@@ -8,7 +8,7 @@ import {
   SelectViewport,
   useForwardPropsEmits,
 } from 'radix-vue'
-import { SelectScrollDownButton, SelectScrollUpButton } from '.'
+import { SelectScrollDownButton, SelectScrollUpButton } from './index'
 import { cn } from '@/lib/utils'
 
 defineOptions({

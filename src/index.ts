@@ -32,8 +32,8 @@ import Text from './components/inputs/Text.vue'
 
 // page components
 import Container from './components/page/Container.vue'
-import Datatable from './components/page/Datatable.vue'
-import { CollapsibleTableRow } from './ui/table'
+import Datatable from './components/pre-built/Datatable.vue'
+import { CollapsibleTableRow } from './components/table'
 import Notifications from './components/page/Notifications.vue'
 import Toggle from './components/inputs/Toggle.vue'
 import Tabs from './components/pre-built/Tabs.vue'

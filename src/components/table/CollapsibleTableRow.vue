@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { defineProps } from 'vue'
-import { TableRow, TableCell, TableRowAction } from '@/ui/table'
+import { TableRow, TableCell, TableRowAction } from '@/components/table/index'
 
 type Header<Value extends string = string> = {
   value: Value

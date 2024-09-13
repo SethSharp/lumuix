@@ -8,14 +8,14 @@ import {
   HomeIcon,
   UserCircleIcon,
 } from '@heroicons/vue/16/solid'
-import { CollapsibleTableRow } from '@/ui/table'
+import { CollapsibleTableRow } from 'src/components/table'
 import Tabs from './components/pre-built/Tabs.vue'
 import Text from './components/inputs/Text.vue'
 import Heading from './components/page/Heading.vue'
 import Toggle from './components/inputs/Toggle.vue'
 import Modal from './components/pre-built/Modal.vue'
 import Select from './components/inputs/Select.vue'
-import Datatable from './components/page/Datatable.vue'
+import Datatable from './components/pre-built/Datatable.vue'
 import Container from './components/page/Container.vue'
 import Checkbox from './components/inputs/Checkbox.vue'
 import TextArea from './components/inputs/TextArea.vue'

@@ -9,7 +9,7 @@ import {
   TableHeader,
   TableRow,
   TableRowAction,
-} from '@/ui/table'
+} from '@/components/table'
 
 type Header<Value extends string = string> = {
   value: Value

@@ -20,7 +20,7 @@ import Container from './components/page/Container.vue'
 import Checkbox from './components/inputs/Checkbox.vue'
 import TextArea from './components/inputs/TextArea.vue'
 import Combobox from './components/inputs/Combobox.vue'
-import Dropdown from './components/dropdown/Dropdown.vue'
+import Dropdown from './components/pre-built/Dropdown.vue'
 import Pagination from './components/pre-built/Pagination.vue'
 import DatePicker from './components/inputs/DatePicker.vue'
 import DarkModeToggle from './components/DarkModeToggle.vue'
@@ -29,7 +29,7 @@ import Notifications from './components/page/Notifications.vue'
 import DangerButton from './components/buttons/DangerButton.vue'
 import PrimaryButton from './components/buttons/PrimaryButton.vue'
 import SecondaryButton from './components/buttons/SecondaryButton.vue'
-import { DropdownMenuItem, DropdownMenuLink } from '@/ui/dropdown-menu'
+import { DropdownMenuItem, DropdownMenuLink } from 'src/components/dropdown-menu'
 
 const sendAlert = (msg: string) => alert(msg)
 

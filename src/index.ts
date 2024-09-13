@@ -5,7 +5,7 @@ import SecondaryButton from './components/buttons/SecondaryButton.vue'
 import DangerButton from './components/buttons/DangerButton.vue'
 
 // dropdown components
-import Dropdown from './components/dropdown/Dropdown.vue'
+import Dropdown from './components/pre-built/Dropdown.vue'
 import {
   BaseDropdownMenuItem,
   DropdownMenu,
@@ -13,7 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuLink,
   DropdownMenuTrigger,
-} from '@/ui/dropdown-menu'
+} from 'src/components/dropdown-menu'
 
 // form components
 import Form from './components/form/Form.vue'

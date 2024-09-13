@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import Dropdown from '../dropdown/Dropdown.vue'
-import { DropdownMenuLink } from '@/ui/dropdown-menu'
+import Dropdown from './Dropdown.vue'
+import { DropdownMenuLink } from '@/components/dropdown-menu'
 import SecondaryButton from '../buttons/SecondaryButton.vue'
 import { TabsRoot, TabBaseContent, TabsList, TabsItem  } from '@/components/tabs'
 

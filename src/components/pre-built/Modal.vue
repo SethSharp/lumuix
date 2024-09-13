@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@/ui/dialog'
+} from '@/components/dialog'
 
 const emits = defineEmits(['close'])
 

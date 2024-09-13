@@ -41,7 +41,7 @@ import { TabsRoot, TabsTrigger, TabsItem, TabsList, TabsContent } from 'src/comp
 import Pagination from './components/pre-built/Pagination.vue'
 
 // popover components
-import Modal from './components/popovers/Modal.vue'
+import Modal from './components/pre-built/Modal.vue'
 
 // other
 import DarkModeToggle from './components/DarkModeToggle.vue'

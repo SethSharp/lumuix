@@ -13,7 +13,7 @@ import {
   DropdownMenuItem,
   DropdownMenuLink,
   DropdownMenuTrigger,
-} from 'src/components/dropdown-menu'
+} from '@/components/dropdown-menu'
 
 // form components
 import Form from './components/form/Form.vue'
@@ -37,7 +37,7 @@ import { CollapsibleTableRow } from './components/table'
 import Notifications from './components/page/Notifications.vue'
 import Toggle from './components/inputs/Toggle.vue'
 import Tabs from './components/pre-built/Tabs.vue'
-import { TabsRoot, TabsTrigger, TabsItem, TabsList, TabsContent } from 'src/components/tabs'
+import { TabsRoot, TabsTrigger, TabsItem, TabsList, TabsContent } from '@/components/tabs'
 import Pagination from './components/pre-built/Pagination.vue'
 
 // popover components

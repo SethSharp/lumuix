@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import Label from './Label.vue'
-import Error from './Error.vue'
+import Error from '../form/Error.vue'
 
 withDefaults(
   defineProps<{

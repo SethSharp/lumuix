@@ -23,7 +23,7 @@ import FormElement from './components/form/FormElement.vue'
 // input components
 import Checkbox from './components/inputs/Checkbox.vue'
 import ImageUpload from './components/inputs/ImageUpload.vue'
-import Error from './components/inputs/Error.vue'
+import Error from './components/form/Error.vue'
 import Label from './components/inputs/Label.vue'
 import Combobox from './components/inputs/Combobox.vue'
 import Select from './components/inputs/Select.vue'

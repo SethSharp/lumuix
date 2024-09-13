@@ -10,7 +10,7 @@ import {
   CommandList,
 } from '@/components/command'
 import Base from './Base.vue'
-import { Button } from '@/ui/button'
+import { Button } from '@/components/buttons'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
 const emits = defineEmits(['update:modelValue'])

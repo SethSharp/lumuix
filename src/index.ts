@@ -1,5 +1,5 @@
 // button components
-import { Button } from './ui/button'
+import { Button } from './components/buttons'
 import PrimaryButton from './components/buttons/PrimaryButton.vue'
 import SecondaryButton from './components/buttons/SecondaryButton.vue'
 import DangerButton from './components/buttons/DangerButton.vue'

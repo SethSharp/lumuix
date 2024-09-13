@@ -38,7 +38,7 @@ import Notifications from './components/page/Notifications.vue'
 import Toggle from './components/inputs/Toggle.vue'
 import Tabs from './components/pre-built/Tabs.vue'
 import { TabsRoot, TabsTrigger, TabsItem, TabsList, TabsContent } from 'src/components/tabs'
-import Pagination from './components/page/Pagination.vue'
+import Pagination from './components/pre-built/Pagination.vue'
 
 // popover components
 import Modal from './components/popovers/Modal.vue'

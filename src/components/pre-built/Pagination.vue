@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Button } from '@/ui/button'
 import {
   Pagination,
   PaginationEllipsis,
@@ -7,14 +8,14 @@ import {
   PaginationList,
   PaginationNext,
   PaginationPrev,
-} from '@/ui/pagination'
-import { Button } from '@/ui/button'
+  PaginationDetails
+} from '@/components/pagination'
 
 const props = withDefaults(
   defineProps<{
     data: Paginator<any>
     is?: any
-    as?: string
+    as?: any
   }>(),
   {
     is: 'a',
@@ -52,18 +53,18 @@ const getTotalNumber = () => {
 
 <template>
   <div class="justify-between sm:flex">
-    <div class="my-auto text-slate-400 dark:text-slate-100">
-      Showing {{ getStartingNumber() }} to {{ getTotalNumber() }} of {{ data.total }} results
-    </div>
+    <PaginationDetails :min="getStartingNumber()" :max="getTotalNumber" :total="data.total" />
 
     <Pagination>
       <PaginationList class="flex items-center gap-1">
         <PaginationFirst
+          :is="is"
           :as="as"
           :href="data.first_page_url" />
 
         <PaginationPrev
           v-if="data.prev_page_url"
+          :is="is"
           :as="as"
           :href="data.prev_page_url" />
 
@@ -86,10 +87,12 @@ const getTotalNumber = () => {
 
         <PaginationNext
           v-if="data.next_page_url"
+          :is="is"
           :as="as"
           :href="data.next_page_url" />
 
         <PaginationLast
+          :is="is"
           :as="as"
           :href="data.last_page_url" />
       </PaginationList>

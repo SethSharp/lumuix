@@ -9,7 +9,7 @@ import {
 } from '@internationalized/date'
 import { Button } from '@/ui/button'
 import { Calendar } from '@/components/pre-built'
-import { Popover, PopoverContent, PopoverTrigger } from '@/ui/popover'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
 const emits = defineEmits(['update:modelValue'])
 

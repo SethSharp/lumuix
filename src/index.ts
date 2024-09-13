@@ -36,8 +36,8 @@ import Datatable from './components/page/Datatable.vue'
 import { CollapsibleTableRow } from './ui/table'
 import Notifications from './components/page/Notifications.vue'
 import Toggle from './components/inputs/Toggle.vue'
-import Tabs from './components/page/Tabs.vue'
-import { TabsRoot, TabsTrigger, TabsItem, TabsList, TabsContent } from '@/ui/tabs'
+import Tabs from './components/pre-built/Tabs.vue'
+import { TabsRoot, TabsTrigger, TabsItem, TabsList, TabsContent } from 'src/components/tabs'
 import Pagination from './components/page/Pagination.vue'
 
 // popover components

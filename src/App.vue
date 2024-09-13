@@ -9,7 +9,7 @@ import {
   UserCircleIcon,
 } from '@heroicons/vue/16/solid'
 import { CollapsibleTableRow } from '@/ui/table'
-import Tabs from './components/page/Tabs.vue'
+import Tabs from './components/pre-built/Tabs.vue'
 import Text from './components/inputs/Text.vue'
 import Heading from './components/page/Heading.vue'
 import Toggle from './components/inputs/Toggle.vue'

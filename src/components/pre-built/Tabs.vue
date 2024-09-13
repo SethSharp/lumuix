@@ -1,11 +1,9 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import TabRoot from '@/ui/tabs/TabRoot.vue'
 import Dropdown from '../dropdown/Dropdown.vue'
 import { DropdownMenuLink } from '@/ui/dropdown-menu'
-import { TabsList, TabsItem } from '@/ui/tabs'
 import SecondaryButton from '../buttons/SecondaryButton.vue'
-import BaseContent from '@/ui/tabs/BaseContent.vue'
+import { TabsRoot, TabBaseContent, TabsList, TabsItem  } from '@/components/tabs'
 
 const props = withDefaults(
   defineProps<{
@@ -17,23 +15,21 @@ const props = withDefaults(
   },
 )
 
-const currentValue = computed(() => {
-  return props.tabs.find((tab) => {
+const currentValue = computed(() =>
+  props.tabs.find((tab) => {
     return tab.active
   })
-})
+)
 </script>
 
 <template>
-  <TabRoot>
+  <TabsRoot>
     <TabsList class="hidden gap-2 md:block">
-      <slot name="tab-list">
-        <TabsItem
-          v-for="tab in tabs"
-          :key="tab.name"
-          :is="is"
-          :tab="tab" />
-      </slot>
+      <TabsItem
+        v-for="tab in tabs"
+        :key="tab.name"
+        :is="is"
+        :tab="tab" />
     </TabsList>
 
     <TabsList class="flex md:hidden">
@@ -53,8 +49,8 @@ const currentValue = computed(() => {
       </Dropdown>
     </TabsList>
 
-    <BaseContent>
+    <TabBaseContent>
       <slot />
-    </BaseContent>
-  </TabRoot>
+    </TabBaseContent>
+  </TabsRoot>
 </template>

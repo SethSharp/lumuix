@@ -8,7 +8,7 @@ import {
   PaginationList,
   PaginationNext,
   PaginationPrev,
-  PaginationDetails
+  PaginationDetails,
 } from '@/components/pagination'
 
 const props = withDefaults(
@@ -53,7 +53,10 @@ const getTotalNumber = () => {
 
 <template>
   <div class="justify-between sm:flex">
-    <PaginationDetails :min="getStartingNumber()" :max="getTotalNumber" :total="data.total" />
+    <PaginationDetails
+      :min="getStartingNumber()"
+      :max="getTotalNumber"
+      :total="data.total" />
 
     <Pagination>
       <PaginationList class="flex items-center gap-1">

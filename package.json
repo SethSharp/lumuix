@@ -4,7 +4,8 @@
   "type": "module",
   "files": [
     "dist",
-    "src"
+    "src",
+    "dropdown-menu"
   ],
   "repository": {
     "type": "git",
@@ -17,13 +18,23 @@
       "import": "./dist/ui.js",
       "require": "./dist/ui.umd.cjs",
       "types": "./dist/types/index.d.ts"
+    },
+    "./dropdown-menu": {
+      "import": "./dist/dropdown-menu/index.js",
+      "require": "./dist/dropdown-menu/index.umd.cjs",
+      "types": "./dist/dropdown-menu/index.d.ts"
+    },
+    "./button": {
+      "import": "./dist/button/index.js",
+      "require": "./dist/button/index.umd.cjs",
+      "types": "./dist/button/index.d.ts"
     }
   },
   "types": "./dist/types/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "run-p format type-check build-only",
-    "build-only": "vite build",
+    "build": "run-p format type-check build-all",
+    "build-all": "vite build",
     "type-check": "vue-tsc --declaration --emitDeclarationOnly --outDir dist/types",
     "preview": "vite preview",
     "format": "prettier --write src/",

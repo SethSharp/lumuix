@@ -8,7 +8,7 @@ import {
   useForwardPropsEmits,
 } from 'radix-vue'
 import { CheckCircleIcon } from '@heroicons/vue/20/solid/index.js'
-import { cn } from '@/lib/utils'
+import { cn } from '../../lib/utils'
 
 const props = defineProps<DropdownMenuRadioItemProps & { class?: HTMLAttributes['class'] }>()
 

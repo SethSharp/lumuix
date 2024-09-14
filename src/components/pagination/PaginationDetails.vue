@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  min: number,
+  min: number
   max: number
   total: number
 }>()

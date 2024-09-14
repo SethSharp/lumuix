@@ -8,7 +8,6 @@ import {
   HomeIcon,
   UserCircleIcon,
 } from '@heroicons/vue/16/solid'
-import { CollapsibleTableRow } from 'src/components/table'
 import Tabs from './components/pre-built/Tabs.vue'
 import Text from './components/inputs/Text.vue'
 import Heading from './components/page/Heading.vue'
@@ -29,7 +28,7 @@ import Notifications from './components/page/Notifications.vue'
 import DangerButton from './components/buttons/DangerButton.vue'
 import PrimaryButton from './components/buttons/PrimaryButton.vue'
 import SecondaryButton from './components/buttons/SecondaryButton.vue'
-import { DropdownMenuItem, DropdownMenuLink } from 'src/components/dropdown-menu'
+import { DropdownMenuItem, DropdownMenuLink } from '@/components/dropdown-menu'
 
 const sendAlert = (msg: string) => alert(msg)
 
@@ -224,9 +223,7 @@ watch(multiSelect, () => {
     <a
       href="https://github.com/SethSharp/ui"
       class="p-4 text-xl text-gray-100 transition hover:text-white dark:text-primary-200 sm:text-3xl">
-      <b>
-        Lumuix
-      </b>- Generic Vue Component Library
+      <b> Lumuix </b>- Generic Vue Component Library
     </a>
     <div class="my-auto mr-6 flex gap-2 font-bold text-white dark:text-primary-200">
       1.0.0-alpha.1.0

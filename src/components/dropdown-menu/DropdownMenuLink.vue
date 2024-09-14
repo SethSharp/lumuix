@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed, type HTMLAttributes } from 'vue'
 import { DropdownMenuItem, type DropdownMenuItemProps, useForwardProps } from 'radix-vue'
-import BaseDropdownMenuItem from '@/components/dropdown-menu/BaseDropdownMenuItem.vue'
+import BaseDropdownMenuItem from './BaseDropdownMenuItem.vue'
 
 const props = withDefaults(
   defineProps<

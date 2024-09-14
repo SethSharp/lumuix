@@ -3,7 +3,7 @@ import { computed } from 'vue'
 import Dropdown from './Dropdown.vue'
 import { DropdownMenuLink } from '@/components/dropdown-menu'
 import SecondaryButton from '../buttons/SecondaryButton.vue'
-import { TabsRoot, TabBaseContent, TabsList, TabsItem  } from '@/components/tabs'
+import { TabsRoot, TabBaseContent, TabsList, TabsItem } from '@/components/tabs'
 
 const props = withDefaults(
   defineProps<{
@@ -18,7 +18,7 @@ const props = withDefaults(
 const currentValue = computed(() =>
   props.tabs.find((tab) => {
     return tab.active
-  })
+  }),
 )
 </script>
 

@@ -8,7 +8,7 @@ import {
   useForwardPropsEmits,
 } from 'radix-vue'
 import { CheckIcon } from '@heroicons/vue/24/outline'
-import { cn } from '@/lib/utils'
+import { cn } from '../../lib/utils'
 
 const props = defineProps<DropdownMenuCheckboxItemProps & { class?: HTMLAttributes['class'] }>()
 const emits = defineEmits<DropdownMenuCheckboxItemEmits>()

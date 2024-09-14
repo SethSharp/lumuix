@@ -1,3 +1,4 @@
+![Logo](https://raw.githubusercontent.com/SethSharp/lumuix/main/public/images/lumuix-logo.png)
 # Lumuix: Vue Component Library
 This is a personal use component library, used across internal projects to:
 - Avoid the hassle of duplicating code and setting up new components

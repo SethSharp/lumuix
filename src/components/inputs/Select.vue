@@ -1,7 +1,13 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
 import Base from './Base.vue'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/select'
+import {
+  SelectRoot,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/select'
 
 const emits = defineEmits(['update:modelValue'])
 
@@ -33,7 +39,7 @@ watch(selectedOption, (newSelectedOption) => {
 <template>
   <Base v-bind="$props">
     <div class="w-fit">
-      <Select v-model="selectedOption">
+      <SelectRoot v-model="selectedOption">
         <SelectTrigger>
           <SelectValue> {{ selectedOption ?? placeholder }} </SelectValue>
         </SelectTrigger>
@@ -51,7 +57,7 @@ watch(selectedOption, (newSelectedOption) => {
             </template>
           </SelectItem>
         </SelectContent>
-      </Select>
+      </SelectRoot>
     </div>
   </Base>
 </template>

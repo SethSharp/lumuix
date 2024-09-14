@@ -4,60 +4,151 @@ import PrimaryButton from './components/buttons/PrimaryButton.vue'
 import SecondaryButton from './components/buttons/SecondaryButton.vue'
 import DangerButton from './components/buttons/DangerButton.vue'
 
-// dropdown components
-import Dropdown from './components/pre-built/Dropdown.vue'
+// form
+import { Form, FormGrid, FormElement, Error } from '@/components/form'
+
+// inputs
 import {
-  BaseDropdownMenuItem,
+  Checkbox,
+  ImageUpload,
+  Text,
+  Label,
+  Combobox,
+  Select,
+  TextArea,
+  Toggle,
+  DatePicker,
+} from '@/components/inputs'
+
+// pre-built
+import Datatable from './components/pre-built/Datatable.vue'
+import DarkModeToggle from './components/pre-built/DarkModeToggle.vue'
+import Dropdown from './components/pre-built/Dropdown.vue'
+import Container from './components/page/Container.vue'
+import Pagination from './components/pre-built/Pagination.vue'
+import Modal from './components/pre-built/Modal.vue'
+import Notifications from './components/page/Notifications.vue'
+import Tabs from './components/pre-built/Tabs.vue'
+
+// tabs
+import { TabsRoot, TabsTrigger, TabsItem, TabsList, TabsContent } from '@/components/tabs'
+
+// table
+import {
+  CollapsibleTableRow,
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableHead,
+  TableFooter,
+  TableRow,
+  TableRowAction,
+  TableCaption,
+  TableEmpty,
+} from '@/components/table'
+
+// select
+import {
+  SelectRoot,
+  SelectValue,
+  SelectTrigger,
+  SelectGroup,
+  SelectItem,
+  SelectItemText,
+  SelectLabel,
+  SelectSeparator,
+  SelectScrollUpButton,
+  SelectScrollDownButton,
+  SelectContent,
+} from '@/components/select'
+
+// popover
+import { Popover, PopoverTrigger, PopoverContent } from '@/components/popover'
+
+// pagination
+import {
+  PaginationRoot,
+  PaginationList,
+  PaginationListItem,
+  PaginationEllipsis,
+  PaginationFirst,
+  PaginationLast,
+  PaginationNext,
+  PaginationPrev,
+  PaginationDetails,
+} from '@/components/pagination'
+
+// dropdown-menu
+import {
+  DropdownMenuPortal,
   DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
+  BaseDropdownMenuItem,
   DropdownMenuLink,
   DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuGroup,
+  DropdownMenuRadioGroup,
+  DropdownMenuItem,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioItem,
+  DropdownMenuShortcut,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
 } from '@/components/dropdown-menu'
 
-// form components
-import Form from './components/form/Form.vue'
-import FormGrid from './components/form/FormGrid.vue'
-import FormElement from './components/form/FormElement.vue'
+// dialog
+import {
+  Dialog,
+  DialogClose,
+  DialogTrigger,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogContent,
+  DialogScrollContent,
+  DialogFooter,
+} from '@/components/dialog'
 
-// input components
-import Checkbox from './components/inputs/Checkbox.vue'
-import ImageUpload from './components/inputs/ImageUpload.vue'
-import Error from './components/form/Error.vue'
-import Label from './components/inputs/Label.vue'
-import Combobox from './components/inputs/Combobox.vue'
-import Select from './components/inputs/Select.vue'
-import TextArea from './components/inputs/TextArea.vue'
-import Text from './components/inputs/Text.vue'
+// command
+import {
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+} from '@/components/command'
 
-// page components
-import Container from './components/page/Container.vue'
-import Datatable from './components/pre-built/Datatable.vue'
-import { CollapsibleTableRow } from './components/table'
-import Notifications from './components/page/Notifications.vue'
-import Toggle from './components/inputs/Toggle.vue'
-import Tabs from './components/pre-built/Tabs.vue'
-import { TabsRoot, TabsTrigger, TabsItem, TabsList, TabsContent } from '@/components/tabs'
-import Pagination from './components/pre-built/Pagination.vue'
-
-// popover components
-import Modal from './components/pre-built/Modal.vue'
-
-// other
-import DarkModeToggle from './components/DarkModeToggle.vue'
+// calendar
+import {
+  CalendarCell,
+  CalendarCellTrigger,
+  CalendarGrid,
+  CalendarGridBody,
+  CalendarGridHead,
+  CalendarGridRow,
+  CalendarHeadCell,
+  CalendarHeader,
+  CalendarHeading,
+  CalendarNextButton,
+  CalendarPrevButton,
+} from '@/components/calendar'
 
 export {
+  // buttons
   Button,
   PrimaryButton,
   SecondaryButton,
   DangerButton,
-  Dropdown,
-  BaseDropdownMenuItem,
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLink,
-  DropdownMenuTrigger,
+  // inputs
+  DatePicker,
   Form,
   FormGrid,
   FormElement,
@@ -70,17 +161,107 @@ export {
   TextArea,
   Text,
   Toggle,
-  Container,
-  Datatable,
+  // popover
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
+  // table
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableHead,
+  TableFooter,
+  TableRow,
+  TableRowAction,
+  TableCaption,
+  TableEmpty,
   CollapsibleTableRow,
+  // select
+  SelectRoot,
+  SelectValue,
+  SelectTrigger,
+  SelectGroup,
+  SelectItem,
+  SelectItemText,
+  SelectLabel,
+  SelectSeparator,
+  SelectScrollUpButton,
+  SelectScrollDownButton,
+  SelectContent,
+  // select
+  PaginationRoot,
+  PaginationList,
+  PaginationListItem,
+  PaginationEllipsis,
+  PaginationFirst,
+  PaginationLast,
+  PaginationNext,
+  PaginationPrev,
+  PaginationDetails,
+  // dropdown
+  DropdownMenuPortal,
+  DropdownMenu,
+  BaseDropdownMenuItem,
+  DropdownMenuLink,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuRadioGroup,
+  DropdownMenuItem,
+  DropdownMenuCheckboxItem,
+  DropdownMenuRadioItem,
+  DropdownMenuShortcut,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+  DropdownMenuSub,
+  DropdownMenuSubTrigger,
+  DropdownMenuSubContent,
+  DropdownMenuGroup,
+  // dialog
+  Dialog,
+  DialogClose,
+  DialogTrigger,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogContent,
+  DialogScrollContent,
+  DialogFooter,
+  // command
+  Command,
+  CommandDialog,
+  CommandEmpty,
+  CommandGroup,
+  CommandInput,
+  CommandItem,
+  CommandList,
+  CommandSeparator,
+  CommandShortcut,
+  // calendar
+  CalendarCell,
+  CalendarCellTrigger,
+  CalendarGrid,
+  CalendarGridBody,
+  CalendarGridHead,
+  CalendarGridRow,
+  CalendarHeadCell,
+  CalendarHeader,
+  CalendarHeading,
+  CalendarNextButton,
+  CalendarPrevButton,
   Notifications,
+  // tabs
   Tabs,
   TabsRoot,
   TabsTrigger,
   TabsItem,
   TabsList,
   TabsContent,
+  // pre-built
   Pagination,
   Modal,
   DarkModeToggle,
+  Container,
+  Datatable,
+  Dropdown,
 }

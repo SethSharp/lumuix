@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useDark } from '@vueuse/core'
 import { MoonIcon, SunIcon } from '@heroicons/vue/24/outline'
-import Toggle from './inputs/Toggle.vue'
+import Toggle from '../inputs/Toggle.vue'
 
 const isDark = useDark({
   selector: 'html',

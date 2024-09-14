@@ -41,9 +41,9 @@ declare const __VLS_component: import("vue").DefineComponent<__VLS_WithDefaults<
 }, {
     multiple: boolean;
     placeholder: string;
-    widthClass: string;
     noResults: string;
     allowSearch: boolean;
+    widthClass: string;
 }, {}>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, ReturnType<typeof __VLS_template>>;
 export default _default;

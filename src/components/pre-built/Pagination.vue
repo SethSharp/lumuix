@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Button } from '@/components/buttons'
 import {
-  Pagination,
+  PaginationRoot,
   PaginationEllipsis,
   PaginationFirst,
   PaginationLast,
@@ -58,7 +58,7 @@ const getTotalNumber = () => {
       :max="getTotalNumber"
       :total="data.total" />
 
-    <Pagination>
+    <PaginationRoot>
       <PaginationList class="flex items-center gap-1">
         <PaginationFirst
           :is="is"
@@ -99,6 +99,6 @@ const getTotalNumber = () => {
           :as="as"
           :href="data.last_page_url" />
       </PaginationList>
-    </Pagination>
+    </PaginationRoot>
   </div>
 </template>

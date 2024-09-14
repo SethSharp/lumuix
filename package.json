@@ -4,8 +4,7 @@
   "type": "module",
   "files": [
     "dist",
-    "src",
-    "dropdown-menu"
+    "src"
   ],
   "repository": {
     "type": "git",
@@ -18,16 +17,6 @@
       "import": "./dist/ui.js",
       "require": "./dist/ui.umd.cjs",
       "types": "./dist/types/index.d.ts"
-    },
-    "./dropdown-menu": {
-      "import": "./dist/dropdown-menu/index.js",
-      "require": "./dist/dropdown-menu/index.umd.cjs",
-      "types": "./dist/dropdown-menu/index.d.ts"
-    },
-    "./button": {
-      "import": "./dist/button/index.js",
-      "require": "./dist/button/index.umd.cjs",
-      "types": "./dist/button/index.d.ts"
     }
   },
   "types": "./dist/types/index.d.ts",

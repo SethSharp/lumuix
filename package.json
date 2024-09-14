@@ -1,6 +1,6 @@
 {
   "name": "@sethsharp/lumuix",
-  "version": "1.0.0-alpha.1.1.0",
+  "version": "1.0.0-alpha.1.1.1",
   "type": "module",
   "files": [
     "dist",
@@ -14,8 +14,8 @@
   "module": "./dist/ui.js",
   "exports": {
     ".": {
-      "import": "./dist/ui.js",
-      "require": "./dist/ui.umd.cjs",
+      "import": "./dist/lumuix.js",
+      "require": "./dist/lumuix.umd.cjs",
       "types": "./dist/types/index.d.ts"
     }
   },

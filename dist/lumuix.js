@@ -13827,9 +13827,9 @@ const Vm = { class: "absolute left-2 flex h-3.5 w-3.5 items-center justify-cente
     return (o, l) => (m(), R("div", Gm, [
       P(s(Km), {
         min: a(),
-        max: n,
+        max: n(),
         total: o.data.total
-      }, null, 8, ["min", "total"]),
+      }, null, 8, ["min", "max", "total"]),
       P(s(gp), null, {
         default: f(() => [
           P(s($p), { class: "flex items-center gap-1" }, {

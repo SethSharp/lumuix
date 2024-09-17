@@ -55,7 +55,7 @@ const getTotalNumber = () => {
   <div class="justify-between sm:flex">
     <PaginationDetails
       :min="getStartingNumber()"
-      :max="getTotalNumber"
+      :max="getTotalNumber()"
       :total="data.total" />
 
     <PaginationRoot>

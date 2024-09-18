@@ -36,7 +36,7 @@ export default {
     <div class="relative">
       <slot />
 
-      <CharacterCount v-if="showCharacterCount" :count="modelValue?.length" class="mt-[3px]" />
+      <CharacterCount v-if="showCharacterCount" :count="modelValue?.length" class="mt-[3px] absolute right-0" />
     </div>
 
     <Description class="mt-[3px] w-4/5 ">

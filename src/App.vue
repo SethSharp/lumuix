@@ -273,7 +273,7 @@ watch(multiSelect, () => {
     <Container>
       <Heading shadow> Inputs </Heading>
 
-      <div class="space-y-4">
+      <div class="space-y-4 my-4">
         <Text
           v-model="textInput"
           label="Firstname"

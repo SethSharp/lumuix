@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import Label from './Label.vue'
-import Error from '../form/Error.vue'
+import { Error } from '@/components/form'
+import { CharacterCount, Description, Label } from '@/components/inputs'
 
 withDefaults(
   defineProps<{
@@ -37,14 +37,15 @@ export default {
     <div class="relative">
       <slot />
 
-      <div
+      <CharacterCount
         v-if="showCharacterCount"
-        class="absolute right-0 mt-[3px] text-xs text-slate-600 dark:text-slate-300">
-        Characters: {{ modelValue?.length }}
-      </div>
+        :count="modelValue?.length"
+        class="absolute right-0 mt-[3px]" />
     </div>
 
-    <div class="mt-[3px] w-4/5 text-sm text-slate-600 dark:text-slate-300">{{ description }}</div>
+    <Description class="mt-[3px] w-4/5">
+      {{ description }}
+    </Description>
 
     <Error :message="error" />
   </div>

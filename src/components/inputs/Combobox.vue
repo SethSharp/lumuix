@@ -9,7 +9,6 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/command'
-import Base from './Base.vue'
 import { Button } from '@/components/buttons'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
@@ -95,67 +94,65 @@ watch(selectedOptions, () => {
 </script>
 
 <template>
-  <Base v-bind="$props">
-    <Popover v-model:open="open">
-      <PopoverTrigger as-child>
-        <Button
-          variant="outline"
-          role="combobox"
-          :aria-expanded="open"
-          class="justify-between"
-          :class="[widthClass]">
-          <div class="overflow-hidden !font-normal dark:text-white">
-            <template v-if="$slots.selectedOptions">
-              <slot
-                name="selectedOptions"
-                :selectedOptions="selectedOptions" />
-            </template>
-            <template v-else>
-              {{ humanReadableOptions }}
-            </template>
-          </div>
-          <ChevronUpDownIcon class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
-        </Button>
-      </PopoverTrigger>
-
-      <PopoverContent
-        class="!p-0"
+  <Popover v-model:open="open">
+    <PopoverTrigger as-child>
+      <Button
+        variant="outline"
+        role="combobox"
+        :aria-expanded="open"
+        class="justify-between"
         :class="[widthClass]">
-        <Command
-          :multiple="multiple"
-          :filter-function="search"
-          v-model="selectedOptions">
-          <CommandInput
-            v-if="allowSearch"
-            class="h-9"
-            :placeholder="placeholder" />
+        <div class="overflow-hidden !font-normal dark:text-white">
+          <template v-if="$slots.selectedOptions">
+            <slot
+              name="selectedOptions"
+              :selectedOptions="selectedOptions" />
+          </template>
+          <template v-else>
+            {{ humanReadableOptions }}
+          </template>
+        </div>
+        <ChevronUpDownIcon class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
+      </Button>
+    </PopoverTrigger>
 
-          <CommandEmpty>{{ noResults }}</CommandEmpty>
+    <PopoverContent
+      class="!p-0"
+      :class="[widthClass]">
+      <Command
+        :multiple="multiple"
+        :filter-function="search"
+        v-model="selectedOptions">
+        <CommandInput
+          v-if="allowSearch"
+          class="h-9"
+          :placeholder="placeholder" />
 
-          <CommandList>
-            <CommandGroup>
-              <CommandItem
-                v-for="option in options"
-                :key="option.id"
-                :id="option.id"
-                :value="option"
-                @select="optionSelected(option)">
-                <CheckIcon
-                  class="mr-2 size-4"
-                  :class="[isSelected(option) ? 'opacity-100' : 'opacity-0']" />
-                <template v-if="$slots.item">
-                  <slot
-                    name="item"
-                    :option="option" />
-                </template>
-                <template v-else>
-                  {{ option.name }}
-                </template>
-              </CommandItem>
-            </CommandGroup>
-          </CommandList>
-        </Command>
-      </PopoverContent>
-    </Popover>
-  </Base>
+        <CommandEmpty>{{ noResults }}</CommandEmpty>
+
+        <CommandList>
+          <CommandGroup>
+            <CommandItem
+              v-for="option in options"
+              :key="option.id"
+              :id="option.id"
+              :value="option"
+              @select="optionSelected(option)">
+              <CheckIcon
+                class="mr-2 size-4"
+                :class="[isSelected(option) ? 'opacity-100' : 'opacity-0']" />
+              <template v-if="$slots.item">
+                <slot
+                  name="item"
+                  :option="option" />
+              </template>
+              <template v-else>
+                {{ option.name }}
+              </template>
+            </CommandItem>
+          </CommandGroup>
+        </CommandList>
+      </Command>
+    </PopoverContent>
+  </Popover>
 </template>

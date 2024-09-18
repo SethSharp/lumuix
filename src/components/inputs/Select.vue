@@ -1,6 +1,5 @@
 <script lang="ts" setup>
 import { ref, watch } from 'vue'
-import Base from './Base.vue'
 import {
   SelectRoot,
   SelectContent,
@@ -37,27 +36,23 @@ watch(selectedOption, (newSelectedOption) => {
 </script>
 
 <template>
-  <Base v-bind="$props">
-    <div class="w-fit">
-      <SelectRoot v-model="selectedOption">
-        <SelectTrigger>
-          <SelectValue> {{ selectedOption ?? placeholder }} </SelectValue>
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem
-            v-for="option in options"
-            :value="option">
-            <template v-if="$slots.options">
-              <slot
-                name="options"
-                :item="option" />
-            </template>
-            <template v-else>
-              {{ option }}
-            </template>
-          </SelectItem>
-        </SelectContent>
-      </SelectRoot>
-    </div>
-  </Base>
+  <SelectRoot v-model="selectedOption">
+    <SelectTrigger>
+      <SelectValue> {{ selectedOption ?? placeholder }} </SelectValue>
+    </SelectTrigger>
+    <SelectContent>
+      <SelectItem
+        v-for="option in options"
+        :value="option">
+        <template v-if="$slots.options">
+          <slot
+            name="options"
+            :item="option" />
+        </template>
+        <template v-else>
+          {{ option }}
+        </template>
+      </SelectItem>
+    </SelectContent>
+  </SelectRoot>
 </template>

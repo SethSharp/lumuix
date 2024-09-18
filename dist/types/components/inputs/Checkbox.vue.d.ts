@@ -2,15 +2,11 @@ import { type CheckboxRootProps } from 'radix-vue';
 declare const _default: import("vue").DefineComponent<__VLS_TypePropsToOption<CheckboxRootProps & {
     modelValue: boolean | null;
     label?: string;
-    description?: string;
-    error?: string;
 }>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;
 }, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToOption<CheckboxRootProps & {
     modelValue: boolean | null;
     label?: string;
-    description?: string;
-    error?: string;
 }>>> & {
     "onUpdate:modelValue"?: (...args: any[]) => any;
 }, {}, {}>;

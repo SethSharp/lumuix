@@ -26,6 +26,5 @@ const modelValue = useVModel(props, 'modelValue', emits, {
     :class="{
       'focus-visible:ring-slate-950 dark:focus-visible:ring-slate-400': !error,
       'focus-visible:ring-red-600 dark:focus-visible:ring-red-400': error,
-    }"
-  />
+    }" />
 </template>

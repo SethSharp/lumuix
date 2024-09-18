@@ -5,8 +5,5 @@ defineProps<{
 </script>
 
 <template>
-  <div
-    class="text-xs text-slate-600 dark:text-slate-300">
-    Characters: {{ count }}
-  </div>
+  <div class="text-xs text-slate-600 dark:text-slate-300">Characters: {{ count }}</div>
 </template>

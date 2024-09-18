@@ -8,7 +8,7 @@ const emits = defineEmits(['update:modelValue'])
 
 const props = defineProps<
   CheckboxRootProps & {
-    modelValue: boolean | null,
+    modelValue: boolean | null
     label?: string
   }
 >()
@@ -31,8 +31,11 @@ watch(checked, (newChecked) => {
       </CheckboxIndicator>
     </CheckboxRoot>
 
-    <Label v-if="label" :id="id" class="my-auto">
-      {{label}}
+    <Label
+      v-if="label"
+      :id="id"
+      class="my-auto">
+      {{ label }}
     </Label>
   </div>
 </template>

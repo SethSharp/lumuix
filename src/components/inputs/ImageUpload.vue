@@ -1,7 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { v4 as uuidv4 } from 'uuid'
-import Base from './Base.vue'
 import SecondaryButton from '../buttons/SecondaryButton.vue'
 
 const props = withDefaults(
@@ -35,26 +34,24 @@ const fileUpload = () => document.getElementById(uniqueId).click()
 </script>
 
 <template>
-  <Base v-bind="$props">
-    <div class="flex items-center space-x-2">
-      <slot
-        name="image"
-        :newImage="newImage"
-        :curImage="curImg">
-        <img
-          :src="newImage ?? curImg"
-          alt="Image cannot be shown right now"
-          class="size-24 rounded-full dark:bg-slate-700" />
-      </slot>
+  <div class="flex items-center space-x-2">
+    <slot
+      name="image"
+      :newImage="newImage"
+      :curImage="curImg">
+      <img
+        :src="newImage ?? curImg"
+        alt="Image cannot be shown right now"
+        class="size-24 rounded-full dark:bg-slate-700" />
+    </slot>
 
-      <input
-        :id="uniqueId"
-        :accept="accept"
-        hidden
-        type="file"
-        @input="handleFileChange" />
+    <input
+      :id="uniqueId"
+      :accept="accept"
+      hidden
+      type="file"
+      @input="handleFileChange" />
 
-      <SecondaryButton @click="fileUpload"> Upload </SecondaryButton>
-    </div>
-  </Base>
+    <SecondaryButton @click="fileUpload"> Upload </SecondaryButton>
+  </div>
 </template>

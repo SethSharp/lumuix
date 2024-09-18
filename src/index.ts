@@ -9,15 +9,18 @@ import { Form, FormGrid, FormElement, Error } from '@/components/form'
 
 // inputs
 import {
+  CharacterCount,
   Checkbox,
-  ImageUpload,
+  DatePicker,
+  Description,
+  Base,
   Text,
   Label,
   Combobox,
+  ImageUpload,
   Select,
   TextArea,
   Toggle,
-  DatePicker,
 } from '@/components/inputs'
 
 // pre-built
@@ -148,15 +151,18 @@ export {
   SecondaryButton,
   DangerButton,
   // inputs
+  CharacterCount,
+  Combobox,
+  Checkbox,
+  Error,
+  Base,
   DatePicker,
+  Description,
   Form,
   FormGrid,
   FormElement,
-  Checkbox,
   ImageUpload,
-  Error,
   Label,
-  Combobox,
   Select,
   TextArea,
   Text,

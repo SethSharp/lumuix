@@ -210,10 +210,6 @@ const addError = (msg: string) => {
     errorMsg.value = null
   }, 5000)
 }
-
-watch(multiSelect, () => {
-  console.log(multiSelect.value)
-})
 </script>
 
 <template>

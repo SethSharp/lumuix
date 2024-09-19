@@ -1,7 +1,15 @@
 <script lang="ts" setup>
-defineProps<{
+import { onMounted } from 'vue'
+
+const props = defineProps<{
   message?: string | null
 }>()
+
+onMounted(() => {
+  if (props.message) {
+    console.warn('WARNING: The :message prop will not be supported in the next major version.')
+  }
+})
 </script>
 
 <template>

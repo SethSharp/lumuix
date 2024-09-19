@@ -1,4 +1,4 @@
-import { defineComponent as b, openBlock as f, createBlock as y, resolveDynamicComponent as Me, mergeProps as E, unref as s, withCtx as m, renderSlot as _, withDirectives as At, createElementBlock as R, createElementVNode as K, toDisplayString as Q, vShow as xn, computed as B, ref as M, shallowRef as Cn, watch as J, getCurrentScope as $n, onScopeDispose as kn, shallowReadonly as bt, getCurrentInstance as Te, toRef as Fo, camelize as Lo, Comment as Bs, cloneVNode as Ps, h as it, toRefs as me, onMounted as ce, normalizeProps as U, guardReactiveProps as G, reactive as No, createVNode as P, createCommentVNode as ee, createTextVNode as Y, withKeys as He, withModifiers as we, Fragment as X, watchEffect as he, markRaw as Os, nextTick as te, watchSyncEffect as Ds, isRef as Xt, renderList as ve, Teleport as Bn, onBeforeUnmount as Pn, useSlots as Ss, onBeforeMount as Es, normalizeStyle as Da, effectScope as zo, toHandlerKey as Ms, onUnmounted as Qt, vModelSelect as As, inject as Wo, provide as jo, customRef as Uo, onBeforeUpdate as Ts, onUpdated as Is, mergeDefaults as Ho, readonly as On, normalizeClass as se, mergeModels as dn, useModel as Ko, vModelDynamic as Rs, vModelText as Vs, Transition as Fs } from "vue";
+import { defineComponent as b, openBlock as f, createBlock as y, resolveDynamicComponent as Me, mergeProps as E, unref as s, withCtx as m, renderSlot as _, onMounted as ce, withDirectives as At, createElementBlock as R, createElementVNode as K, toDisplayString as Q, vShow as xn, computed as B, ref as M, shallowRef as Cn, watch as J, getCurrentScope as $n, onScopeDispose as kn, shallowReadonly as bt, getCurrentInstance as Te, toRef as Fo, camelize as Lo, Comment as Bs, cloneVNode as Ps, h as it, toRefs as me, normalizeProps as U, guardReactiveProps as G, reactive as No, createVNode as P, createCommentVNode as ee, createTextVNode as Y, withKeys as He, withModifiers as we, Fragment as X, watchEffect as he, markRaw as Os, nextTick as te, watchSyncEffect as Ds, isRef as Xt, renderList as ve, Teleport as Bn, onBeforeUnmount as Pn, useSlots as Ss, onBeforeMount as Es, normalizeStyle as Da, effectScope as zo, toHandlerKey as Ms, onUnmounted as Qt, vModelSelect as As, inject as Wo, provide as jo, customRef as Uo, onBeforeUpdate as Ts, onUpdated as Is, mergeDefaults as Ho, readonly as On, normalizeClass as se, mergeModels as dn, useModel as Ko, vModelDynamic as Rs, vModelText as Vs, Transition as Fs } from "vue";
 function Go(e) {
   var t, a, n = "";
   if (typeof e == "string" || typeof e == "number") n += e;
@@ -2426,10 +2426,13 @@ const ct = /* @__PURE__ */ b({
     message: {}
   },
   setup(e) {
-    return (t, a) => At((f(), R("div", null, [
-      K("p", br, Q(t.message), 1)
+    const t = e;
+    return ce(() => {
+      t.message && console.warn("WARNING: The :message prop will not be supported in the next major version.");
+    }), (a, n) => At((f(), R("div", null, [
+      K("p", br, Q(a.message), 1)
     ], 512)), [
-      [xn, t.message]
+      [xn, a.message]
     ]);
   }
 }), ea = (e, t) => {
@@ -11287,8 +11290,8 @@ const _f = /* @__PURE__ */ b({
     }), (l, r) => (f(), R("div", Cf, [
       P(s(nc), {
         id: l.id,
-        modelValue: o.value,
-        "onUpdate:modelValue": r[0] || (r[0] = (i) => o.value = i),
+        checked: o.value,
+        "onUpdate:checked": r[0] || (r[0] = (i) => o.value = i),
         class: "focus-visible:ring-primary-950 dark:ring-offset-primary-950 peer size-4 shrink-0 rounded-sm border border-primary-900 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary-900 data-[state=checked]:text-primary-50 dark:border-primary-50 dark:focus-visible:ring-primary-300 dark:data-[state=checked]:bg-primary-300 dark:data-[state=checked]:text-primary-900"
       }, {
         default: m(() => [
@@ -11300,7 +11303,7 @@ const _f = /* @__PURE__ */ b({
           })
         ]),
         _: 1
-      }, 8, ["id", "modelValue"]),
+      }, 8, ["id", "checked"]),
       l.label ? (f(), y(us, {
         key: 0,
         id: l.id,

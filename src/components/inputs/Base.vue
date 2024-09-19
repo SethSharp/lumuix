@@ -47,6 +47,6 @@ export default {
       {{ description }}
     </Description>
 
-    <Error :message="error" />
+    <Error :error="error" />
   </div>
 </template>

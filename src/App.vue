@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Link } from '@inertiajs/vue3'
-import { computed, ref, watch } from 'vue'
+import { computed, ref } from 'vue'
 import { CalendarDate } from '@internationalized/date'
 import {
   ChartBarSquareIcon,
@@ -8,25 +8,25 @@ import {
   HomeIcon,
   UserCircleIcon,
 } from '@heroicons/vue/16/solid'
-import Tabs from './components/pre-built/Tabs.vue'
 import Text from './components/inputs/Text.vue'
+import Tabs from './components/pre-built/Tabs.vue'
 import Heading from './components/page/Heading.vue'
 import Toggle from './components/inputs/Toggle.vue'
 import Modal from './components/pre-built/Modal.vue'
 import Select from './components/inputs/Select.vue'
-import Datatable from './components/pre-built/Datatable.vue'
 import Container from './components/page/Container.vue'
 import Checkbox from './components/inputs/Checkbox.vue'
 import TextArea from './components/inputs/TextArea.vue'
 import Combobox from './components/inputs/Combobox.vue'
 import Dropdown from './components/pre-built/Dropdown.vue'
-import Pagination from './components/pre-built/Pagination.vue'
 import DatePicker from './components/inputs/DatePicker.vue'
-import DarkModeToggle from './components/pre-built/DarkModeToggle.vue'
+import Datatable from './components/pre-built/Datatable.vue'
 import ImageUpload from './components/inputs/ImageUpload.vue'
+import Pagination from './components/pre-built/Pagination.vue'
 import Notifications from './components/page/Notifications.vue'
 import DangerButton from './components/buttons/DangerButton.vue'
 import PrimaryButton from './components/buttons/PrimaryButton.vue'
+import DarkModeToggle from './components/pre-built/DarkModeToggle.vue'
 import SecondaryButton from './components/buttons/SecondaryButton.vue'
 import { DropdownMenuItem, DropdownMenuLink } from '@/components/dropdown-menu'
 

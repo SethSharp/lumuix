@@ -1,3 +1,5 @@
+import preset from '@/presets/preset'
+
 // button components
 import { Button } from './components/buttons'
 import PrimaryButton from './components/buttons/PrimaryButton.vue'
@@ -271,3 +273,5 @@ export {
   Datatable,
   Dropdown,
 }
+
+export { preset }

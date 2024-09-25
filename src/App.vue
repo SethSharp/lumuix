@@ -351,30 +351,38 @@ const addError = (msg: string) => {
 
       <div class="mt-4 space-y-3">
         <div class="flex gap-2">
-          <Button variant="primary" @click.prevent="sendAlert('You clicked me!')">
+          <Button
+            variant="primary"
+            @click.prevent="sendAlert('You clicked me!')">
             Primary Button
           </Button>
-          <Button variant="primary" as-child>
-            <Link href="/">
-              Primary Link (using as-child)
-            </Link>
+          <Button
+            variant="primary"
+            as-child>
+            <Link href="/"> Primary Link (using as-child) </Link>
           </Button>
         </div>
 
         <div class="flex gap-2">
-          <Button variant="secondary" @click.prevent="sendAlert('You clicked me!')">
+          <Button
+            variant="secondary"
+            @click.prevent="sendAlert('You clicked me!')">
             Secondary button
           </Button>
         </div>
 
         <div class="flex gap-2">
-          <Button variant="destructive" @click.prevent="sendAlert('You clicked me!')">
+          <Button
+            variant="destructive"
+            @click.prevent="sendAlert('You clicked me!')">
             Destructive button
           </Button>
         </div>
 
         <div class="flex gap-2">
-          <Button variant="default" @click.prevent="sendAlert('You clicked me!')">
+          <Button
+            variant="default"
+            @click.prevent="sendAlert('You clicked me!')">
             Default button
           </Button>
         </div>

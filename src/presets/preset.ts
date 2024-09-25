@@ -1,7 +1,7 @@
 export default {
-  safelist: ["dark"],
-  
-  darkMode: ["class"],
+  safelist: ['dark'],
+
+  darkMode: ['class'],
 
   theme: {
     extend: {
@@ -30,5 +30,5 @@ export default {
         DEFAULT: '0.5rem',
       },
     },
-  }
+  },
 }

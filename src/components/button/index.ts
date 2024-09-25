@@ -9,14 +9,11 @@ export const buttonVariants = cva(
       variant: {
         default:
           'bg-slate-800 text-slate-50 hover:bg-slate-700/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90',
-        primary:
-          'bg-primary text-primary-foreground hover:bg-primary-700/90 dark:bg-primary-800 dark:text-slate-100 dark:hover:bg-primary-800/90',
-        destructive:
-          'bg-destructive text-destructive-foreground hover:bg-red-700/90 dark:bg-red-800 dark:text-slate-100 dark:hover:bg-red-800/90',
+        primary: 'bg-primary text-primary-foreground hover:bg-primary/90 dark:bg-[hsl(var(--primary) / 0.8)] dark:text-slate-100 dark:hover:bg-[hsl(var(--primary) / 0.7)]',
+        secondary: 'bg-secondary text-secondary-foreground hover:bg-secondary/90 dark:bg-[hsl(var(--secondary) / 0.8)] dark:text-slate-100 dark:hover:bg-[hsl(var(--secondary) / 0.7)]',
+        destructive: 'bg-destructive text-destructive-foreground hover:bg-[hsl(var(--destructive) / 0.9)] dark:bg-[hsl(var(--destructive) / 0.8)] dark:text-slate-100 dark:hover:bg-[hsl(var(--destructive) / 0.7)]',
         outline:
           'border border-slate-200 bg-white hover:bg-slate-100 hover:text-slate-900 dark:text-slate-200 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50',
-        secondary:
-          'bg-secondary text-secondary-foreground hover:bg-slate-300 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-800/80',
         ghost:
           'hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50',
         link: 'text-slate-500 underline-offset-4 hover:underline dark:text-slate-50',

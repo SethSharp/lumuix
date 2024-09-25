@@ -3,7 +3,7 @@ import { type HTMLAttributes, computed } from 'vue'
 import { ChevronLeftIcon } from '@heroicons/vue/24/outline'
 import { PaginationPrev, type PaginationPrevProps } from 'radix-vue'
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/buttons'
+import { Button } from '@/components/button'
 
 const props = withDefaults(
   defineProps<

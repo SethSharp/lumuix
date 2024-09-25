@@ -7,7 +7,7 @@ import {
   type DateValue,
   getLocalTimeZone,
 } from '@internationalized/date'
-import { Button } from '@/components/buttons'
+import { Button } from '@/components/button'
 import { Calendar } from '@/components/pre-built'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 

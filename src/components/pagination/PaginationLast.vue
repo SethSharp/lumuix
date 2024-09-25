@@ -2,7 +2,7 @@
 import { type HTMLAttributes, computed } from 'vue'
 import { ChevronDoubleRightIcon } from '@heroicons/vue/24/outline'
 import { PaginationLast, type PaginationLastProps } from 'radix-vue'
-import { Button } from '@/components/buttons'
+import { Button } from '@/components/button'
 
 const props = withDefaults(
   defineProps<

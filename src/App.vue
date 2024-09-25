@@ -24,10 +24,8 @@ import Datatable from './components/pre-built/Datatable.vue'
 import ImageUpload from './components/inputs/ImageUpload.vue'
 import Pagination from './components/pre-built/Pagination.vue'
 import Notifications from './components/page/Notifications.vue'
-import DangerButton from './components/buttons/DangerButton.vue'
-import PrimaryButton from './components/buttons/PrimaryButton.vue'
 import DarkModeToggle from './components/pre-built/DarkModeToggle.vue'
-import SecondaryButton from './components/buttons/SecondaryButton.vue'
+import { Button } from './components/button'
 import { DropdownMenuItem, DropdownMenuLink } from '@/components/dropdown-menu'
 
 const sendAlert = (msg: string) => alert(msg)
@@ -353,52 +351,40 @@ const addError = (msg: string) => {
 
       <div class="mt-4 space-y-3">
         <div class="flex gap-2">
-          <PrimaryButton @click.prevent="sendAlert('You clicked me!')">
-            Primary {button}
-          </PrimaryButton>
-          <PrimaryButton
-            is="a"
-            href="https://laravel.com/docs/11.x">
-            Primary {a}
-          </PrimaryButton>
-          <PrimaryButton
-            :is="Link"
-            href="http://localhost:5173#2">
-            Primary {Link}
-          </PrimaryButton>
-          <PrimaryButton
-            :is="Link"
-            as="a"
-            href="http://localhost:5173#2">
-            Primary {Link} as {a}
-          </PrimaryButton>
-          <PrimaryButton
-            :is="Link"
-            as="button">
-            Primary Button is {Link} as {button}
-          </PrimaryButton>
+          <Button
+            variant="primary"
+            @click.prevent="sendAlert('You clicked me!')">
+            Primary Button
+          </Button>
+          <Button
+            variant="primary"
+            as-child>
+            <Link href="/"> Primary Link (using as-child) </Link>
+          </Button>
         </div>
 
         <div class="flex gap-2">
-          <SecondaryButton @click.prevent="sendAlert('You clicked me!')">
-            A secondary button
-          </SecondaryButton>
-          <SecondaryButton
-            is="a"
-            href="https://vuejs.org">
-            A secondary link
-          </SecondaryButton>
+          <Button
+            variant="secondary"
+            @click.prevent="sendAlert('You clicked me!')">
+            Secondary button
+          </Button>
         </div>
 
         <div class="flex gap-2">
-          <DangerButton @click.prevent="sendAlert('You clicked me!')">
-            A danger button
-          </DangerButton>
-          <DangerButton
-            is="a"
-            href="https://google.com">
-            A danger link
-          </DangerButton>
+          <Button
+            variant="destructive"
+            @click.prevent="sendAlert('You clicked me!')">
+            Destructive button
+          </Button>
+        </div>
+
+        <div class="flex gap-2">
+          <Button
+            variant="default"
+            @click.prevent="sendAlert('You clicked me!')">
+            Default button
+          </Button>
         </div>
       </div>
     </Container>

@@ -15,8 +15,11 @@
   "exports": {
     ".": {
       "import": "./dist/lumuix.js",
-      "require": "./dist/lumuix.umd.cjs",
       "types": "./dist/types/index.d.ts"
+    },
+    "./dropdown-menu": {
+      "import": "./dist/dropdown-menu.js",
+      "types": "./dist/types/components/dropdown-menu/index.d.ts"
     }
   },
   "types": "./dist/types/index.d.ts",

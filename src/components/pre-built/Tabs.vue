@@ -2,7 +2,7 @@
 import { computed } from 'vue'
 import Dropdown from './Dropdown.vue'
 import { DropdownMenuLink } from '@/components/dropdown-menu'
-import SecondaryButton from '../buttons/SecondaryButton.vue'
+import { Button } from '../button'
 import { TabsRoot, TabBaseContent, TabsList, TabsItem } from '@/components/tabs'
 
 const props = withDefaults(
@@ -35,7 +35,7 @@ const currentValue = computed(() =>
     <TabsList class="flex md:hidden">
       <Dropdown trigger-class="size-full">
         <template #trigger>
-          <SecondaryButton> {{ currentValue?.name ?? 'Select an option' }} </SecondaryButton>
+          <Button variant="secondary"> {{ currentValue?.name ?? 'Select an option' }} </Button>
         </template>
 
         <template #content>

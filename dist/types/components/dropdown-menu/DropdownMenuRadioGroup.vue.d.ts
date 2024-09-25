@@ -1,25 +1,21 @@
 import { type DropdownMenuRadioGroupProps } from 'radix-vue';
 declare function __VLS_template(): {
-    default?(_: {}): any;
+    slots: {
+        default?(_: {}): any;
+    };
+    refs: {};
+    attrs: Partial<{}>;
 };
-declare const __VLS_component: import("vue").DefineComponent<__VLS_TypePropsToOption<DropdownMenuRadioGroupProps>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (payload: string) => void;
-}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToOption<DropdownMenuRadioGroupProps>>> & {
+type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
+declare const __VLS_component: import("vue").DefineComponent<DropdownMenuRadioGroupProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    "update:modelValue": (payload: string) => any;
+}, string, import("vue").PublicProps, Readonly<DropdownMenuRadioGroupProps> & Readonly<{
     "onUpdate:modelValue"?: (payload: string) => any;
-}, {}, {}>;
-declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, ReturnType<typeof __VLS_template>>;
+}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;
 type __VLS_WithTemplateSlots<T, S> = T & {
     new (): {
         $slots: S;
-    };
-};
-type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
-type __VLS_TypePropsToOption<T> = {
-    [K in keyof T]-?: {} extends Pick<T, K> ? {
-        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>;
-    } : {
-        type: import('vue').PropType<T[K]>;
-        required: true;
     };
 };

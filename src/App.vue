@@ -215,11 +215,11 @@ const addError = (msg: string) => {
     id="nav-bar"
     class="sticky top-0 z-10 flex h-fit w-full justify-between bg-gradient-to-r from-green-400 to-green-500 dark:from-gray-800 dark:to-gray-950">
     <a
-      href="https://github.com/SethSharp/ui"
-      class="p-4 text-xl text-gray-100 transition hover:text-white dark:text-primary-200 sm:text-3xl">
+      href="https://github.com/SethSharp/lumuix"
+      class="dark:text-primary-200 p-4 text-xl text-gray-100 transition hover:text-white sm:text-3xl">
       <b> Lumuix </b>- Generic Vue Component Library
     </a>
-    <div class="my-auto mr-6 flex gap-2 font-bold text-white dark:text-primary-200">
+    <div class="dark:text-primary-200 my-auto mr-6 flex gap-2 font-bold text-white">
       1.0.0-alpha.1.0
       <DarkModeToggle />
     </div>
@@ -323,12 +323,12 @@ const addError = (msg: string) => {
 
       <Dropdown width-class="w-72">
         <template #trigger="{ open }">
-          <SecondaryButton>
+          <Button variant="secondary">
             Click me!
             <ChevronDownIcon
               class="size-5 transition"
               :class="[open ? 'rotate-180' : '']" />
-          </SecondaryButton>
+          </Button>
         </template>
 
         <template #content>
@@ -380,11 +380,7 @@ const addError = (msg: string) => {
         </div>
 
         <div class="flex gap-2">
-          <Button
-            variant="default"
-            @click.prevent="sendAlert('You clicked me!')">
-            Default button
-          </Button>
+          <Button @click.prevent="sendAlert('You clicked me!')"> Default button </Button>
         </div>
       </div>
     </Container>
@@ -392,7 +388,11 @@ const addError = (msg: string) => {
     <Container>
       <Heading shadow> Popovers </Heading>
 
-      <PrimaryButton @click="open = true"> Open Modal </PrimaryButton>
+      <Button
+        variant="primary"
+        @click="open = true">
+        Open Modal
+      </Button>
 
       <Modal
         :open="open"
@@ -410,11 +410,17 @@ const addError = (msg: string) => {
     <Container>
       <Heading> Notifications </Heading>
 
-      <SecondaryButton @click="addSuccess('This is a successful message!')">
+      <Button
+        variant="secondary"
+        @click="addSuccess('This is a successful message!')">
         Add Success Message
-      </SecondaryButton>
+      </Button>
 
-      <DangerButton @click="addError('This is a error message!')"> Add Error Message </DangerButton>
+      <Button
+        variant="destructive"
+        @click="addError('This is a error message!')">
+        Add Error Message
+      </Button>
     </Container>
 
     <Notifications

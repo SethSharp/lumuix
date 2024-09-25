@@ -15,6 +15,7 @@
       "DOM",
       "DOM.Iterable"
     ],
+    "skipLibCheck": true
   },
   "exclude": [
     "./dist/**/*",

@@ -1,28 +1,24 @@
 import { type HTMLAttributes } from 'vue';
 import { type CalendarHeadingProps } from 'radix-vue';
 declare function __VLS_template(): {
-    default?(_: {
-        headingValue: string;
-    }): any;
+    slots: {
+        default?(_: {
+            headingValue: string;
+        }): any;
+    };
+    refs: {};
+    attrs: Partial<{}>;
 };
-declare const __VLS_component: import("vue").DefineComponent<__VLS_TypePropsToOption<CalendarHeadingProps & {
+type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
+declare const __VLS_component: import("vue").DefineComponent<CalendarHeadingProps & {
     class?: HTMLAttributes["class"];
-}>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_TypePropsToOption<CalendarHeadingProps & {
+}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<CalendarHeadingProps & {
     class?: HTMLAttributes["class"];
-}>>>, {}, {}>;
-declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, ReturnType<typeof __VLS_template>>;
+}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;
 type __VLS_WithTemplateSlots<T, S> = T & {
     new (): {
         $slots: S;
-    };
-};
-type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
-type __VLS_TypePropsToOption<T> = {
-    [K in keyof T]-?: {} extends Pick<T, K> ? {
-        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>;
-    } : {
-        type: import('vue').PropType<T[K]>;
-        required: true;
     };
 };

@@ -1,12 +1,17 @@
 declare function __VLS_template(): {
-    selectedOptions?(_: {
-        selectedOptions: number | Option | Option[];
-    }): any;
-    item?(_: {
-        option: Option;
-    }): any;
+    slots: {
+        selectedOptions?(_: {
+            selectedOptions: number | Option | Option[];
+        }): any;
+        item?(_: {
+            option: Option;
+        }): any;
+    };
+    refs: {};
+    attrs: Partial<{}>;
 };
-declare const __VLS_component: import("vue").DefineComponent<__VLS_WithDefaults<__VLS_TypePropsToOption<{
+type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
+declare const __VLS_component: import("vue").DefineComponent<{
     modelValue: [] | number | null;
     placeholder?: string;
     noResults?: string;
@@ -14,15 +19,9 @@ declare const __VLS_component: import("vue").DefineComponent<__VLS_WithDefaults<
     multiple?: boolean;
     allowSearch?: boolean;
     widthClass?: string;
-}>, {
-    placeholder: string;
-    noResults: string;
-    multiple: boolean;
-    allowSearch: boolean;
-    widthClass: string;
-}>, {}, unknown, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;
-}, string, import("vue").PublicProps, Readonly<import("vue").ExtractPropTypes<__VLS_WithDefaults<__VLS_TypePropsToOption<{
+}, string, import("vue").PublicProps, Readonly<{
     modelValue: [] | number | null;
     placeholder?: string;
     noResults?: string;
@@ -30,42 +29,19 @@ declare const __VLS_component: import("vue").DefineComponent<__VLS_WithDefaults<
     multiple?: boolean;
     allowSearch?: boolean;
     widthClass?: string;
-}>, {
-    placeholder: string;
-    noResults: string;
-    multiple: boolean;
-    allowSearch: boolean;
-    widthClass: string;
-}>>> & {
+}> & Readonly<{
     "onUpdate:modelValue"?: (...args: any[]) => any;
-}, {
-    multiple: boolean;
+}>, {
+    widthClass: string;
     placeholder: string;
+    multiple: boolean;
     noResults: string;
     allowSearch: boolean;
-    widthClass: string;
-}, {}>;
-declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, ReturnType<typeof __VLS_template>>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;
-type __VLS_WithDefaults<P, D> = {
-    [K in keyof Pick<P, keyof P>]: K extends keyof D ? __VLS_Prettify<P[K] & {
-        default: D[K];
-    }> : P[K];
-};
-type __VLS_Prettify<T> = {
-    [K in keyof T]: T[K];
-} & {};
 type __VLS_WithTemplateSlots<T, S> = T & {
     new (): {
         $slots: S;
-    };
-};
-type __VLS_NonUndefinedable<T> = T extends undefined ? never : T;
-type __VLS_TypePropsToOption<T> = {
-    [K in keyof T]-?: {} extends Pick<T, K> ? {
-        type: import('vue').PropType<__VLS_NonUndefinedable<T[K]>>;
-    } : {
-        type: import('vue').PropType<T[K]>;
-        required: true;
     };
 };

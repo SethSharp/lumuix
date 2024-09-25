@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { v4 as uuidv4 } from 'uuid'
-import SecondaryButton from '../buttons/SecondaryButton.vue'
+import { Button } from '../button'
 
 const props = withDefaults(
   defineProps<{
@@ -52,6 +52,10 @@ const fileUpload = () => document.getElementById(uniqueId).click()
       type="file"
       @input="handleFileChange" />
 
-    <SecondaryButton @click="fileUpload"> Upload </SecondaryButton>
+    <Button
+      variant="secondary"
+      @click="fileUpload">
+      Upload
+    </Button>
   </div>
 </template>

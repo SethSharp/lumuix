@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button } from '@/components/buttons'
+import { Button } from '@/components/button'
 import {
   PaginationRoot,
   PaginationEllipsis,

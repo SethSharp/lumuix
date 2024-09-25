@@ -3,7 +3,7 @@ import { type HTMLAttributes, computed } from 'vue'
 import { RangeCalendarNext, type RangeCalendarNextProps, useForwardProps } from 'radix-vue'
 import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 import { cn } from '@/lib/utils'
-import { buttonVariants } from '@/components/buttons'
+import { buttonVariants } from '@/components/button'
 
 const props = defineProps<RangeCalendarNextProps & { class?: HTMLAttributes['class'] }>()
 

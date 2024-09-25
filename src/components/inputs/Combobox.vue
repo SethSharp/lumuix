@@ -9,7 +9,7 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/command'
-import { Button } from '@/components/buttons'
+import { Button } from '@/components/button'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
 const emits = defineEmits(['update:modelValue'])

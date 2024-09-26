@@ -1,8 +1,8 @@
 import * as uo from "vue";
 import { defineComponent as _, ref as M, openBlock as f, createElementBlock as V, Fragment as X, createVNode as P, unref as r, normalizeClass as ne, withCtx as m, renderList as ve, createBlock as y, renderSlot as x, createTextVNode as Y, toDisplayString as Q, createCommentVNode as te, createElementVNode as H, computed as B, mergeProps as E, toRef as Wo, readonly as Bn, customRef as jo, onMounted as ce, nextTick as ae, getCurrentScope as Pn, onScopeDispose as Dn, getCurrentInstance as Me, watch as J, watchEffect as ge, shallowRef as On, shallowReadonly as bt, camelize as Uo, Comment as Dr, cloneVNode as Or, h as dt, toRefs as me, normalizeProps as K, guardReactiveProps as G, reactive as Ko, withKeys as Ue, withModifiers as we, markRaw as Sr, watchSyncEffect as Er, withDirectives as At, vShow as Sn, isRef as Xt, resolveDynamicComponent as Qe, Teleport as En, onBeforeUnmount as Mn, useSlots as Mr, onBeforeMount as Ar, normalizeStyle as Sa, effectScope as Ho, toHandlerKey as Tr, onUnmounted as Qt, vModelSelect as Ir, inject as Go, provide as qo, onBeforeUpdate as Vr, onUpdated as Rr, mergeDefaults as Yo, watchPostEffect as Fr, mergeModels as cn, useModel as Zo, Transition as Lr, vModelDynamic as zr, vModelText as Nr } from "vue";
 const Iv = {
-  darkMode: ["class"],
   safelist: ["dark"],
+  darkMode: ["class"],
   theme: {
     extend: {
       colors: {
@@ -10,26 +10,54 @@ const Iv = {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        foreground: "hsl(var(--foreground))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          foreground: "hsl(var(--primary-foreground))"
+          50: "hsl(var(--primary-50))",
+          100: "hsl(var(--primary-100))",
+          200: "hsl(var(--primary-200))",
+          300: "hsl(var(--primary-300))",
+          400: "hsl(var(--primary-400))",
+          500: "hsl(var(--primary-500))",
+          600: "hsl(var(--primary-600))",
+          700: "hsl(var(--primary-700))",
+          800: "hsl(var(--primary-800))",
+          900: "hsl(var(--primary-900))",
+          950: "hsl(var(--primary-950))"
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          foreground: "hsl(var(--secondary-foreground))"
+          50: "hsl(var(--secondary-50))",
+          100: "hsl(var(--secondary-100))",
+          200: "hsl(var(--secondary-200))",
+          300: "hsl(var(--secondary-300))",
+          400: "hsl(var(--secondary-400))",
+          500: "hsl(var(--secondary-500))",
+          600: "hsl(var(--secondary-600))",
+          700: "hsl(var(--secondary-700))",
+          800: "hsl(var(--secondary-800))",
+          900: "hsl(var(--secondary-900))",
+          950: "hsl(var(--secondary-950))"
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
-          foreground: "hsl(var(--destructive-foreground))"
+          50: "hsl(var(--destructive-50))",
+          100: "hsl(var(--destructive-100))",
+          200: "hsl(var(--destructive-200))",
+          300: "hsl(var(--destructive-300))",
+          400: "hsl(var(--destructive-400))",
+          500: "hsl(var(--destructive-500))",
+          600: "hsl(var(--destructive-600))",
+          700: "hsl(var(--destructive-700))",
+          800: "hsl(var(--destructive-800))",
+          900: "hsl(var(--destructive-900))",
+          950: "hsl(var(--destructive-950))"
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))"
         },
         accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))"
+          DEFAULT: "hsl(var(--accent))"
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -45,30 +73,6 @@ const Iv = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)"
-      },
-      keyframes: {
-        "accordion-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-accordion-content-height)" }
-        },
-        "accordion-up": {
-          from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 }
-        },
-        "collapsible-down": {
-          from: { height: 0 },
-          to: { height: "var(--radix-collapsible-content-height)" }
-        },
-        "collapsible-up": {
-          from: { height: "var(--radix-collapsible-content-height)" },
-          to: { height: 0 }
-        }
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
-        "collapsible-down": "collapsible-down 0.2s ease-in-out",
-        "collapsible-up": "collapsible-up 0.2s ease-in-out"
       }
     }
   }
@@ -11845,12 +11849,12 @@ const zf = /* @__PURE__ */ _({
       "onUpdate:checked": u[0] || (u[0] = (c) => o.value = c)
     }, r(s), {
       class: r(W)(
-        "focus-visible:ring-primary-950 dark:focus-visible:ring-offset-primary-950 data-[state=checked]:bg-primary-600 data-[state=unchecked]:bg-primary-300 dark:focus-visible:ring-primary-300 dark:data-[state=checked]:bg-primary-800 dark:data-[state=unchecked]:bg-primary-600 peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50",
+        "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-950 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary-600 data-[state=unchecked]:bg-primary-300 dark:focus-visible:ring-primary-300 dark:focus-visible:ring-offset-primary-950 dark:data-[state=checked]:bg-primary-800 dark:data-[state=unchecked]:bg-primary-600",
         n.class
       )
     }), {
       default: m(({ checked: c }) => [
-        P(r(Vf), { class: "dark:bg-primary-950 pointer-events-none block size-5 rounded-full bg-white shadow-lg ring-0 transition-transform duration-100 ease-in data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0" }, {
+        P(r(Vf), { class: "pointer-events-none block size-5 rounded-full bg-white shadow-lg ring-0 transition-transform duration-100 ease-in data-[state=checked]:translate-x-5 data-[state=unchecked]:translate-x-0 dark:bg-primary-950" }, {
           default: m(() => [
             c ? x(i.$slots, "checked", { key: 0 }) : te("", !0),
             c ? te("", !0) : x(i.$slots, "not-checked", { key: 1 })
@@ -11872,10 +11876,10 @@ const zf = /* @__PURE__ */ _({
       "onUpdate:modelValue": n[0] || (n[0] = (o) => Xt(t) ? t.value = o : null)
     }, {
       checked: m(() => [
-        P(r(ni), { class: "text-primary-900 m-auto mt-0.5 size-4" })
+        P(r(ni), { class: "m-auto mt-0.5 size-4 text-primary-900" })
       ]),
       "not-checked": m(() => [
-        P(r(oi), { class: "text-primary-900 m-auto size-5" })
+        P(r(oi), { class: "m-auto size-5 text-primary-900" })
       ]),
       _: 1
     }, 8, ["modelValue"]));
@@ -12417,11 +12421,11 @@ const Ro = (e) => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e, Fo =
   {
     variants: {
       variant: {
-        default: "bg-slate-800 text-slate-50 hover:bg-slate-700/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90",
-        primary: "bg-primary text-primary-foreground hover:bg-primary-700/90 dark:bg-primary-800 dark:text-slate-100 dark:hover:bg-primary-800/90",
-        destructive: "bg-destructive text-destructive-foreground hover:bg-red-700/90 dark:bg-red-800 dark:text-slate-100 dark:hover:bg-red-800/90",
+        default: "bg-slate-500 text-slate-50 hover:bg-slate-700/90 dark:bg-slate-50 dark:text-slate-900 dark:hover:bg-slate-50/90",
+        primary: "bg-primary-500 text-primary-50 hover:bg-primary-700/90 dark:bg-primary-800 dark:text-slate-100 dark:hover:bg-primary-800/90",
+        destructive: "bg-red-500 text-slate-50 hover:bg-red-700/90 dark:bg-red-800 dark:text-slate-100 dark:hover:bg-red-800/90",
         outline: "border border-slate-200 bg-white hover:bg-slate-100 hover:text-slate-900 dark:text-slate-200 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50",
-        secondary: "bg-secondary text-secondary-foreground hover:bg-slate-300 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-800/80",
+        secondary: "bg-slate-100 text-slate-900 hover:bg-slate-300 dark:bg-slate-800 dark:text-slate-100 dark:hover:bg-slate-800/80",
         ghost: "hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50",
         link: "text-slate-500 underline-offset-4 hover:underline dark:text-slate-50"
       },
@@ -13028,7 +13032,7 @@ const Ro = (e) => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e, Fo =
                       H("button", {
                         onClick: (c) => o(u),
                         type: "button",
-                        class: "focus:ring-primary-500 rounded-md bg-white text-sm font-medium text-slate-700 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2"
+                        class: "rounded-md bg-white text-sm font-medium text-slate-700 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2"
                       }, " Dismiss ", 8, $m)
                     ])
                   ])
@@ -13101,7 +13105,7 @@ const Ro = (e) => typeof e == "boolean" ? "".concat(e) : e === 0 ? "0" : e, Fo =
     return (a, n) => (f(), y(Qe(a.is), {
       href: a.tab.href,
       class: ne([
-        a.tab.active ? "text-primary-500 dark:text-primary-400 bg-white hover:bg-opacity-80 dark:bg-slate-950" : "hover:bg-white dark:hover:bg-slate-900",
+        a.tab.active ? "bg-white text-primary-500 hover:bg-opacity-80 dark:bg-slate-950 dark:text-primary-400" : "hover:bg-white dark:hover:bg-slate-900",
         r(W)(
           "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
           t.class
@@ -13294,7 +13298,7 @@ const Sm = /* @__PURE__ */ ia(Pm, [["render", Om]]), ch = /* @__PURE__ */ _({
     }), n = ie(a);
     return (o, l) => (f(), y(r(sf), E(r(n), {
       class: r(W)(
-        "focus:ring-primary-900 flex h-10 w-full items-center justify-between rounded-md border border-slate-200 px-3 py-2 text-sm ring-offset-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-white dark:ring-offset-slate-950 dark:placeholder:text-slate-400 dark:focus:ring-slate-300 [&>span]:line-clamp-1",
+        "flex h-10 w-full items-center justify-between rounded-md border border-slate-200 px-3 py-2 text-sm ring-offset-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-900 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-white dark:ring-offset-slate-950 dark:placeholder:text-slate-400 dark:focus:ring-slate-300 [&>span]:line-clamp-1",
         t.class
       )
     }), {
@@ -13417,7 +13421,7 @@ const Sm = /* @__PURE__ */ ia(Pm, [["render", Om]]), ch = /* @__PURE__ */ _({
         H("span", Im, [
           P(r(_f), null, {
             default: m(() => [
-              P(r(Ma), { class: "text-primary-700 dark:text-primary-400 size-4" })
+              P(r(Ma), { class: "size-4 text-primary-700 dark:text-primary-400" })
             ]),
             _: 1
           })
@@ -13499,7 +13503,7 @@ const Sm = /* @__PURE__ */ ia(Pm, [["render", Om]]), ch = /* @__PURE__ */ _({
     }), {
       default: m(() => [
         x(o.$slots, "default", {}, () => [
-          P(r(ei), { class: "text-primary-900 size-4" })
+          P(r(ei), { class: "size-4 text-primary-900" })
         ])
       ]),
       _: 3
@@ -14197,7 +14201,7 @@ const uv = /* @__PURE__ */ ia(sv, [["render", dv]]), cv = { class: "grid gap-4 m
         id: l.id,
         checked: o.value,
         "onUpdate:checked": s[0] || (s[0] = (i) => o.value = i),
-        class: "focus-visible:ring-primary-950 dark:ring-offset-primary-950 border-primary-900 data-[state=checked]:bg-primary-900 data-[state=checked]:text-primary-50 dark:border-primary-50 dark:focus-visible:ring-primary-300 dark:data-[state=checked]:bg-primary-300 dark:data-[state=checked]:text-primary-900 peer size-4 shrink-0 rounded-sm border ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+        class: "peer size-4 shrink-0 rounded-sm border border-primary-900 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary-900 data-[state=checked]:text-primary-50 dark:border-primary-50 dark:ring-offset-primary-950 dark:focus-visible:ring-primary-300 dark:data-[state=checked]:bg-primary-300 dark:data-[state=checked]:text-primary-900"
       }, {
         default: m(() => [
           P(r(_c), { class: "flex h-full w-full items-center justify-center text-current" }, {

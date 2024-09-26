@@ -1,1 +1,1 @@
-import './styles.css';
+import './local.css';

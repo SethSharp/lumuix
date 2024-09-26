@@ -1,6 +1,6 @@
 declare const _default: {
-    darkMode: string[];
     safelist: string[];
+    darkMode: string[];
     theme: {
         extend: {
             colors: {
@@ -8,18 +8,47 @@ declare const _default: {
                 input: string;
                 ring: string;
                 background: string;
-                foreground: string;
                 primary: {
                     DEFAULT: string;
-                    foreground: string;
+                    '50': string;
+                    '100': string;
+                    '200': string;
+                    '300': string;
+                    '400': string;
+                    '500': string;
+                    '600': string;
+                    '700': string;
+                    '800': string;
+                    '900': string;
+                    '950': string;
                 };
                 secondary: {
                     DEFAULT: string;
-                    foreground: string;
+                    '50': string;
+                    '100': string;
+                    '200': string;
+                    '300': string;
+                    '400': string;
+                    '500': string;
+                    '600': string;
+                    '700': string;
+                    '800': string;
+                    '900': string;
+                    '950': string;
                 };
                 destructive: {
                     DEFAULT: string;
-                    foreground: string;
+                    '50': string;
+                    '100': string;
+                    '200': string;
+                    '300': string;
+                    '400': string;
+                    '500': string;
+                    '600': string;
+                    '700': string;
+                    '800': string;
+                    '900': string;
+                    '950': string;
                 };
                 muted: {
                     DEFAULT: string;
@@ -27,7 +56,6 @@ declare const _default: {
                 };
                 accent: {
                     DEFAULT: string;
-                    foreground: string;
                 };
                 popover: {
                     DEFAULT: string;
@@ -43,46 +71,6 @@ declare const _default: {
                 lg: string;
                 md: string;
                 sm: string;
-            };
-            keyframes: {
-                'accordion-down': {
-                    from: {
-                        height: number;
-                    };
-                    to: {
-                        height: string;
-                    };
-                };
-                'accordion-up': {
-                    from: {
-                        height: string;
-                    };
-                    to: {
-                        height: number;
-                    };
-                };
-                'collapsible-down': {
-                    from: {
-                        height: number;
-                    };
-                    to: {
-                        height: string;
-                    };
-                };
-                'collapsible-up': {
-                    from: {
-                        height: string;
-                    };
-                    to: {
-                        height: number;
-                    };
-                };
-            };
-            animation: {
-                'accordion-down': string;
-                'accordion-up': string;
-                'collapsible-down': string;
-                'collapsible-up': string;
             };
         };
     };

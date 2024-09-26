@@ -216,10 +216,10 @@ const addError = (msg: string) => {
     class="sticky top-0 z-10 flex h-fit w-full justify-between bg-gradient-to-r from-green-400 to-green-500 dark:from-gray-800 dark:to-gray-950">
     <a
       href="https://github.com/SethSharp/lumuix"
-      class="dark:text-primary-200 p-4 text-xl text-gray-100 transition hover:text-white sm:text-3xl">
+      class="p-4 text-xl text-gray-100 transition hover:text-white dark:text-primary-200 sm:text-3xl">
       <b> Lumuix </b>- Generic Vue Component Library
     </a>
-    <div class="dark:text-primary-200 my-auto mr-6 flex gap-2 font-bold text-white">
+    <div class="my-auto mr-6 flex gap-2 font-bold text-white dark:text-primary-200">
       1.0.0-alpha.1.0
       <DarkModeToggle />
     </div>

@@ -109,7 +109,7 @@ watch(
                     <button
                       @click="removeNotification(index)"
                       type="button"
-                      class="focus:ring-primary-500 rounded-md bg-white text-sm font-medium text-slate-700 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-offset-2">
+                      class="rounded-md bg-white text-sm font-medium text-slate-700 hover:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
                       Dismiss
                     </button>
                   </div>

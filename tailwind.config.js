@@ -1,6 +1,5 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
 import preset from './src/presets/preset'
-// import './src/presets/styles.css'
 
 /** @type {import('tailwindcss').Config} */
 export default {

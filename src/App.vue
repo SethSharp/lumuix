@@ -380,6 +380,14 @@ const addError = (msg: string) => {
         </div>
 
         <div class="flex gap-2">
+          <Button
+            variant="outline"
+            @click.prevent="sendAlert('You clicked me!')">
+            Outline button
+          </Button>
+        </div>
+
+        <div class="flex gap-2">
           <Button @click.prevent="sendAlert('You clicked me!')"> Default button </Button>
         </div>
       </div>

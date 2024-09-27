@@ -1,4 +1,4 @@
-@import './presets/styles.css';
+@import '../src/presets/styles.css';
 
 @tailwind base;
 @tailwind components;

@@ -8,7 +8,7 @@ import {
   HomeIcon,
   UserCircleIcon,
 } from '@heroicons/vue/16/solid'
-import Text from './components/inputs/Text.vue'
+import Text from './components/inputs/Input.vue'
 import Tabs from './components/pre-built/Tabs.vue'
 import Heading from './components/page/Heading.vue'
 import Toggle from './components/inputs/Toggle.vue'

@@ -45,7 +45,8 @@
     "tailwind-merge": "^2.5.2",
     "uuid": "^10.0.0",
     "vue": "^3.4.29",
-    "vue-component-type-helpers": "^2.0.29"
+    "vue-component-type-helpers": "^2.0.29",
+    "vue-router": "^4.4.5"
   },
   "devDependencies": {
     "@babel/types": "^7.24.7",

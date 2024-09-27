@@ -14683,7 +14683,7 @@ const Ov = { class: "flex items-center space-x-2" }, Sv = ["src"], Ev = ["accept
       placeholder: a.placeholder,
       required: a.required,
       type: a.type,
-      class: ne(["flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:outline-none focus-visible:border-slate-900 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300 dark:focus-visible:border-slate-300 dark:placeholder:text-slate-500", {
+      class: ne(["flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:border-slate-900 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300 dark:placeholder:text-slate-500 dark:focus-visible:border-slate-300", {
         "focus-visible:ring-slate-950 dark:focus-visible:ring-slate-400": !a.error,
         "focus-visible:ring-red-600 dark:focus-visible:ring-red-400": a.error
       }])
@@ -14707,7 +14707,7 @@ const Ov = { class: "flex items-center space-x-2" }, Sv = ["src"], Ev = ["accept
     return (l, s) => At((f(), V("textarea", {
       "onUpdate:modelValue": s[0] || (s[0] = (i) => Xt(o) ? o.value = i : null),
       placeholder: l.placeholder,
-      class: ne(["flex min-h-20 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white placeholder:text-slate-500 focus-visible:outline-none focus-visible:border-slate-950 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300 dark:focus-visible:border-slate-300 dark:placeholder:text-slate-500", {
+      class: ne(["flex min-h-20 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white placeholder:text-slate-500 focus-visible:border-slate-950 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300 dark:placeholder:text-slate-500 dark:focus-visible:border-slate-300", {
         "focus-visible:ring-slate-950 dark:focus-visible:ring-slate-400": !l.error,
         "focus-visible:ring-red-600 dark:focus-visible:ring-red-400": l.error
       }])
@@ -14747,7 +14747,7 @@ export {
   yh as CommandShortcut,
   Vv as Container,
   jv as DarkModeToggle,
-  Gv as DataTable,
+  Gv as Datatable,
   Ch as DatePicker,
   _v as Description,
   _r as Dialog,
@@ -14781,6 +14781,7 @@ export {
   pv as FormElement,
   wh as FormGrid,
   kh as ImageUpload,
+  Ph as Input,
   Pr as Label,
   sh as Modal,
   Rv as Notifications,
@@ -14826,7 +14827,6 @@ export {
   zo as TabsList,
   Rm as TabsRoot,
   dh as TabsTrigger,
-  Ph as Text,
   Dh as TextArea,
   im as Toggle,
   Wa as buttonVariants,

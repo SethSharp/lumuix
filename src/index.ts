@@ -1,15 +1,9 @@
 import preset from '@/presets/preset'
 
-// pre-built
-import Datatable from './components/pre-built/Datatable.vue'
-import DarkModeToggle from './components/pre-built/DarkModeToggle.vue'
-import Dropdown from './components/pre-built/Dropdown.vue'
 import Container from './components/page/Container.vue'
-import Pagination from './components/pre-built/Pagination.vue'
-import Modal from './components/pre-built/Modal.vue'
 import Notifications from './components/page/Notifications.vue'
-import Tabs from './components/pre-built/Tabs.vue'
 
+export * from '@/components/pre-built'
 export * from './components/button'
 export * from '@/components/tabs'
 export * from '@/components/table'
@@ -23,6 +17,6 @@ export * from '@/components/calendar'
 export * from '@/components/form'
 export * from '@/components/inputs'
 
-export { Notifications, Tabs, Pagination, Modal, DarkModeToggle, Container, Datatable, Dropdown }
+export { Notifications, Pagination, Container }
 
 export { preset }

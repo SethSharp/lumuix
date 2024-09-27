@@ -227,7 +227,7 @@ const addError = (msg: string) => {
 
   <div class="mx-4 mt-4 space-y-6 sm:mx-8">
     <Container>
-      <Heading shadow> Overview </Heading>
+      <Heading> Overview </Heading>
 
       <Container>
         This component library adds multiple benefits, including but not limited to the following:
@@ -241,7 +241,7 @@ const addError = (msg: string) => {
     </Container>
 
     <Container>
-      <Heading shadow> Page </Heading>
+      <Heading> Page </Heading>
 
       <div class="space-y-4">
         <Datatable v-bind="baseDataTableConfig">
@@ -265,7 +265,7 @@ const addError = (msg: string) => {
     </Container>
 
     <Container>
-      <Heading shadow> Inputs </Heading>
+      <Heading> Inputs </Heading>
 
       <div class="my-4 space-y-4">
         <Text
@@ -319,7 +319,7 @@ const addError = (msg: string) => {
     </Container>
 
     <Container>
-      <Heading shadow> Dropdown </Heading>
+      <Heading> Dropdown </Heading>
 
       <Dropdown width-class="w-72">
         <template #trigger="{ open }">
@@ -341,7 +341,7 @@ const addError = (msg: string) => {
     </Container>
 
     <Container>
-      <Heading shadow> Links & Buttons </Heading>
+      <Heading> Links & Buttons </Heading>
 
       Both Buttons & Links extend the base shadcn Button component however, there are different
       required props for each component ie; Links will require a href and buttons can be provided a
@@ -394,7 +394,7 @@ const addError = (msg: string) => {
     </Container>
 
     <Container>
-      <Heading shadow> Popovers </Heading>
+      <Heading> Popovers </Heading>
 
       <Button
         variant="primary"

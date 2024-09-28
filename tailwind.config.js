@@ -6,10 +6,10 @@ export default {
   presets: [preset],
 
   css: {
-    postcss: './postcss.config.cjs'
+    postcss: './postcss.config.cjs',
   },
 
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './app/**/*.{vue,js,ts,jsx,tsx}'],
 
   safelist: ['max-w-sm', 'max-w-md', 'max-w-lg', 'max-w-xl', 'max-w-2xl'],
 

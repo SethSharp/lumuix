@@ -32,9 +32,9 @@ declare const __VLS_component: import("vue").DefineComponent<{
 }> & Readonly<{
     "onUpdate:modelValue"?: (...args: any[]) => any;
 }>, {
-    widthClass: string;
-    placeholder: string;
     multiple: boolean;
+    placeholder: string;
+    widthClass: string;
     noResults: string;
     allowSearch: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;

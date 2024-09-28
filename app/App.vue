@@ -23,7 +23,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
     </nav>
     <main>
       <div class="flex gap-4">
-        <div class="w-1/4 bg-slate-100 dark:bg-slate-700">
+        <div class="w-1/4 bg-slate-100 dark:bg-slate-950">
           <nav class="space-y-4 p-4">
             <div
               v-for="group in routes"

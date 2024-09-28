@@ -2,7 +2,6 @@
 import router from './router'
 import { RouterLink } from 'vue-router'
 import { DarkModeToggle } from '@/components/pre-built'
-console.log(router.getRoutes())
 </script>
 
 <template>
@@ -25,10 +24,20 @@ console.log(router.getRoutes())
     <main>
       <div class="flex gap-4">
         <div class="w-1/4">
-          <div v-for="route in router.getRoutes()">
-            <router-link v-if="route.name !== 'NotFound'" :to="route.path">
-              {{ route.path }}
-            </router-link>
+          <div v-for="route in router.getRoutes()" class="flex flex-col bg-red-500 w-[100px]">
+            <template v-if="route.name !== 'NotFound'">
+              <router-link v-if="!route.children" :to="route.path">
+                {{ route.name }}
+              </router-link>
+              <div v-else>
+                <span>
+                  {{ route.name }}
+                </span>
+                <router-link v-for="subRoute in route.children" :key="subRoute.name" :to="subRoute.path">
+                  {{ subRoute.name }}
+                </router-link>
+              </div>
+            </template>
           </div>
         </div>
         <div class="w-3/4">

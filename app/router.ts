@@ -1,12 +1,12 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
+import { Installation, Styles } from './views'
+
 import Home from './views/Home.vue'
 import NotFound from './views/NotFound.vue'
 import FormWrapper from './views/FormWrapper.vue'
 import ComponentWrapper from './views/ComponentWrapper.vue'
 import Overview from './views/form/Overview.vue'
-import Installation from './views/gettingstarted/Installation.vue'
-import Styles from './views/gettingstarted/Styles.vue'
 import Button from './views/components/Button.vue'
 import Calendar from './views/components/Calendar.vue'
 import Command from './views/components/Command.vue'

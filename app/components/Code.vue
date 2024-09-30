@@ -1,7 +1,6 @@
 <template>
   <div
-    class="bg-gray-200 text-black w-fit font-mono"
-    style="overflow-x: auto; padding: 0.25rem; border-radius: 4px;">
+    class="bg-gray-200 text-black w-fit font-mono overflow-x-auto p-1">
     <code>
       <slot />
     </code>

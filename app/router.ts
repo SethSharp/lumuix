@@ -4,8 +4,6 @@ import { Installation, Styles } from './views'
 
 import Home from './views/Home.vue'
 import NotFound from './views/NotFound.vue'
-import FormWrapper from './views/FormWrapper.vue'
-import ComponentWrapper from './views/ComponentWrapper.vue'
 import Overview from './views/form/Overview.vue'
 import Button from './views/components/Button.vue'
 import Calendar from './views/components/Calendar.vue'
@@ -33,7 +31,6 @@ const routes = [
   },
   {
     name: 'Components',
-    component: ComponentWrapper,
     children: [
       { path: '/components/button', name: 'Button', component: Button },
       { path: '/components/calendar', name: 'Calendar', component: Calendar },
@@ -53,7 +50,6 @@ const routes = [
   },
   {
     name: 'Form',
-    component: FormWrapper,
     children: [{ path: '/form/overview', name: 'Overview', component: Overview }],
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },

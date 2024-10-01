@@ -1,24 +1,25 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import { Installation, Styles } from './views'
-
-import Home from './views/Home.vue'
-import NotFound from './views/NotFound.vue'
-import Overview from './views/form/Overview.vue'
-import Button from './views/components/Button.vue'
-import Calendar from './views/components/Calendar.vue'
-import Command from './views/components/Command.vue'
-import Dialog from './views/components/Dialog.vue'
-import DropdownMenu from './views/components/DropdownMenu.vue'
-import Inputs from './views/components/Inputs.vue'
-import Page from './views/components/Page.vue'
-import Pagination from './views/components/Pagination.vue'
-import Popover from './views/components/Popover.vue'
-import Prebuilt from './views/components/Prebuilt.vue'
-import RangeCalendar from './views/components/RangeCalendar.vue'
-import Select from './views/components/Select.vue'
-import Table from './views/components/Table.vue'
-import Tabs from './views/components/Tabs.vue'
+import { Installation,
+  Styles,
+  Home,
+  NotFound,
+  Overview,
+  Button,
+  Calendar,
+  Command,
+  Dialog,
+  DropdownMenu,
+  Inputs,
+  Page,
+  Pagination,
+  Popover,
+  Prebuilt,
+  RangeCalendar,
+  Select,
+  Table,
+  Tabs
+} from './views'
 
 const routes = [
   { path: '', name: 'Home', component: Home },

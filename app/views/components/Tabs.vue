@@ -1,5 +1,5 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Calendar</div>
+  <div>Tabs</div>
 </template>

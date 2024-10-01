@@ -1,6 +1,6 @@
 import { createWebHistory, createRouter } from 'vue-router'
 
-import { Installation, Styles } from './views'
+import { Installation, Styles, Toast } from './views'
 
 import Home from './views/Home.vue'
 import NotFound from './views/NotFound.vue'
@@ -46,6 +46,7 @@ const routes = [
       { path: '/components/select', name: 'Select', component: Select },
       { path: '/components/table', name: 'Table', component: Table },
       { path: '/components/tabs', name: 'Tabs', component: Tabs },
+      { path: '/components/toast', name: 'Toast', component: Toast },
     ],
   },
   {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Button } from '@/components/button'
 import { ArrowRightIcon } from '@heroicons/vue/24/outline'
+import { Button } from '@/components/button'
 
 defineProps<{
   title: string

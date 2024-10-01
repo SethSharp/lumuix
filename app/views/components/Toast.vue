@@ -12,7 +12,7 @@ const { toast } = useToast()
       Allows for easy toast notifications, allowing real time feedback to users.
     </div>
 
-    <Button @click="toast({
+    <Button variant="outline" @click="toast({
         title: 'Some title',
         description: 'some description'
       })"

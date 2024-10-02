@@ -7,10 +7,8 @@ export const badgeVariants = cva(
   {
     variants: {
       variant: {
-        default:
-          'border-transparent bg-slate-800 text-slate-50 hover:bg-slate-800/80',
-        primary:
-          'border-transparent bg-primary-600 text-primary-50 hover:bg-primary-600/80',
+        default: 'border-transparent bg-slate-800 text-slate-50 hover:bg-slate-800/80',
+        primary: 'border-transparent bg-primary-600 text-primary-50 hover:bg-primary-600/80',
         secondary:
           'border-transparent bg-secondary-600 text-secondary-50 hover:bg-secondary-600/80',
         destructive:

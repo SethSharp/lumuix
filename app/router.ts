@@ -19,7 +19,8 @@ import { Installation,
   Select,
   Table,
   Tabs,
-  Toast
+  Toast,
+  Badge,
 } from './views'
 
 const routes = [
@@ -34,6 +35,7 @@ const routes = [
   {
     name: 'Components',
     children: [
+      { path: '/components/badge', name: 'Badge', component: Badge },
       { path: '/components/button', name: 'Button', component: Button },
       { path: '/components/calendar', name: 'Calendar', component: Calendar },
       { path: '/components/command', name: 'Command', component: Command },

@@ -15,7 +15,7 @@
 
   --input: 214.3 31.8% 91.4%;
 
-  --primary: 162 60% 33%;
+  --primary: 173 80% 40%;
   --primary-50: 166 76% 97%;
   --primary-100: 167 85% 89%;
   --primary-200: 168 84% 78%;
@@ -28,33 +28,33 @@
   --primary-900: 176 61% 19%;
   --primary-950: 179 84% 10%;
 
-  --secondary: 210 40% 96.1%;
-  --secondary-50: 210, 95%, 97%;
-  --secondary-100: 210, 90%, 94%;
-  --secondary-200: 210, 85%, 90%;
-  --secondary-300: 210, 70%, 80%;
-  --secondary-400: 210, 40%, 60%;
-  --secondary-500: 210, 25%, 45%;
-  --secondary-600: 210, 20%, 35%;
-  --secondary-700: 210, 15%, 25%;
-  --secondary-800: 210, 10%, 18%;
-  --secondary-900: 210, 5%, 12%;
-  --secondary-950: 210, 0%, 5%;
+  --secondary: 215 20% 65%;
+  --secondary-50: 210 40% 98%;
+  --secondary-100: 210 40% 96%;
+  --secondary-200: 214 32% 91%;
+  --secondary-300: 213 27% 84%;
+  --secondary-400: 215 20% 65%;
+  --secondary-500: 215 16% 47%;
+  --secondary-600: 215 19% 35%;
+  --secondary-700: 215 25% 27%;
+  --secondary-800: 217 33% 17%;
+  --secondary-900: 222 47% 11%;
+  --secondary-950: 229 84% 5%;
 
   --accent: 210 40% 96.1%;
 
-  --destructive: 0 100% 50%;
-  --destructive-50: 0, 100%, 99%;
-  --destructive-100: 0, 100%, 95%;
-  --destructive-200: 0, 100%, 89%;
-  --destructive-300: 0, 95%, 75%;
-  --destructive-400: 0, 90%, 55%;
-  --destructive-500: 0, 85%, 30%;
-  --destructive-600: 0, 80%, 15%;
-  --destructive-700: 0, 70%, 11%;
-  --destructive-800: 0, 60%, 10%;
-  --destructive-900: 0, 50%, 12%;
-  --destructive-950: 0, 40%, 3%;
+  --destructive: 0 84% 60%;
+  --destructive-50: 0 86% 97%;
+  --destructive-100: 0 93% 94%;
+  --destructive-200: 0 96% 89%;
+  --destructive-300: 0 94% 82%;
+  --destructive-400: 0 91% 71%;
+  --destructive-500: 0 84% 60%;
+  --destructive-600: 0 72% 51%;
+  --destructive-700: 0 72% 51%;
+  --destructive-800: 0 70% 35%;
+  --destructive-900: 0 63% 31%;
+  --destructive-950: 0 75% 15%;
 
   --ring: 215 20.2% 65.1%;
 

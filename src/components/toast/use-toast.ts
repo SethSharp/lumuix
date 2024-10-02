@@ -13,6 +13,8 @@ export type StringOrVNode =
 type ToasterToast = ToastProps & {
   id: string
   title?: string
+  icon?: Component,
+  iconClasses?: string,
   description?: StringOrVNode
   action?: Component
 }

@@ -1,9 +1,15 @@
 <script setup lang="ts">
+import { h } from 'vue'
+import { XCircleIcon } from '@heroicons/vue/24/outline'
 import { Button } from '@/components/button'
-import { Toaster, useToast } from '@/components/toast'
 import MainLayout from '../../layouts/MainLayout.vue'
+import { Toaster, useToast, ToastAction } from '@/components/toast'
 
 const { toast } = useToast()
+
+const someAction = () => {
+  alert('some action')
+}
 </script>
 
 <template>
@@ -14,10 +20,27 @@ const { toast } = useToast()
 
     <Button variant="outline" @click="toast({
         title: 'Some title',
-        description: 'some description'
+        icon: XCircleIcon,
+        description: 'some description',
       })"
     >
-      Add a notification
+      Standard
+    </Button>
+
+    <Button variant="outline" @click="toast({
+        title: 'Some title',
+        icon: XCircleIcon,
+        description: 'some description',
+        action: h(ToastAction, {
+          altText: 'Try again',
+          variant: 'ghost',
+          onClick: someAction,
+        }, {
+          default: () => 'Try again',
+        }),
+      })"
+    >
+      Action
     </Button>
 
     <Toaster />

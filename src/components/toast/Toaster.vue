@@ -9,9 +9,15 @@ const { toasts } = useToast()
 
 <template>
   <ToastProvider>
-    <Toast v-for="toast in toasts" :key="toast.id" v-bind="toast" class="my-1">
+    <Toast
+      v-for="toast in toasts"
+      :key="toast.id"
+      v-bind="toast"
+      class="my-1">
       <div class="flex gap-3">
-        <component :is="toast.icon" :class="cn(toast.iconClasses, 'size-4')" />
+        <component
+          :is="toast.icon"
+          :class="cn(toast.iconClasses, 'size-4')" />
         <div class="grid gap-1">
           <ToastTitle v-if="toast.title">
             {{ toast.title }}

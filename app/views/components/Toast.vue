@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { h } from 'vue'
-import { XCircleIcon } from '@heroicons/vue/24/outline'
+import { CheckBadgeIcon, XCircleIcon } from '@heroicons/vue/24/outline'
 import { Button } from '@/components/button'
 import MainLayout from '../../layouts/MainLayout.vue'
 import { Toaster, useToast, ToastAction } from '@/components/toast'
@@ -8,7 +8,7 @@ import { Toaster, useToast, ToastAction } from '@/components/toast'
 const { toast } = useToast()
 
 const someAction = () => {
-  alert('some action')
+  alert('dismissed')
 }
 </script>
 
@@ -18,30 +18,42 @@ const someAction = () => {
       Allows for easy toast notifications, allowing real time feedback to users.
     </div>
 
-    <Button variant="outline" @click="toast({
+    <div class="flex flex-col gap-2 w-fit">
+      <Button variant="outline" @click="toast({
         title: 'Some title',
         icon: XCircleIcon,
         description: 'some description',
       })"
-    >
-      Standard
-    </Button>
+      >
+        Standard
+      </Button>
 
-    <Button variant="outline" @click="toast({
-        title: 'Some title',
+      <Button variant="outline" @click="toast({
+        title: 'Action time!',
         icon: XCircleIcon,
-        description: 'some description',
+        description: 'You have clicked a button, now dismiss it ->',
         action: h(ToastAction, {
-          altText: 'Try again',
+          altText: 'Dismiss',
           variant: 'ghost',
           onClick: someAction,
         }, {
-          default: () => 'Try again',
+          default: () => 'Dismiss',
         }),
       })"
-    >
-      Action
-    </Button>
+      >
+        Action
+      </Button>
+
+      <Button variant="outline" @click="toast({
+        title: 'Nicework!',
+        icon: CheckBadgeIcon,
+        description: 'You have successfully clicked this button!',
+        iconClasses: 'text-green-500'
+      })"
+      >
+        Custom icon / class
+      </Button>
+    </div>
 
     <Toaster />
   </MainLayout>

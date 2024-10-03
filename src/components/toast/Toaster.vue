@@ -10,22 +10,24 @@ const { toasts } = useToast()
 <template>
   <ToastProvider>
     <Toast v-for="toast in toasts" :key="toast.id" v-bind="toast" class="my-1">
-      <div class="grid gap-1">
+      <div class="flex gap-3">
         <component :is="toast.icon" :class="cn(toast.iconClasses, 'size-4')" />
-        <ToastTitle v-if="toast.title">
-          {{ toast.title }}
-        </ToastTitle>
-        <template v-if="toast.description">
-          <ToastDescription v-if="isVNode(toast.description)">
-            <component :is="toast.description" />
-          </ToastDescription>
-          <ToastDescription v-else>
-            {{ toast.description }}
-          </ToastDescription>
-        </template>
-        <ToastClose />
+        <div class="grid gap-1">
+          <ToastTitle v-if="toast.title">
+            {{ toast.title }}
+          </ToastTitle>
+          <template v-if="toast.description">
+            <ToastDescription v-if="isVNode(toast.description)">
+              <component :is="toast.description" />
+            </ToastDescription>
+            <ToastDescription v-else>
+              {{ toast.description }}
+            </ToastDescription>
+          </template>
+          <ToastClose />
+        </div>
+        <component :is="toast.action" />
       </div>
-      <component :is="toast.action" />
     </Toast>
     <ToastViewport />
   </ToastProvider>

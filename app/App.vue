@@ -28,20 +28,20 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
             <div
               v-for="group in routes"
               :key="group.name">
-              <h3 class="text-lg font-medium">{{ group.name }}</h3>
+              <h3 class="text-lg font-medium dark:text-slate-300">{{ group.name }}</h3>
 
               <ul
                 role="list"
-                class="flex flex-1 flex-col">
+                class="flex flex-1 flex-col py-2">
                 <li>
                   <ul class="space-y-2">
                     <li
                       v-for="route in group.children"
                       :key="route.name"
-                      class="flex items-center underline-offset-2 hover:underline">
+                      class="flex items-center hover:underline ">
                       <RouterLink
                         :to="route.path"
-                        class="px-2">
+                        class="px-2 text-slate-400 dark:text-slate-500">
                         {{ route.name }}
                       </RouterLink>
                     </li>

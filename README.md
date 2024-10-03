@@ -1,5 +1,5 @@
 ![Logo](https://raw.githubusercontent.com/SethSharp/lumuix/main/public/images/logo.png)
-# Lumuix: Vue Component Library
+# A Generic Vue Component Library
 This is a personal use component library, used across internal projects to:
 - Avoid the hassle of duplicating code and setting up new components
 - Provides positive downstream updates / improvements to products that use these components
@@ -11,10 +11,19 @@ The components serve as a way to fully customise UI/UX on your projects.
 
 ## Configuration
 1. `npm ci` to install dependencies
-2. `npm run dev` to spin up the dev server and start playing around with the components
+2. `npm run dev` to spin up the dev server
+
+The main app showcases all the components and goes over basic usages + linking to the original documentation in shadcn.
+
+## Submitting Additions
+Simply open a PR containing your changes, DO NOT increment the package version or push changes including build files - it is important that you
+test the build process works fine. When a new version is released, the version and any build scripts will be run directly on main by myself.
 
 ## Releasing version
-Simply increment the package version in the package.json, run `npm run build` to build assets & push to main. Then tag a release in the repository with a summary of what has been changed and publish.
+On main:
+1. `npm run build`
+2. increment `package.json`
+3. Push
 
-## Submitting
-Make your adjustments and create a PR. It will be reviewed and potentially merged to main. Where I (the owner) will publish a release. Note: You do not need to increment the package version when submitting a PR.
+Then tag a release matching that in the `package.json`, auto-generate notes and add anything extra.
+Then release!

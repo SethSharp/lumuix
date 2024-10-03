@@ -17,7 +17,7 @@ defineProps<{
       </a>
     </Button>
 
-    <div class="text-slate-400">
+    <div class="text-slate-600 dark:text-slate-500">
       <slot />
     </div>
   </div>

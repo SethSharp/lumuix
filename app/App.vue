@@ -10,13 +10,13 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
   <div>
     <nav
       id="nav-bar"
-      class="sticky top-0 z-10 flex h-fit w-full justify-between bg-gradient-to-r from-green-400 to-green-500 dark:from-gray-800 dark:to-gray-950">
+      class="sticky top-0 z-10 flex h-fit w-full justify-between backdrop-blur bg-slate-100 dark:bg-slate-950">
       <RouterLink
         to="/"
         class="p-4 text-xl text-gray-100 transition hover:text-white dark:text-primary-200 sm:text-3xl">
-        <b> Lumuix </b>- Generic Vue Component Library
+        <img src="/public/images/logo.png" class="w-32" alt="Lumuix Logo" />
       </RouterLink>
-      <div class="my-auto mr-6 flex gap-2 font-bold text-white dark:text-primary-200">
+      <div class="my-auto mr-6 flex gap-2 font-bold text-black dark:text-primary-200">
         <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.3.0 </a>
         <DarkModeToggle />
       </div>

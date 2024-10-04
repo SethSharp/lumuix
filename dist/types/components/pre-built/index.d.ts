@@ -1,4 +1,3 @@
-export { default as Calendar } from './Calendar.vue';
 export { default as DarkModeToggle } from './DarkModeToggle.vue';
 export { default as Datatable } from './Datatable.vue';
 export { default as Dropdown } from './Dropdown.vue';

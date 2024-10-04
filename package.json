@@ -41,6 +41,7 @@
     "@heroicons/vue": "^2.1.4",
     "@vueuse/core": "^10.11.1",
     "class-variance-authority": "^0.7.0",
+    "lucide-vue-next": "^0.447.0",
     "radix-vue": "^1.9.1",
     "tailwind-merge": "^2.5.2",
     "uuid": "^10.0.0",

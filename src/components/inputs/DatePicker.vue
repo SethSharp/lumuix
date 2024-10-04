@@ -8,7 +8,7 @@ import {
   getLocalTimeZone,
 } from '@internationalized/date'
 import { Button } from '@/components/button'
-import { Calendar } from '@/components/pre-built'
+import { Calendar } from '@/components/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
 const emits = defineEmits(['update:modelValue'])

@@ -52,7 +52,9 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
           </nav>
         </div>
         <div class="w-3/4 p-6">
-          <RouterView />
+          <component :is="$route.meta.layout">
+            <RouterView />
+          </component>
         </div>
       </div>
     </main>

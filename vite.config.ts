@@ -30,6 +30,7 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
       '@/app': resolve(__dirname, 'app'),
+      '@/components': resolve(__dirname, 'src/components'),
     },
   },
 })

@@ -32,11 +32,11 @@ declare const __VLS_component: import("vue").DefineComponent<{
 }> & Readonly<{
     "onUpdate:modelValue"?: (...args: any[]) => any;
 }>, {
-    widthClass: string;
-    placeholder: string;
     multiple: boolean;
+    placeholder: string;
     noResults: string;
     allowSearch: boolean;
+    widthClass: string;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;

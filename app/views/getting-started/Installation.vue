@@ -1,10 +1,9 @@
 <script setup lang="ts">
 import Code from '../../components/Code.vue'
-import MainLayout from '../../layouts/MainLayout.vue'
 </script>
 
 <template>
-  <MainLayout title="Installation">
+  <div>
     <p>
       Installation is fairly straight forward. First you must install the project from the npm
       registry:
@@ -19,5 +18,5 @@ import MainLayout from '../../layouts/MainLayout.vue'
     './node_modules/@sethsharp/lumuix/dist/*.js'
   ]
     </pre>
-  </MainLayout>
+  </div>
 </template>

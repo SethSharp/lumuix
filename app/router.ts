@@ -26,7 +26,15 @@ import {
 } from './views'
 
 const routes = [
-  { path: '', name: 'Home', component: Home, isExternal: true },
+  {
+    path: '',
+    name: 'Home',
+    component: Home,
+    isExternal: false,
+    meta: {
+      layout: MainLayout,
+    },
+  },
   {
     name: 'Getting Started',
     children: [

@@ -119,7 +119,7 @@ const routes = [
         component: Inputs,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          shadcn: false,
         },
       },
       {
@@ -128,7 +128,7 @@ const routes = [
         component: Page,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          shadcn: false,
         },
       },
       {

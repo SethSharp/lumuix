@@ -1,5 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div>Prebuilt</div>
+  <div>
+    <p>Houses components which are more opinionated.</p>
+  </div>
 </template>

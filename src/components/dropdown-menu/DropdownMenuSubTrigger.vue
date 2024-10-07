@@ -5,8 +5,8 @@ import {
   type DropdownMenuSubTriggerProps,
   useForwardProps,
 } from 'radix-vue'
-import { ChevronRightIcon } from '@heroicons/vue/24/outline'
-import { cn } from '../../lib/utils'
+import { ChevronRight } from 'lucide-vue-next'
+import { cn } from '@/lib/utils'
 
 const props = defineProps<DropdownMenuSubTriggerProps & { class?: HTMLAttributes['class'] }>()
 
@@ -24,11 +24,11 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
     :class="
       cn(
-        'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-slate-100 data-[state=open]:bg-slate-100 dark:focus:bg-slate-800 dark:data-[state=open]:bg-slate-800',
+        'flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none focus:bg-accent data-[state=open]:bg-accent',
         props.class,
       )
     ">
     <slot />
-    <ChevronRightIcon class="ml-auto size-4" />
+    <ChevronRight class="ml-auto size-4" />
   </DropdownMenuSubTrigger>
 </template>

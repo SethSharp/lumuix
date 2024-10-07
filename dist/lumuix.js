@@ -11914,6 +11914,30 @@ const Vf = /* @__PURE__ */ _({
     }, 16));
   }
 }), Kf = /* @__PURE__ */ _({
+  __name: "BaseDropdownMenuItem",
+  props: {
+    disabled: { type: Boolean },
+    textValue: {},
+    asChild: { type: Boolean },
+    as: {},
+    class: {},
+    inset: { type: Boolean }
+  },
+  setup(e) {
+    const t = e;
+    return (a, n) => (m(), R("div", {
+      class: re(
+        r(z)(
+          "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-slate-200 focus:bg-slate-100 focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:hover:bg-slate-700 dark:focus:bg-slate-800 dark:focus:text-slate-50",
+          a.inset && "pl-8",
+          t.class
+        )
+      )
+    }, [
+      x(a.$slots, "default")
+    ], 2));
+  }
+}), Hf = /* @__PURE__ */ _({
   __name: "DropdownMenuTrigger",
   props: {
     disabled: { type: Boolean },
@@ -11929,7 +11953,7 @@ const Vf = /* @__PURE__ */ _({
       _: 3
     }, 16));
   }
-}), Hf = /* @__PURE__ */ _({
+}), Gf = /* @__PURE__ */ _({
   __name: "DropdownMenuContent",
   props: {
     forceMount: { type: Boolean },
@@ -12033,30 +12057,6 @@ const Vf = /* @__PURE__ */ _({
       _: 3
     }, 16, ["class"]));
   }
-}), Gf = /* @__PURE__ */ _({
-  __name: "BaseDropdownMenuItem",
-  props: {
-    disabled: { type: Boolean },
-    textValue: {},
-    asChild: { type: Boolean },
-    as: {},
-    class: {},
-    inset: { type: Boolean }
-  },
-  setup(e) {
-    const t = e;
-    return (a, n) => (m(), R("div", {
-      class: re(
-        r(z)(
-          "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-slate-200 focus:bg-slate-100 focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:hover:bg-slate-700 dark:focus:bg-slate-800 dark:focus:text-slate-50",
-          a.inset && "pl-8",
-          t.class
-        )
-      )
-    }, [
-      x(a.$slots, "default")
-    ], 2));
-  }
 }), qf = /* @__PURE__ */ _({
   __name: "DropdownMenuLink",
   props: {
@@ -12074,7 +12074,7 @@ const Vf = /* @__PURE__ */ _({
       const { class: o, ...l } = t;
       return l;
     }), n = ie(a);
-    return (o, l) => (m(), b(Gf, {
+    return (o, l) => (m(), b(Kf, {
       class: re(t.class)
     }, {
       default: f(() => [
@@ -12387,7 +12387,7 @@ const Qf = co("CircleIcon", [
   setup(e) {
     return (t, a) => (m(), b(r(Uf), null, {
       default: f(({ open: n }) => [
-        P(r(Kf), {
+        P(r(Hf), {
           "as-child": "",
           class: re([t.triggerClass])
         }, {
@@ -12396,7 +12396,7 @@ const Qf = co("CircleIcon", [
           ]),
           _: 2
         }, 1032, ["class"]),
-        P(r(Hf), {
+        P(r(Gf), {
           class: re([t.widthClass])
         }, {
           default: f(() => [
@@ -14672,6 +14672,7 @@ const Cv = { class: "flex items-center space-x-2" }, $v = ["src"], kv = ["accept
 });
 export {
   gh as Base,
+  Kf as BaseDropdownMenuItem,
   qe as Button,
   zm as Calendar,
   Wm as CalendarCell,
@@ -14715,7 +14716,7 @@ export {
   am as Dropdown,
   Uf as DropdownMenu,
   Uv as DropdownMenuCheckboxItem,
-  Hf as DropdownMenuContent,
+  Gf as DropdownMenuContent,
   zv as DropdownMenuGroup,
   jv as DropdownMenuItem,
   qv as DropdownMenuLabel,
@@ -14728,7 +14729,7 @@ export {
   Yv as DropdownMenuSub,
   Jv as DropdownMenuSubContent,
   Zv as DropdownMenuSubTrigger,
-  Kf as DropdownMenuTrigger,
+  Hf as DropdownMenuTrigger,
   Qm as Error,
   ph as Form,
   rv as FormElement,

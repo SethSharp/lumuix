@@ -1,4 +1,7 @@
 <script setup lang='ts'>
+import { Label } from '@/components/form'
+import { Input } from '@/components/inputs'
+import { Button } from '@/components/button'
 import {
   Card,
   CardContent,
@@ -14,9 +17,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/select'
-import { Input } from '@/components/inputs'
-import { Label } from '@/components/form'
-import { Button } from '@/components/button'
 </script>
 
 <template>

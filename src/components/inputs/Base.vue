@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Error } from '@/components/form'
-import { CharacterCount, Description, Label } from '@/components/inputs'
+import { CharacterCount, Description, Label } from '@/components/form'
 
 withDefaults(
   defineProps<{

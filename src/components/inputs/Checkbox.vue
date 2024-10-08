@@ -2,7 +2,7 @@
 import { watch, ref } from 'vue'
 import { CheckIcon } from '@heroicons/vue/24/outline'
 import { CheckboxIndicator, CheckboxRoot, type CheckboxRootProps } from 'radix-vue'
-import Label from './Label.vue'
+import { Label } from '@/components/form'
 
 const emits = defineEmits(['update:modelValue'])
 

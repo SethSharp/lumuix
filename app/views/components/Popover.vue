@@ -5,7 +5,8 @@ import {
   PopoverTrigger,
 } from '@/components/popover'
 import { Button } from '@/components/button'
-import { Label, Input } from '@/components/inputs'
+import { Input } from '@/components/inputs'
+import { Label } from '@/components/form'
 </script>
 
 <template>

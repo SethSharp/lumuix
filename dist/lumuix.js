@@ -13676,49 +13676,55 @@ const rm = Oo("CircleIcon", [
       _: 3
     }, 16, ["class"]));
   }
-}), um = { class: "text-sm text-red-600 dark:text-red-400" }, cm = /* @__PURE__ */ b({
+}), um = { class: "text-xs text-slate-600 dark:text-slate-300" }, cm = /* @__PURE__ */ b({
+  __name: "CharacterCount",
+  props: {
+    count: {}
+  },
+  setup(e) {
+    return (t, a) => (f(), R("div", um, "Characters: " + Z(t.count), 1));
+  }
+}), pm = {}, fm = { class: "text-sm text-slate-600 dark:text-slate-300" };
+function vm(e, t) {
+  return f(), R("div", fm, [
+    w(e.$slots, "default")
+  ]);
+}
+const mm = /* @__PURE__ */ wa(pm, [["render", vm]]), hm = { class: "text-sm text-red-600 dark:text-red-400" }, gm = /* @__PURE__ */ b({
   __name: "Error",
   props: {
     error: {}
   },
   setup(e) {
     return (t, a) => jt((f(), R("div", null, [
-      te("p", um, Z(t.error), 1)
+      te("p", hm, Z(t.error), 1)
     ], 512)), [
       [Gn, t.error]
     ]);
   }
-}), pm = {}, fm = { class: "w-full space-y-4 p-1.5" };
-function vm(e, t) {
-  return f(), R("div", fm, [
+}), ym = {}, bm = { class: "w-full space-y-4 p-1.5" };
+function wm(e, t) {
+  return f(), R("div", bm, [
     w(e.$slots, "default")
   ]);
 }
-const Ig = /* @__PURE__ */ wa(pm, [["render", vm]]), mm = {}, hm = { class: "my-4" };
-function gm(e, t) {
-  return f(), R("div", hm, [
+const Ig = /* @__PURE__ */ wa(ym, [["render", wm]]), _m = {}, xm = { class: "my-4" };
+function Cm(e, t) {
+  return f(), R("div", xm, [
     w(e.$slots, "default")
   ]);
 }
-const ym = /* @__PURE__ */ wa(mm, [["render", gm]]), bm = { class: "grid gap-4 md:grid-cols-2" }, Rg = /* @__PURE__ */ b({
+const $m = /* @__PURE__ */ wa(_m, [["render", Cm]]), km = { class: "grid gap-4 md:grid-cols-2" }, Rg = /* @__PURE__ */ b({
   __name: "FormGrid",
   setup(e) {
-    return (t, a) => (f(), y(ym, null, {
+    return (t, a) => (f(), y($m, null, {
       default: v(() => [
-        te("div", bm, [
+        te("div", km, [
           w(t.$slots, "default")
         ])
       ]),
       _: 3
     }));
-  }
-}), wm = { class: "text-xs text-slate-600 dark:text-slate-300" }, _m = /* @__PURE__ */ b({
-  __name: "CharacterCount",
-  props: {
-    count: {}
-  },
-  setup(e) {
-    return (t, a) => (f(), R("div", wm, "Characters: " + Z(t.count), 1));
   }
 }), Ys = /* @__PURE__ */ b({
   __name: "Label",
@@ -13746,7 +13752,7 @@ const ym = /* @__PURE__ */ wa(mm, [["render", gm]]), bm = { class: "grid gap-4 m
       _: 3
     }, 16, ["class"]));
   }
-}), xm = { class: "flex gap-2" }, Fg = /* @__PURE__ */ b({
+}), Bm = { class: "flex gap-2" }, Fg = /* @__PURE__ */ b({
   __name: "Checkbox",
   props: {
     defaultChecked: { type: Boolean },
@@ -13766,7 +13772,7 @@ const ym = /* @__PURE__ */ wa(mm, [["render", gm]]), bm = { class: "grid gap-4 m
     const a = t, o = M(e.modelValue);
     return ee(o, (l) => {
       a("update:modelValue", l);
-    }), (l, r) => (f(), R("div", xm, [
+    }), (l, r) => (f(), R("div", Bm, [
       S(s(bc), {
         id: l.id,
         checked: o.value,
@@ -13783,7 +13789,7 @@ const ym = /* @__PURE__ */ wa(mm, [["render", gm]]), bm = { class: "grid gap-4 m
         ]),
         _: 1
       }, 8, ["id", "checked"]),
-      l.label ? (f(), y(Ys, {
+      l.label ? (f(), y(s(Ys), {
         key: 0,
         id: l.id,
         class: "my-auto"
@@ -13873,7 +13879,7 @@ const ym = /* @__PURE__ */ wa(mm, [["render", gm]]), bm = { class: "grid gap-4 m
       _: 3
     }));
   }
-}), Cm = { class: "overflow-hidden !font-normal dark:text-white" }, Lg = /* @__PURE__ */ b({
+}), Pm = { class: "overflow-hidden !font-normal dark:text-white" }, Lg = /* @__PURE__ */ b({
   __name: "Combobox",
   props: {
     modelValue: {},
@@ -13905,7 +13911,7 @@ const ym = /* @__PURE__ */ wa(mm, [["render", gm]]), bm = { class: "grid gap-4 m
               class: re(["justify-between", [u.widthClass]])
             }, {
               default: v(() => [
-                te("div", Cm, [
+                te("div", Pm, [
                   u.$slots.selectedOptions ? w(u.$slots, "selectedOptions", {
                     key: 0,
                     selectedOptions: l.value
@@ -14032,13 +14038,7 @@ const ym = /* @__PURE__ */ wa(mm, [["render", gm]]), bm = { class: "grid gap-4 m
       _: 1
     }));
   }
-}), $m = {}, km = { class: "text-sm text-slate-600 dark:text-slate-300" };
-function Bm(e, t) {
-  return f(), R("div", km, [
-    w(e.$slots, "default")
-  ]);
-}
-const Pm = /* @__PURE__ */ wa($m, [["render", Bm]]), Dm = { class: "relative" }, Om = {
+}), Dm = { class: "relative" }, Om = {
   name: "Base",
   inheritAttrs: !1
 }, zg = /* @__PURE__ */ b({
@@ -14067,19 +14067,19 @@ const Pm = /* @__PURE__ */ wa($m, [["render", Bm]]), Dm = { class: "relative" },
         }, 8, ["id"])) : Q("", !0),
         te("div", Dm, [
           w(t.$slots, "default"),
-          t.showCharacterCount ? (f(), y(s(_m), {
+          t.showCharacterCount ? (f(), y(s(cm), {
             key: 0,
             count: (n = t.modelValue) == null ? void 0 : n.length,
             class: "absolute right-0 mt-[3px]"
           }, null, 8, ["count"])) : Q("", !0)
         ]),
-        S(s(Pm), { class: "mt-[3px] w-4/5" }, {
+        S(s(mm), { class: "mt-[3px] w-4/5" }, {
           default: v(() => [
             Y(Z(t.description), 1)
           ]),
           _: 1
         }),
-        S(s(cm), { error: t.error }, null, 8, ["error"])
+        S(s(gm), { error: t.error }, null, 8, ["error"])
       ]);
     };
   }
@@ -14152,7 +14152,37 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       })
     ]));
   }
-}), Fm = /* @__PURE__ */ b({
+}), Fm = ["disabled", "placeholder", "required", "type"], Ug = /* @__PURE__ */ b({
+  __name: "Input",
+  props: /* @__PURE__ */ Pn({
+    modelValue: {},
+    type: { default: "text" },
+    disabled: { type: Boolean },
+    placeholder: {},
+    error: {},
+    required: { type: Boolean }
+  }, {
+    modelValue: {},
+    modelModifiers: {}
+  }),
+  emits: ["update:modelValue"],
+  setup(e) {
+    const t = wl(e, "modelValue");
+    return (a, n) => jt((f(), R("input", {
+      "onUpdate:modelValue": n[0] || (n[0] = (o) => t.value = o),
+      disabled: a.disabled,
+      placeholder: a.placeholder,
+      required: a.required,
+      type: a.type,
+      class: re(["flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:border-slate-900 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300 dark:placeholder:text-slate-500 dark:focus-visible:border-slate-300", {
+        "focus-visible:ring-slate-950 dark:focus-visible:ring-slate-400": !a.error,
+        "focus-visible:ring-red-600 dark:focus-visible:ring-red-400": a.error
+      }])
+    }, null, 10, Fm)), [
+      [br, t.value]
+    ]);
+  }
+}), Lm = /* @__PURE__ */ b({
   __name: "SelectRoot",
   props: {
     open: { type: Boolean },
@@ -14175,7 +14205,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 16));
   }
-}), Lm = /* @__PURE__ */ b({
+}), Nm = /* @__PURE__ */ b({
   __name: "SelectValue",
   props: {
     placeholder: {},
@@ -14191,7 +14221,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 16));
   }
-}), Nm = /* @__PURE__ */ b({
+}), zm = /* @__PURE__ */ b({
   __name: "SelectTrigger",
   props: {
     disabled: { type: Boolean },
@@ -14222,7 +14252,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 16, ["class"]));
   }
-}), zm = /* @__PURE__ */ b({
+}), Wm = /* @__PURE__ */ b({
   inheritAttrs: !1,
   __name: "SelectContent",
   props: {
@@ -14261,7 +14291,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
           )
         }), {
           default: v(() => [
-            S(s(jm)),
+            S(s(Hm)),
             S(s(zf), {
               class: re(
                 s(z)(
@@ -14275,7 +14305,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
               ]),
               _: 3
             }, 8, ["class"]),
-            S(s(Hm))
+            S(s(Km))
           ]),
           _: 3
         }, 16, ["class"])
@@ -14283,7 +14313,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }));
   }
-}), Ug = /* @__PURE__ */ b({
+}), jg = /* @__PURE__ */ b({
   __name: "SelectGroup",
   props: {
     asChild: { type: Boolean },
@@ -14304,7 +14334,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 16, ["class"]));
   }
-}), Wm = { class: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center" }, Um = /* @__PURE__ */ b({
+}), Um = { class: "absolute left-2 flex h-3.5 w-3.5 items-center justify-center" }, jm = /* @__PURE__ */ b({
   __name: "SelectItem",
   props: {
     value: {},
@@ -14326,7 +14356,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       )
     }), {
       default: v(() => [
-        te("span", Wm, [
+        te("span", Um, [
           S(s(If), null, {
             default: v(() => [
               S(s(Do), { class: "size-4 text-primary-700 dark:text-primary-400" })
@@ -14344,7 +14374,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 16, ["class"]));
   }
-}), jg = /* @__PURE__ */ b({
+}), Hg = /* @__PURE__ */ b({
   __name: "SelectItemText",
   props: {
     asChild: { type: Boolean },
@@ -14359,7 +14389,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 16));
   }
-}), Hg = /* @__PURE__ */ b({
+}), Kg = /* @__PURE__ */ b({
   __name: "SelectLabel",
   props: {
     for: {},
@@ -14378,7 +14408,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 8, ["class"]));
   }
-}), Kg = /* @__PURE__ */ b({
+}), Gg = /* @__PURE__ */ b({
   __name: "SelectSeparator",
   props: {
     asChild: { type: Boolean },
@@ -14394,7 +14424,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       class: s(z)("-mx-1 my-1 h-px bg-slate-100 dark:bg-slate-800", t.class)
     }), null, 16, ["class"]));
   }
-}), jm = /* @__PURE__ */ b({
+}), Hm = /* @__PURE__ */ b({
   __name: "SelectScrollUpButton",
   props: {
     asChild: { type: Boolean },
@@ -14417,7 +14447,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 16, ["class"]));
   }
-}), Hm = /* @__PURE__ */ b({
+}), Km = /* @__PURE__ */ b({
   __name: "SelectScrollDownButton",
   props: {
     asChild: { type: Boolean },
@@ -14440,7 +14470,7 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       _: 3
     }, 16, ["class"]));
   }
-}), Gg = /* @__PURE__ */ b({
+}), qg = /* @__PURE__ */ b({
   __name: "Select",
   props: {
     modelValue: {},
@@ -14458,14 +14488,14 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
         return;
       }
       a("update:modelValue", null);
-    }), (l, r) => (f(), y(s(Fm), {
+    }), (l, r) => (f(), y(s(Lm), {
       modelValue: o.value,
       "onUpdate:modelValue": r[0] || (r[0] = (i) => o.value = i)
     }, {
       default: v(() => [
-        S(s(Nm), null, {
+        S(s(zm), null, {
           default: v(() => [
-            S(s(Lm), null, {
+            S(s(Nm), null, {
               default: v(() => [
                 Y(Z(o.value ?? l.placeholder), 1)
               ]),
@@ -14474,9 +14504,9 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
           ]),
           _: 1
         }),
-        S(s(zm), null, {
+        S(s(Wm), null, {
           default: v(() => [
-            (f(!0), R(J, null, he(l.options, (i) => (f(), y(s(Um), { value: i }, {
+            (f(!0), R(J, null, he(l.options, (i) => (f(), y(s(jm), { value: i }, {
               default: v(() => [
                 l.$slots.options ? w(l.$slots, "options", {
                   key: 0,
@@ -14493,36 +14523,6 @@ const Vm = { class: "flex items-center space-x-2" }, Im = ["src"], Rm = ["accept
       ]),
       _: 3
     }, 8, ["modelValue"]));
-  }
-}), Km = ["disabled", "placeholder", "required", "type"], qg = /* @__PURE__ */ b({
-  __name: "Input",
-  props: /* @__PURE__ */ Pn({
-    modelValue: {},
-    type: { default: "text" },
-    disabled: { type: Boolean },
-    placeholder: {},
-    error: {},
-    required: { type: Boolean }
-  }, {
-    modelValue: {},
-    modelModifiers: {}
-  }),
-  emits: ["update:modelValue"],
-  setup(e) {
-    const t = wl(e, "modelValue");
-    return (a, n) => jt((f(), R("input", {
-      "onUpdate:modelValue": n[0] || (n[0] = (o) => t.value = o),
-      disabled: a.disabled,
-      placeholder: a.placeholder,
-      required: a.required,
-      type: a.type,
-      class: re(["flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-slate-500 focus-visible:border-slate-900 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-300 dark:placeholder:text-slate-500 dark:focus-visible:border-slate-300", {
-        "focus-visible:ring-slate-950 dark:focus-visible:ring-slate-400": !a.error,
-        "focus-visible:ring-red-600 dark:focus-visible:ring-red-400": a.error
-      }])
-    }, null, 10, Km)), [
-      [br, t.value]
-    ]);
   }
 });
 function Qs(e) {
@@ -16528,7 +16528,7 @@ export {
   Dv as CalendarHeading,
   Ov as CalendarNextButton,
   Sv as CalendarPrevButton,
-  _m as CharacterCount,
+  cm as CharacterCount,
   Fg as Checkbox,
   Xg as CollapsibleTableRow,
   Lg as Combobox,
@@ -16545,7 +16545,7 @@ export {
   Zg as DarkModeToggle,
   ey as Datatable,
   Ng as DatePicker,
-  Pm as Description,
+  mm as Description,
   Us as Dialog,
   wg as DialogClose,
   qs as DialogContent,
@@ -16572,12 +16572,12 @@ export {
   Vg as DropdownMenuSubContent,
   Ag as DropdownMenuSubTrigger,
   em as DropdownMenuTrigger,
-  cm as Error,
+  gm as Error,
   Ig as Form,
-  ym as FormElement,
+  $m as FormElement,
   Rg as FormGrid,
   Wg as ImageUpload,
-  qg as Input,
+  Ug as Input,
   Ys as Label,
   ty as Modal,
   ay as Pagination,
@@ -16605,18 +16605,18 @@ export {
   qh as RangeCalendarHeading,
   Yh as RangeCalendarNextButton,
   Zh as RangeCalendarPrevButton,
-  Gg as Select,
-  zm as SelectContent,
-  Ug as SelectGroup,
-  Um as SelectItem,
-  jg as SelectItemText,
-  Hg as SelectLabel,
-  Fm as SelectRoot,
-  Hm as SelectScrollDownButton,
-  jm as SelectScrollUpButton,
-  Kg as SelectSeparator,
-  Nm as SelectTrigger,
-  Lm as SelectValue,
+  qg as Select,
+  Wm as SelectContent,
+  jg as SelectGroup,
+  jm as SelectItem,
+  Hg as SelectItemText,
+  Kg as SelectLabel,
+  Lm as SelectRoot,
+  Km as SelectScrollDownButton,
+  Hm as SelectScrollUpButton,
+  Gg as SelectSeparator,
+  zm as SelectTrigger,
+  Nm as SelectValue,
   Lh as TabBaseContent,
   kh as Table,
   Bh as TableBody,

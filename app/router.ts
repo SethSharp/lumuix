@@ -99,7 +99,8 @@ const routes = [
       },
       {
         path: '/components/combobox',
-        name: 'Combobox', component: Combobox,
+        name: 'Combobox',
+        component: Combobox,
         meta: {
           layout: ComponentLayout,
           shadcn: true

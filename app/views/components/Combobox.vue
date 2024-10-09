@@ -1,8 +1,9 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { Check, ChevronsUpDown } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/button'
+import { Combobox } from '@/components/inputs'
 import {
   Popover,
   PopoverContent,
@@ -25,11 +26,25 @@ const frameworks = [
   { value: 'astro', label: 'Astro' },
 ]
 
+const options = [
+  { id: 'next.js', name: 'Next.js' },
+  { id: 'sveltekit', name: 'SvelteKit' },
+  { id: 'nuxt', name: 'Nuxt' },
+  { id: 'remix', name: 'Remix' },
+  { id: 'astro', name: 'Astro' },
+]
+
 const open = ref(false)
 const value = ref('')
+
+watch(value, () => {
+  console.log(value.value)
+})
 </script>
 
 <template>
+  <Combobox :options="options" :multiple="true"/>
+
   <Popover v-model:open="open">
     <PopoverTrigger as-child>
       <Button
@@ -38,14 +53,12 @@ const value = ref('')
         :aria-expanded="open"
         class="w-[200px] justify-between"
       >
-        {{ value
-        ? frameworks.find((framework) => framework.value === value)?.label
-        : "Select framework..." }}
+        data
         <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50" />
       </Button>
     </PopoverTrigger>
     <PopoverContent class="w-[200px] p-0">
-      <Command>
+      <Command :multiple="true">
         <CommandInput class="h-9" placeholder="Search framework..." />
         <CommandEmpty>No framework found.</CommandEmpty>
         <CommandList>
@@ -64,7 +77,7 @@ const value = ref('')
               {{ framework.label }}
               <Check
                 :class="cn(
-                  'ml-auto h-4 w-4',
+                  'ml-auto size-4',
                   value === framework.value ? 'opacity-100' : 'opacity-0',
                 )"
               />

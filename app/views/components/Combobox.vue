@@ -53,7 +53,9 @@ watch(value, () => {
         :aria-expanded="open"
         class="w-[200px] justify-between"
       >
-        data
+        {{ value
+        ? frameworks.find((framework) => framework.value === value)?.label
+        : "Select framework..." }}
         <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50" />
       </Button>
     </PopoverTrigger>

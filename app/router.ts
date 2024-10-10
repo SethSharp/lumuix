@@ -10,6 +10,7 @@ import {
   Button,
   Calendar,
   Card,
+  Combobox,
   Command,
   Dialog,
   DropdownMenu,
@@ -95,6 +96,15 @@ const routes = [
           layout: ComponentLayout,
           shadcn: true,
         },
+      },
+      {
+        path: '/components/combobox',
+        name: 'Combobox',
+        component: Combobox,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true
+        }
       },
       {
         path: '/components/command',

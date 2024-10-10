@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { computed, ref, watch } from 'vue'
-import { CheckIcon, ChevronUpDownIcon } from '@heroicons/vue/24/outline'
+import { Check, ChevronsUpDown } from 'lucide-vue-next'
+import { cn } from '@/lib/utils'
+import { Button } from '@/components/button'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 import {
   Command,
   CommandEmpty,
@@ -9,82 +12,60 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/command'
-import { Button } from '@/components/button'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
 const emits = defineEmits(['update:modelValue'])
 
-const props = withDefaults(
-  defineProps<{
-    modelValue: [] | number | null
-    placeholder?: string
-    noResults?: string
-    options: Option[]
-    multiple?: boolean
-    allowSearch?: boolean
-    widthClass?: string
-  }>(),
-  {
-    placeholder: 'Select option...',
-    noResults: 'No option found.',
-    multiple: false,
-    allowSearch: false,
-    widthClass: 'w-44',
-  },
-)
+type ModelValue = Option[] | Option | number | null | string
+
+const props = defineProps<{
+  modelValue: ModelValue
+  placeholder?: string
+  emptyMessage?: string
+  options: Option[]
+  multiple?: boolean
+}>()
+
+const computedEmpty = computed(() => props.emptyMessage ?? 'Option not found')
+const computedPlaceholder = computed(() => props.placeholder ?? 'Select an option')
 
 const open = ref(false)
-const selectedOptions = ref<Option[] | Option | number | null>(props.modelValue ?? [])
-
-const optionSelected = (option: Option) => {
-  if (!props.multiple) {
-    open.value = false
-  }
-}
-
-const humanReadableOptions = computed(() => {
-  if (props.multiple) {
-    // @ts-ignore
-    return selectedOptions.value.map((option) => option.name).join(', ')
-  }
-
-  if (typeof selectedOptions.value === 'object') {
-    // @ts-ignore
-    return selectedOptions.value.name
-  }
-
-  if (typeof selectedOptions.value === 'number') {
-    return props.options.find((item) => item.id === selectedOptions.value).name
-  }
-
-  return props.placeholder
-})
+const selectedOptions = ref<ModelValue>(props.modelValue ?? [])
 
 const search = (items: Option[], searchTerm: string) =>
   items.filter((item) => {
     return item.name.toLowerCase().includes(searchTerm.toLowerCase())
   })
 
+const humanReadableOptions = computed(() => {
+  if (Array.isArray(selectedOptions.value)) {
+    if (!selectedOptions.value.length) {
+      return computedPlaceholder.value
+    }
+
+    return selectedOptions.value.map((option) => option.name).join(', ')
+  }
+
+  if (typeof selectedOptions.value === 'object') {
+    return selectedOptions.value.name
+  }
+
+  return props.options.find((item) => item.id === selectedOptions.value)?.name
+})
+
 const isSelected = (option: Option) => {
-  if (props.multiple) {
-    // @ts-ignore
+  if (Array.isArray(selectedOptions.value)) {
     return selectedOptions.value.find((cur) => cur.id === option.id)
   }
 
   if (typeof selectedOptions.value === 'object') {
-    // @ts-ignore
     return selectedOptions.value.id === option.id
   }
 
-  if (typeof selectedOptions.value === 'number') {
-    return selectedOptions.value === option.id
-  }
-
-  return false
+  return selectedOptions.value === option.id
 }
 
 watch(selectedOptions, () => {
-  if (props.multiple) {
+  if (Array.isArray(selectedOptions.value)) {
     emits('update:modelValue', selectedOptions.value)
   } else {
     // @ts-ignore
@@ -100,55 +81,39 @@ watch(selectedOptions, () => {
         variant="outline"
         role="combobox"
         :aria-expanded="open"
-        class="justify-between"
-        :class="[widthClass]">
-        <div class="overflow-hidden !font-normal dark:text-white">
-          <template v-if="$slots.selectedOptions">
-            <slot
-              name="selectedOptions"
-              :selectedOptions="selectedOptions" />
-          </template>
-          <template v-else>
-            {{ humanReadableOptions }}
-          </template>
-        </div>
-        <ChevronUpDownIcon class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
+        class="w-[200px] justify-between overflow-hidden !font-normal dark:text-white">
+        {{ humanReadableOptions }}
+        <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
       </Button>
     </PopoverTrigger>
 
-    <PopoverContent
-      class="!p-0"
-      :class="[widthClass]">
+    <PopoverContent class="w-[200px] p-0">
       <Command
         :multiple="multiple"
-        :filter-function="search"
-        v-model="selectedOptions">
+        v-model="selectedOptions"
+        :filter-function="search">
         <CommandInput
-          v-if="allowSearch"
           class="h-9"
-          :placeholder="placeholder" />
+          :placeholder="computedPlaceholder" />
 
-        <CommandEmpty>{{ noResults }}</CommandEmpty>
+        <CommandEmpty>{{ computedEmpty }}</CommandEmpty>
 
         <CommandList>
           <CommandGroup>
             <CommandItem
               v-for="option in options"
               :key="option.id"
-              :id="option.id"
               :value="option"
-              @select="optionSelected(option)">
-              <CheckIcon
-                class="mr-2 size-4"
-                :class="[isSelected(option) ? 'opacity-100' : 'opacity-0']" />
-              <template v-if="$slots.item">
-                <slot
-                  name="item"
-                  :option="option" />
-              </template>
-              <template v-else>
-                {{ option.name }}
-              </template>
+              @select="
+                () => {
+                  if (!multiple) {
+                    open = false
+                  }
+                }
+              ">
+              {{ option.name }}
+              <Check
+                :class="cn('ml-auto size-4', isSelected(option) ? 'opacity-100' : 'opacity-0')" />
             </CommandItem>
           </CommandGroup>
         </CommandList>

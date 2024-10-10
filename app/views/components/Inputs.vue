@@ -33,7 +33,7 @@ watch(selectValue, () => {
     <div class="space-y-4 w-fit">
       <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions" />
 
-      <Combobox v-model="comboboxValue" :options="comboboxOptions" />
+      <Combobox v-model="comboboxValue" :options="comboboxOptions" :multiple="true" />
     </div>
   </div>
 </template>

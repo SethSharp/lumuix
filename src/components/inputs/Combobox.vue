@@ -1,13 +1,7 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import { Check, ChevronsUpDown } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
-import { Button } from '@/components/button'
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from '@/components/popover'
 import {
   Command,
   CommandEmpty,
@@ -16,42 +10,39 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/command'
+import { Button } from '@/components/button'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
-const props = withDefaults(
-  defineProps<{
-    modelValue?: Option[] | Option | number | null
-    options: Option[]
-    multiple?: boolean
-    placeholder?: string
-  }>(), {
-    modelValue: null
-  }
-)
+const emits = defineEmits(['update:modelValue'])
 
-const computedPlaceholder = computed(() => props.placeholder ?? "Search framework...")
+const props = defineProps<{
+  modelValue: [] | number | null
+  placeholder?: string
+  emptyMessage?: string
+  options: Option[]
+  multiple?: boolean
+}>()
 
-const selectedOptions = ref<Option[] | Option | number | null>(props.modelValue)
+const computedPlaceholder = computed(() => props.placeholder ?? "Select an option")
+const computedEmpty = computed(() => props.emptyMessage ?? "Option not found")
 
-const isSelected = (option: Option) => {
-  if (props.multiple) {
-    return selectedOptions.value.find((cur) => cur.id === option.id)
-  }
+const open = ref(false)
+const selectedOptions = ref<Option[] | Option | number | null>(props.modelValue ?? [])
 
-  if (typeof selectedOptions.value === 'object') {
-    return selectedOptions.value.id === option.id
-  }
-
-  return selectedOptions.value === option.id
-}
+const search = (items: Option[], searchTerm: string) =>
+  items.filter((item) => {
+    return item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  })
 
 const humanReadableOptions = computed(() => {
   if (props.multiple) {
     // @ts-ignore
-    return selectedOptions.value.map((option) => option.name).join(', ')
-  }
+    if (! selectedOptions.value.length) {
+      return computedPlaceholder.value
+    }
 
-  if (selectedOptions.value === null) {
-    return computedPlaceholder.value
+    // @ts-ignore
+    return selectedOptions.value.map((option) => option.name).join(', ')
   }
 
   if (typeof selectedOptions.value === 'object') {
@@ -65,38 +56,70 @@ const humanReadableOptions = computed(() => {
 
   return computedPlaceholder.value
 })
+
+const isSelected = (option: Option) => {
+  if (props.multiple) {
+    // @ts-ignore
+    return selectedOptions.value.find((cur) => cur.id === option.id)
+  }
+
+  if (typeof selectedOptions.value === 'object') {
+    // @ts-ignore
+    return selectedOptions.value.id === option.id
+  }
+
+  if (typeof selectedOptions.value === 'number') {
+    return selectedOptions.value === option.id
+  }
+
+  return false
+}
+
+watch(selectedOptions, () => {
+  if (props.multiple) {
+    emits('update:modelValue', selectedOptions.value)
+  } else {
+    // @ts-ignore
+    emits('update:modelValue', selectedOptions.value.id)
+  }
+})
 </script>
 
 <template>
-  <Popover>
+  <Popover v-model:open="open">
     <PopoverTrigger as-child>
       <Button
         variant="outline"
         role="combobox"
-        class="w-[200px] justify-between"
+        :aria-expanded="open"
+        class="w-[200px] justify-between overflow-hidden !font-normal dark:text-white"
       >
-        {{ humanReadableOptions }}
-        <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50" />
+          {{ humanReadableOptions }}
+          <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
       </Button>
     </PopoverTrigger>
+
     <PopoverContent class="w-[200px] p-0">
-      <Command :multiple="multiple" v-model="selectedOptions">
-        <CommandInput class="h-9" :placeholder="computedPlaceholder" />
-        <CommandEmpty>Option not found</CommandEmpty>
+      <Command :multiple="multiple" v-model="selectedOptions" :filter-function="search">
+        <CommandInput
+          class="h-9"
+          :placeholder="computedPlaceholder" />
+
+        <CommandEmpty>{{computedEmpty}}</CommandEmpty>
+
         <CommandList>
           <CommandGroup>
             <CommandItem
               v-for="option in options"
               :key="option.id"
-              :value="option.id"
-            >
-              {{ option.name }}
-              <Check
-                :class="cn(
-                  'ml-auto size-4',
-                  isSelected(option) ? 'opacity-100' : 'opacity-0',
-                )"
-              />
+              :value="option">
+                {{ option.name }}
+                <Check
+                  :class="cn(
+                    'ml-auto size-4',
+                    isSelected(option) ? 'opacity-100' : 'opacity-0',
+                  )"
+                />
             </CommandItem>
           </CommandGroup>
         </CommandList>

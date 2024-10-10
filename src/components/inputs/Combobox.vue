@@ -15,19 +15,21 @@ import {
 
 const emits = defineEmits(['update:modelValue'])
 
+type ModelValue = Option[] | Option | number | null | string
+
 const props = defineProps<{
-  modelValue: Option[] | number | null
+  modelValue: ModelValue
   placeholder?: string
   emptyMessage?: string
   options: Option[]
   multiple?: boolean
 }>()
 
-const computedPlaceholder = computed(() => props.placeholder ?? "Select an option")
 const computedEmpty = computed(() => props.emptyMessage ?? "Option not found")
+const computedPlaceholder = computed(() => props.placeholder ?? "Select an option")
 
 const open = ref(false)
-const selectedOptions = ref<Option[] | Option | number | null>(props.modelValue ?? [])
+const selectedOptions = ref<ModelValue>(props.modelValue ?? [])
 
 const search = (items: Option[], searchTerm: string) =>
   items.filter((item) => {
@@ -47,11 +49,7 @@ const humanReadableOptions = computed(() => {
     return selectedOptions.value.name
   }
 
-  if (typeof selectedOptions.value === 'number') {
-    return props.options.find((item) => item.id === selectedOptions.value).name
-  }
-
-  return computedPlaceholder.value
+  return props.options.find((item) => item.id === selectedOptions.value)?.name
 })
 
 const isSelected = (option: Option) => {
@@ -63,11 +61,7 @@ const isSelected = (option: Option) => {
     return selectedOptions.value.id === option.id
   }
 
-  if (typeof selectedOptions.value === 'number') {
-    return selectedOptions.value === option.id
-  }
-
-  return false
+  return selectedOptions.value === option.id
 }
 
 watch(selectedOptions, () => {

@@ -12,7 +12,7 @@ const selectOptions = ref([
   'Strawberry'
 ])
 
-const comboboxValue = ref(null)
+const comboboxValue = ref('next.js')
 const comboboxOptions = ref([
   { id: 'next.js', name: 'Next.js' },
   { id: 'sveltekit', name: 'SvelteKit' },
@@ -39,7 +39,7 @@ watch(comboboxValue, () => {
       </div>
 
       <div>
-        <Combobox v-model="comboboxValue" :options="comboboxOptions" :multiple="true" />
+        <Combobox v-model="comboboxValue" :options="comboboxOptions" />
         <p class="text-sm mt-1">
           Accepts options as {id: number|string, value: string}.
           Model value as: array, null or a number (id)

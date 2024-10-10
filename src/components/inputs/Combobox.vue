@@ -112,7 +112,8 @@ watch(selectedOptions, () => {
             <CommandItem
               v-for="option in options"
               :key="option.id"
-              :value="option">
+              :value="option"
+            >
                 {{ option.name }}
                 <Check
                   :class="cn(

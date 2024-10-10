@@ -33,8 +33,8 @@ watch(selectedOption, () => {
 </script>
 
 <template>
-  <SelectRoot v-model="selectedOption">
-    <SelectTrigger>
+  <SelectRoot v-model="selectedOption" v-slot="{ open }">
+    <SelectTrigger :open="open">
       <SelectValue :placeholder="computedPlaceholder" />
     </SelectTrigger>
     <SelectContent>

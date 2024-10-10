@@ -33,7 +33,13 @@ watch(selectValue, () => {
     <div class="space-y-4 w-fit">
       <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions" />
 
-      <Combobox v-model="comboboxValue" :options="comboboxOptions" :multiple="true" />
+      <div>
+        <Combobox v-model="comboboxValue" :options="comboboxOptions" />
+        <p class="text-sm mt-1">
+          Accepts options as {id: number, value: string}.
+          Model value as: array, null or a number (id)
+        </p>
+      </div>
     </div>
   </div>
 </template>

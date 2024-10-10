@@ -9,7 +9,7 @@ const forwarded = useForwardPropsEmits(props, emits)
 </script>
 
 <template>
-  <SelectRoot v-bind="forwarded">
-    <slot />
+  <SelectRoot v-bind="forwarded" v-slot="{ open }">
+    <slot :open="open" />
   </SelectRoot>
 </template>

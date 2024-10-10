@@ -12,7 +12,7 @@ const emits = defineEmits(['update:modelValue'])
 
 const props = withDefaults(
   defineProps<{
-    modelValue?: string | null
+    modelValue: string | null
     options: string[]
     placeholder?: string
   }>(),
@@ -25,33 +25,19 @@ const selectedOption = ref(
   props.modelValue ? props.options.find((option) => option === props.modelValue) : null,
 )
 
-watch(selectedOption, (newSelectedOption) => {
-  if (newSelectedOption) {
-    emits('update:modelValue', newSelectedOption)
-    return
-  }
-
-  emits('update:modelValue', null)
+watch(selectedOption, () => {
+  emits('update:modelValue', selectedOption.value)
 })
 </script>
 
 <template>
   <SelectRoot v-model="selectedOption">
     <SelectTrigger>
-      <SelectValue> {{ selectedOption ?? placeholder }} </SelectValue>
+      <SelectValue :placeholder="placeholder ?? 'Select an option'" />
     </SelectTrigger>
     <SelectContent>
-      <SelectItem
-        v-for="option in options"
-        :value="option">
-        <template v-if="$slots.options">
-          <slot
-            name="options"
-            :item="option" />
-        </template>
-        <template v-else>
-          {{ option }}
-        </template>
+      <SelectItem v-for="option in options" :value="option">
+        {{ option }}
       </SelectItem>
     </SelectContent>
   </SelectRoot>

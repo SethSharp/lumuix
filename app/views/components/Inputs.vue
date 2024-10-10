@@ -31,10 +31,10 @@ watch(selectValue, () => {
     <p>Inputs houses a lot of general use inputs especially helpful for forms.</p>
 
     <div class="space-y-4 w-fit">
-      <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions" />
+      <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions"/>
 
       <div>
-        <Combobox v-model="comboboxValue" :options="comboboxOptions" />
+        <Combobox v-model="comboboxValue" :options="comboboxOptions" :multiple="true" />
         <p class="text-sm mt-1">
           Accepts options as {id: number, value: string}.
           Model value as: array, null or a number (id)

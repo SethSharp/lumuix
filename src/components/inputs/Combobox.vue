@@ -35,18 +35,15 @@ const search = (items: Option[], searchTerm: string) =>
   })
 
 const humanReadableOptions = computed(() => {
-  if (props.multiple) {
-    // @ts-ignore
+  if (Array.isArray(selectedOptions.value)) {
     if (! selectedOptions.value.length) {
       return computedPlaceholder.value
     }
 
-    // @ts-ignore
     return selectedOptions.value.map((option) => option.name).join(', ')
   }
 
   if (typeof selectedOptions.value === 'object') {
-    // @ts-ignore
     return selectedOptions.value.name
   }
 
@@ -113,6 +110,11 @@ watch(selectedOptions, () => {
               v-for="option in options"
               :key="option.id"
               :value="option"
+              @select="() => {
+                if (! multiple) {
+                  open = false
+                }
+              }"
             >
                 {{ option.name }}
                 <Check

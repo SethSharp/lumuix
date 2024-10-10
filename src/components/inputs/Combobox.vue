@@ -68,6 +68,7 @@ watch(selectedOptions, () => {
   if (Array.isArray(selectedOptions.value)) {
     emits('update:modelValue', selectedOptions.value)
   } else {
+    // @ts-ignore
     emits('update:modelValue', selectedOptions.value.id)
   }
 })

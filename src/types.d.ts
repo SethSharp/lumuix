@@ -13,7 +13,7 @@ declare global {
   }
 
   export type Option = {
-    id: number|string
+    id: number | string
     name: string
   }
 

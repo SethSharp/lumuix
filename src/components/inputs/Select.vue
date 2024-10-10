@@ -21,7 +21,7 @@ const props = withDefaults(
   },
 )
 
-const computedPlaceholder = computed(() => props.placeholder ?? "Select an option...")
+const computedPlaceholder = computed(() => props.placeholder ?? 'Select an option...')
 
 const selectedOption = ref(
   props.modelValue ? props.options.find((option) => option === props.modelValue) : null,
@@ -33,12 +33,16 @@ watch(selectedOption, () => {
 </script>
 
 <template>
-  <SelectRoot v-model="selectedOption" v-slot="{ open }">
+  <SelectRoot
+    v-model="selectedOption"
+    v-slot="{ open }">
     <SelectTrigger :open="open">
       <SelectValue :placeholder="computedPlaceholder" />
     </SelectTrigger>
     <SelectContent>
-      <SelectItem v-for="option in options" :value="option">
+      <SelectItem
+        v-for="option in options"
+        :value="option">
         {{ option }}
       </SelectItem>
     </SelectContent>

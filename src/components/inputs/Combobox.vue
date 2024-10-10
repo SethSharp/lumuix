@@ -25,8 +25,8 @@ const props = defineProps<{
   multiple?: boolean
 }>()
 
-const computedEmpty = computed(() => props.emptyMessage ?? "Option not found")
-const computedPlaceholder = computed(() => props.placeholder ?? "Select an option")
+const computedEmpty = computed(() => props.emptyMessage ?? 'Option not found')
+const computedPlaceholder = computed(() => props.placeholder ?? 'Select an option')
 
 const open = ref(false)
 const selectedOptions = ref<ModelValue>(props.modelValue ?? [])
@@ -38,7 +38,7 @@ const search = (items: Option[], searchTerm: string) =>
 
 const humanReadableOptions = computed(() => {
   if (Array.isArray(selectedOptions.value)) {
-    if (! selectedOptions.value.length) {
+    if (!selectedOptions.value.length) {
       return computedPlaceholder.value
     }
 
@@ -80,20 +80,22 @@ watch(selectedOptions, () => {
         variant="outline"
         role="combobox"
         :aria-expanded="open"
-        class="w-[200px] justify-between overflow-hidden !font-normal dark:text-white"
-      >
-          {{ humanReadableOptions }}
-          <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
+        class="w-[200px] justify-between overflow-hidden !font-normal dark:text-white">
+        {{ humanReadableOptions }}
+        <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
       </Button>
     </PopoverTrigger>
 
     <PopoverContent class="w-[200px] p-0">
-      <Command :multiple="multiple" v-model="selectedOptions" :filter-function="search">
+      <Command
+        :multiple="multiple"
+        v-model="selectedOptions"
+        :filter-function="search">
         <CommandInput
           class="h-9"
           :placeholder="computedPlaceholder" />
 
-        <CommandEmpty>{{computedEmpty}}</CommandEmpty>
+        <CommandEmpty>{{ computedEmpty }}</CommandEmpty>
 
         <CommandList>
           <CommandGroup>
@@ -101,19 +103,16 @@ watch(selectedOptions, () => {
               v-for="option in options"
               :key="option.id"
               :value="option"
-              @select="() => {
-                if (! multiple) {
-                  open = false
+              @select="
+                () => {
+                  if (!multiple) {
+                    open = false
+                  }
                 }
-              }"
-            >
-                {{ option.name }}
-                <Check
-                  :class="cn(
-                    'ml-auto size-4',
-                    isSelected(option) ? 'opacity-100' : 'opacity-0',
-                  )"
-                />
+              ">
+              {{ option.name }}
+              <Check
+                :class="cn('ml-auto size-4', isSelected(option) ? 'opacity-100' : 'opacity-0')" />
             </CommandItem>
           </CommandGroup>
         </CommandList>

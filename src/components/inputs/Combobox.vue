@@ -2,6 +2,8 @@
 import { computed, ref, watch } from 'vue'
 import { Check, ChevronsUpDown } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
+import { Button } from '@/components/button'
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 import {
   Command,
   CommandEmpty,
@@ -10,8 +12,6 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/command'
-import { Button } from '@/components/button'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
 const emits = defineEmits(['update:modelValue'])
 
@@ -55,13 +55,11 @@ const humanReadableOptions = computed(() => {
 })
 
 const isSelected = (option: Option) => {
-  if (props.multiple) {
-    // @ts-ignore
+  if (Array.isArray(selectedOptions.value)) {
     return selectedOptions.value.find((cur) => cur.id === option.id)
   }
 
   if (typeof selectedOptions.value === 'object') {
-    // @ts-ignore
     return selectedOptions.value.id === option.id
   }
 
@@ -73,10 +71,9 @@ const isSelected = (option: Option) => {
 }
 
 watch(selectedOptions, () => {
-  if (props.multiple) {
+  if (Array.isArray(selectedOptions.value)) {
     emits('update:modelValue', selectedOptions.value)
   } else {
-    // @ts-ignore
     emits('update:modelValue', selectedOptions.value.id)
   }
 })

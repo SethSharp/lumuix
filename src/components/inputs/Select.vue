@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import {
   SelectRoot,
   SelectContent,
@@ -21,6 +21,8 @@ const props = withDefaults(
   },
 )
 
+const computedPlaceholder = computed(() => props.placeholder ?? "Select an option...")
+
 const selectedOption = ref(
   props.modelValue ? props.options.find((option) => option === props.modelValue) : null,
 )
@@ -33,7 +35,7 @@ watch(selectedOption, () => {
 <template>
   <SelectRoot v-model="selectedOption">
     <SelectTrigger>
-      <SelectValue :placeholder="placeholder ?? 'Select an option'" />
+      <SelectValue :placeholder="computedPlaceholder" />
     </SelectTrigger>
     <SelectContent>
       <SelectItem v-for="option in options" :value="option">

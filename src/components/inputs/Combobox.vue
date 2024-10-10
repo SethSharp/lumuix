@@ -22,10 +22,13 @@ const props = withDefaults(
     modelValue?: Option[] | Option | number | null
     options: Option[]
     multiple?: boolean
+    placeholder?: string
   }>(), {
     modelValue: null
   }
 )
+
+const computedPlaceholder = computed(() => props.placeholder ?? "Search framework...")
 
 const selectedOptions = ref<Option[] | Option | number | null>(props.modelValue)
 
@@ -47,6 +50,10 @@ const humanReadableOptions = computed(() => {
     return selectedOptions.value.map((option) => option.name).join(', ')
   }
 
+  if (selectedOptions.value === null) {
+    return computedPlaceholder.value
+  }
+
   if (typeof selectedOptions.value === 'object') {
     // @ts-ignore
     return selectedOptions.value.name
@@ -56,7 +63,7 @@ const humanReadableOptions = computed(() => {
     return props.options.find((item) => item.id === selectedOptions.value).name
   }
 
-  return "Select an option..."
+  return computedPlaceholder.value
 })
 </script>
 
@@ -74,7 +81,7 @@ const humanReadableOptions = computed(() => {
     </PopoverTrigger>
     <PopoverContent class="w-[200px] p-0">
       <Command :multiple="multiple" v-model="selectedOptions">
-        <CommandInput class="h-9" placeholder="Search framework..." />
+        <CommandInput class="h-9" :placeholder="computedPlaceholder" />
         <CommandEmpty>Option not found</CommandEmpty>
         <CommandList>
           <CommandGroup>

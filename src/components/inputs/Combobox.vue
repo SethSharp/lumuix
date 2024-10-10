@@ -16,7 +16,7 @@ import {
 const emits = defineEmits(['update:modelValue'])
 
 const props = defineProps<{
-  modelValue: [] | number | null
+  modelValue: Option[] | number | null
   placeholder?: string
   emptyMessage?: string
   options: Option[]

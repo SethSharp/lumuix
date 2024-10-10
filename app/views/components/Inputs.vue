@@ -21,22 +21,27 @@ const comboboxOptions = ref([
   { id: 'astro', name: 'Astro' },
 ])
 
-watch(selectValue, () => {
-  console.log(selectValue.value)
+watch(comboboxValue, () => {
+  console.log(comboboxValue.value)
 })
 </script>
 
 <template>
   <div>
-    <p>Inputs houses a lot of general use inputs especially helpful for forms.</p>
+    <p>Inputs houses a lot of general use inputs especially helpful for forms. Some are opinionated inputs built using Lumuix components (such as Select and Combobox). </p>
 
-    <div class="space-y-4 w-fit">
-      <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions"/>
+    <div class="space-y-4 w-fit mt-4">
+      <div>
+        <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions"/>
+        <p class="text-sm mt-1">
+          Accepts an array of values
+        </p>
+      </div>
 
       <div>
         <Combobox v-model="comboboxValue" :options="comboboxOptions" :multiple="true" />
         <p class="text-sm mt-1">
-          Accepts options as {id: number, value: string}.
+          Accepts options as {id: number|string, value: string}.
           Model value as: array, null or a number (id)
         </p>
       </div>

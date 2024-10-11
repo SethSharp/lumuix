@@ -55,7 +55,7 @@ const fileUpload = () => document.getElementById(uniqueId).click()
         @input="handleFileChange" />
 
       <Button
-        variant="secondary"
+        variant="outline"
         @click="fileUpload">
         Upload
       </Button>

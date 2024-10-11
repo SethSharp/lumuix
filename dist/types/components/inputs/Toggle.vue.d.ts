@@ -3,8 +3,6 @@ import { type SwitchRootProps } from 'radix-vue';
 declare let __VLS_typeProps: SwitchRootProps & {
     modelValue?: boolean | null;
     class?: HTMLAttributes['class'];
-    id?: string;
-    label?: string;
 };
 type __VLS_PublicProps = {
     modelValue?: any;

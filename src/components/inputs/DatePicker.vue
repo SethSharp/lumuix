@@ -51,9 +51,9 @@ onMounted(() => {
         <Button
           variant="outline"
           :class="[
-          'w-[280px] justify-start text-left font-normal dark:text-white',
-          !modelValue && 'text-muted-foreground',
-        ]">
+            'w-[280px] justify-start text-left font-normal dark:text-white',
+            !modelValue && 'text-muted-foreground',
+          ]">
           <CalendarIcon class="mr-2 size-4" />
           {{ value ? df.format(value.toDate(getLocalTimeZone())) : placeholder }}
         </Button>

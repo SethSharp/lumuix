@@ -1,7 +1,7 @@
+export { default as Base } from './Base.vue';
 export { default as Checkbox } from './Checkbox.vue';
 export { default as Combobox } from './Combobox.vue';
 export { default as DatePicker } from './DatePicker.vue';
-export { default as Base } from './Base.vue';
 export { default as ImageUpload } from './ImageUpload.vue';
 export { default as Input } from './Input.vue';
 export { default as Select } from './Select.vue';

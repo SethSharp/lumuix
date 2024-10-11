@@ -8,8 +8,7 @@ import { Base } from '@/components/inputs'
 const emits = defineEmits(['update:modelValue'])
 
 const props = defineProps<
-  CheckboxRootProps &
-  {
+  CheckboxRootProps & {
     modelValue: boolean | null
     text?: string
   }

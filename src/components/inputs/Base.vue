@@ -47,6 +47,8 @@ export default {
       {{ description }}
     </Description>
 
-    <Error :error="error" class="mt-[3px]" />
+    <Error
+      :error="error"
+      class="mt-[3px]" />
   </div>
 </template>

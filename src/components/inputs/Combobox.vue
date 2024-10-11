@@ -107,12 +107,12 @@ watch(selectedOptions, () => {
                 :key="option.id"
                 :value="option"
                 @select="
-                () => {
-                  if (!multiple) {
-                    open = false
+                  () => {
+                    if (!multiple) {
+                      open = false
+                    }
                   }
-                }
-              ">
+                ">
                 {{ option.name }}
                 <Check
                   :class="cn('ml-auto size-4', isSelected(option) ? 'opacity-100' : 'opacity-0')" />

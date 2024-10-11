@@ -3,6 +3,7 @@ import { computed, ref, watch } from 'vue'
 import { Check, ChevronsUpDown } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/button'
+import { Base } from '@/components/inputs'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 import {
   Command,
@@ -75,49 +76,51 @@ watch(selectedOptions, () => {
 </script>
 
 <template>
-  <Popover v-model:open="open">
-    <PopoverTrigger as-child>
-      <Button
-        variant="outline"
-        role="combobox"
-        :aria-expanded="open"
-        class="w-[200px] justify-between overflow-hidden !font-normal dark:text-white">
-        {{ humanReadableOptions }}
-        <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
-      </Button>
-    </PopoverTrigger>
+  <Base v-bind="$props">
+    <Popover v-model:open="open">
+      <PopoverTrigger as-child>
+        <Button
+          variant="outline"
+          role="combobox"
+          :aria-expanded="open"
+          class="w-[200px] justify-between overflow-hidden !font-normal dark:text-white">
+          {{ humanReadableOptions }}
+          <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
+        </Button>
+      </PopoverTrigger>
 
-    <PopoverContent class="w-[200px] p-0">
-      <Command
-        :multiple="multiple"
-        v-model="selectedOptions"
-        :filter-function="search">
-        <CommandInput
-          class="h-9"
-          :placeholder="computedPlaceholder" />
+      <PopoverContent class="w-[200px] p-0">
+        <Command
+          :multiple="multiple"
+          v-model="selectedOptions"
+          :filter-function="search">
+          <CommandInput
+            class="h-9"
+            :placeholder="computedPlaceholder" />
 
-        <CommandEmpty>{{ computedEmpty }}</CommandEmpty>
+          <CommandEmpty>{{ computedEmpty }}</CommandEmpty>
 
-        <CommandList>
-          <CommandGroup>
-            <CommandItem
-              v-for="option in options"
-              :key="option.id"
-              :value="option"
-              @select="
+          <CommandList>
+            <CommandGroup>
+              <CommandItem
+                v-for="option in options"
+                :key="option.id"
+                :value="option"
+                @select="
                 () => {
                   if (!multiple) {
                     open = false
                   }
                 }
               ">
-              {{ option.name }}
-              <Check
-                :class="cn('ml-auto size-4', isSelected(option) ? 'opacity-100' : 'opacity-0')" />
-            </CommandItem>
-          </CommandGroup>
-        </CommandList>
-      </Command>
-    </PopoverContent>
-  </Popover>
+                {{ option.name }}
+                <Check
+                  :class="cn('ml-auto size-4', isSelected(option) ? 'opacity-100' : 'opacity-0')" />
+              </CommandItem>
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  </Base>
 </template>

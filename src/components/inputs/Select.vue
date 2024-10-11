@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref, watch } from 'vue'
+import { Base } from '@/components/inputs'
 import {
   SelectRoot,
   SelectContent,
@@ -33,18 +34,20 @@ watch(selectedOption, () => {
 </script>
 
 <template>
-  <SelectRoot
-    v-model="selectedOption"
-    v-slot="{ open }">
-    <SelectTrigger :open="open">
-      <SelectValue :placeholder="computedPlaceholder" />
-    </SelectTrigger>
-    <SelectContent>
-      <SelectItem
-        v-for="option in options"
-        :value="option">
-        {{ option }}
-      </SelectItem>
-    </SelectContent>
-  </SelectRoot>
+  <Base v-bind="$props">
+    <SelectRoot
+      v-model="selectedOption"
+      v-slot="{ open }">
+      <SelectTrigger :open="open">
+        <SelectValue :placeholder="computedPlaceholder" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem
+          v-for="option in options"
+          :value="option">
+          {{ option }}
+        </SelectItem>
+      </SelectContent>
+    </SelectRoot>
+  </Base>
 </template>

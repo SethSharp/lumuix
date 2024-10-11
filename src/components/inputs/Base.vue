@@ -43,7 +43,7 @@ export default {
         class="absolute right-0 mt-[3px]" />
     </div>
 
-    <Description class="mt-[3px] w-4/5">
+    <Description class="mt-[3px]">
       {{ description }}
     </Description>
 

@@ -64,7 +64,7 @@ watch(comboboxValue, () => {
       </div>
 
       <div>
-        <TextArea label="This is a textarea" description="Allows you to enter a body of text" error="Oops! There is an error - this is available on all input components" />
+        <TextArea label="This is a textarea" description="Allows you to enter a body of text" placeholder="Do not enter the text of a book here please." error="Oops! There is an error - this is available on all input components" />
       </div>
 
       <div>

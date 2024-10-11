@@ -83,7 +83,7 @@ watch(selectedOptions, () => {
           variant="outline"
           role="combobox"
           :aria-expanded="open"
-          class="w-[200px] justify-between overflow-hidden !font-normal dark:text-white">
+          class="w-[200px] justify-between overflow-hidden">
           {{ humanReadableOptions }}
           <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
         </Button>

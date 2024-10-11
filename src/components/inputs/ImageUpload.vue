@@ -44,7 +44,7 @@ const fileUpload = () => document.getElementById(uniqueId).click()
         <img
           :src="newImage ?? curImg"
           alt="Image cannot be shown right now"
-          class="size-24 rounded-full dark:bg-slate-700" />
+          class="size-24 rounded-full dark:bg-slate-900" />
       </slot>
 
       <input

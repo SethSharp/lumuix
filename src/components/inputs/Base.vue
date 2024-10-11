@@ -40,13 +40,13 @@ export default {
       <CharacterCount
         v-if="showCharacterCount"
         :count="modelValue?.length"
-        class="absolute right-0 mt-[3px]" />
+        class="absolute right-0 mt-[5px]" />
     </div>
 
-    <Description class="mt-[3px]">
+    <Description class="mt-[5px]">
       {{ description }}
     </Description>
 
-    <Error :error="error" />
+    <Error :error="error" class="mt-[3px]" />
   </div>
 </template>

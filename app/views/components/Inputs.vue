@@ -2,8 +2,16 @@
 import { ref, watch } from 'vue'
 import {
   Select,
-  Combobox
+  Combobox,
+  Checkbox,
+  DatePicker,
+  ImageUpload,
+  Input,
+  TextArea,
+  Toggle
 } from '@/components/inputs'
+
+const checkboxValue = ref(true)
 
 const selectValue = ref(null)
 const selectOptions = ref([
@@ -32,10 +40,7 @@ watch(comboboxValue, () => {
 
     <div class="space-y-4 w-fit mt-4">
       <div>
-        <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions"/>
-        <p class="text-sm mt-1">
-          Accepts an array of values
-        </p>
+        <Checkbox v-model="checkboxValue" label="This is a checkbox" />
       </div>
 
       <div>
@@ -44,6 +49,33 @@ watch(comboboxValue, () => {
           Accepts options as {id: number|string, value: string}.
           Model value as: array, null or a number (id)
         </p>
+      </div>
+
+      <div>
+        <DatePicker />
+      </div>
+
+      <div>
+        <ImageUpload />
+      </div>
+
+      <div>
+        <Input label="This is a input" />
+      </div>
+
+      <div>
+        <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions"/>
+        <p class="text-sm mt-1">
+          Accepts an array of values
+        </p>
+      </div>
+
+      <div>
+        <TextArea />
+      </div>
+
+      <div>
+        <Toggle />
       </div>
     </div>
   </div>

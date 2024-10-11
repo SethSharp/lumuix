@@ -17,7 +17,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
         <img src="/public/images/logo.png" class="w-32" alt="Lumuix Logo" />
       </RouterLink>
       <div class="my-auto mr-6 flex gap-2 font-bold text-black dark:text-primary-200">
-        <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.4 </a>
+        <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.8 </a>
         <DarkModeToggle />
       </div>
     </nav>

@@ -1,10 +1,6 @@
 export {}
 
-import type { ButtonHTMLAttributes } from 'vue'
-
 declare global {
-  export type ButtonType = ButtonHTMLAttributes['type']
-
   export type TabOption = {
     name: string
     href: string

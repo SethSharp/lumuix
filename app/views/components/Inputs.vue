@@ -2,8 +2,16 @@
 import { ref, watch } from 'vue'
 import {
   Select,
-  Combobox
+  Combobox,
+  Checkbox,
+  DatePicker,
+  ImageUpload,
+  Input,
+  TextArea,
+  Toggle
 } from '@/components/inputs'
+
+const checkboxValue = ref(true)
 
 const selectValue = ref(null)
 const selectOptions = ref([
@@ -32,18 +40,35 @@ watch(comboboxValue, () => {
 
     <div class="space-y-4 w-fit mt-4">
       <div>
-        <Select v-model="selectValue" placeholder="Select a fruit..." :options="selectOptions"/>
-        <p class="text-sm mt-1">
-          Accepts an array of values
-        </p>
+        <Checkbox v-model="checkboxValue" text="This is a checkbox" />
       </div>
 
       <div>
-        <Combobox v-model="comboboxValue" :options="comboboxOptions" />
-        <p class="text-sm mt-1">
-          Accepts options as {id: number|string, value: string}.
-          Model value as: array, null or a number (id)
-        </p>
+        <Combobox v-model="comboboxValue" label="This is a combobox" description="Accepts options as {id: number|string, value: string}. Model value as: array, null or a number (id)" :options="comboboxOptions" />
+      </div>
+
+      <div>
+        <DatePicker label="Date picker" description="Select a date for this example page"  />
+      </div>
+
+      <div>
+        <ImageUpload label="Image upload" description="Allows you to upload an image" />
+      </div>
+
+      <div>
+        <Input label="This is a input" description="Allows you to enter some short text" placeholder="This is a placeholder, guiding users to a sensible response"  />
+      </div>
+
+      <div>
+        <Select v-model="selectValue" label="This is a select (custom)" placeholder="Select a fruit..." :options="selectOptions" description="Accepts an array of values"/>
+      </div>
+
+      <div>
+        <TextArea label="This is a textarea" description="Allows you to enter a body of text" placeholder="Do not enter the text of a book here please." error="Oops! There is an error - this is available on all input components" />
+      </div>
+
+      <div>
+        <Toggle label="This is a toggle" description="Toggle a setting or light and dark mode" />
       </div>
     </div>
   </div>

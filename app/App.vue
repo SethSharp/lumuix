@@ -10,7 +10,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
   <div>
     <nav
       id="nav-bar"
-      class="sticky top-0 z-10 flex h-fit w-full justify-between backdrop-blur bg-slate-100 dark:bg-slate-950">
+      class="sticky top-0 z-10 flex h-fit w-full justify-between backdrop-blur bg-slate-100 dark:bg-black border-b border-slate-400 dark:border-white">
       <RouterLink
         to="/"
         class="p-4 text-xl text-gray-100 transition hover:text-white dark:text-primary-200 sm:text-3xl">
@@ -23,8 +23,8 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
     </nav>
     <main>
       <div class="flex gap-4">
-        <div class="w-1/4 h-screen bg-slate-100 dark:bg-slate-950">
-          <nav class="space-y-4 p-4">
+        <div class="w-1/4 h-screen bg-slate-100 dark:bg-black">
+          <nav class="space-y-4 p-4 border-r border-slate-400 dark:border-white">
             <div
               v-for="group in routes"
               :key="group.name">
@@ -51,7 +51,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
             </div>
           </nav>
         </div>
-        <div class="w-3/4 p-6">
+        <div class="w-3/4">
           <component :is="$route.meta.layout">
             <RouterView />
           </component>

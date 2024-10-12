@@ -6,6 +6,7 @@ declare global {
     href: string
     active: boolean
     icon?: any
+    is?: any
   }
 
   export type Option = {

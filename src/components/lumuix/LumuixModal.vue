@@ -29,8 +29,8 @@ const closeModal = () => emits('close')
 </script>
 
 <template>
-  <Dialog :open="open">
-    <DialogTrigger>
+  <Dialog>
+    <DialogTrigger as-child>
       <slot name="trigger" />
     </DialogTrigger>
     <DialogContent
@@ -40,8 +40,8 @@ const closeModal = () => emits('close')
       :class="'max-w-' + size">
       <DialogHeader>
         <DialogTitle>
-          <template v-if="$slots.header">
-            <slot name="header" />
+          <template v-if="$slots.title">
+            <slot name="title" />
           </template>
           <template v-else-if="headerData?.title">
             {{ headerData.title }}

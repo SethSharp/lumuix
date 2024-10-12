@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { Error } from '@/components/form'
-import { CharacterCount, Description, Label } from '@/components/inputs'
+import { CharacterCount, Description, Label } from '@/components/form'
 
 withDefaults(
   defineProps<{
@@ -40,13 +40,15 @@ export default {
       <CharacterCount
         v-if="showCharacterCount"
         :count="modelValue?.length"
-        class="absolute right-0 mt-[3px]" />
+        class="absolute right-0 mt-[5px]" />
     </div>
 
-    <Description class="mt-[3px] w-4/5">
+    <Description class="mt-[5px]">
       {{ description }}
     </Description>
 
-    <Error :error="error" />
+    <Error
+      :error="error"
+      class="mt-[3px]" />
   </div>
 </template>

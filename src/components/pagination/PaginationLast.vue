@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type HTMLAttributes, computed } from 'vue'
-import { ChevronDoubleRightIcon } from '@heroicons/vue/24/outline'
+import { ChevronsRight } from 'lucide-vue-next'
 import { PaginationLast, type PaginationLastProps } from 'radix-vue'
 import { Button } from '@/components/button'
 
@@ -34,7 +34,7 @@ const delegatedProps = computed(() => {
       :as="as"
       class="size-10 p-0"
       variant="outline">
-      <ChevronDoubleRightIcon class="size-4" />
+      <ChevronsRight :size="16" />
     </Button>
   </PaginationLast>
 </template>

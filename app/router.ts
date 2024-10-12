@@ -9,6 +9,8 @@ import {
   Overview,
   Button,
   Calendar,
+  Card,
+  Combobox,
   Command,
   Dialog,
   DropdownMenu,
@@ -87,6 +89,24 @@ const routes = [
         },
       },
       {
+        path: '/components/card',
+        name: 'Card',
+        component: Card,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/combobox',
+        name: 'Combobox',
+        component: Combobox,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true
+        }
+      },
+      {
         path: '/components/command',
         name: 'Command',
         component: Command,
@@ -119,7 +139,7 @@ const routes = [
         component: Inputs,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          shadcn: false,
         },
       },
       {
@@ -128,7 +148,7 @@ const routes = [
         component: Page,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          shadcn: false,
         },
       },
       {

@@ -1,6 +1,7 @@
 <script setup lang="ts">
+import { Label } from '@/components/form'
+import { Input } from '@/components/inputs'
 import { Button } from '@/components/button'
-import { Input, Label } from '@/components/inputs'
 import {
   Dialog,
   DialogContent,

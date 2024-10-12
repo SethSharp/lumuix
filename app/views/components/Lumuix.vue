@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { Link } from '@inertiajs/vue3'
 import { House, Users, Banknote } from 'lucide-vue-next'
 import { Button } from '@/components/button'
@@ -116,6 +116,8 @@ const paginatedData = {
   to: 2,
   total: 10,
 }
+
+const isOpen = ref(false)
 </script>
 
 <template>
@@ -130,11 +132,14 @@ const paginatedData = {
       </div>
 
       <div>
-        <LumuixModal>
-          <template #trigger>
-            <Button variant="default"> Modal </Button>
-          </template>
-
+        <Button
+          variant="default"
+          @click="isOpen = true">
+          Modal
+        </Button>
+        <LumuixModal
+          :open="isOpen"
+          @close="isOpen = false">
           <template #title> This is the title </template>
           <template #description>
             This is the modal description. You can also pass the title and description as part of

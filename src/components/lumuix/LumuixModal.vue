@@ -29,7 +29,7 @@ const closeModal = () => emits('close')
 </script>
 
 <template>
-  <Dialog>
+  <Dialog :open="open">
     <DialogTrigger as-child>
       <slot name="trigger" />
     </DialogTrigger>

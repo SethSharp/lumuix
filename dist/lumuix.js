@@ -15436,7 +15436,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
   emits: ["close"],
   setup(e, { emit: t }) {
     const a = t, n = () => a("close");
-    return (o, s) => (v(), y(l(Hs), null, {
+    return (o, s) => (v(), y(l(Hs), { open: o.open }, {
       default: f(() => [
         O(l(Ev), { "as-child": "" }, {
           default: f(() => [
@@ -15492,7 +15492,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
         }, 8, ["class"])
       ]),
       _: 3
-    }));
+    }, 8, ["open"]));
   }
 }), Mh = { class: "justify-between sm:flex" }, Qg = /* @__PURE__ */ b({
   __name: "LumuixPagination",

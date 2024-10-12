@@ -1,22 +1,25 @@
 import preset from '@/presets/preset'
 
 import Container from './components/page/Container.vue'
-import Notifications from './components/page/Notifications.vue'
 
-export * from '@/components/pre-built'
-export * from './components/button'
-export * from '@/components/tabs'
-export * from '@/components/table'
-export * from '@/components/select'
-export * from '@/components/popover'
-export * from '@/components/pagination'
-export * from '@/components/dropdown-menu'
-export * from '@/components/dialog'
-export * from '@/components/command'
+export * from '@/components/badge'
+export * from '@/components/button'
 export * from '@/components/calendar'
+export * from '@/components/command'
+export * from '@/components/dialog'
+export * from '@/components/dropdown-menu'
 export * from '@/components/form'
 export * from '@/components/inputs'
+export * from '@/components/page'
+export * from '@/components/pagination'
+export * from '@/components/popover'
+export * from '@/components/pre-built'
+export * from '@/components/range-calendar'
+export * from '@/components/select'
+export * from '@/components/table'
+export * from '@/components/tabs'
+export * from '@/components/toast'
 
-export { Notifications, Pagination, Container }
+export { Pagination, Container }
 
 export { preset }

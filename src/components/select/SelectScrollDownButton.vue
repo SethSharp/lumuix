@@ -5,7 +5,7 @@ import {
   type SelectScrollDownButtonProps,
   useForwardProps,
 } from 'radix-vue'
-import { ChevronDownIcon } from '@heroicons/vue/24/outline'
+import { ChevronDown } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<SelectScrollDownButtonProps & { class?: HTMLAttributes['class'] }>()
@@ -24,7 +24,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     v-bind="forwardedProps"
     :class="cn('flex cursor-default items-center justify-center py-1', props.class)">
     <slot>
-      <ChevronDownIcon class="size-4" />
+      <ChevronDown class="h-4 w-4" />
     </slot>
   </SelectScrollDownButton>
 </template>

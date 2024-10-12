@@ -1,13 +1,5 @@
 <script setup lang="ts">
-import {
-  Calculator,
-  Calendar,
-  CreditCard,
-  Settings,
-  Smile,
-  User,
-} from 'lucide-vue-next'
-
+import { Calculator, Calendar, CreditCard, Settings, Smile, User } from 'lucide-vue-next'
 import {
   Command,
   CommandEmpty,
@@ -21,7 +13,7 @@ import {
 </script>
 
 <template>
-  <Command class="rounded-lg border shadow-md max-w-[450px]">
+  <Command class="max-w-[450px] rounded-lg border shadow-md">
     <CommandInput placeholder="Type a command or search..." />
     <CommandList>
       <CommandEmpty>No results found.</CommandEmpty>

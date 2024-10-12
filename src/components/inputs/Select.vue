@@ -1,5 +1,6 @@
 <script lang="ts" setup>
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
+import { Base } from '@/components/inputs'
 import {
   SelectRoot,
   SelectContent,
@@ -12,7 +13,7 @@ const emits = defineEmits(['update:modelValue'])
 
 const props = withDefaults(
   defineProps<{
-    modelValue?: string | null
+    modelValue: string | null
     options: string[]
     placeholder?: string
   }>(),
@@ -21,38 +22,32 @@ const props = withDefaults(
   },
 )
 
+const computedPlaceholder = computed(() => props.placeholder ?? 'Select an option...')
+
 const selectedOption = ref(
   props.modelValue ? props.options.find((option) => option === props.modelValue) : null,
 )
 
-watch(selectedOption, (newSelectedOption) => {
-  if (newSelectedOption) {
-    emits('update:modelValue', newSelectedOption)
-    return
-  }
-
-  emits('update:modelValue', null)
+watch(selectedOption, () => {
+  emits('update:modelValue', selectedOption.value)
 })
 </script>
 
 <template>
-  <SelectRoot v-model="selectedOption">
-    <SelectTrigger>
-      <SelectValue> {{ selectedOption ?? placeholder }} </SelectValue>
-    </SelectTrigger>
-    <SelectContent>
-      <SelectItem
-        v-for="option in options"
-        :value="option">
-        <template v-if="$slots.options">
-          <slot
-            name="options"
-            :item="option" />
-        </template>
-        <template v-else>
+  <Base v-bind="$props">
+    <SelectRoot
+      v-model="selectedOption"
+      v-slot="{ open }">
+      <SelectTrigger :open="open">
+        <SelectValue :placeholder="computedPlaceholder" />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem
+          v-for="option in options"
+          :value="option">
           {{ option }}
-        </template>
-      </SelectItem>
-    </SelectContent>
-  </SelectRoot>
+        </SelectItem>
+      </SelectContent>
+    </SelectRoot>
+  </Base>
 </template>

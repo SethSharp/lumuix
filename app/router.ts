@@ -25,6 +25,7 @@ import {
   Tabs,
   Toast,
   Badge,
+  Lumuix,
 } from './views'
 
 const routes = [
@@ -103,8 +104,8 @@ const routes = [
         component: Combobox,
         meta: {
           layout: ComponentLayout,
-          shadcn: true
-        }
+          shadcn: true,
+        },
       },
       {
         path: '/components/command',
@@ -170,9 +171,9 @@ const routes = [
         },
       },
       {
-        path: '/components/pre-built',
-        name: 'Prebuilt',
-        component: Prebuilt,
+        path: '/components/lumuix',
+        name: 'Lumuix',
+        component: Lumuix,
         meta: {
           layout: ComponentLayout,
           shadcn: false,

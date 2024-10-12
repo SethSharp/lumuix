@@ -15,9 +15,6 @@ declare function __VLS_template(): {
     }) => any>> & Partial<Record<`cell_${string}`, (_: {
         item: Row<Header<string>[]>;
     }) => any>> & {
-        default?(_: {
-            item: Row<Header<string>[]>[];
-        }): any;
         row_actions?(_: {
             item: Row<Header<string>[]>;
         }): any;

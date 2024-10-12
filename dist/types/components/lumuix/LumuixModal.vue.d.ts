@@ -1,7 +1,7 @@
 declare function __VLS_template(): {
     slots: {
         trigger?(_: {}): any;
-        header?(_: {}): any;
+        title?(_: {}): any;
         description?(_: {}): any;
         content?(_: {}): any;
         default?(_: {}): any;

@@ -1,21 +1,14 @@
 <script setup lang="ts">
-import { type HTMLAttributes, computed } from 'vue'
 import { ChevronsRight } from 'lucide-vue-next'
+import { type HTMLAttributes, computed } from 'vue'
 import { PaginationLast, type PaginationLastProps } from 'radix-vue'
+import { cn } from '@/lib/utils'
 import { Button } from '@/components/button'
 
 const props = withDefaults(
-  defineProps<
-    PaginationLastProps & {
-      class?: HTMLAttributes['class']
-      href?: string
-      is?: any
-      as?: string
-    }
-  >(),
+  defineProps<PaginationLastProps & { class?: HTMLAttributes['class'] }>(),
   {
     asChild: true,
-    is: 'a',
   },
 )
 
@@ -29,12 +22,11 @@ const delegatedProps = computed(() => {
 <template>
   <PaginationLast v-bind="delegatedProps">
     <Button
-      :href="href"
-      :is="is"
-      :as="as"
-      class="size-10 p-0"
+      :class="cn('size-10 p-0', props.class)"
       variant="outline">
-      <ChevronsRight :size="16" />
+      <slot>
+        <ChevronsRight class="size-4" />
+      </slot>
     </Button>
   </PaginationLast>
 </template>

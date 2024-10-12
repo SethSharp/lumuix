@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import {
-  PaginationRoot,
+  Pagination,
   PaginationEllipsis,
   PaginationFirst,
   PaginationLast,
@@ -13,7 +13,7 @@ import { Button } from '@/components/button'
 </script>
 
 <template>
-  <PaginationRoot
+  <Pagination
     v-slot="{ page }"
     :total="100"
     :sibling-count="1"
@@ -46,5 +46,5 @@ import { Button } from '@/components/button'
       <PaginationNext />
       <PaginationLast />
     </PaginationList>
-  </PaginationRoot>
+  </Pagination>
 </template>

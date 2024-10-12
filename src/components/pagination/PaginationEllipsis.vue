@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Ellipsis } from 'lucide-vue-next'
+import { MoreHorizontal } from 'lucide-vue-next'
 import { type HTMLAttributes, computed } from 'vue'
 import { PaginationEllipsis, type PaginationEllipsisProps } from 'radix-vue'
 import { cn } from '@/lib/utils'
@@ -16,7 +16,9 @@ const delegatedProps = computed(() => {
 <template>
   <PaginationEllipsis
     v-bind="delegatedProps"
-    :class="cn('flex h-9 w-9 items-center justify-center', props.class)">
-    <Ellipsis :size="16" />
+    :class="cn('flex size-9 items-center justify-center', props.class)">
+    <slot>
+      <MoreHorizontal />
+    </slot>
   </PaginationEllipsis>
 </template>

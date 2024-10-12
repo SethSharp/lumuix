@@ -2,19 +2,12 @@
 import { ChevronsLeft } from 'lucide-vue-next'
 import { type HTMLAttributes, computed } from 'vue'
 import { PaginationFirst, type PaginationFirstProps } from 'radix-vue'
+import { cn } from '@/lib/utils'
 import { Button } from '@/components/button'
 
 const props = withDefaults(
-  defineProps<
-    PaginationFirstProps & {
-      class?: HTMLAttributes['class']
-      href?: string
-      is?: any
-      as?: string
-    }
-  >(),
+  defineProps<PaginationFirstProps & { class?: HTMLAttributes['class'] }>(),
   {
-    is: 'a',
     asChild: true,
   },
 )
@@ -29,12 +22,11 @@ const delegatedProps = computed(() => {
 <template>
   <PaginationFirst v-bind="delegatedProps">
     <Button
-      :href="href"
-      :is="is"
-      :as="as"
-      class="size-10 p-0"
+      :class="cn('size-10 p-0', props.class)"
       variant="outline">
-      <ChevronsLeft :size="16" />
+      <slot>
+        <ChevronsLeft class="size-4" />
+      </slot>
     </Button>
   </PaginationFirst>
 </template>

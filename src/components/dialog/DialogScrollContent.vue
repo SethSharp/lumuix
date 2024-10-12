@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { X } from 'lucide-vue-next'
 import { type HTMLAttributes, computed } from 'vue'
 import {
   DialogClose,
@@ -9,7 +10,6 @@ import {
   DialogPortal,
   useForwardPropsEmits,
 } from 'radix-vue'
-import { XMarkIcon } from '@heroicons/vue/24/outline'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<DialogContentProps & { class?: HTMLAttributes['class'] }>()
@@ -52,7 +52,7 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
 
         <DialogClose
           class="absolute right-3 top-3 rounded-md p-0.5 transition-colors hover:bg-slate-100 dark:hover:bg-slate-800">
-          <XMarkIcon class="size-4" />
+          <X :size="16" />
           <span class="sr-only">Close</span>
         </DialogClose>
       </DialogContent>

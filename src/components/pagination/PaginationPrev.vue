@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type HTMLAttributes, computed } from 'vue'
-import { ChevronLeftIcon } from '@heroicons/vue/24/outline'
+import { MoveLeft } from 'lucide-vue-next'
 import { PaginationPrev, type PaginationPrevProps } from 'radix-vue'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/button'
@@ -35,7 +35,7 @@ const delegatedProps = computed(() => {
       :is="is"
       :as="as"
       variant="outline">
-      <ChevronLeftIcon class="size-4" />
+      <MoveLeft :size="16" />
     </Button>
   </PaginationPrev>
 </template>

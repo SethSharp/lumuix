@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { type HTMLAttributes, computed } from 'vue'
 import { ToastClose, type ToastCloseProps } from 'radix-vue'
-import { XMarkIcon } from '@heroicons/vue/20/solid/index.js'
+import { XIcon } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<
@@ -26,6 +26,8 @@ const delegatedProps = computed(() => {
         props.class,
       )
     ">
-    <XMarkIcon class="size-4" />
+    <XIcon
+      :size="15"
+      class="transition hover:text-slate-400" />
   </ToastClose>
 </template>

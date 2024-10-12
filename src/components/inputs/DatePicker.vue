@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
-import { CalendarIcon } from '@heroicons/vue/24/outline'
+import { CalendarIcon } from 'lucide-vue-next'
 import {
   CalendarDate,
   DateFormatter,
@@ -54,7 +54,9 @@ onMounted(() => {
             'w-[280px] justify-start text-left font-normal dark:text-white',
             !modelValue && 'text-muted-foreground',
           ]">
-          <CalendarIcon class="mr-2 size-4" />
+          <CalendarIcon
+            :size="16"
+            class="mr-2" />
           {{ value ? df.format(value.toDate(getLocalTimeZone())) : placeholder }}
         </Button>
       </PopoverTrigger>

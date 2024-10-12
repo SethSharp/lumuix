@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { type HTMLAttributes, computed } from 'vue'
-import { ChevronRightIcon } from '@heroicons/vue/24/outline'
+import { MoveRight } from 'lucide-vue-next'
 import { PaginationNext, type PaginationNextProps } from 'radix-vue'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/button'
@@ -36,7 +36,7 @@ const delegatedProps = computed(() => {
       :as="as"
       :href="href"
       variant="outline">
-      <ChevronRightIcon class="size-4" />
+      <MoveRight :size="16" />
     </Button>
   </PaginationNext>
 </template>

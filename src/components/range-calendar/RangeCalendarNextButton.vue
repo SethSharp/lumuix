@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { type HTMLAttributes, computed } from 'vue'
+import { MoveRight } from 'lucide-vue-next'
 import { RangeCalendarNext, type RangeCalendarNextProps, useForwardProps } from 'radix-vue'
-import { ChevronRightIcon } from '@heroicons/vue/24/outline'
 import { cn } from '@/lib/utils'
 import { buttonVariants } from '@/components/button'
 
@@ -27,7 +27,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     "
     v-bind="forwardedProps">
     <slot>
-      <ChevronRightIcon class="size-4" />
+      <MoveRight :size="16" />
     </slot>
   </RangeCalendarNext>
 </template>

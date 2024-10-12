@@ -51,32 +51,28 @@ defineProps<
       </TableRow>
     </TableHeader>
     <TableBody>
-      <slot
-        name="default"
-        :item="rows">
-        <TableRow
-          v-for="(row, rowIndex) in rows"
-          :key="rowIndex">
-          <TableCell
-            v-for="header in headers"
-            :key="header.value">
-            <template v-if="$slots[`cell_${header.value}`]">
-              <slot
-                :name="`cell_${header.value}`"
-                :item="row" />
-            </template>
-            <template v-else>
-              {{ row[header.value] }}
-            </template>
-          </TableCell>
-
-          <TableRowAction v-if="$slots['row_actions']">
+      <TableRow
+        v-for="(row, rowIndex) in rows"
+        :key="rowIndex">
+        <TableCell
+          v-for="header in headers"
+          :key="header.value">
+          <template v-if="$slots[`cell_${header.value}`]">
             <slot
-              name="row_actions"
+              :name="`cell_${header.value}`"
               :item="row" />
-          </TableRowAction>
-        </TableRow>
-      </slot>
+          </template>
+          <template v-else>
+            {{ row[header.value] }}
+          </template>
+        </TableCell>
+
+        <TableRowAction v-if="$slots['row_actions']">
+          <slot
+            name="row_actions"
+            :item="row" />
+        </TableRowAction>
+      </TableRow>
     </TableBody>
   </Table>
 </template>

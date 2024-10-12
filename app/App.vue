@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import router from './router'
 import { RouterLink, RouterView } from 'vue-router'
-import { DarkModeToggle } from '@/components/pre-built'
+import { LumuixModeToggle } from '@/components/lumuix'
 
 const routes = router.getRoutes().filter((route) => route.children.length > 0)
 </script>
@@ -10,21 +10,24 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
   <div>
     <nav
       id="nav-bar"
-      class="sticky top-0 z-10 flex h-fit w-full justify-between backdrop-blur bg-slate-100 dark:bg-black border-b border-slate-400 dark:border-white">
+      class="sticky top-0 z-10 flex h-fit w-full justify-between border-b border-slate-400 bg-slate-100 backdrop-blur dark:border-white dark:bg-black">
       <RouterLink
         to="/"
         class="p-4 text-xl text-gray-100 transition hover:text-white dark:text-primary-200 sm:text-3xl">
-        <img src="/public/images/logo.png" class="w-32" alt="Lumuix Logo" />
+        <img
+          src="/public/images/logo.png"
+          class="w-32"
+          alt="Lumuix Logo" />
       </RouterLink>
       <div class="my-auto mr-6 flex gap-2 font-bold text-black dark:text-primary-200">
         <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.9 </a>
-        <DarkModeToggle />
+        <LumuixModeToggle />
       </div>
     </nav>
     <main>
       <div class="flex gap-4">
-        <div class="w-1/4 h-screen bg-slate-100 dark:bg-black">
-          <nav class="space-y-4 p-4 border-r border-slate-400 dark:border-white">
+        <div class="h-screen w-1/4 bg-slate-100 dark:bg-black">
+          <nav class="space-y-4 border-r border-slate-400 p-4 dark:border-white">
             <div
               v-for="group in routes"
               :key="group.name">
@@ -38,7 +41,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
                     <li
                       v-for="route in group.children"
                       :key="route.name"
-                      class="flex items-center hover:underline ">
+                      class="flex items-center hover:underline">
                       <RouterLink
                         :to="route.path"
                         class="px-2 text-slate-400 dark:text-slate-500">

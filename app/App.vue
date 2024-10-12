@@ -20,7 +20,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
           alt="Lumuix Logo" />
       </RouterLink>
       <div class="my-auto mr-6 flex gap-2 font-bold text-black dark:text-primary-200">
-        <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.9 </a>
+        <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.10 </a>
         <LumuixModeToggle />
       </div>
     </nav>

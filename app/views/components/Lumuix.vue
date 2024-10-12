@@ -2,6 +2,7 @@
 import { computed } from 'vue'
 import { Link } from '@inertiajs/vue3'
 import { House, Users, Banknote } from 'lucide-vue-next'
+import { Button } from '@/components/button'
 import {
   LumuixModeToggle,
   LumuixDatatable,
@@ -9,7 +10,6 @@ import {
   LumuixTabs,
   LumuixPagination,
 } from '@/components/lumuix'
-import { Button } from '@/components/button'
 
 const dataTableConfig = computed(() => ({
   headers: [
@@ -120,11 +120,13 @@ const paginatedData = {
 
 <template>
   <div>
-    <p>Lumuix opinionated house components. Built using internal components.</p>
+    <p>Lumuix opinionated components. Built using internal components.</p>
 
     <div class="mt-5 space-y-4">
       <div>
-        <LumuixDatatable v-bind="dataTableConfig" />
+        <LumuixDatatable
+          caption="Data on sports betting"
+          v-bind="dataTableConfig" />
       </div>
 
       <div>

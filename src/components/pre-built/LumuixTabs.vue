@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
-import Dropdown from './Dropdown.vue'
+import Dropdown from './LumiuxDropdown.vue'
 import { DropdownMenuLink } from '@/components/dropdown-menu'
 import { Button } from '../button'
 import { TabsRoot, TabBaseContent, TabsList, TabsItem } from '@/components/tabs'

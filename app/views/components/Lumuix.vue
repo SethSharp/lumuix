@@ -78,41 +78,51 @@ const tabs = [
 const paginatedData = {
   data: [],
   current_page: 2,
-  first_page_url: 'https://portfolio.test/dashboard/blogs?page=1',
+  first_page_url: '?page=1',
   from: 1,
   last_page: 5,
-  last_page_url: 'https://portfolio.test/dashboard/blogs?page=5',
+  last_page_url: '?page=7',
   links: [
     {
       active: false,
       label: '1',
-      url: 'https://portfolio.test/dashboard/blogs?page=1',
+      url: '?page=1',
     },
     {
       active: true,
       label: '2',
-      url: 'https://portfolio.test/dashboard/blogs?page=2',
+      url: '?page=2',
     },
     {
       active: false,
       label: '3',
-      url: 'https://portfolio.test/dashboard/blogs?page=3',
+      url: '?page=3',
     },
     {
       active: false,
       label: '4',
-      url: 'https://portfolio.test/dashboard/blogs?page=4',
+      url: '?page=4',
     },
     {
       active: false,
       label: '5',
-      url: 'https://portfolio.test/dashboard/blogs?page=5',
+      url: '?page=5',
+    },
+    {
+      active: false,
+      label: '5',
+      url: '?page=6',
+    },
+    {
+      active: false,
+      label: '5',
+      url: '?page=7',
     },
   ],
-  next_page_url: 'https://portfolio.test/dashboard/blogs?page=3',
-  path: 'https://portfolio.test/dashboard/blogs',
+  next_page_url: '?page=3',
+  path: '#',
   per_page: 2,
-  prev_page_url: 'https://portfolio.test/dashboard/blogs?page=1',
+  prev_page_url: '?page=1',
   to: 2,
   total: 10,
 }
@@ -175,7 +185,9 @@ const isOpen = ref(false)
       </div>
 
       <div>
-        <LumuixPagination :data="paginatedData" />
+        <LumuixPagination
+          :as="Link"
+          :data="paginatedData" />
       </div>
     </div>
   </div>

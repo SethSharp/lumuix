@@ -6,7 +6,12 @@ import { cn } from '@/lib/utils'
 import { Button } from '@/components/button'
 
 const props = withDefaults(
-  defineProps<PaginationLastProps & { class?: HTMLAttributes['class'] }>(),
+  defineProps<
+    PaginationLastProps & {
+      class?: HTMLAttributes['class']
+      as?: any
+    }
+  >(),
   {
     asChild: true,
   },
@@ -23,6 +28,7 @@ const delegatedProps = computed(() => {
   <PaginationLast v-bind="delegatedProps">
     <Button
       :class="cn('size-10 p-0', props.class)"
+      :as="as"
       variant="outline">
       <slot>
         <ChevronsRight class="size-4" />

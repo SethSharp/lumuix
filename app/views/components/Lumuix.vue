@@ -175,7 +175,9 @@ const isOpen = ref(false)
       </div>
 
       <div>
-        <LumuixPagination :data="paginatedData" />
+        <LumuixPagination
+          :as="Link"
+          :data="paginatedData" />
       </div>
     </div>
   </div>

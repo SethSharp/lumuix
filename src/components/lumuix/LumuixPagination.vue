@@ -11,16 +11,10 @@ import {
   PaginationDetails,
 } from '@/components/pagination'
 
-const props = withDefaults(
-  defineProps<{
-    data: Paginator<any>
-    is?: any
-    as?: any
-  }>(),
-  {
-    is: 'a',
-  },
-)
+const props = defineProps<{
+  data: Paginator<any>
+  as?: any
+}>()
 
 const getStartingNumber = () => {
   if (props.data.current_page === 1) {
@@ -61,14 +55,14 @@ const getTotalNumber = () => {
     <Pagination>
       <PaginationList class="flex items-center gap-1">
         <PaginationFirst
-          :is="is"
           :as="as"
+          as-child
           :href="data.first_page_url" />
 
         <PaginationPrev
           v-if="data.prev_page_url"
-          :is="is"
           :as="as"
+          as-child
           :href="data.prev_page_url" />
 
         <template v-for="(item, index) in data.links">
@@ -77,7 +71,6 @@ const getTotalNumber = () => {
             :key="index">
             <Button
               :href="item.url"
-              :is="is"
               :as="as"
               class="size-10 p-0"
               :variant="item.active ? 'primary' : 'outline'">
@@ -90,13 +83,13 @@ const getTotalNumber = () => {
 
         <PaginationNext
           v-if="data.next_page_url"
-          :is="is"
           :as="as"
+          as-child
           :href="data.next_page_url" />
 
         <PaginationLast
-          :is="is"
           :as="as"
+          as-child
           :href="data.last_page_url" />
       </PaginationList>
     </Pagination>

@@ -1,5 +1,16 @@
 # Release notes
 
+## [v1.0.0-alpha.10.2](https://github.com/SethSharp/lumuix/releases/tag/v1.0.0-alpha.10.2) - 14/10/24
+* Fixes to LumuixPagination by @SethSharp in https://github.com/SethSharp/lumuix/pull/18
+
+## [v1.0.0-alpha.10.1](https://github.com/SethSharp/lumuix/releases/tag/v1.0.0-alpha.10.1) - 12/10/24
+* Fixed bug with LumuixModal: Was not passing the open prop to the Dialog component. This disallowed the modal state from being controlled via a variable.
+
+## [v1.0.0-alpha.10](https://github.com/SethSharp/lumuix/releases/tag/v1.0.0-alpha.10) - 12/10/24
+* Implement Lucide Icons by @SethSharp in https://github.com/SethSharp/lumuix/pull/9
+* Pagination adjustments by @SethSharp in https://github.com/SethSharp/lumuix/pull/16
+* Create lumuix specific dir of components by @SethSharp in https://github.com/SethSharp/lumuix/pull/17
+
 ## [v1.0.0-alpha.9](https://github.com/SethSharp/lumuix/releases/tag/v1.0.0-alpha.9) - 12/10/24
 
 * Implement Base + improvements to input styles by @SethSharp in https://github.com/SethSharp/lumuix/pull/15

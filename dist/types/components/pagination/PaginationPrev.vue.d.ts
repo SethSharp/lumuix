@@ -10,8 +10,10 @@ declare function __VLS_template(): {
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import("vue").DefineComponent<PaginationPrevProps & {
     class?: HTMLAttributes["class"];
+    as?: any;
 }, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PaginationPrevProps & {
     class?: HTMLAttributes["class"];
+    as?: any;
 }> & Readonly<{}>, {
     asChild: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;

@@ -13002,7 +13002,12 @@ const Eo = Ce("XIcon", [
   setup(e) {
     const t = e;
     return (a, n) => (v(), U("div", {
-      class: se(l(L)("flex flex-col-reverse sm:flex-row sm:justify-end sm:gap-x-2", t.class))
+      class: se(
+        l(L)(
+          "flex flex-col-reverse dark:text-slate-500 sm:flex-row sm:justify-end sm:gap-x-2",
+          t.class
+        )
+      )
     }, [
       w(a.$slots, "default")
     ], 2));
@@ -14994,6 +14999,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
       default: f(() => [
         O(l(Ye), {
           class: se(l(L)("size-10 p-0", t.class)),
+          as: n.as,
           variant: "outline"
         }, {
           default: f(() => [
@@ -15002,7 +15008,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
             ])
           ]),
           _: 3
-        }, 8, ["class"])
+        }, 8, ["class", "as"])
       ]),
       _: 3
     }, 16));
@@ -15023,6 +15029,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
       default: f(() => [
         O(l(Ye), {
           class: se(l(L)("size-10 p-0", t.class)),
+          as: n.as,
           variant: "outline"
         }, {
           default: f(() => [
@@ -15031,7 +15038,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
             ])
           ]),
           _: 3
-        }, 8, ["class"])
+        }, 8, ["class", "as"])
       ]),
       _: 3
     }, 16));
@@ -15052,6 +15059,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
       default: f(() => [
         O(l(Ye), {
           class: se(l(L)("size-10 p-0", t.class)),
+          as: n.as,
           variant: "outline"
         }, {
           default: f(() => [
@@ -15060,7 +15068,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
             ])
           ]),
           _: 3
-        }, 8, ["class"])
+        }, 8, ["class", "as"])
       ]),
       _: 3
     }, 16));
@@ -15081,6 +15089,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
       default: f(() => [
         O(l(Ye), {
           class: se(l(L)("size-10 p-0", t.class)),
+          as: n.as,
           variant: "outline"
         }, {
           default: f(() => [
@@ -15089,7 +15098,7 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
             ])
           ]),
           _: 3
-        }, 8, ["class"])
+        }, 8, ["class", "as"])
       ]),
       _: 3
     }, 16));
@@ -15498,7 +15507,6 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
   __name: "LumuixPagination",
   props: {
     data: {},
-    is: { default: "a" },
     as: {}
   },
   setup(e) {
@@ -15514,21 +15522,20 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
           O(l(Wp), { class: "flex items-center gap-1" }, {
             default: f(() => [
               O(l(wh), {
-                is: o.is,
                 as: o.as,
+                "as-child": "",
                 href: o.data.first_page_url
-              }, null, 8, ["is", "as", "href"]),
+              }, null, 8, ["as", "href"]),
               o.data.prev_page_url ? (v(), y(l(Ch), {
                 key: 0,
-                is: o.is,
                 as: o.as,
+                "as-child": "",
                 href: o.data.prev_page_url
-              }, null, 8, ["is", "as", "href"])) : J("", !0),
+              }, null, 8, ["as", "href"])) : J("", !0),
               (v(!0), U(ee, null, he(o.data.links, (r, i) => (v(), U(ee, null, [
                 i < 5 ? (v(), U("div", { key: i }, [
                   O(l(Ye), {
                     href: r.url,
-                    is: o.is,
                     as: o.as,
                     class: "size-10 p-0",
                     variant: r.active ? "primary" : "outline"
@@ -15537,21 +15544,21 @@ const mh = ["placeholder"], Kg = /* @__PURE__ */ b({
                       Y(X(r.label), 1)
                     ]),
                     _: 2
-                  }, 1032, ["href", "is", "as", "variant"])
+                  }, 1032, ["href", "as", "variant"])
                 ])) : J("", !0)
               ], 64))), 256)),
               o.data.links.length > 5 ? (v(), y(l(bh), { key: 1 })) : J("", !0),
               o.data.next_page_url ? (v(), y(l(xh), {
                 key: 2,
-                is: o.is,
                 as: o.as,
+                "as-child": "",
                 href: o.data.next_page_url
-              }, null, 8, ["is", "as", "href"])) : J("", !0),
+              }, null, 8, ["as", "href"])) : J("", !0),
               O(l(_h), {
-                is: o.is,
                 as: o.as,
+                "as-child": "",
                 href: o.data.last_page_url
-              }, null, 8, ["is", "as", "href"])
+              }, null, 8, ["as", "href"])
             ]),
             _: 1
           })

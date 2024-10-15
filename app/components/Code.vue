@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="bg-gray-200 text-black w-fit font-mono overflow-x-auto p-1 rounded-sm">
-    <code>
-      <slot />
-    </code>
-  </div>
+  <pre class="w-fit overflow-x-auto rounded-sm bg-gray-200 p-1">
+<slot />
+  </pre>
 </template>

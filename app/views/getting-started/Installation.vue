@@ -13,10 +13,6 @@ import Code from '../../components/Code.vue'
 
     <p>Next step is to include the package in the tailwind.config.js purge configuration:</p>
 
-    <pre>
-  content: [
-    './node_modules/@sethsharp/lumuix/dist/*.js'
-  ]
-    </pre>
+    <Code> content: [ './node_modules/@sethsharp/lumuix/dist/*.js' ] </Code>
   </div>
 </template>

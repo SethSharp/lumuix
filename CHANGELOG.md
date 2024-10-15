@@ -1,5 +1,9 @@
 # Release notes
 
+## [v1.0.0-alpha.10.3](https://github.com/SethSharp/lumuix/releases/tag/v1.0.0-alpha-10.3) - 16/10/24
+* Improved documentation
+* Remove hover styles on badge
+
 ## [v1.0.0-alpha.10.2](https://github.com/SethSharp/lumuix/releases/tag/v1.0.0-alpha.10.2) - 14/10/24
 * Fixes to LumuixPagination by @SethSharp in https://github.com/SethSharp/lumuix/pull/18
 

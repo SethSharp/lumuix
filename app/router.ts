@@ -234,14 +234,22 @@ const routes = [
         name: 'Overview',
         component: Overview,
         isExternal: true,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: false,
+        },
       },
     ],
   },
   {
     path: '/:pathMatch(.*)*',
-    name: 'NotFound',
+    name: 'Your Page could not be found',
     component: NotFound,
     isExternal: true,
+    meta: {
+      layout: ComponentLayout,
+      shadcn: false,
+    },
   },
 ]
 

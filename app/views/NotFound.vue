@@ -1,7 +1,3 @@
-<script setup lang="ts">
+<script setup lang="ts"></script>
 
-</script>
-
-<template>
-This is a 404
-</template>
+<template></template>

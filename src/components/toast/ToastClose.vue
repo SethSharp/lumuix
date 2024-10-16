@@ -26,8 +26,6 @@ const delegatedProps = computed(() => {
         props.class,
       )
     ">
-    <XIcon
-      :size="15"
-      class="transition hover:text-slate-400" />
+    <XIcon class="size-4 transition hover:text-slate-400" />
   </ToastClose>
 </template>

@@ -54,9 +54,7 @@ onMounted(() => {
             'w-[280px] justify-start text-left font-normal dark:text-white',
             !modelValue && 'text-muted-foreground',
           ]">
-          <CalendarIcon
-            :size="16"
-            class="mr-2" />
+          <CalendarIcon class="mr-2 size-4" />
           {{ value ? df.format(value.toDate(getLocalTimeZone())) : placeholder }}
         </Button>
       </PopoverTrigger>

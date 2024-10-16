@@ -19,9 +19,7 @@ defineProps<{
         target="_blank"
         class="flex gap-2">
         See Shadcn Docs
-        <MoveRight
-          :size="18"
-          color="white" />
+        <MoveRight class="size-5 text-white" />
       </a>
     </Button>
 

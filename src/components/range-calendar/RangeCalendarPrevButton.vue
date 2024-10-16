@@ -27,7 +27,7 @@ const forwardedProps = useForwardProps(delegatedProps)
     "
     v-bind="forwardedProps">
     <slot>
-      <MoveLeft :size="16" />
+      <MoveLeft class="size-4" />
     </slot>
   </RangeCalendarPrev>
 </template>

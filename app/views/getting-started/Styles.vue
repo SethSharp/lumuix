@@ -12,7 +12,7 @@
       variable s(such as primary and secondary):
     </p>
 
-    <pre class="w-fit overflow-x-auto rounded-sm bg-gray-200">
+    <pre class="w-fit overflow-x-auto rounded-sm bg-slate-800 p-4 text-slate-50">
   import { preset } from '@sethsharp/lumuix';
 
   module.exports = {
@@ -27,7 +27,7 @@
       main primary colour.
     </p>
 
-    <pre class="w-fit overflow-x-auto rounded-sm bg-gray-200">
+    <pre class="w-fit overflow-x-auto rounded-sm bg-slate-800 p-4 text-slate-50">
   @import '@sethsharp/lumuix/dist/types/presets/styles.css';
 
   :root {

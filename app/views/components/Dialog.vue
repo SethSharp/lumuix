@@ -26,7 +26,7 @@ import {
         </DialogDescription>
       </DialogHeader>
       <div class="grid gap-4 py-4">
-        <div class="grid grid-cols-4 items-center gap-4">
+        <div>
           <Label
             for="name"
             class="text-right">
@@ -37,7 +37,7 @@ import {
             value="Pedro Duarte"
             class="col-span-3" />
         </div>
-        <div class="grid grid-cols-4 items-center gap-4">
+        <div>
           <Label
             for="username"
             class="text-right">

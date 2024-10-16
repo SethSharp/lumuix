@@ -11,15 +11,11 @@ const isDark = useDark({
 <template>
   <Toggle v-model="isDark">
     <template #checked>
-      <MoonIcon
-        :size="16"
-        class="m-auto mt-0.5 text-primary-900" />
+      <MoonIcon class="m-auto mt-0.5 size-4 text-primary-900" />
     </template>
 
     <template #not-checked>
-      <SunIcon
-        :size="16"
-        class="m-auto mt-0.5 text-primary-900" />
+      <SunIcon class="m-auto mt-0.5 size-4 text-primary-900" />
     </template>
   </Toggle>
 </template>

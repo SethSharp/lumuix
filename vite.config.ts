@@ -23,12 +23,14 @@ export default defineConfig({
       },
       name: 'lumuix',
       fileName: (entry) => entry.name,
+      formats: ['es', 'cjs'],
     },
     rollupOptions: {
       external: ['vue'],
-      // Add this to ensure separate chunks for each entry point
       output: {
-        entryFileNames: '[name].js',
+        dir: 'dist',
+        entryFileNames: '[name].cjs.js',
+        chunkFileNames: '[name].js',
       },
     },
     emptyOutDir: true,
@@ -37,8 +39,8 @@ export default defineConfig({
     alias: {
       '@': resolve(__dirname, 'src'),
       '@/app': resolve(__dirname, 'app'),
-      '@sethsharp/lumuix': '/src',
-      '@sethsharp/lumuix/dropdown-menu': '/src/components/dropdown-menu',
+      '@sethsharp/lumuix': resolve(__dirname, 'dist'),
+      '@sethsharp/lumuix/dropdown-menu': resolve(__dirname, 'dist/types/components/dropdown-menu'),
     },
   },
 })

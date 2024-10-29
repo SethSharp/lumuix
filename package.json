@@ -14,12 +14,13 @@
   "module": "./dist/ui.js",
   "exports": {
     ".": {
-      "import": "./dist/lumuix.js",
-      "require": "./dist/lumuix.umd.cjs",
+      "import": "./dist/lumuix.cjs.js",
+      "require": "./dist/lumuix.cjs.js",
       "types": "./dist/types/index.d.ts"
     },
     "./dropdown-menu": {
-      "import": "./dist/dropdown-menu.js",
+      "import": "./dist/dropdown-menu.cjs.js",
+      "require": "./dist/dropdown-menu.cjs.js",
       "types": "./dist/types/components/dropdown-menu/index.d.ts"
     },
     "./dist/types/presets/*.css": {

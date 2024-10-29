@@ -2,25 +2,20 @@
   "name": "@sethsharp/lumuix",
   "version": "1.0.0-alpha.10.3",
   "type": "module",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": ["dist/*"],
   "repository": {
     "type": "git",
     "url": "https://github.com/SethSharp/lumuix"
   },
-  "main": "./dist/ui.umd.cjs",
-  "module": "./dist/ui.js",
   "exports": {
     ".": {
-      "import": "./dist/lumuix.cjs.js",
-      "require": "./dist/lumuix.cjs.js",
+      "import": "./dist/lumuix.js",
+      "require": "./dist/lumuix.cjs",
       "types": "./dist/types/index.d.ts"
     },
     "./dropdown-menu": {
-      "import": "./dist/dropdown-menu.cjs.js",
-      "require": "./dist/dropdown-menu.cjs.js",
+      "import": "./dist/dropdown-menu.js",
+      "require": "./dist/dropdown-menu.cjs",
       "types": "./dist/types/components/dropdown-menu/index.d.ts"
     },
     "./dist/types/presets/*.css": {

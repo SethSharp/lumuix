@@ -16,31 +16,22 @@ export default defineConfig({
     }),
   ],
   build: {
+    emptyOutDir: false,
+    outDir: "dist",
+    sourcemap: true,
     lib: {
       entry: {
         lumuix: resolve(__dirname, 'src/index.ts'),
         'dropdown-menu': resolve(__dirname, 'src/components/dropdown-menu/index.ts'),
       },
-      name: 'lumuix',
-      fileName: (entry) => entry.name,
-      formats: ['es', 'cjs'],
+      formats: ["es", "cjs"],
     },
-    rollupOptions: {
-      external: ['vue'],
-      output: {
-        dir: 'dist',
-        entryFileNames: '[name].cjs.js',
-        chunkFileNames: '[name].js',
-      },
-    },
-    emptyOutDir: true,
   },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
+      '@/components': resolve(__dirname, 'src/components'),
       '@/app': resolve(__dirname, 'app'),
-      '@sethsharp/lumuix': resolve(__dirname, 'dist'),
-      '@sethsharp/lumuix/dropdown-menu': resolve(__dirname, 'dist/types/components/dropdown-menu'),
     },
   },
 })

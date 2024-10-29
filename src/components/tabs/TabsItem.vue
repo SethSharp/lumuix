@@ -2,22 +2,15 @@
 import { type HTMLAttributes } from 'vue'
 import { cn } from '@/lib/utils'
 
-const props = withDefaults(
-  defineProps<{
-    class?: HTMLAttributes['class']
-    is?: any
-    tab: TabOption
-    active?: boolean
-  }>(),
-  {
-    is: 'a',
-  },
-)
+const props = defineProps<{
+  class?: HTMLAttributes['class']
+  tab: TabOption
+}>()
 </script>
 
 <template>
   <component
-    :is="is"
+    :is="tab?.is ? tab.is : 'a'"
     :href="tab.href"
     :class="[
       tab.active

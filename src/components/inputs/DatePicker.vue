@@ -1,14 +1,15 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
-import { CalendarIcon } from '@heroicons/vue/24/outline'
+import { CalendarIcon } from 'lucide-vue-next'
 import {
   CalendarDate,
   DateFormatter,
   type DateValue,
   getLocalTimeZone,
 } from '@internationalized/date'
-import { Button } from '@/components/buttons'
-import { Calendar } from '@/components/pre-built'
+import { Base } from '@/components/inputs'
+import { Button } from '@/components/button'
+import { Calendar } from '@/components/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
 const emits = defineEmits(['update:modelValue'])
@@ -44,23 +45,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <Popover>
-    <PopoverTrigger as-child>
-      <Button
-        variant="outline"
-        :class="[
-          'w-[280px] justify-start text-left font-normal dark:text-white',
-          !modelValue && 'text-muted-foreground',
-        ]">
-        <CalendarIcon class="mr-2 size-4" />
-        {{ value ? df.format(value.toDate(getLocalTimeZone())) : placeholder }}
-      </Button>
-    </PopoverTrigger>
-    <PopoverContent class="w-auto p-0">
-      <Calendar
-        v-model="value"
-        :default-value="defaultValue"
-        initial-focus />
-    </PopoverContent>
-  </Popover>
+  <Base v-bind="$props">
+    <Popover>
+      <PopoverTrigger as-child>
+        <Button
+          variant="outline"
+          :class="[
+            'w-[280px] justify-start text-left font-normal dark:text-white',
+            !modelValue && 'text-muted-foreground',
+          ]">
+          <CalendarIcon class="mr-2 size-4" />
+          {{ value ? df.format(value.toDate(getLocalTimeZone())) : placeholder }}
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent class="w-auto p-0">
+        <Calendar
+          v-model="value"
+          :default-value="defaultValue"
+          initial-focus />
+      </PopoverContent>
+    </Popover>
+  </Base>
 </template>

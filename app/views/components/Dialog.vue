@@ -1,0 +1,57 @@
+<script setup lang="ts">
+import { Label } from '@/components/form'
+import { Input } from '@/components/inputs'
+import { Button } from '@/components/button'
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/dialog'
+</script>
+
+<template>
+  <Dialog>
+    <DialogTrigger as-child>
+      <Button variant="outline"> Edit Profile </Button>
+    </DialogTrigger>
+    <DialogContent class="sm:max-w-[425px]">
+      <DialogHeader>
+        <DialogTitle>Edit profile</DialogTitle>
+        <DialogDescription>
+          Make changes to your profile here. Click save when you're done.
+        </DialogDescription>
+      </DialogHeader>
+      <div class="grid gap-4 py-4">
+        <div>
+          <Label
+            for="name"
+            class="text-right">
+            Name
+          </Label>
+          <Input
+            id="name"
+            value="Pedro Duarte"
+            class="col-span-3" />
+        </div>
+        <div>
+          <Label
+            for="username"
+            class="text-right">
+            Username
+          </Label>
+          <Input
+            id="username"
+            value="@peduarte"
+            class="col-span-3" />
+        </div>
+      </div>
+      <DialogFooter>
+        <Button type="submit"> Save changes </Button>
+      </DialogFooter>
+    </DialogContent>
+  </Dialog>
+</template>

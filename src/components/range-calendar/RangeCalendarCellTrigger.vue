@@ -5,7 +5,7 @@ import {
   type RangeCalendarCellTriggerProps,
   useForwardProps,
 } from 'radix-vue'
-import { buttonVariants } from '@/components/buttons'
+import { buttonVariants } from '@/components/button'
 import { cn } from '@/lib/utils'
 
 const props = defineProps<RangeCalendarCellTriggerProps & { class?: HTMLAttributes['class'] }>()

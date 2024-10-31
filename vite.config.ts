@@ -21,12 +21,12 @@ export default defineConfig({
     sourcemap: true,
     lib: {
       entry: {
-        lumuix: resolve(__dirname, 'src/index.ts'),
-        'dropdown-menu': resolve(__dirname, 'src/components/dropdown-menu/index.ts'),
+        'dropdown-menu': './src/components/dropdown-menu/index.ts',
       },
       formats: ["es", "cjs"],
     },
   },
+
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

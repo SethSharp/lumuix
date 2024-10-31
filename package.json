@@ -8,15 +8,11 @@
     "url": "https://github.com/SethSharp/lumuix"
   },
   "exports": {
-    ".": {
-      "import": "./dist/lumuix.js",
-      "require": "./dist/lumuix.cjs",
-      "types": "./dist/types/index.d.ts"
-    },
+    "./*": "./components/*",
     "./dropdown-menu": {
       "import": "./dist/dropdown-menu.js",
       "require": "./dist/dropdown-menu.cjs",
-      "types": "./dist/types/components/dropdown-menu/index.d.ts"
+      "types": "./src/components/dropdown-menu/index.ts"
     },
     "./dist/types/presets/*.css": {
       "import": "./dist/types/presets/*.css",

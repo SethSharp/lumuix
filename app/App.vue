@@ -11,15 +11,13 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
     <nav
       id="nav-bar"
       class="sticky top-0 z-10 flex h-fit w-full justify-between border-b border-slate-400 bg-slate-100 backdrop-blur dark:border-white dark:bg-black">
-      <RouterLink
-        to="/"
-        class="p-4 text-xl text-gray-100 transition hover:text-white dark:text-primary-200 sm:text-3xl">
+      <RouterLink to="/">
         <img
           src="/public/images/logo.png"
           class="w-32"
           alt="Lumuix Logo" />
       </RouterLink>
-      <div class="my-auto mr-6 flex gap-2 font-bold text-black dark:text-primary-200">
+      <div class="dark:text-primary-foreground my-auto mr-6 flex gap-2 font-bold text-black">
         <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.10.3 </a>
         <LumuixModeToggle />
       </div>

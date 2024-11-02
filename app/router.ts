@@ -18,9 +18,9 @@ import {
   Page,
   Pagination,
   Popover,
-  Prebuilt,
   RangeCalendar,
   Select,
+  Slider,
   Table,
   Tabs,
   Toast,
@@ -192,6 +192,15 @@ const routes = [
         path: '/components/select',
         name: 'Select',
         component: Select,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/slider',
+        name: 'Slider',
+        component: Slider,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

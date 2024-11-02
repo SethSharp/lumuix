@@ -20,6 +20,7 @@ export * from '@/components/slider'
 export * from '@/components/table'
 export * from '@/components/tabs'
 export * from '@/components/toast'
+export * from '@/components/tooltip'
 
 export { Pagination, Container }
 

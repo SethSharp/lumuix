@@ -26,6 +26,6 @@ jobs:
         run: npm config list
 
       - name: Publish to npm
-        run: npm publish --access public
+        run: npm publish --access public --registry=https://registry.npmjs.org/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}

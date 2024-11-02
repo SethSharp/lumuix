@@ -1,6 +1,6 @@
 {
   "name": "@sethsharp/lumuix",
-  "version": "1.0.0-alpha.11.3",
+  "version": "1.0.0-alpha.11.4",
   "type": "module",
   "files": [
     "dist",

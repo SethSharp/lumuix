@@ -14,6 +14,7 @@ export * from '@/components/popover';
 export * from '@/components/lumuix';
 export * from '@/components/range-calendar';
 export * from '@/components/select';
+export * from '@/components/slider';
 export * from '@/components/table';
 export * from '@/components/tabs';
 export * from '@/components/toast';

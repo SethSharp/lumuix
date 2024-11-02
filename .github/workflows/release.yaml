@@ -20,7 +20,13 @@ jobs:
           registry-url: https://registry.npmjs.org/
           node-version: '20'
 
-      - name: Publish
+      - name: Clear npm cache
+        run: npm cache clean --force
+
+      - name: Show npm config
+        run: npm config list
+
+      - name: Publish to npm
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPMJS_ACCESS_TOKEN }}

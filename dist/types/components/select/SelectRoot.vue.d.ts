@@ -1,12 +1,13 @@
 import type { SelectRootProps } from 'radix-vue';
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         default?(_: {
             open: boolean;
         }): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import("vue").DefineComponent<SelectRootProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {

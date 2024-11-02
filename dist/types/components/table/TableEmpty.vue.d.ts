@@ -1,21 +1,20 @@
 import { type HTMLAttributes } from 'vue';
+type __VLS_Props = {
+    class?: HTMLAttributes['class'];
+    colspan?: number;
+};
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         default?(_: {}): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: HTMLTableRowElement;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import("vue").DefineComponent<{
-    class?: HTMLAttributes["class"];
-    colspan?: number;
-}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{
-    class?: HTMLAttributes["class"];
-    colspan?: number;
-}> & Readonly<{}>, {
+declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
     colspan: number;
-}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, HTMLTableRowElement>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;
 type __VLS_WithTemplateSlots<T, S> = T & {

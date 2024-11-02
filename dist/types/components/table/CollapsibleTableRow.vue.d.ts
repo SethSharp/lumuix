@@ -10,7 +10,12 @@ type CollapsibleTableRowProps<Headers extends readonly Header[]> = {
     headers: Headers;
     subRows?: Array<Row<Headers>>;
 };
+type __VLS_Props = CollapsibleTableRowProps<Header[]> & {
+    setOpenTo?: boolean;
+    class?: string;
+};
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: Partial<Record<`cell_header_${string}`, (_: {
         item: Row<Header<string>[]>;
         open: boolean;
@@ -27,16 +32,10 @@ declare function __VLS_template(): {
         }): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import("vue").DefineComponent<CollapsibleTableRowProps<Header<string>[]> & {
-    setOpenTo?: boolean;
-    class?: string;
-}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<CollapsibleTableRowProps<Header<string>[]> & {
-    setOpenTo?: boolean;
-    class?: string;
-}> & Readonly<{}>, {
+declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
     setOpenTo: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;

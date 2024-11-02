@@ -1,9 +1,7 @@
 import { type HTMLAttributes } from 'vue';
-declare const _default: import("vue").DefineComponent<{
-    class?: HTMLAttributes["class"];
+type __VLS_Props = {
+    class?: HTMLAttributes['class'];
     tab: TabOption;
-}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<{
-    class?: HTMLAttributes["class"];
-    tab: TabOption;
-}> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+};
+declare const _default: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 export default _default;

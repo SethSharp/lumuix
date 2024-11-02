@@ -1,22 +1,22 @@
 import { type HTMLAttributes } from 'vue';
 import { type SelectContentProps } from 'radix-vue';
+type __VLS_Props = SelectContentProps & {
+    class?: HTMLAttributes['class'];
+};
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         default?(_: {}): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import("vue").DefineComponent<SelectContentProps & {
-    class?: HTMLAttributes["class"];
-}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     escapeKeyDown: (event: KeyboardEvent) => any;
     pointerDownOutside: (event: import("radix-vue/dist/DismissableLayer").PointerDownOutsideEvent) => any;
     closeAutoFocus: (event: Event) => any;
-}, string, import("vue").PublicProps, Readonly<SelectContentProps & {
-    class?: HTMLAttributes["class"];
-}> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
     onEscapeKeyDown?: (event: KeyboardEvent) => any;
     onPointerDownOutside?: (event: import("radix-vue/dist/DismissableLayer").PointerDownOutsideEvent) => any;
     onCloseAutoFocus?: (event: Event) => any;

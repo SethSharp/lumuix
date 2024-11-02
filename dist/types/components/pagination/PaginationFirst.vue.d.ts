@@ -1,20 +1,19 @@
 import { type HTMLAttributes } from 'vue';
 import { type PaginationFirstProps } from 'radix-vue';
+type __VLS_Props = PaginationFirstProps & {
+    class?: HTMLAttributes['class'];
+    as?: any;
+};
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         default?(_: {}): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import("vue").DefineComponent<PaginationFirstProps & {
-    class?: HTMLAttributes["class"];
-    as?: any;
-}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<PaginationFirstProps & {
-    class?: HTMLAttributes["class"];
-    as?: any;
-}> & Readonly<{}>, {
+declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
     asChild: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;

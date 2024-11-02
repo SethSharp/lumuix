@@ -1,19 +1,20 @@
 import { type HTMLAttributes } from 'vue';
 import { type SwitchRootProps } from 'radix-vue';
-declare let __VLS_typeProps: SwitchRootProps & {
+type __VLS_Props = SwitchRootProps & {
     modelValue?: boolean | null;
     class?: HTMLAttributes['class'];
 };
 type __VLS_PublicProps = {
     modelValue?: any;
-} & typeof __VLS_typeProps;
+} & __VLS_Props;
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         checked?(_: {}): any;
         "not-checked"?(_: {}): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import("vue").DefineComponent<__VLS_PublicProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {

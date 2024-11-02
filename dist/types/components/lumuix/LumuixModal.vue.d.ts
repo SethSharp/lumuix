@@ -1,4 +1,13 @@
+type __VLS_Props = {
+    open?: boolean;
+    headerData?: {
+        title: string;
+        description: string;
+    };
+    size?: string;
+};
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         trigger?(_: {}): any;
         title?(_: {}): any;
@@ -8,26 +17,12 @@ declare function __VLS_template(): {
         footer?(_: {}): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import("vue").DefineComponent<{
-    open?: boolean;
-    headerData?: {
-        title: string;
-        description: string;
-    };
-    size?: string;
-}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     close: (...args: any[]) => void;
-}, string, import("vue").PublicProps, Readonly<{
-    open?: boolean;
-    headerData?: {
-        title: string;
-        description: string;
-    };
-    size?: string;
-}> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
     onClose?: (...args: any[]) => any;
 }>, {
     size: string;

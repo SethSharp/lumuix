@@ -1,23 +1,23 @@
 import { type HTMLAttributes } from 'vue';
 import type { ComboboxRootProps } from 'radix-vue';
+type __VLS_Props = ComboboxRootProps & {
+    class?: HTMLAttributes['class'];
+};
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         default?(_: {}): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import("vue").DefineComponent<ComboboxRootProps<import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue> & {
-    class?: HTMLAttributes["class"];
-}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (value: import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue) => any;
     "update:open": (value: boolean) => any;
     "update:searchTerm": (value: string) => any;
     "update:selectedValue": (value: import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue) => any;
-}, string, import("vue").PublicProps, Readonly<ComboboxRootProps<import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue> & {
-    class?: HTMLAttributes["class"];
-}> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
     "onUpdate:modelValue"?: (value: import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue) => any;
     "onUpdate:open"?: (value: boolean) => any;
     "onUpdate:searchTerm"?: (value: string) => any;

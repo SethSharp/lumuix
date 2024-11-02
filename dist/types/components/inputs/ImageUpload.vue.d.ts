@@ -1,4 +1,11 @@
+type __VLS_Props = {
+    modelValue?: any;
+    currentImage?: string;
+    defaultImage?: string;
+    accept?: string;
+};
 declare function __VLS_template(): {
+    attrs: Partial<{}>;
     slots: {
         image?(_: {
             newImage: string;
@@ -6,22 +13,12 @@ declare function __VLS_template(): {
         }): any;
     };
     refs: {};
-    attrs: Partial<{}>;
+    rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import("vue").DefineComponent<{
-    modelValue?: any;
-    currentImage?: string;
-    defaultImage?: string;
-    accept?: string;
-}, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:modelValue": (...args: any[]) => void;
-}, string, import("vue").PublicProps, Readonly<{
-    modelValue?: any;
-    currentImage?: string;
-    defaultImage?: string;
-    accept?: string;
-}> & Readonly<{
+}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
     "onUpdate:modelValue"?: (...args: any[]) => any;
 }>, {
     accept: string;

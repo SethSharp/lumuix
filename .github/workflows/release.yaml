@@ -1,7 +1,8 @@
 name: Publish Package Version
 
 on:
-  push:
+  release:
+    types: [ published ]
     branches:
       - main
 

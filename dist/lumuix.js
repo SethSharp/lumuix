@@ -12,45 +12,15 @@ const ly = {
         background: "hsl(var(--background))",
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          50: "hsl(var(--primary-50))",
-          100: "hsl(var(--primary-100))",
-          200: "hsl(var(--primary-200))",
-          300: "hsl(var(--primary-300))",
-          400: "hsl(var(--primary-400))",
-          500: "hsl(var(--primary-500))",
-          600: "hsl(var(--primary-600))",
-          700: "hsl(var(--primary-700))",
-          800: "hsl(var(--primary-800))",
-          900: "hsl(var(--primary-900))",
-          950: "hsl(var(--primary-950))"
+          foreground: "hsl(var(--primary-foreground))"
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          50: "hsl(var(--secondary-50))",
-          100: "hsl(var(--secondary-100))",
-          200: "hsl(var(--secondary-200))",
-          300: "hsl(var(--secondary-300))",
-          400: "hsl(var(--secondary-400))",
-          500: "hsl(var(--secondary-500))",
-          600: "hsl(var(--secondary-600))",
-          700: "hsl(var(--secondary-700))",
-          800: "hsl(var(--secondary-800))",
-          900: "hsl(var(--secondary-900))",
-          950: "hsl(var(--secondary-950))"
+          foreground: "hsl(var(--secondary-foreground))"
         },
         destructive: {
           DEFAULT: "hsl(var(--destructive))",
-          50: "hsl(var(--destructive-50))",
-          100: "hsl(var(--destructive-100))",
-          200: "hsl(var(--destructive-200))",
-          300: "hsl(var(--destructive-300))",
-          400: "hsl(var(--destructive-400))",
-          500: "hsl(var(--destructive-500))",
-          600: "hsl(var(--destructive-600))",
-          700: "hsl(var(--destructive-700))",
-          800: "hsl(var(--destructive-800))",
-          900: "hsl(var(--destructive-900))",
-          950: "hsl(var(--destructive-950))"
+          foreground: "hsl(var(--destructive-foreground))"
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
@@ -2409,9 +2379,9 @@ const ry = /* @__PURE__ */ w({
     variants: {
       variant: {
         default: "border-transparent bg-slate-800 text-slate-50",
-        primary: "border-transparent bg-primary-600 text-primary-50",
-        secondary: "border-transparent bg-secondary-600 text-secondary-50",
-        destructive: "border-transparent bg-destructive-600 text-destructive-50",
+        primary: "border-transparent bg-primary text-primary-foreground hover:bg-primary/80",
+        secondary: "border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80",
+        destructive: "border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80",
         outline: "text-foreground"
       }
     },
@@ -13029,24 +12999,23 @@ const Zv = /* @__PURE__ */ w({
     }, 8, ["as", "as-child", "class"]));
   }
 }), At = ao(
-  "inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default: "bg-slate-800 text-slate-50 hover:bg-slate-800/90 dark:bg-slate-300 dark:text-slate-900 dark:hover:bg-slate-300/90",
-        primary: "bg-primary-500 text-primary-50 hover:bg-primary-500/90 dark:bg-primary-800 dark:text-slate-100 dark:hover:bg-primary-800/90",
-        destructive: "bg-destructive-500 text-slate-50 hover:bg-destructive-500/90 dark:bg-destructive-800 dark:text-slate-100 dark:hover:bg-destructive-800/90",
-        outline: "border border-slate-200 bg-white hover:bg-slate-200/90 hover:text-slate-900 dark:text-slate-200 dark:border-slate-800 dark:bg-slate-950 dark:hover:bg-slate-800 dark:hover:text-slate-50",
-        secondary: "bg-secondary-400 text-secondary-100 hover:bg-secondary-400/90 dark:bg-secondary-800 dark:text-secondary-100 dark:hover:bg-secondary-800/80",
-        ghost: "hover:bg-slate-100 hover:text-slate-900 dark:hover:bg-slate-800 dark:hover:text-slate-50",
-        link: "text-slate-500 underline-offset-4 hover:underline dark:text-slate-50"
+        primary: "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+        destructive: "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+        outline: "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+        secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
+        ghost: "hover:bg-accent hover:text-accent-foreground",
+        link: "text-primary underline-offset-4 hover:underline"
       },
       size: {
-        default: "h-10 px-4 py-2",
-        xs: "h-7 rounded px-2",
-        sm: "h-9 rounded-md px-3",
-        lg: "h-11 rounded-md px-8",
-        icon: "h-10 w-10"
+        default: "h-9 px-4 py-2",
+        sm: "h-8 rounded-md px-3 text-xs",
+        lg: "h-10 rounded-md px-8",
+        icon: "h-9 w-9"
       }
     },
     defaultVariants: {
@@ -14649,7 +14618,7 @@ const wh = /* @__PURE__ */ ka(gh, [["render", bh]]), _h = { class: "grid gap-4 m
             id: s.id,
             checked: o.value,
             "onUpdate:checked": r[0] || (r[0] = (i) => o.value = i),
-            class: "peer size-4 shrink-0 rounded-sm border border-slate-600 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-950 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary-500 data-[state=checked]:text-primary-50 dark:border-primary-900 dark:ring-offset-primary-950 dark:focus-visible:ring-primary-300 dark:data-[state=checked]:bg-primary-400 dark:data-[state=checked]:text-primary-800"
+            class: "data-[state=checked]:text-primary-foreground dark:focus-visible:ring-primary-foreground dark:data-[state=checked]:text-primary-foreground peer size-4 shrink-0 rounded-sm border border-slate-600 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary dark:border-primary dark:ring-offset-primary dark:data-[state=checked]:bg-primary"
           }, {
             default: f(() => [
               P(l(Uc), { class: "flex h-full w-full items-center justify-center text-current" }, {
@@ -15279,7 +15248,7 @@ const Eh = { class: "flex items-center space-x-2" }, Sh = ["src"], Th = ["accept
     }), {
       default: f(() => [
         x(o.$slots, "default", {}, () => [
-          P(l(Am), { class: "size-4 text-primary-900" })
+          P(l(Am), { class: "size-4 text-primary" })
         ])
       ]),
       _: 3
@@ -15805,7 +15774,7 @@ const ug = ["placeholder"], zy = /* @__PURE__ */ w({
           "onUpdate:checked": d[0] || (d[0] = (c) => o.value = c)
         }, l(r), {
           class: l(z)(
-            "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-950 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary-600 data-[state=unchecked]:bg-primary-300 dark:focus-visible:ring-primary-300 dark:focus-visible:ring-offset-primary-800 dark:data-[state=checked]:bg-primary-900 dark:data-[state=unchecked]:bg-primary-500",
+            "data-[state=unchecked]:bg-primary-foreground dark:focus-visible:ring-primary-foreground peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary dark:focus-visible:ring-offset-primary dark:data-[state=checked]:bg-primary dark:data-[state=unchecked]:bg-primary",
             n.class
           )
         }), {
@@ -15988,10 +15957,10 @@ const ug = ["placeholder"], zy = /* @__PURE__ */ w({
       "onUpdate:modelValue": n[0] || (n[0] = (o) => Ca(t) ? t.value = o : null)
     }, {
       checked: f(() => [
-        P(l(Nm), { class: "m-auto mt-0.5 size-4 text-primary-900" })
+        P(l(Nm), { class: "m-auto mt-0.5 size-4 text-primary" })
       ]),
       "not-checked": f(() => [
-        P(l(Um), { class: "m-auto mt-0.5 size-4 text-primary-900" })
+        P(l(Um), { class: "m-auto mt-0.5 size-4 text-primary" })
       ]),
       _: 1
     }, 8, ["modelValue"]));
@@ -16495,7 +16464,7 @@ const ug = ["placeholder"], zy = /* @__PURE__ */ w({
       return v(), y(Se((o = a.tab) != null && o.is ? a.tab.is : "a"), {
         href: a.tab.href,
         class: re([
-          a.tab.active ? "bg-white text-primary-500 hover:bg-opacity-80 dark:bg-slate-950 dark:text-primary-400" : "hover:bg-white dark:hover:bg-slate-900",
+          a.tab.active ? "bg-white text-primary hover:bg-opacity-80 dark:bg-slate-950" : "hover:bg-white dark:hover:bg-slate-900",
           l(z)(
             "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
             t.class
@@ -17124,7 +17093,7 @@ function Yg(e) {
     update: a
   };
 }
-const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, e0 = /* @__PURE__ */ w({
+const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, eb = /* @__PURE__ */ w({
   __name: "Toaster",
   setup(e) {
     const { toasts: t } = qg();
@@ -17222,7 +17191,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, e0 = /* @__PUR
       )
     }), null, 16, ["class"]));
   }
-}), t0 = /* @__PURE__ */ w({
+}), tb = /* @__PURE__ */ w({
   __name: "ToastAction",
   props: {
     altText: {},
@@ -17347,7 +17316,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, e0 = /* @__PUR
       variant: "default"
     }
   }
-), a0 = /* @__PURE__ */ w({
+), ab = /* @__PURE__ */ w({
   __name: "Tooltip",
   props: {
     defaultOpen: { type: Boolean },
@@ -17368,7 +17337,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, e0 = /* @__PUR
       _: 3
     }, 16));
   }
-}), n0 = /* @__PURE__ */ w({
+}), nb = /* @__PURE__ */ w({
   inheritAttrs: !1,
   __name: "TooltipContent",
   props: {
@@ -17411,7 +17380,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, e0 = /* @__PUR
       _: 3
     }));
   }
-}), o0 = /* @__PURE__ */ w({
+}), ob = /* @__PURE__ */ w({
   __name: "TooltipProvider",
   props: {
     delayDuration: {},
@@ -17430,7 +17399,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, e0 = /* @__PUR
       _: 3
     }, 16));
   }
-}), l0 = /* @__PURE__ */ w({
+}), lb = /* @__PURE__ */ w({
   __name: "TooltipTrigger",
   props: {
     asChild: { type: Boolean },
@@ -17571,18 +17540,18 @@ export {
   Yy as TabsTrigger,
   zy as TextArea,
   Jg as Toast,
-  t0 as ToastAction,
+  tb as ToastAction,
   ey as ToastClose,
   xl as ToastDescription,
   ay as ToastProvider,
   ty as ToastTitle,
   Qg as ToastViewport,
-  e0 as Toaster,
+  eb as Toaster,
   cg as Toggle,
-  a0 as Tooltip,
-  n0 as TooltipContent,
-  o0 as TooltipProvider,
-  l0 as TooltipTrigger,
+  ab as Tooltip,
+  nb as TooltipContent,
+  ob as TooltipProvider,
+  lb as TooltipTrigger,
   Ci as badgeVariants,
   At as buttonVariants,
   ly as preset,

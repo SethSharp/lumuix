@@ -24,6 +24,7 @@ import {
   Table,
   Tabs,
   Toast,
+  ToolTip,
   Badge,
   Lumuix,
 } from './views'
@@ -228,6 +229,15 @@ const routes = [
         path: '/components/toast',
         name: 'Toast',
         component: Toast,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/tooltip',
+        name: 'ToolTip',
+        component: ToolTip,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

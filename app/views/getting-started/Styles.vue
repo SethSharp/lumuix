@@ -31,9 +31,10 @@
   @import '@sethsharp/lumuix/dist/types/presets/styles.css';
 
   :root {
-      --primary-500: 174 90% 31%;
-      // rest of HSL codes (primary-{50-950})
+      --primary: 173 80% 40%;;
+      --primary-foreground: 210 40% 98%;
   }
     </pre>
+    Note: You can overwrite styles for accent, destructive and secondary.
   </div>
 </template>

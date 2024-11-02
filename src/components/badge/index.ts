@@ -1,4 +1,4 @@
-import { type VariantProps, cva } from 'class-variance-authority'
+import { cva, type VariantProps } from 'class-variance-authority'
 
 export { default as Badge } from './Badge.vue'
 
@@ -8,9 +8,11 @@ export const badgeVariants = cva(
     variants: {
       variant: {
         default: 'border-transparent bg-slate-800 text-slate-50',
-        primary: 'border-transparent bg-primary-600 text-primary-50',
-        secondary: 'border-transparent bg-secondary-600 text-secondary-50',
-        destructive: 'border-transparent bg-destructive-600 text-destructive-50',
+        primary: 'border-transparent bg-primary text-primary-foreground hover:bg-primary/80',
+        secondary:
+          'border-transparent bg-secondary text-secondary-foreground hover:bg-secondary/80',
+        destructive:
+          'border-transparent bg-destructive text-destructive-foreground hover:bg-destructive/80',
         outline: 'text-foreground',
       },
     },

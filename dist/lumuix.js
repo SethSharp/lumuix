@@ -14618,7 +14618,7 @@ const wh = /* @__PURE__ */ ka(gh, [["render", bh]]), _h = { class: "grid gap-4 m
             id: s.id,
             checked: o.value,
             "onUpdate:checked": r[0] || (r[0] = (i) => o.value = i),
-            class: "data-[state=checked]:text-primary-foreground dark:focus-visible:ring-primary-foreground dark:data-[state=checked]:text-primary-foreground peer size-4 shrink-0 rounded-sm border border-slate-600 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary dark:border-primary dark:ring-offset-primary dark:data-[state=checked]:bg-primary"
+            class: "peer size-4 shrink-0 rounded-sm border border-slate-600 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:border-primary dark:ring-offset-primary dark:focus-visible:ring-primary-foreground dark:data-[state=checked]:bg-primary dark:data-[state=checked]:text-primary-foreground"
           }, {
             default: f(() => [
               P(l(Uc), { class: "flex h-full w-full items-center justify-center text-current" }, {
@@ -15774,7 +15774,7 @@ const ug = ["placeholder"], zy = /* @__PURE__ */ w({
           "onUpdate:checked": d[0] || (d[0] = (c) => o.value = c)
         }, l(r), {
           class: l(z)(
-            "data-[state=unchecked]:bg-primary-foreground dark:focus-visible:ring-primary-foreground peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary dark:focus-visible:ring-offset-primary dark:data-[state=checked]:bg-primary dark:data-[state=unchecked]:bg-primary",
+            "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=unchecked]:bg-primary-foreground dark:focus-visible:ring-primary-foreground dark:focus-visible:ring-offset-primary dark:data-[state=checked]:bg-primary dark:data-[state=unchecked]:bg-primary",
             n.class
           )
         }), {
@@ -16970,6 +16970,17 @@ const Mg = /* @__PURE__ */ ka(Eg, [["render", Tg]]), Zy = /* @__PURE__ */ w({
     }, 16, ["class"]));
   }
 }), Qy = /* @__PURE__ */ w({
+  __name: "Skeleton",
+  props: {
+    class: {}
+  },
+  setup(e) {
+    const t = e;
+    return (a, n) => (v(), K("div", {
+      class: re(l(z)("animate-pulse rounded-md bg-muted", t.class))
+    }, null, 2));
+  }
+}), eb = /* @__PURE__ */ w({
   __name: "Slider",
   props: {
     name: {},
@@ -17093,7 +17104,7 @@ function Yg(e) {
     update: a
   };
 }
-const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, eb = /* @__PURE__ */ w({
+const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, tb = /* @__PURE__ */ w({
   __name: "Toaster",
   setup(e) {
     const { toasts: t } = qg();
@@ -17191,7 +17202,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, eb = /* @__PUR
       )
     }), null, 16, ["class"]));
   }
-}), tb = /* @__PURE__ */ w({
+}), ab = /* @__PURE__ */ w({
   __name: "ToastAction",
   props: {
     altText: {},
@@ -17316,7 +17327,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, eb = /* @__PUR
       variant: "default"
     }
   }
-), ab = /* @__PURE__ */ w({
+), nb = /* @__PURE__ */ w({
   __name: "Tooltip",
   props: {
     defaultOpen: { type: Boolean },
@@ -17337,7 +17348,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, eb = /* @__PUR
       _: 3
     }, 16));
   }
-}), nb = /* @__PURE__ */ w({
+}), ob = /* @__PURE__ */ w({
   inheritAttrs: !1,
   __name: "TooltipContent",
   props: {
@@ -17380,7 +17391,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, eb = /* @__PUR
       _: 3
     }));
   }
-}), ob = /* @__PURE__ */ w({
+}), lb = /* @__PURE__ */ w({
   __name: "TooltipProvider",
   props: {
     delayDuration: {},
@@ -17399,7 +17410,7 @@ const Xg = { class: "flex gap-3" }, Zg = { class: "grid gap-1" }, eb = /* @__PUR
       _: 3
     }, 16));
   }
-}), lb = /* @__PURE__ */ w({
+}), sb = /* @__PURE__ */ w({
   __name: "TooltipTrigger",
   props: {
     asChild: { type: Boolean },
@@ -17521,7 +17532,8 @@ export {
   Ly as SelectSeparator,
   Rh as SelectTrigger,
   Ih as SelectValue,
-  Qy as Slider,
+  Qy as Skeleton,
+  eb as Slider,
   Mg as TabBaseContent,
   wg as Table,
   _g as TableBody,
@@ -17540,18 +17552,18 @@ export {
   Yy as TabsTrigger,
   zy as TextArea,
   Jg as Toast,
-  tb as ToastAction,
+  ab as ToastAction,
   ey as ToastClose,
   xl as ToastDescription,
   ay as ToastProvider,
   ty as ToastTitle,
   Qg as ToastViewport,
-  eb as Toaster,
+  tb as Toaster,
   cg as Toggle,
-  ab as Tooltip,
-  nb as TooltipContent,
-  ob as TooltipProvider,
-  lb as TooltipTrigger,
+  nb as Tooltip,
+  ob as TooltipContent,
+  lb as TooltipProvider,
+  sb as TooltipTrigger,
   Ci as badgeVariants,
   At as buttonVariants,
   ly as preset,

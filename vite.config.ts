@@ -16,19 +16,22 @@ export default defineConfig({
     }),
   ],
   build: {
+    emptyOutDir: false,
+    outDir: "dist",
+    sourcemap: true,
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'lumuix',
-      fileName: 'lumuix',
+      entry: {
+        'dropdown-menu': './src/components/dropdown-menu/index.ts',
+        badge: './src/components/badge/index.ts',
+        presets: './src/presets/preset.ts',
+      },
+      formats: ["es", "cjs"],
     },
-    rollupOptions: {
-      external: ['vue'],
-    },
-    emptyOutDir: true,
   },
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),
+      '@/components': resolve(__dirname, 'src/components'),
       '@/app': resolve(__dirname, 'app'),
     },
   },

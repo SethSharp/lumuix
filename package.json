@@ -1,6 +1,6 @@
 {
   "name": "@sethsharp/lumuix",
-  "version": "1.0.0-alpha.14",
+  "version": "1.0.0-alpha.15",
   "type": "module",
   "files": [
     "dist",
@@ -71,7 +71,7 @@
     "start-server-and-test": "^2.0.4",
     "tailwindcss": "^3.4.4",
     "typescript": "^5.5.4",
-    "typescript-eslint": "8.0.0-alpha.10",
+    "typescript-eslint": "^8.12.2",
     "vite": "^5.3.1",
     "vite-plugin-static-copy": "^1.0.6",
     "vue-eslint-parser": "^9.4.3",

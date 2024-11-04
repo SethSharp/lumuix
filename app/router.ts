@@ -20,6 +20,7 @@ import {
   Popover,
   RangeCalendar,
   Select,
+  Skeleton,
   Slider,
   Table,
   Tabs,
@@ -193,6 +194,15 @@ const routes = [
         path: '/components/select',
         name: 'Select',
         component: Select,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/skeleton',
+        name: 'Skeleton',
+        component: Skeleton,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

@@ -22,11 +22,12 @@ export default defineConfig({
     lib: {
       entry: {
         'dropdown-menu': './src/components/dropdown-menu/index.ts',
+        badge: './src/components/badge/index.ts',
+        presets: './src/presets/preset.ts',
       },
       formats: ["es", "cjs"],
     },
   },
-
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src'),

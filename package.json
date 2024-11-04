@@ -8,21 +8,27 @@
     "url": "https://github.com/SethSharp/lumuix"
   },
   "exports": {
-    "./*": "./components/*",
     "./dropdown-menu": {
       "import": "./dist/dropdown-menu.js",
       "require": "./dist/dropdown-menu.cjs",
       "types": "./src/components/dropdown-menu/index.ts"
     },
-    "./dist/types/presets/*.css": {
-      "import": "./dist/types/presets/*.css",
-      "require": "./dist/types/presets/*.css"
+    "./badge": {
+      "import": "./dist/badge.js",
+      "require": "./dist/badge.cjs",
+      "types": "./src/components/badge/index.ts"
+    },
+    "./presets": {
+      "import": "./dist/presets.js",
+      "require": "./dist/presets.cjs",
+      "types": "./src/presets/preset.ts"
     }
   },
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "run-p format type-check build-all",
+    "build": "run-p format type-check build-types build-all",
+    "build-types": "tsc src/**/*.ts --declaration --emitDeclarationOnly --declarationDir dist/types",
     "build-all": "vite build",
     "type-check": "vue-tsc --declaration --emitDeclarationOnly --outDir dist/types",
     "preview": "vite preview",

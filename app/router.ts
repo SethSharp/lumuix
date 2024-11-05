@@ -20,6 +20,7 @@ import {
   Popover,
   RangeCalendar,
   Select,
+  Separator,
   Skeleton,
   Slider,
   Table,
@@ -194,6 +195,15 @@ const routes = [
         path: '/components/select',
         name: 'Select',
         component: Select,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/separator',
+        name: 'Separator',
+        component: Separator,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

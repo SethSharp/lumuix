@@ -21,6 +21,7 @@ import {
   RangeCalendar,
   Select,
   Separator,
+  Sheet,
   Skeleton,
   Slider,
   Table,
@@ -195,6 +196,15 @@ const routes = [
         path: '/components/select',
         name: 'Select',
         component: Select,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/sheet',
+        name: 'Sheet',
+        component: Sheet,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

@@ -1,6 +1,9 @@
 declare const _default: {
     safelist: string[];
     darkMode: string[];
+    plugins: {
+        handler: () => void;
+    }[];
     theme: {
         extend: {
             colors: {

@@ -1,7 +1,11 @@
+import animate from 'tailwindcss-animate'
+
 export default {
   safelist: ['dark'],
 
   darkMode: ['class'],
+
+  plugins: [animate],
 
   theme: {
     extend: {

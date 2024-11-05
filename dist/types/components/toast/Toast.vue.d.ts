@@ -9,18 +9,18 @@ declare function __VLS_template(): {
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import("vue").DefineComponent<ToastProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    pause: () => any;
     "update:open": (value: boolean) => any;
     escapeKeyDown: (event: KeyboardEvent) => any;
-    pause: () => any;
     resume: () => any;
     swipeStart: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
     swipeMove: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
     swipeCancel: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
     swipeEnd: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
 }, string, import("vue").PublicProps, Readonly<ToastProps> & Readonly<{
+    onPause?: () => any;
     "onUpdate:open"?: (value: boolean) => any;
     onEscapeKeyDown?: (event: KeyboardEvent) => any;
-    onPause?: () => any;
     onResume?: () => any;
     onSwipeStart?: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
     onSwipeMove?: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;

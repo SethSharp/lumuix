@@ -13,21 +13,21 @@ declare function __VLS_template(): {
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
+    close: (event: Event) => any;
     escapeKeyDown: (event: KeyboardEvent) => any;
     pointerDownOutside: (event: import("radix-vue/dist/DismissableLayer").PointerDownOutsideEvent) => any;
     focusOutside: (event: import("radix-vue/dist/DismissableLayer").FocusOutsideEvent) => any;
     interactOutside: (event: import("radix-vue/dist/DismissableLayer").PointerDownOutsideEvent | import("radix-vue/dist/DismissableLayer").FocusOutsideEvent) => any;
     openAutoFocus: (event: Event) => any;
     closeAutoFocus: (event: Event) => any;
-    close: (event: Event) => any;
 }, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
+    onClose?: (event: Event) => any;
     onEscapeKeyDown?: (event: KeyboardEvent) => any;
     onPointerDownOutside?: (event: import("radix-vue/dist/DismissableLayer").PointerDownOutsideEvent) => any;
     onFocusOutside?: (event: import("radix-vue/dist/DismissableLayer").FocusOutsideEvent) => any;
     onInteractOutside?: (event: import("radix-vue/dist/DismissableLayer").PointerDownOutsideEvent | import("radix-vue/dist/DismissableLayer").FocusOutsideEvent) => any;
     onOpenAutoFocus?: (event: Event) => any;
     onCloseAutoFocus?: (event: Event) => any;
-    onClose?: (event: Event) => any;
 }>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 declare const _default: __VLS_WithTemplateSlots<typeof __VLS_component, __VLS_TemplateResult["slots"]>;
 export default _default;

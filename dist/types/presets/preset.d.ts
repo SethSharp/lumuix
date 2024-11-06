@@ -11,6 +11,7 @@ declare const _default: {
                 input: string;
                 ring: string;
                 background: string;
+                foreground: string;
                 primary: {
                     DEFAULT: string;
                     foreground: string;

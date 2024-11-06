@@ -5,12 +5,12 @@ defineProps<{
 </script>
 
 <template>
-  <div class="space-y-2 p-6 leading-loose text-black dark:bg-black dark:text-slate-400">
+  <div class="space-y-2 p-6 leading-loose dark:bg-black">
     <h1 class="text-3xl font-bold dark:text-white">{{ $route.name }}</h1>
 
     <slot />
 
-    <div class="space-y-4 text-slate-600 dark:text-slate-500">
+    <div class="space-y-4">
       <slot name="content" />
     </div>
   </div>

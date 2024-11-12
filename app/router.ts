@@ -22,6 +22,7 @@ import {
   Select,
   Separator,
   Sheet,
+  Sidebar,
   Skeleton,
   Slider,
   Table,
@@ -214,6 +215,15 @@ const routes = [
         path: '/components/separator',
         name: 'Separator',
         component: Separator,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/sidebar',
+        name: 'Sidebar',
+        component: Sidebar,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

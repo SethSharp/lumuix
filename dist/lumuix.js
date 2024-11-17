@@ -14840,16 +14840,13 @@ const Eh = /* @__PURE__ */ ka(Ph, [["render", Sh]]), Th = { class: "grid gap-4 m
             class: "absolute right-0 mt-[5px]"
           }, null, 8, ["count"])) : Z("", !0)
         ]),
-        P(l(xh), { class: "mt-[5px]" }, {
+        P(l(xh), { class: "mt-[2px]" }, {
           default: f(() => [
             Y(X(t.description), 1)
           ]),
           _: 1
         }),
-        P(l($h), {
-          error: t.error,
-          class: "mt-[3px]"
-        }, null, 8, ["error"])
+        P(l($h), { error: t.error }, null, 8, ["error"])
       ]);
     };
   }

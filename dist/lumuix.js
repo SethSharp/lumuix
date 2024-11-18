@@ -13277,9 +13277,9 @@ const im = /* @__PURE__ */ b({
         default: "h-9 p-5 text-base",
         xs: "h-6 rounded-md text-xs",
         sm: "h-8 rounded-md p-4 text-sm",
-        lg: "h-10 rounded-md px-8 text-lg",
-        xl: "h-12 rounded px-14 text-xl",
-        xxl: "h-14 rounded px-16 text-2xl",
+        lg: "h-10 rounded-lg px-8 text-lg",
+        xl: "h-12 rounded-lg px-14 text-xl",
+        xxl: "h-14 rounded-lg px-16 text-2xl",
         icon: "h-9 w-9"
       }
     },

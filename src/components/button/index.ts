@@ -26,10 +26,19 @@ export const buttonVariants = cva(
         xxl: 'h-14 rounded-lg px-16 text-2xl',
         icon: 'h-9 w-9',
       },
+      spinner: {
+        default: 'size-9',
+        xs: 'size-6',
+        sm: 'size-8',
+        lg: 'size-10',
+        xl: 'size-12',
+        xxl: 'size-14',
+      },
     },
     defaultVariants: {
       variant: 'default',
       size: 'default',
+      spinner: 'default',
     },
   },
 )

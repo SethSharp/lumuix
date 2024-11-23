@@ -30,7 +30,8 @@ import { Button } from '@/components/button'
     </Button>
     <Button
       variant="primary"
-      size="xxl">
+      size="xxl"
+      loading>
       Register
     </Button>
   </div>

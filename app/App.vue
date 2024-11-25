@@ -10,7 +10,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
   <div>
     <nav
       id="nav-bar"
-      class="sticky top-0 z-10 flex h-fit w-full justify-between border-b border-slate-400 bg-slate-100 backdrop-blur dark:border-white dark:bg-black">
+      class="sticky top-0 z-10 flex h-fit w-full justify-between border-b border-slate-400 bg-background backdrop-blur dark:border-white">
       <RouterLink to="/">
         <img
           src="/public/images/logo.png"
@@ -24,12 +24,12 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
     </nav>
     <main>
       <div class="flex gap-4">
-        <div class="h-screen w-1/4 bg-slate-100 dark:bg-black">
+        <div class="h-screen w-1/4 bg-background">
           <nav class="space-y-4 border-r border-slate-400 p-4 dark:border-white">
             <div
               v-for="group in routes"
               :key="group.name">
-              <h3 class="text-lg font-medium dark:text-slate-300">{{ group.name }}</h3>
+              <h3 class="text-lg font-medium text-heading">{{ group.name }}</h3>
 
               <ul
                 role="list"
@@ -42,7 +42,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
                       class="flex items-center hover:underline">
                       <RouterLink
                         :to="route.path"
-                        class="px-2 text-slate-400 dark:text-slate-500">
+                        class="px-2 text-text">
                         {{ route.name }}
                       </RouterLink>
                     </li>

@@ -2,6 +2,9 @@
   --background: 0 0% 100%;
   --foreground: 222.2 47.4% 11.2%;
 
+  --heading: 224 71% 4%;
+  --text: 215 20% 65%;
+
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
@@ -34,4 +37,7 @@
 .dark {
   --background: 222 47% 11%;
   --foreground: 214 32% 91%;
+
+  --heading: 213 27% 84%;
+  --text: 215 16% 47%; /* slate-400 */
 }

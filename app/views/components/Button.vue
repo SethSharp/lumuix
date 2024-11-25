@@ -6,7 +6,7 @@ import { Button } from '@/components/button'
   <div>The Button can take many forms using the variant prop</div>
 
   <div class="flex w-fit flex-col gap-y-2">
-    <Button> Default </Button>
+    <Button loading> Default </Button>
     <Button variant="primary"> Primary </Button>
     <Button
       variant="destructive"

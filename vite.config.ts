@@ -9,7 +9,7 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: 'src/presets/slate.css',
+          src: 'src/presets/styles.css',
           dest: 'types/presets',
         },
       ],

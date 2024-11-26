@@ -2,8 +2,8 @@
   --background: 0 0% 100%;
   --foreground: 222.2 47.4% 11.2%;
 
-  --heading: 224 71% 4%;
-  --text: 215 20% 65%;
+  --heading: 229 84% 5%; /* slate-950 */
+  --text: 229 84% 5%; /* slate-950 */
 
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
@@ -35,9 +35,11 @@
 }
 
 .dark {
-  --background: 222 47% 11%;
+  --background: 229 84% 5%; /* slate-950 */
   --foreground: 214 32% 91%;
 
-  --heading: 213 27% 84%;
-  --text: 215 16% 47%; /* slate-400 */
+  --heading: 214 32% 91%; /* slate-200 */
+  --text: 213 27% 84%; /* slate-400 */
+
+  --muted: 229 84% 5%; /* slate-950 */
 }

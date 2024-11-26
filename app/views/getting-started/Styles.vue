@@ -1,7 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <div class="text-text">
+  <div>
     <p>
       This package requires tailwind styles and variables to be configured at runtime, allowing
       components using these styles to be rendered at runtime.

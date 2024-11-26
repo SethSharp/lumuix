@@ -49,6 +49,7 @@ export default {
 
         card: {
           DEFAULT: 'hsl(var(--card))',
+          border: 'hsl(var(--card-border))',
           foreground: 'hsl(var(--card-foreground))',
         },
       },

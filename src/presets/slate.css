@@ -9,7 +9,8 @@
   --muted-foreground: 215.4 16.3% 46.9%;
 
   --card: 0 0% 100%;
-  --card-foreground: 222.2 47.4% 11.2%;
+  --card-border: 229 84% 5%; /* slate-950 */
+  --card-foreground: 229 84% 5%; /* slate-950 */
 
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 47.4% 11.2%;
@@ -42,4 +43,8 @@
   --text: 213 27% 84%; /* slate-400 */
 
   --muted: 229 84% 5%; /* slate-950 */
+
+  --card: 229 84% 5%; /* slate-950 */
+  --card-border: 215 16% 47%; /* slate-500 */
+  --card-foreground: 214 32% 91%; /* slate-200 */
 }

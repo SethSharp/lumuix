@@ -23,7 +23,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
       </div>
     </nav>
     <main>
-      <div class="flex gap-4">
+      <div class="flex">
         <div class="h-screen w-1/4 bg-background">
           <nav class="space-y-4 border-r border-slate-400 p-4 dark:border-white">
             <div

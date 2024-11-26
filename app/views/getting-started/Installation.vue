@@ -3,7 +3,7 @@ import Code from '../../components/Code.vue'
 </script>
 
 <template>
-  <div>
+  <div class="text-text">
     <p>
       Installation is fairly straight forward. First you must install the project from the npm
       registry:

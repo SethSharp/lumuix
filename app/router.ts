@@ -6,7 +6,6 @@ import {
   Styles,
   Home,
   NotFound,
-  Overview,
   Accordion,
   Button,
   Calendar,
@@ -281,21 +280,6 @@ const routes = [
         meta: {
           layout: ComponentLayout,
           shadcn: true,
-        },
-      },
-    ],
-  },
-  {
-    name: 'Form',
-    children: [
-      {
-        path: '/form/overview',
-        name: 'Overview',
-        component: Overview,
-        isExternal: true,
-        meta: {
-          layout: ComponentLayout,
-          shadcn: false,
         },
       },
     ],

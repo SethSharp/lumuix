@@ -3,16 +3,36 @@ import { Button } from '@/components/button'
 </script>
 
 <template>
-  <div>
-    The Button can take many forms using the variant prop
-  </div>
+  <div>The Button can take many forms using the variant prop</div>
 
-  <div class="flex flex-col w-fit gap-y-2">
-    <Button> Default </Button>
+  <div class="flex w-fit flex-col gap-y-2">
+    <Button loading> Default </Button>
     <Button variant="primary"> Primary </Button>
-    <Button variant="destructive"> Destructive </Button>
-    <Button variant="secondary"> Secondary </Button>
-    <Button variant="ghost"> Ghost </Button>
-    <Button variant="outline"> Outline </Button>
+    <Button
+      variant="destructive"
+      size="xs">
+      Destructive
+    </Button>
+    <Button
+      variant="secondary"
+      size="sm">
+      Secondary
+    </Button>
+    <Button
+      variant="ghost"
+      size="lg">
+      Ghost
+    </Button>
+    <Button
+      variant="outline"
+      size="xl">
+      Outline
+    </Button>
+    <Button
+      variant="primary"
+      size="xxl"
+      loading>
+      Register
+    </Button>
   </div>
 </template>

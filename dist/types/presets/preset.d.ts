@@ -11,6 +11,7 @@ declare const _default: {
                 input: string;
                 ring: string;
                 background: string;
+                foreground: string;
                 primary: {
                     DEFAULT: string;
                     foreground: string;
@@ -44,6 +45,28 @@ declare const _default: {
                 lg: string;
                 md: string;
                 sm: string;
+            };
+            keyframes: {
+                'accordion-down': {
+                    from: {
+                        height: string;
+                    };
+                    to: {
+                        height: string;
+                    };
+                };
+                'accordion-up': {
+                    from: {
+                        height: string;
+                    };
+                    to: {
+                        height: string;
+                    };
+                };
+            };
+            animation: {
+                'accordion-down': string;
+                'accordion-up': string;
             };
         };
     };

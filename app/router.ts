@@ -6,7 +6,7 @@ import {
   Styles,
   Home,
   NotFound,
-  Overview,
+  Accordion,
   Button,
   Calendar,
   Card,
@@ -67,6 +67,15 @@ const routes = [
   {
     name: 'Components',
     children: [
+      {
+        path: '/components/accordion',
+        name: 'Accordion',
+        component: Accordion,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
       {
         path: '/components/badge',
         name: 'Badge',
@@ -281,21 +290,6 @@ const routes = [
         meta: {
           layout: ComponentLayout,
           shadcn: true,
-        },
-      },
-    ],
-  },
-  {
-    name: 'Form',
-    children: [
-      {
-        path: '/form/overview',
-        name: 'Overview',
-        component: Overview,
-        isExternal: true,
-        meta: {
-          layout: ComponentLayout,
-          shadcn: false,
         },
       },
     ],

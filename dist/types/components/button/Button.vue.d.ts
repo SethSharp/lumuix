@@ -5,6 +5,7 @@ interface Props extends PrimitiveProps {
     variant?: ButtonVariants['variant'];
     size?: ButtonVariants['size'];
     class?: HTMLAttributes['class'];
+    loading?: boolean;
 }
 declare function __VLS_template(): {
     attrs: Partial<{}>;

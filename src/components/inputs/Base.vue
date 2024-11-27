@@ -43,12 +43,10 @@ export default {
         class="absolute right-0 mt-[5px]" />
     </div>
 
-    <Description class="mt-[5px]">
+    <Description class="mt-[2px]">
       {{ description }}
     </Description>
 
-    <Error
-      :error="error"
-      class="mt-[3px]" />
+    <Error :error="error" />
   </div>
 </template>

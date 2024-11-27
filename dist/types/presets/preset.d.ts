@@ -46,6 +46,28 @@ declare const _default: {
                 md: string;
                 sm: string;
             };
+            keyframes: {
+                'accordion-down': {
+                    from: {
+                        height: string;
+                    };
+                    to: {
+                        height: string;
+                    };
+                };
+                'accordion-up': {
+                    from: {
+                        height: string;
+                    };
+                    to: {
+                        height: string;
+                    };
+                };
+            };
+            animation: {
+                'accordion-down': string;
+                'accordion-up': string;
+            };
         };
     };
 };

@@ -1,5 +1,6 @@
 import preset from '@/presets/preset';
 import Container from './components/page/Container.vue';
+export * from '@/components/accordion';
 export * from '@/components/badge';
 export * from '@/components/button';
 export * from '@/components/calendar';

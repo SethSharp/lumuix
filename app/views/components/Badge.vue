@@ -3,9 +3,9 @@ import { Badge } from '@/components/badge'
 </script>
 
 <template>
-  <div>
+  <p class="text-text">
     The Badge can take many forms using the variant prop
-  </div>
+  </p>
 
   <div class="flex gap-x-2">
     <Badge> Default </Badge>

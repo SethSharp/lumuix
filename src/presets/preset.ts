@@ -16,6 +16,7 @@ export default {
         background: 'hsl(var(--background))',
         heading: 'hsl(var(--heading))',
         text: 'hsl(var(--text))',
+        'sub-text': 'hsl(var(--sub-text))',
         foreground: 'hsl(var(--foreground))',
 
         primary: {

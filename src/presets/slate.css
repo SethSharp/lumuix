@@ -4,6 +4,7 @@
 
   --heading: 229 84% 5%; /* slate-950 */
   --text: 229 84% 5%; /* slate-950 */
+  --sub-text: 222 47% 11%; /* slate-950 */
 
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
@@ -57,9 +58,10 @@
   --destructive-foreground: 210 40% 98%; /* slate-50 */
 
   --heading: 210 40% 96%; /* slate-200 */
-  --text: 215 16% 47%; /* slate-500 */
+  --text: 213 27% 84%; /* slate-300 */
+  --sub-text: 215 16% 47%; /* slate-500 */
 
-  --muted: 215 25% 27%; /* slate-700 */
+  --muted: 215 20% 65%; /* slate-400 */
   --muted-foreground: 215.4 16.3% 46.9%;
 
   --accordion-text: 213 27% 84%; /* slate-300 */

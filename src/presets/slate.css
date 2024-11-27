@@ -69,6 +69,9 @@
   --card-border: 215 16% 47%; /* slate-500 */
   --card-foreground: 214 32% 91%; /* slate-200 */
 
+  --popover: 229 84% 5%; /* slate-950 */
+  --popover-foreground: 214 32% 91%; /* slate-200 */
+
   --skeleton: 215 25% 27%; /* slate-800 */
 
   --border: 214.3 31.8% 91.4%;

@@ -15,7 +15,6 @@ import {
   Dialog,
   DropdownMenu,
   Inputs,
-  Page,
   Pagination,
   Popover,
   RangeCalendar,
@@ -151,15 +150,6 @@ const routes = [
         path: '/components/inputs',
         name: 'Inputs',
         component: Inputs,
-        meta: {
-          layout: ComponentLayout,
-          shadcn: false,
-        },
-      },
-      {
-        path: '/components/page',
-        name: 'Page',
-        component: Page,
         meta: {
           layout: ComponentLayout,
           shadcn: false,

@@ -8,9 +8,14 @@
   --muted: 210 40% 96.1%;
   --muted-foreground: 215.4 16.3% 46.9%;
 
+  --accordion-text: 229 84% 5%; /* slate-950 */
+  --accordion-border: 215 20% 65%; /* slate-500 */
+
   --card: 0 0% 100%;
   --card-border: 229 84% 5%; /* slate-950 */
   --card-foreground: 229 84% 5%; /* slate-950 */
+
+  --skeleton: 214 32% 91%; /* slate-200 */
 
   --popover: 0 0% 100%;
   --popover-foreground: 222.2 47.4% 11.2%;
@@ -39,18 +44,32 @@
   --background: 229 84% 5%; /* slate-950 */
   --foreground: 214 32% 91%;
 
-  --heading: 214 32% 91%; /* slate-200 */
-  --text: 213 27% 84%; /* slate-400 */
+  --primary: 175 77% 26%; /* teal-700 */
+  --primary-foreground: 210 40% 98%; /* slate-50 */
+
+  --secondary: 215 20% 65%; /* slate-400 */
+  --secondary-foreground: 229 84% 5%; /* slate-950 */
+
+  --accent: 215 25% 27%; /* slate-800 */
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 74% 42%; /* red-700 */
+  --destructive-foreground: 210 40% 98%; /* slate-50 */
+
+  --heading: 210 40% 96%; /* slate-200 */
+  --text: 215 16% 47%; /* slate-500 */
 
   --muted: 215 25% 27%; /* slate-700 */
   --muted-foreground: 215.4 16.3% 46.9%;
+
+  --accordion-text: 213 27% 84%; /* slate-300 */
+  --accordion-border: 215 16% 47%; /* slate-500 */
 
   --card: 229 84% 5%; /* slate-950 */
   --card-border: 215 16% 47%; /* slate-500 */
   --card-foreground: 214 32% 91%; /* slate-200 */
 
-  --accent: 215 25% 27%; /* slate-800 */
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --skeleton: 215 25% 27%; /* slate-800 */
 
   --border: 214.3 31.8% 91.4%;
   --input: 215 19% 35%; /* slate-600 */

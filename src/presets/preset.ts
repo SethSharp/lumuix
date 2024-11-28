@@ -14,6 +14,9 @@ export default {
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
+        heading: 'hsl(var(--heading))',
+        text: 'hsl(var(--text))',
+        'sub-text': 'hsl(var(--sub-text))',
         foreground: 'hsl(var(--foreground))',
 
         primary: {
@@ -45,8 +48,18 @@ export default {
           foreground: 'hsl(var(--popover-foreground))',
         },
 
+        accordion: {
+          text: 'hsl(var(--accordion-text))',
+          border: 'hsl(var(--accordion-border))',
+        },
+
+        skeleton: {
+          DEFAULT: 'hsl(var(--skeleton))'
+        },
+
         card: {
           DEFAULT: 'hsl(var(--card))',
+          border: 'hsl(var(--card-border))',
           foreground: 'hsl(var(--card-foreground))',
         },
       },

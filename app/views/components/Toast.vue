@@ -14,7 +14,7 @@ const someAction = () => {
 
 <template>
   <MainLayout title="Toaster">
-    <div>Allows for easy toast notifications, allowing real time feedback to users.</div>
+    <p class="text-text">Allows for easy toast notifications, allowing real time feedback to users.</p>
 
     <div class="flex w-fit flex-col gap-2">
       <Button
@@ -37,11 +37,13 @@ const someAction = () => {
             icon: CircleCheckIcon,
             description: 'You have clicked a button, now dismiss it ->',
             iconClasses: '!size-6',
+            variant: 'destructive',
             action: h(
               ToastAction,
               {
                 altText: 'Dismiss',
                 variant: 'ghost',
+                class: 'text-white',
                 onClick: someAction,
               },
               {
@@ -50,7 +52,7 @@ const someAction = () => {
             ),
           })
         ">
-        Action
+        Destructive Action
       </Button>
 
       <Button

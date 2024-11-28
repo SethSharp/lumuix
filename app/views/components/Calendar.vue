@@ -9,6 +9,16 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
 <template>
   <Calendar
     v-model="value"
-    :weekday-format="'short'"
+    weekday-format="narrow"
     class="w-fit rounded-md border" />
+
+  <Calendar
+    v-model="value"
+    weekday-format="short"
+    class="w-fit rounded-md border" />
+
+  <Calendar
+    v-model="value"
+    weekday-format="long"
+    class=" rounded-md border" />
 </template>

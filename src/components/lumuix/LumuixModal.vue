@@ -57,7 +57,7 @@ const closeModal = () => emits('close')
         </DialogDescription>
       </DialogHeader>
 
-      <div class="text-black dark:text-slate-400">
+      <div class="text-text">
         <template v-if="$slots.content">
           <slot name="content" />
         </template>

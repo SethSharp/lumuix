@@ -3,7 +3,7 @@ import { Button } from '@/components/button'
 </script>
 
 <template>
-  <div>The Button can take many forms using the variant prop</div>
+  <p class="text-text">The Button can take many forms using the variant prop</p>
 
   <div class="flex w-fit flex-col gap-y-2">
     <Button loading> Default </Button>

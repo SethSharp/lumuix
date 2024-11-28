@@ -7,12 +7,12 @@ import { Separator } from '@/components/separator'
     <Separator
       class="my-4"
       label="Or" />
-    <div class="flex h-5 items-center space-x-4 text-sm text-text">
-      <div>Blog</div>
+    <div class="flex h-5 items-center space-x-4 text-sm">
+      <p class="text-muted-foreground">Blog</p>
       <Separator orientation="vertical" />
-      <div>Docs</div>
+      <div class="text-muted-foreground">Docs</div>
       <Separator orientation="vertical" />
-      <div>Source</div>
+      <div class="text-muted-foreground">Source</div>
     </div>
   </div>
 </template>

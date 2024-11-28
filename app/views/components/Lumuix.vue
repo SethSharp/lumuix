@@ -9,6 +9,7 @@ import {
   LumuixModal,
   LumuixTabs,
   LumuixPagination,
+  LumuixTooltip
 } from '@/components/lumuix'
 
 const dataTableConfig = computed(() => ({
@@ -139,6 +140,17 @@ const isOpen = ref(false)
         <LumuixDatatable
           caption="Data on sports betting"
           v-bind="dataTableConfig" />
+      </div>
+
+      <div>
+        <LumuixTooltip>
+          <Button variant="outline">
+            Hover over me
+          </Button>
+          <template #tool-tip>
+            Some random tip
+          </template>
+        </LumuixTooltip>
       </div>
 
       <div>

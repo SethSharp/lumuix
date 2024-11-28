@@ -38,6 +38,7 @@
     "test:unit:dev": "cypress open --component"
   },
   "dependencies": {
+    "@tanstack/vue-table": "^8.20.5",
     "@vueuse/core": "^10.11.1",
     "class-variance-authority": "^0.7.0",
     "lucide-vue-next": "^0.447.0",

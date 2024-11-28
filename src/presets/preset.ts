@@ -54,7 +54,7 @@ export default {
         },
 
         skeleton: {
-          DEFAULT: 'hsl(var(--skeleton))'
+          DEFAULT: 'hsl(var(--skeleton))',
         },
 
         card: {

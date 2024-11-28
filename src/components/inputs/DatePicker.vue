@@ -50,10 +50,7 @@ onMounted(() => {
       <PopoverTrigger as-child>
         <Button
           variant="outline"
-          :class="[
-            'w-[280px] justify-start text-left font-normal text-text',
-
-          ]">
+          :class="['w-[280px] justify-start text-left font-normal text-text']">
           <CalendarIcon class="mr-2 size-4" />
           {{ value ? df.format(value.toDate(getLocalTimeZone())) : placeholder }}
         </Button>

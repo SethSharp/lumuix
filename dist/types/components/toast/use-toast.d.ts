@@ -20,12 +20,12 @@ declare function useToast(): {
         open?: boolean;
         duration?: number;
         asChild?: boolean;
-        as?: import("vue").FunctionalComponent<any, {}, any, {}> | {
+        as?: import("radix-vue").AsTag | import("vue").FunctionalComponent<any, {}, any, {}> | {
             new (...args: any[]): any;
             __isFragment?: never;
             __isTeleport?: never;
             __isSuspense?: never;
-        } | import("radix-vue").AsTag | {
+        } | {
             [x: string]: any;
             setup?: (this: void, props: import("@vue/shared").LooseRequired<any>, ctx: {
                 attrs: {

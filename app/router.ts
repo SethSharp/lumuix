@@ -7,6 +7,7 @@ import {
   Home,
   NotFound,
   Accordion,
+  Breadcrumbs,
   Button,
   Calendar,
   Card,
@@ -78,6 +79,15 @@ const routes = [
         path: '/components/badge',
         name: 'Badge',
         component: Badge,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/breadcrumbs',
+        name: 'Breadcrumbs',
+        component: Breadcrumbs,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

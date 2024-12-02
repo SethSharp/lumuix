@@ -2,6 +2,7 @@ import preset from '@/presets/preset'
 
 export * from '@/components/accordion'
 export * from '@/components/badge'
+export * from '@/components/breadcrumb'
 export * from '@/components/button'
 export * from '@/components/card'
 export * from '@/components/calendar'

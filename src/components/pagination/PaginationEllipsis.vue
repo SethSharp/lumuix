@@ -16,7 +16,7 @@ const delegatedProps = computed(() => {
 <template>
   <PaginationEllipsis
     v-bind="delegatedProps"
-    :class="cn('flex size-9 items-center justify-center', props.class)">
+    :class="cn('flex size-9 items-center justify-center text-text', props.class)">
     <slot>
       <MoreHorizontal />
     </slot>

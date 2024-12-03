@@ -7,7 +7,7 @@ const modelValue = ref([50])
 
 <template>
   <div class="mt-6 flex w-full flex-col justify-center">
-    <span class="mx-auto"> {{ modelValue?.[0] }}% </span>
+    <span class="mx-auto text-text"> {{ modelValue?.[0] }}% </span>
     <Slider
       v-model="modelValue"
       :max="100"

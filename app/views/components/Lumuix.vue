@@ -132,7 +132,7 @@ const isOpen = ref(false)
 
 <template>
   <div>
-    <p>Lumuix opinionated components. Built using internal components.</p>
+    <p class="text-text">Lumuix opinionated components. Built using internal components.</p>
 
     <div class="mt-5 space-y-4">
       <div>
@@ -153,8 +153,11 @@ const isOpen = ref(false)
           <template #title> This is the title </template>
           <template #description>
             This is the modal description. You can also pass the title and description as part of
-            the headerData object</template
-          >
+            the headerData object
+          </template>
+          <template #content>
+            Reprehenderit irure sunt aute commodo pariatur tempor aute labore consectetur voluptate. Sint dolore minim minim do cupidatat non enim dolore incididunt. Proident nulla occaecat aliquip sint adipisicing enim occaecat deserunt consectetur ex nisi laboris. Nulla nulla nulla do adipisicing sint pariatur do. Id non commodo amet in occaecat anim anim sint excepteur Lorem qui dolor ipsum ipsum. Commodo consequat deserunt ad sunt fugiat ea. Irure nisi amet excepteur non aliqua nulla ut enim consequat commodo incididunt non do.
+          </template>
           <template #footer>Oh hello, I am down here - the footer...</template>
         </LumuixModal>
       </div>

@@ -11,6 +11,9 @@ declare const _default: {
                 input: string;
                 ring: string;
                 background: string;
+                heading: string;
+                text: string;
+                'sub-text': string;
                 foreground: string;
                 primary: {
                     DEFAULT: string;
@@ -35,8 +38,16 @@ declare const _default: {
                     DEFAULT: string;
                     foreground: string;
                 };
+                accordion: {
+                    text: string;
+                    border: string;
+                };
+                skeleton: {
+                    DEFAULT: string;
+                };
                 card: {
                     DEFAULT: string;
+                    border: string;
                     foreground: string;
                 };
             };

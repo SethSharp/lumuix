@@ -36,7 +36,7 @@ watch(comboboxValue, () => {
 
 <template>
   <div>
-    <p>Inputs houses a lot of general use inputs especially helpful for forms. Some are opinionated inputs built using Lumuix components (such as Select and Combobox). </p>
+    <p class="text-text">Inputs houses a lot of general use inputs especially helpful for forms. Some are opinionated inputs built using Lumuix components (such as Select and Combobox). </p>
 
     <div class="space-y-4 w-fit mt-4">
       <div>

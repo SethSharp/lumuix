@@ -2,30 +2,34 @@
 import router from './router'
 import { RouterLink, RouterView } from 'vue-router'
 import { LumuixModeToggle } from '@/components/lumuix'
+import { SidebarProvider, Sidebar, SidebarContent, SidebarTrigger } from '@/components/sidebar'
 
 const routes = router.getRoutes().filter((route) => route.children.length > 0)
 </script>
 
 <template>
-  <div>
-    <nav
-      id="nav-bar"
-      class="sticky top-0 z-10 flex h-fit w-full justify-between border-b border-slate-400 bg-background backdrop-blur dark:border-white">
-      <RouterLink to="/">
-        <img
-          src="/public/images/logo.png"
-          class="w-32"
-          alt="Lumuix Logo" />
-      </RouterLink>
-      <div class="text-primary my-auto mr-6 flex gap-2 font-bold">
-        <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.10.3 </a>
-        <LumuixModeToggle />
-      </div>
-    </nav>
-    <main>
-      <div class="flex">
-        <div class="h-screen w-1/4 bg-background">
-          <nav class="space-y-4 border-r border-slate-400 p-4 dark:border-white">
+  <div class="flex">
+    <SidebarProvider>
+      <SidebarTrigger class="mt-5" />
+
+      <Sidebar side="left" variant="sidebar">
+        <SidebarContent>
+          <RouterLink to="/">
+            <img
+              src="/public/images/logo.png"
+              class="w-full"
+              alt="Lumuix Logo" />
+          </RouterLink>
+
+          <div class="flex gap-1">
+            <SidebarTrigger />
+            <div class="text-primary m-auto flex gap-2 font-bold">
+              <a href="https://github.com/SethSharp/lumuix" class="my-auto"> 1.0.0-alpha.10.3 </a>
+              <LumuixModeToggle />
+            </div>
+          </div>
+
+          <div class="p-4">
             <div
               v-for="group in routes"
               :key="group.name">
@@ -50,14 +54,15 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
                 </li>
               </ul>
             </div>
-          </nav>
-        </div>
-        <div class="w-3/4">
-          <component :is="$route.meta.layout">
-            <RouterView />
-          </component>
-        </div>
-      </div>
+          </div>
+        </SidebarContent>
+      </Sidebar>
+    </SidebarProvider>
+
+    <main class="w-full">
+      <component :is="$route.meta.layout">
+        <RouterView />
+      </component>
     </main>
   </div>
 </template>

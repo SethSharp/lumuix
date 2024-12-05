@@ -308,7 +308,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  linkActiveClass: '!font-medium underline',
+  linkActiveClass: '',
   routes,
 })
 

@@ -15806,7 +15806,7 @@ const qh = /* @__PURE__ */ xn(Hh, [["render", Gh]]), Yh = { class: "grid gap-4 m
   setup(e, { emit: t }) {
     const a = t, n = e, o = new et("en-US", {
       dateStyle: "long"
-    }), s = T();
+    }), s = T(n.modelValue);
     return Q(s, () => {
       a("update:modelValue", s.value);
     }), ie(() => {
@@ -15836,6 +15836,7 @@ const qh = /* @__PURE__ */ xn(Hh, [["render", Gh]]), Yh = { class: "grid gap-4 m
                   modelValue: s.value,
                   "onUpdate:modelValue": i[0] || (i[0] = (d) => s.value = d),
                   "default-value": r.defaultValue,
+                  multiple: !1,
                   "initial-focus": ""
                 }, null, 8, ["modelValue", "default-value"])
               ]),

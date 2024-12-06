@@ -1,12 +1,7 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
 import { CalendarIcon } from 'lucide-vue-next'
-import {
-  CalendarDate,
-  DateFormatter,
-  type DateValue,
-  getLocalTimeZone,
-} from '@internationalized/date'
+import { DateFormatter, type DateValue, getLocalTimeZone } from '@internationalized/date'
 import { Base } from '@/components/inputs'
 import { Button } from '@/components/button'
 import { Calendar } from '@/components/calendar'
@@ -16,8 +11,8 @@ const emits = defineEmits(['update:modelValue'])
 
 const props = withDefaults(
   defineProps<{
-    modelValue?: CalendarDate
-    defaultValue?: CalendarDate
+    modelValue?: DateValue | undefined
+    defaultValue?: DateValue | undefined
     placeholder?: string
   }>(),
   {
@@ -29,7 +24,7 @@ const df = new DateFormatter('en-US', {
   dateStyle: 'long',
 })
 
-const value = ref<DateValue>(props.modelValue)
+const value = ref<DateValue | undefined>(props.modelValue)
 
 watch(value, () => {
   emits('update:modelValue', value.value)
@@ -57,8 +52,9 @@ onMounted(() => {
       </PopoverTrigger>
       <PopoverContent class="w-auto p-0">
         <Calendar
-          v-model="value"
+          v-model="value as DateValue | undefined"
           :default-value="defaultValue"
+          :multiple="false"
           initial-focus />
       </PopoverContent>
     </Popover>

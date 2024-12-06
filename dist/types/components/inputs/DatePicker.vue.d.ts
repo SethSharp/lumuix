@@ -1,7 +1,7 @@
-import { CalendarDate } from '@internationalized/date';
+import { type DateValue } from '@internationalized/date';
 type __VLS_Props = {
-    modelValue?: CalendarDate;
-    defaultValue?: CalendarDate;
+    modelValue?: DateValue | undefined;
+    defaultValue?: DateValue | undefined;
     placeholder?: string;
 };
 declare const _default: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {

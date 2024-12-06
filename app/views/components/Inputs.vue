@@ -8,17 +8,14 @@ import {
   ImageUpload,
   Input,
   TextArea,
-  Toggle
+  Toggle,
 } from '@/components/inputs'
+import { CalendarDate } from '@internationalized/date'
 
 const checkboxValue = ref(true)
 
 const selectValue = ref(null)
-const selectOptions = ref([
-  'Grape',
-  'Banana',
-  'Strawberry'
-])
+const selectOptions = ref(['Grape', 'Banana', 'Strawberry'])
 
 const comboboxValue = ref('next.js')
 const comboboxOptions = ref([
@@ -29,46 +26,76 @@ const comboboxOptions = ref([
   { id: 'astro', name: 'Astro' },
 ])
 
-watch(comboboxValue, () => {
-  console.log(comboboxValue.value)
+const datePickerValue = ref(new CalendarDate(2024, 12, 6))
+
+watch(datePickerValue, () => {
+  console.log(datePickerValue.value)
 })
 </script>
 
 <template>
   <div>
-    <p class="text-text">Inputs houses a lot of general use inputs especially helpful for forms. Some are opinionated inputs built using Lumuix components (such as Select and Combobox). </p>
+    <p class="text-text">
+      Inputs houses a lot of general use inputs especially helpful for forms. Some are opinionated
+      inputs built using Lumuix components (such as Select and Combobox).
+    </p>
 
-    <div class="space-y-4 w-fit mt-4">
+    <div class="mt-4 w-fit space-y-4">
       <div>
-        <Checkbox v-model="checkboxValue" text="This is a checkbox" />
+        <Checkbox
+          v-model="checkboxValue"
+          text="This is a checkbox" />
       </div>
 
       <div>
-        <Combobox v-model="comboboxValue" label="This is a combobox" description="Accepts options as {id: number|string, value: string}. Model value as: array, null or a number (id)" :options="comboboxOptions" />
+        <Combobox
+          v-model="comboboxValue"
+          label="This is a combobox"
+          description="Accepts options as {id: number|string, value: string}. Model value as: array, null or a number (id)"
+          :options="comboboxOptions" />
       </div>
 
       <div>
-        <DatePicker label="Date picker" description="Select a date for this example page"  />
+        <DatePicker
+          v-model="datePickerValue"
+          label="Date picker"
+          description="Select a date for this example page" />
       </div>
 
       <div>
-        <ImageUpload label="Image upload" description="Allows you to upload an image" />
+        <ImageUpload
+          label="Image upload"
+          description="Allows you to upload an image" />
       </div>
 
       <div>
-        <Input label="This is a input" description="Allows you to enter some short text" placeholder="This is a placeholder, guiding users to a sensible response"  />
+        <Input
+          label="This is a input"
+          description="Allows you to enter some short text"
+          placeholder="This is a placeholder, guiding users to a sensible response" />
       </div>
 
       <div>
-        <Select v-model="selectValue" label="This is a select (custom)" placeholder="Select a fruit..." :options="selectOptions" description="Accepts an array of values"/>
+        <Select
+          v-model="selectValue"
+          label="This is a select (custom)"
+          placeholder="Select a fruit..."
+          :options="selectOptions"
+          description="Accepts an array of values" />
       </div>
 
       <div>
-        <TextArea label="This is a textarea" description="Allows you to enter a body of text" placeholder="Do not enter the text of a book here please." error="Oops! There is an error - this is available on all input components" />
+        <TextArea
+          label="This is a textarea"
+          description="Allows you to enter a body of text"
+          placeholder="Do not enter the text of a book here please."
+          error="Oops! There is an error - this is available on all input components" />
       </div>
 
       <div>
-        <Toggle label="This is a toggle" description="Toggle a setting or light and dark mode" />
+        <Toggle
+          label="This is a toggle"
+          description="Toggle a setting or light and dark mode" />
       </div>
     </div>
   </div>

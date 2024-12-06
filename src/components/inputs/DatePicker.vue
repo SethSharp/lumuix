@@ -29,7 +29,7 @@ const df = new DateFormatter('en-US', {
   dateStyle: 'long',
 })
 
-const value = ref<DateValue>()
+const value = ref<DateValue>(props.modelValue)
 
 watch(value, () => {
   emits('update:modelValue', value.value)

@@ -1,63 +1,96 @@
 <script lang="ts" setup>
 import router from './router'
+import { useRoute } from 'vue-router'
+import { computed } from 'vue'
 import { RouterLink, RouterView } from 'vue-router'
 import { LumuixModeToggle } from '@/components/lumuix'
+import { SidebarProvider, Sidebar, SidebarContent, SidebarTrigger } from '@/components/sidebar'
+import {
+  SidebarGroup,
+  SidebarGroupAction,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  SidebarHeader,
+  SidebarMenu, SidebarMenuButton,
+  SidebarMenuItem
+} from '@/components/sidebar'
+import { SidebarMenuSub, SidebarMenuSubItem } from '@'
+import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from 'radix-vue'
+
+const route = useRoute()
+const currentRoute = computed(() => route.path)
 
 const routes = router.getRoutes().filter((route) => route.children.length > 0)
 </script>
 
 <template>
-  <div>
-    <nav
-      id="nav-bar"
-      class="sticky top-0 z-10 flex h-fit w-full justify-between border-b border-slate-400 bg-background backdrop-blur dark:border-white">
-      <RouterLink to="/">
-        <img
-          src="/public/images/logo.png"
-          class="w-32"
-          alt="Lumuix Logo" />
-      </RouterLink>
-      <div class="text-primary my-auto mr-6 flex gap-2 font-bold">
-        <a href="https://github.com/SethSharp/lumuix"> 1.0.0-alpha.10.3 </a>
-        <LumuixModeToggle />
-      </div>
-    </nav>
-    <main>
-      <div class="flex">
-        <div class="h-screen w-1/4 bg-background">
-          <nav class="space-y-4 border-r border-slate-400 p-4 dark:border-white">
-            <div
+  <div class="flex">
+    <SidebarProvider>
+      <SidebarTrigger class="mt-5" />
+
+      <Sidebar side="left" variant="sidebar">
+        <SidebarContent>
+          <SidebarHeader>
+            <RouterLink to="/">
+              <img
+                src="/public/images/logo.png"
+                class="w-full"
+                alt="Lumuix Logo" />
+            </RouterLink>
+          </SidebarHeader>
+
+          <div class="flex gap-1">
+            <SidebarTrigger />
+            <div class="text-primary m-auto flex gap-2 font-bold">
+              <a href="https://github.com/SethSharp/lumuix" class="my-auto"> 1.0.0-alpha.10.3 </a>
+              <LumuixModeToggle />
+            </div>
+          </div>
+
+          <SidebarContent>
+            <SidebarGroup
               v-for="group in routes"
               :key="group.name">
-              <h3 class="text-lg font-medium text-heading">{{ group.name }}</h3>
 
-              <ul
-                role="list"
-                class="flex flex-1 flex-col py-2">
-                <li>
-                  <ul class="space-y-2">
-                    <li
-                      v-for="route in group.children"
-                      :key="route.name"
-                      class="flex items-center hover:underline">
-                      <RouterLink
-                        :to="route.path"
-                        class="px-2 text-text">
-                        {{ route.name }}
-                      </RouterLink>
-                    </li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-        <div class="w-3/4">
-          <component :is="$route.meta.layout">
-            <RouterView />
-          </component>
-        </div>
-      </div>
+                <SidebarGroupContent>
+                  <SidebarMenu class="pl-1">
+                    <CollapsibleRoot default-open class="group/collapsible">
+                      <SidebarMenuItem>
+                        <CollapsibleTrigger asChild>
+                          <SidebarGroupLabel class="text-heading">{{ group.name }}</SidebarGroupLabel>
+                        </CollapsibleTrigger>
+                        <CollapsibleContent>
+                          <SidebarMenuSub role="list">
+                            <SidebarMenuSubItem
+                              v-for="route in group.children"
+                              :key="route.name"
+                              class="hover:underline">
+                              <SidebarMenuSubItem>
+                                <SidebarMenuButton :is-active="currentRoute === route.path" as-child>
+                                  <RouterLink
+                                    :to="route.path"
+                                    class="text-text">
+                                    {{ route.name }}
+                                  </RouterLink>
+                                </SidebarMenuButton>
+                              </SidebarMenuSubItem>
+                            </SidebarMenuSubItem>
+                          </SidebarMenuSub>
+                        </CollapsibleContent>
+                      </SidebarMenuItem>
+                    </CollapsibleRoot>
+                  </SidebarMenu>
+                </SidebarGroupContent>
+            </SidebarGroup>
+          </SidebarContent>
+        </SidebarContent>
+      </Sidebar>
+    </SidebarProvider>
+
+    <main class="w-full">
+      <component :is="$route.meta.layout">
+        <RouterView />
+      </component>
     </main>
   </div>
 </template>

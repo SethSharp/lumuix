@@ -50,6 +50,10 @@ declare const _default: {
                     border: string;
                     foreground: string;
                 };
+                sidebar: {
+                    DEFAULT: string;
+                    foreground: string;
+                };
             };
             borderRadius: {
                 xl: string;

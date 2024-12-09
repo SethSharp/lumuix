@@ -2,6 +2,7 @@
 import { type Component, computed } from 'vue'
 import { useSidebar } from './utils'
 import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/tooltip'
+import type { PrimitiveProps, AsTag } from 'radix-vue'
 import SidebarMenuButtonChild, { type SidebarMenuButtonProps } from './SidebarMenuButtonChild.vue'
 
 defineOptions({
@@ -32,7 +33,11 @@ const delegatedProps = computed(() => {
 <template>
   <SidebarMenuButtonChild
     v-if="!tooltip"
-    v-bind="{ ...delegatedProps, ...$attrs }">
+    v-bind="{
+      ...delegatedProps,
+      ...$attrs,
+      as: props.as,
+    }">
     <slot />
   </SidebarMenuButtonChild>
 

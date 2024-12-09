@@ -22,6 +22,7 @@ import {
   Select,
   Separator,
   Sheet,
+  Sidebar,
   Skeleton,
   Slider,
   Table,
@@ -229,6 +230,15 @@ const routes = [
         },
       },
       {
+        path: '/components/sidebar',
+        name: 'Sidebar',
+        component: Sidebar,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
         path: '/components/skeleton',
         name: 'Skeleton',
         component: Skeleton,
@@ -298,7 +308,7 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  linkActiveClass: '!font-medium underline',
+  linkActiveClass: '',
   routes,
 })
 

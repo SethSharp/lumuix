@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div class="space-y-2 p-6 leading-loose bg-background h-screen">
+  <div class="space-y-2 leading-loose bg-background pt-6 pr-12 h-screen w-full">
     <slot name="breadcrumbs" />
 
     <h1 class="text-3xl font-bold text-heading">{{ $route.name }}</h1>

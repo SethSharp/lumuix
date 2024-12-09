@@ -62,6 +62,11 @@ export default {
           border: 'hsl(var(--card-border))',
           foreground: 'hsl(var(--card-foreground))',
         },
+
+        sidebar: {
+          DEFAULT: 'hsl(var(--sidebar))',
+          foreground: 'hsl(var(--sidebar-foreground))',
+        },
       },
       borderRadius: {
         xl: 'calc(var(--radius) + 4px)',

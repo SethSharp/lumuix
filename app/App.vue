@@ -6,8 +6,10 @@ import { ChevronDown, PanelLeft } from 'lucide-vue-next'
 import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from 'radix-vue'
 import router from './router'
 import { LumuixModeToggle } from '@/components/lumuix'
-import { SidebarProvider, Sidebar, SidebarContent, SidebarTrigger } from '@/components/sidebar'
 import {
+  SidebarProvider,
+  Sidebar,
+  SidebarContent,
   SidebarGroup,
   SidebarGroupContent,
   SidebarGroupLabel,
@@ -18,9 +20,8 @@ import {
   SidebarFooter,
   SidebarMenuSub,
   SidebarMenuSubItem,
-  SidebarGroupAction
+  SidebarRail
 } from '@/components/sidebar'
-import {  SidebarRail } from '@'
 
 const route = useRoute()
 const currentRoute = computed(() => route.path)

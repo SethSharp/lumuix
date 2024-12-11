@@ -18229,7 +18229,7 @@ const py = /* @__PURE__ */ Ia(dy, [["render", cy]]), c0 = /* @__PURE__ */ y({
         )
       }, r.$attrs), [
         re("div", Ry, [
-          _(r.$slots, "default")
+          _(r.$slots, "default", { state: s(n) })
         ])
       ], 16)
     ], 8, Vy));

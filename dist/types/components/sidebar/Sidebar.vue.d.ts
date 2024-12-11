@@ -10,7 +10,9 @@ declare function __VLS_template(): {
     slots: {
         default?(_: {}): any;
         default?(_: {}): any;
-        default?(_: {}): any;
+        default?(_: {
+            state: "expanded" | "collapsed";
+        }): any;
     };
     refs: {};
     rootEl: any;

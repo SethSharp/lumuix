@@ -32,10 +32,11 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
 <template>
   <div class="flex">
     <SidebarProvider>
-      <Sidebar side="left" variant="sidebar">
+      <Sidebar v-slot="{ state }" collapsible="icon" side="left" variant="sidebar">
         <SidebarHeader>
           <RouterLink to="/">
             <img
+              v-if="state == 'expanded'"
               src="/public/images/logo.png"
               class="w-full"
               alt="Lumuix Logo" />

@@ -91,7 +91,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
       <div
         data-sidebar="sidebar"
         class="group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow">
-        <slot />
+        <slot :state="state" />
       </div>
     </div>
   </div>

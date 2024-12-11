@@ -18276,7 +18276,7 @@ const py = /* @__PURE__ */ Ia(dy, [["render", cy]]), c0 = /* @__PURE__ */ y({
     const t = e;
     return (a, n) => (f(), L("div", {
       "data-sidebar": "group",
-      class: H(s(M)("relative flex w-full min-w-0 flex-col p-2", t.class))
+      class: H(s(M)("relative flex w-full min-w-0 flex-col p-0.5 sm:p-2", t.class))
     }, [
       _(a.$slots, "default")
     ], 2));

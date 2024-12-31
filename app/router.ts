@@ -16,6 +16,7 @@ import {
   Dialog,
   DropdownMenu,
   Inputs,
+  LineChart,
   Pagination,
   Popover,
   RangeCalendar,
@@ -119,6 +120,16 @@ const routes = [
         meta: {
           layout: ComponentLayout,
           shadcn: true,
+        },
+      },
+      {
+        path: '/components/graphs/line-chart',
+        name: 'Line Chart',
+        component: LineChart,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+          actualLink: 'https://www.shadcn-vue.com/docs/charts/line.html',
         },
       },
       {

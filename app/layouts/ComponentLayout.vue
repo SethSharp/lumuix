@@ -13,9 +13,7 @@ defineProps<{
   <MainLayout :title="$route.name">
     <template #breadcrumbs>
       <BreadcrumbList>
-        <BreadcrumbItem>
-          Components
-        </BreadcrumbItem>
+        <BreadcrumbItem> Components </BreadcrumbItem>
         <BreadcrumbSeparator />
         <BreadcrumbItem>
           <BreadcrumbLink :href="`/components/${$route.name.toLowerCase()}`">
@@ -29,7 +27,11 @@ defineProps<{
       variant="default"
       as-child>
       <a
-        :href="`https://www.shadcn-vue.com/docs/components/${$route.name.toLowerCase()}.html`"
+        :href="
+          $route.meta.actualLink
+            ? $route.meta.actualLink
+            : `https://www.shadcn-vue.com/docs/components/${$route.name.toLowerCase()}.html`
+        "
         target="_blank"
         class="flex gap-2">
         See Shadcn Docs

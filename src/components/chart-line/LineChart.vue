@@ -19,6 +19,7 @@ const props = withDefaults(
        * Type of curve
        */
       curveType?: CurveType
+      class?: string
     }
   >(),
   {
@@ -61,7 +62,7 @@ function handleLegendItemClick(d: BulletLegendItemInterface, i: number) {
 </script>
 
 <template>
-  <div :class="cn('flex h-[400px] w-full flex-col items-end', $attrs.class ?? '')">
+  <div :class="cn('flex h-[400px] w-full flex-col items-end', props.class ?? '')">
     <ChartLegend
       v-if="showLegend"
       v-model:items="legendItems"

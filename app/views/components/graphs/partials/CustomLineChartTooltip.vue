@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/card'
+import { Card, CardContent, CardHeader, CardTitle } from '@'
 
 defineProps<{
   title?: string
@@ -16,7 +16,7 @@ defineProps<{
     <CardHeader
       v-if="title"
       class="border-b p-3">
-      <CardTitle> {{ title }} </CardTitle>
+      <CardTitle> Year: {{ title }} </CardTitle>
     </CardHeader>
     <CardContent class="flex min-w-[180px] flex-col gap-1 p-3">
       <div

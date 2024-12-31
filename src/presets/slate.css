@@ -48,6 +48,17 @@
   --sidebar-accent-foreground: 240 5.9% 10%;
   --sidebar-border: 220 13% 91%;
   --sidebar-ring: 217.2 91.2% 59.8%;
+
+  --vis-tooltip-background-color: none !important;
+  --vis-tooltip-border-color: none !important;
+  --vis-tooltip-text-color: none !important;
+  --vis-tooltip-shadow-color: none !important;
+  --vis-tooltip-backdrop-filter: none !important;
+  --vis-tooltip-padding: none !important;
+
+  --vis-primary-color: var(--primary);
+  --vis-secondary-color: var(--secondary);
+  --vis-text-color: var(--muted-foreground);
 }
 
 .dark {

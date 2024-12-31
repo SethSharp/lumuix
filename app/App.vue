@@ -20,7 +20,7 @@ import {
   SidebarFooter,
   SidebarMenuSub,
   SidebarMenuSubItem,
-  SidebarRail
+  SidebarRail,
 } from '@/components/sidebar'
 
 const route = useRoute()
@@ -32,7 +32,10 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
 <template>
   <div class="flex">
     <SidebarProvider>
-      <Sidebar v-slot="{ state }" collapsible="icon" side="left" variant="sidebar">
+      <Sidebar
+        v-slot="{ state }"
+        side="left"
+        variant="sidebar">
         <SidebarHeader>
           <RouterLink to="/">
             <img
@@ -46,57 +49,62 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
           <SidebarGroup
             v-for="group in routes"
             :key="group.name">
-              <SidebarGroupContent>
-                <SidebarMenu>
-                  <CollapsibleRoot default-open class="group/collapsible">
-                    <SidebarMenuItem>
-                      <SidebarGroupLabel as-child class="text-heading">
-                        <CollapsibleTrigger>
-                          <SidebarMenuButton>
-                            {{ group.name }}
-                            <ChevronDown />
-                          </SidebarMenuButton>
-                        </CollapsibleTrigger>
-                      </SidebarGroupLabel>
-                      <CollapsibleContent>
-                        <SidebarMenuSub role="list">
-                          <SidebarMenuSubItem
-                            v-for="route in group.children"
-                            :key="route.name"
-                            class="hover:underline">
-                            <SidebarMenuButton :is-active="currentRoute === route.path" as-child>
-                              <RouterLink
-                                :to="route.path"
-                                class="text-text">
-                                {{ route.name }}
-                              </RouterLink>
-                            </SidebarMenuButton>
-                          </SidebarMenuSubItem>
-                        </SidebarMenuSub>
-                      </CollapsibleContent>
-                    </SidebarMenuItem>
-                  </CollapsibleRoot>
-                </SidebarMenu>
-              </SidebarGroupContent>
+            <SidebarGroupContent>
+              <SidebarMenu>
+                <CollapsibleRoot
+                  default-open
+                  class="group/collapsible">
+                  <SidebarMenuItem>
+                    <SidebarGroupLabel
+                      as-child
+                      class="text-heading">
+                      <SidebarMenuButton>
+                        {{ group.name }}
+                      </SidebarMenuButton>
+                    </SidebarGroupLabel>
+                    <SidebarMenuSub role="list">
+                      <SidebarMenuSubItem
+                        v-for="route in group.children"
+                        :key="route.name"
+                        class="hover:underline">
+                        <SidebarMenuButton
+                          :is-active="currentRoute === route.path"
+                          as-child>
+                          <RouterLink
+                            :to="route.path"
+                            class="text-text">
+                            {{ route.name }}
+                          </RouterLink>
+                        </SidebarMenuButton>
+                      </SidebarMenuSubItem>
+                    </SidebarMenuSub>
+                  </SidebarMenuItem>
+                </CollapsibleRoot>
+              </SidebarMenu>
+            </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
 
         <SidebarRail>
-          <div class="pl-10 py-3">
+          <div class="py-3 pl-10">
             <PanelLeft />
           </div>
         </SidebarRail>
 
         <SidebarFooter class="h-12 text-center">
-          <div class="text-primary m-auto flex gap-2 font-bold">
-            <a href="https://github.com/SethSharp/lumuix" class="my-auto"> 1.0.0-alpha.10.3 </a>
+          <div class="m-auto flex gap-2 font-bold text-primary">
+            <a
+              href="https://github.com/SethSharp/lumuix"
+              class="my-auto">
+              1.0.0-alpha.10.3
+            </a>
             <LumuixModeToggle />
           </div>
         </SidebarFooter>
       </Sidebar>
     </SidebarProvider>
 
-    <main class="w-full px-8 p-4">
+    <main class="w-full p-4 px-8">
       <component :is="$route.meta.layout">
         <RouterView />
       </component>

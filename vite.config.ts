@@ -24,7 +24,7 @@ export default defineConfig({
     rollupOptions: {
       external: ['vue'],
     },
-    emptyOutDir: true,
+    emptyOutDir: false,
   },
   resolve: {
     alias: {

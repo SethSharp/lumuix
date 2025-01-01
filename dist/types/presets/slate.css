@@ -56,9 +56,9 @@
   --vis-tooltip-backdrop-filter: none !important;
   --vis-tooltip-padding: none !important;
 
-  --vis-primary-color: var(--primary);
-  --vis-secondary-color: var(--secondary);
-  --vis-text-color: var(--muted-foreground);
+  --vis-primary-color: 173 80% 40%;
+  --vis-secondary-color: 210 40% 96.1%;
+  --vis-text-color: 215.4 16.3% 46.9%;
 }
 
 .dark {
@@ -107,4 +107,8 @@
 
   --border: 215 20% 65%; /* slate-400 */
   --input: 215 19% 35%; /* slate-600 */
+
+  --vis-primary-color: 175 77% 26%; /* teal-700 */
+  --vis-secondary-color: 215 20% 65%; /* slate-400 */
+  --vis-text-color: 215 19% 35%; /* slate-600 */
 }

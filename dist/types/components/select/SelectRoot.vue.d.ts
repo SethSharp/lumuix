@@ -2,9 +2,7 @@ import type { SelectRootProps } from 'radix-vue';
 declare function __VLS_template(): {
     attrs: Partial<{}>;
     slots: {
-        default?(_: {
-            open: boolean;
-        }): any;
+        default?(_: any): any;
     };
     refs: {};
     rootEl: any;

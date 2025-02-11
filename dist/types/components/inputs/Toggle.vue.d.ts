@@ -11,7 +11,7 @@ declare function __VLS_template(): {
     attrs: Partial<{}>;
     slots: {
         checked?(_: {}): any;
-        "not-checked"?(_: {}): any;
+        'not-checked'?(_: {}): any;
     };
     refs: {};
     rootEl: any;

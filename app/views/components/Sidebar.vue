@@ -43,7 +43,7 @@ const projects = [
           <SidebarMenu>
             <SidebarGroupContent>
               <SidebarMenuItem v-for="project in projects">
-                <SidebarMenuButton asChild>
+                <SidebarMenuButton as-child>
                   <a href="#">
                     <component :is="project.icon" />
                     <span>{{ project.name }} </span>

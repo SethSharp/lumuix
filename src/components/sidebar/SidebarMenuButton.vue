@@ -8,18 +8,11 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const props = withDefaults(
-  defineProps<
-    SidebarMenuButtonProps & {
-      tooltip?: string | Component
-    }
-  >(),
-  {
-    as: 'button',
-    variant: 'default',
-    size: 'default',
-  },
-)
+const props = defineProps<
+  SidebarMenuButtonProps & {
+    tooltip?: string | Component
+  }
+>()
 
 const { isMobile, state } = useSidebar()
 

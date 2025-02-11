@@ -6,9 +6,7 @@ type __VLS_Props = RangeCalendarHeadingProps & {
 declare function __VLS_template(): {
     attrs: Partial<{}>;
     slots: {
-        default?(_: {
-            headingValue: string;
-        }): any;
+        default?(_: any): any;
     };
     refs: {};
     rootEl: any;

@@ -1,10 +1,4 @@
-import type { HTMLAttributes } from 'vue';
-type __VLS_Props = {
-    side?: 'left' | 'right';
-    variant?: 'sidebar' | 'floating' | 'inset';
-    collapsible?: 'offcanvas' | 'icon' | 'none';
-    class?: HTMLAttributes['class'];
-};
+import type { SidebarProps } from '.';
 declare function __VLS_template(): {
     attrs: Partial<{}>;
     slots: {
@@ -18,7 +12,7 @@ declare function __VLS_template(): {
     rootEl: any;
 };
 type __VLS_TemplateResult = ReturnType<typeof __VLS_template>;
-declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
+declare const __VLS_component: import("vue").DefineComponent<SidebarProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<SidebarProps> & Readonly<{}>, {
     collapsible: "offcanvas" | "icon" | "none";
     variant: "sidebar" | "floating" | "inset";
     side: "left" | "right";

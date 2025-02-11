@@ -1,7 +1,6 @@
 <script setup lang="ts">
-import type { HTMLAttributes } from 'vue'
-import Sheet from '@/components/sheet/Sheet.vue'
-import SheetContent from '@/components/sheet/SheetContent.vue'
+import type { SidebarProps } from '.'
+import { Sheet, SheetContent } from '@/components/sheet'
 import { cn } from '@/lib/utils'
 import { SIDEBAR_WIDTH_MOBILE, useSidebar } from './utils'
 
@@ -9,19 +8,11 @@ defineOptions({
   inheritAttrs: false,
 })
 
-const props = withDefaults(
-  defineProps<{
-    side?: 'left' | 'right'
-    variant?: 'sidebar' | 'floating' | 'inset'
-    collapsible?: 'offcanvas' | 'icon' | 'none'
-    class?: HTMLAttributes['class']
-  }>(),
-  {
-    side: 'left',
-    variant: 'sidebar',
-    collapsible: 'offcanvas',
-  },
-)
+const props = withDefaults(defineProps<SidebarProps>(), {
+  side: 'left',
+  variant: 'sidebar',
+  collapsible: 'offcanvas',
+})
 
 const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
 </script>
@@ -44,6 +35,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
     <SheetContent
       data-sidebar="sidebar"
       data-mobile="true"
+      :side="side"
       class="w-[--sidebar-width] bg-sidebar p-0 text-sidebar-foreground [&>button]:hidden"
       :style="{
         '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
@@ -90,7 +82,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
       v-bind="$attrs">
       <div
         data-sidebar="sidebar"
-        class="group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow">
+        class="group-data-[variant=floating]:border-sidebar-border flex h-full w-full flex-col bg-sidebar text-sidebar-foreground group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow">
         <slot :state="state" />
       </div>
     </div>

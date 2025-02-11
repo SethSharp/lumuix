@@ -2,8 +2,7 @@
 import { computed } from 'vue'
 import { useRoute } from 'vue-router'
 import { RouterLink, RouterView } from 'vue-router'
-import { ChevronDown, PanelLeft } from 'lucide-vue-next'
-import { CollapsibleContent, CollapsibleRoot, CollapsibleTrigger } from 'radix-vue'
+import { CollapsibleRoot } from 'radix-vue'
 import router from './router'
 import { LumuixModeToggle } from '@/components/lumuix'
 import {
@@ -20,7 +19,7 @@ import {
   SidebarFooter,
   SidebarMenuSub,
   SidebarMenuSubItem,
-  SidebarRail,
+  SidebarTrigger
 } from '@/components/sidebar'
 
 const route = useRoute()
@@ -30,20 +29,27 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
 </script>
 
 <template>
-  <div class="flex">
+  <div class="flex h-screen">
     <SidebarProvider>
+      <SidebarTrigger />
+
       <Sidebar
         v-slot="{ state }"
         side="left"
         variant="sidebar">
         <SidebarHeader>
-          <RouterLink to="/">
-            <img
-              v-if="state == 'expanded'"
-              src="/public/images/logo.png"
-              class="w-full"
-              alt="Lumuix Logo" />
-          </RouterLink>
+          <div>
+            <RouterLink to="/">
+              <img
+                v-if="state == 'expanded'"
+                src="/public/images/logo.png"
+                class="w-full"
+                alt="Lumuix Logo" />
+            </RouterLink>
+            <div class="w-full flex justify-end">
+              <SidebarTrigger />
+            </div>
+          </div>
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup
@@ -85,18 +91,12 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
           </SidebarGroup>
         </SidebarContent>
 
-        <SidebarRail>
-          <div class="py-3 pl-10">
-            <PanelLeft />
-          </div>
-        </SidebarRail>
-
         <SidebarFooter class="h-12 text-center">
           <div class="m-auto flex gap-2 font-bold text-primary">
             <a
               href="https://github.com/SethSharp/lumuix"
               class="my-auto">
-              1.0.0-alpha.10.3
+              1.0.0-beta.4.3
             </a>
             <LumuixModeToggle />
           </div>
@@ -104,10 +104,12 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
       </Sidebar>
     </SidebarProvider>
 
-    <main class="w-full p-4 px-8">
-      <component :is="$route.meta.layout">
-        <RouterView />
-      </component>
-    </main>
+    <div class="flex w-full flex-col">
+      <main class="flex-1 overflow-y-auto bg-background">
+        <component :is="$route.meta.layout">
+          <RouterView />
+        </component>
+      </main>
+    </div>
   </div>
 </template>

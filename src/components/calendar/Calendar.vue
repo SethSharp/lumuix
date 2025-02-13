@@ -40,9 +40,11 @@ const forwarded = useForwardPropsEmits(delegatedProps, emits)
     :class="cn('p-3', props.class)"
     v-bind="forwarded">
     <CalendarHeader>
-      <CalendarPrevButton />
-      <CalendarHeading />
-      <CalendarNextButton />
+      <slot name="header">
+        <CalendarPrevButton />
+        <CalendarHeading />
+        <CalendarNextButton />
+      </slot>
     </CalendarHeader>
 
     <div class="mt-4 flex flex-col gap-y-4 sm:flex-row sm:gap-x-4 sm:gap-y-0">

@@ -4,7 +4,7 @@ import { CalendarIcon } from 'lucide-vue-next'
 import { DateFormatter, type DateValue, getLocalTimeZone } from '@internationalized/date'
 import { Base } from '@/components/inputs'
 import { Button } from '@/components/button'
-import { Calendar } from '@/components/calendar'
+import { CalendarWithSelect } from '@/components/calendar'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
 
 const emits = defineEmits(['update:modelValue'])
@@ -51,10 +51,9 @@ onMounted(() => {
         </Button>
       </PopoverTrigger>
       <PopoverContent class="w-auto p-0">
-        <Calendar
+        <CalendarWithSelect
           v-model="value as DateValue | undefined"
           :default-value="defaultValue"
-          :multiple="false"
           initial-focus />
       </PopoverContent>
     </Popover>

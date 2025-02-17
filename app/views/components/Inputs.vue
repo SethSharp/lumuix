@@ -26,7 +26,7 @@ const comboboxOptions = ref([
   { id: 'astro', name: 'Astro' },
 ])
 
-const datePickerValue = ref(new CalendarDate(2024, 12, 6))
+const datePickerValue = ref(null)
 
 watch(datePickerValue, () => {
   console.log(datePickerValue.value)

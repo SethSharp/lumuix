@@ -1,7 +1,12 @@
 <script setup lang="ts">
 import { onMounted, ref, watch } from 'vue'
 import { CalendarIcon } from 'lucide-vue-next'
-import { DateFormatter, type DateValue, getLocalTimeZone } from '@internationalized/date'
+import {
+  CalendarDate,
+  DateFormatter,
+  type DateValue,
+  getLocalTimeZone,
+} from '@internationalized/date'
 import { Base } from '@/components/inputs'
 import { Button } from '@/components/button'
 import { CalendarWithSelect } from '@/components/calendar'
@@ -24,7 +29,7 @@ const df = new DateFormatter('en-US', {
   dateStyle: 'long',
 })
 
-const value = ref<DateValue | undefined>(props.modelValue)
+const value = ref<DateValue | undefined | null>(props.modelValue)
 
 watch(value, () => {
   emits('update:modelValue', value.value)
@@ -35,6 +40,13 @@ onMounted(() => {
   // if we passed default value / modelValue to the value
   if (props.defaultValue) {
     value.value = props.defaultValue
+  } else if (value.value === null) {
+    let currentDate = new Date()
+    value.value = new CalendarDate(
+      currentDate.getFullYear(),
+      currentDate.getMonth()+1,
+      currentDate.getDate(),
+    )
   }
 })
 </script>

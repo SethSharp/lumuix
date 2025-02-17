@@ -1,4 +1,4 @@
-declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
+declare const _default: __VLS_WithSlots<import("vue").DefineComponent<{
     id?: string;
     modelValue?: any;
     label?: string;
@@ -18,10 +18,10 @@ declare const _default: __VLS_WithTemplateSlots<import("vue").DefineComponent<{
     showLabel: boolean;
     showCharacterCount: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>, {
-    default?(_: {}): any;
+    default?: (props: {}) => any;
 }>;
 export default _default;
-type __VLS_WithTemplateSlots<T, S> = T & {
+type __VLS_WithSlots<T, S> = T & {
     new (): {
         $slots: S;
     };

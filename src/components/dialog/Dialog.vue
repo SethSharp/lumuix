@@ -5,7 +5,6 @@ import {
   type DialogRootProps,
   useForwardPropsEmits,
 } from 'radix-vue'
-import { b } from 'vite/dist/node/types.d-aGj9QkWt'
 
 const props = defineProps<DialogRootProps>()
 const emits = defineEmits<DialogRootEmits>()

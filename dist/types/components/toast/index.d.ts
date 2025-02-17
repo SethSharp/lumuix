@@ -12,7 +12,7 @@ export { toast, useToast } from './use-toast';
 import { type VariantProps } from 'class-variance-authority';
 export declare const toastVariants: (props?: {
     variant?: "default" | "destructive";
-} & import("class-variance-authority/dist/types.js").ClassProp) => string;
+} & import("class-variance-authority/types").ClassProp) => string;
 type ToastVariants = VariantProps<typeof toastVariants>;
 export interface ToastProps extends ToastRootProps {
     class?: HTMLAttributes['class'];

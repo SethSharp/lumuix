@@ -33,5 +33,5 @@ export { useSidebar } from './utils';
 export declare const sidebarMenuButtonVariants: (props?: {
     variant?: "default" | "outline";
     size?: "default" | "sm" | "lg";
-} & import("class-variance-authority/dist/types.js").ClassProp) => string;
+} & import("class-variance-authority/types").ClassProp) => string;
 export type SidebarMenuButtonVariants = VariantProps<typeof sidebarMenuButtonVariants>;

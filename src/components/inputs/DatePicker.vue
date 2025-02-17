@@ -44,7 +44,7 @@ onMounted(() => {
     let currentDate = new Date()
     value.value = new CalendarDate(
       currentDate.getFullYear(),
-      currentDate.getMonth()+1,
+      currentDate.getMonth() + 1,
       currentDate.getDate(),
     )
   }

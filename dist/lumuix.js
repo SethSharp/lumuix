@@ -17345,7 +17345,11 @@ const qy = /* @__PURE__ */ qa(jy, [["render", Yy]]), Jy = { class: "grid gap-4 m
         s.value = n.defaultValue;
       else if (s.value === null) {
         let r = /* @__PURE__ */ new Date();
-        s.value = new _e(r.getFullYear(), r.getMonth(), r.getDay());
+        s.value = new _e(
+          r.getFullYear(),
+          r.getMonth() + 1,
+          r.getDate()
+        );
       }
     }), (r, i) => (v(), g(l(Ot), W(H(r.$props)), {
       default: f(() => [

@@ -19041,7 +19041,7 @@ const Mb = /* @__PURE__ */ qa(Eb, [["render", Ab]]), M_ = /* @__PURE__ */ y({
         }, {
           default: f(() => [
             re("div", a0, [
-              b(r.$slots, "default")
+              b(r.$slots, "default", { state: l(n) })
             ])
           ]),
           _: 3

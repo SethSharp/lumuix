@@ -41,7 +41,7 @@ const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
         '--sidebar-width': SIDEBAR_WIDTH_MOBILE,
       }">
       <div class="flex h-full w-full flex-col">
-        <slot />
+        <slot :state="state" />
       </div>
     </SheetContent>
   </Sheet>

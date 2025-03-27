@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { Badge } from '@/components/badge'
+
+const variants = ['primary', 'secondary', 'destructive', 'warning'] as const
+const sizes = ['xs', 'sm', 'md', 'lg'] as const
 </script>
 
 <template>
@@ -7,11 +10,25 @@ import { Badge } from '@/components/badge'
     The Badge can take many forms using the variant prop
   </p>
 
-  <div class="flex gap-x-2">
-    <Badge> Default </Badge>
-    <Badge variant="primary"> Primary </Badge>
-    <Badge variant="destructive"> Destructive </Badge>
-    <Badge variant="secondary"> Secondary </Badge>
-    <Badge variant="outline"> Outline </Badge>
+  <h2>Outline</h2>
+  <div class="flex flex-col gap-2 w-1/2">
+    <template v-for="variant in variants" :key="variant">
+      <div class="flex gap-2">
+        <template v-for="size in sizes" :key="`${variant}-${size}`">
+          <Badge :variant="variant" :size="size" type="outline">{{ variant }}</Badge>
+        </template>
+      </div>
+    </template>
+  </div>
+
+  <h2>Fill</h2>
+  <div class="flex flex-col gap-2 w-1/2">
+    <template v-for="variant in variants" :key="variant">
+      <div class="flex gap-2">
+        <template v-for="size in sizes" :key="`${variant}-${size}-fill`">
+          <Badge :variant="variant" :size="size" type="fill">{{ variant }}</Badge>
+        </template>
+      </div>
+    </template>
   </div>
 </template>

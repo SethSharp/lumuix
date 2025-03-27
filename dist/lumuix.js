@@ -231,6 +231,10 @@ const kd = /* @__PURE__ */ wd(Cd), k0 = {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))"
         },
+        warning: {
+          DEFAULT: "hsl(var(--warning))",
+          foreground: "hsl(var(--warning-foreground))"
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))"
@@ -14604,30 +14608,49 @@ const ws = (t) => typeof t == "boolean" ? `${t}` : t === 0 ? "0" : t, xs = Lg, x
   __name: "Badge",
   props: {
     variant: {},
+    type: {},
+    size: {},
     class: {}
   },
   setup(t) {
     const e = t;
     return (a, n) => (v(), R("div", {
-      class: K(l(T)(l(Ng)({ variant: a.variant }), e.class))
+      class: K(l(T)(l(Ng)({ variant: a.variant, type: a.type, size: a.size }), e.class))
     }, [
       b(a.$slots, "default")
     ], 2));
   }
 }), Ng = xa(
-  "inline-flex items-center rounded-full border px-2.5 py-0.5 text-xs font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-default",
+  "inline-flex items-center rounded-full border h-fit font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-default",
   {
     variants: {
       variant: {
-        default: "border-transparent bg-slate-800 text-slate-50 ",
-        primary: "border-transparent bg-primary text-primary-foreground ",
-        secondary: "border-transparent bg-secondary text-secondary-foreground",
-        destructive: "border-transparent bg-destructive text-destructive-foreground",
-        outline: "text-foreground"
+        primary: "bg-primary text-primary-foreground",
+        secondary: "bg-secondary text-secondary-foreground",
+        destructive: "bg-destructive text-destructive-foreground",
+        warning: "bg-warning text-warning-foreground"
+      },
+      type: {
+        outline: "",
+        fill: "border-transparent"
+      },
+      size: {
+        xs: "px-2 text-xs text-xs",
+        sm: "px-2.5 py-0.5 text-sm",
+        md: "px-2.5 py-1 text-base",
+        lg: "px-3 py-1 text-lg"
       }
     },
+    compoundVariants: [
+      { type: "outline", variant: "primary", class: "border-primary bg-primary/10 text-primary" },
+      { type: "outline", variant: "secondary", class: "border-secondary bg-secondary/10 text-secondary" },
+      { type: "outline", variant: "destructive", class: "border-destructive bg-destructive/20 text-destructive" },
+      { type: "outline", variant: "warning", class: "border-warning bg-warning/20 text-warning" }
+    ],
     defaultVariants: {
-      variant: "default"
+      variant: "primary",
+      type: "fill",
+      size: "md"
     }
   }
 ), V0 = /* @__PURE__ */ y({

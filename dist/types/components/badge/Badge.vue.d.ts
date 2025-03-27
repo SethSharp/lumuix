@@ -3,6 +3,8 @@ import { cn } from '@/lib/utils';
 import { type BadgeVariants, badgeVariants } from '.';
 type __VLS_Props = {
     variant?: BadgeVariants['variant'];
+    type?: BadgeVariants['type'];
+    size?: BadgeVariants['size'];
     class?: HTMLAttributes['class'];
 };
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;

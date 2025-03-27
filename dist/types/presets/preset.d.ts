@@ -19,6 +19,10 @@ declare const _default: {
                     DEFAULT: string;
                     foreground: string;
                 };
+                warning: {
+                    DEFAULT: string;
+                    foreground: string;
+                };
                 secondary: {
                     DEFAULT: string;
                     foreground: string;

@@ -15,7 +15,7 @@ const sizes = ['xs', 'sm', 'md', 'lg'] as const
     <template v-for="variant in variants" :key="variant">
       <div class="flex gap-2">
         <template v-for="size in sizes" :key="`${variant}-${size}`">
-          <Badge :variant="variant" :size="size">{{ variant }}</Badge>
+          <Badge :variant="variant" :size="size" type="outline">{{ variant }}</Badge>
         </template>
       </div>
     </template>

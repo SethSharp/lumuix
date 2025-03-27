@@ -31,7 +31,7 @@ export const badgeVariants = cva(
     ],
     defaultVariants: {
       variant: 'primary',
-      type: 'outline',
+      type: 'fill',
       size: 'md'
     },
   },

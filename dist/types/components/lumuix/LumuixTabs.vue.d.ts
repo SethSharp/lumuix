@@ -6,9 +6,9 @@ type __VLS_Props = {
 };
 declare const currentValue: import("vue").ComputedRef<TabOption>;
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
-declare var __VLS_61: {};
+declare var __VLS_42: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
-    default?: (props: typeof __VLS_61) => any;
+    default?: (props: typeof __VLS_42) => any;
 }>;
 declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
     Button: typeof Button;

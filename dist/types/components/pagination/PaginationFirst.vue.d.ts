@@ -12,9 +12,9 @@ declare const delegatedProps: import("vue").ComputedRef<{
     asChild: boolean;
 }>;
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
-declare var __VLS_13: {};
+declare var __VLS_10: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
-    default?: (props: typeof __VLS_13) => any;
+    default?: (props: typeof __VLS_10) => any;
 }>;
 declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
     ChevronsLeft: typeof ChevronsLeft;

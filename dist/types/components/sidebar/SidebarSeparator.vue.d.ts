@@ -5,9 +5,9 @@ type __VLS_Props = {
     class?: HTMLAttributes['class'];
 };
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
-declare var __VLS_6: {};
+declare var __VLS_5: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
-    default?: (props: typeof __VLS_6) => any;
+    default?: (props: typeof __VLS_5) => any;
 }>;
 declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
     Separator: typeof Separator;

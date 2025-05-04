@@ -1,9 +1,9 @@
 import { DropdownMenuTrigger, type DropdownMenuTriggerProps } from 'radix-vue';
 declare const forwardedProps: import("vue").ComputedRef<import("vue").DefineProps<import("@vue/shared").LooseRequired<DropdownMenuTriggerProps>, "disabled" | "asChild">>;
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
-declare var __VLS_7: {};
+declare var __VLS_6: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
-    default?: (props: typeof __VLS_7) => any;
+    default?: (props: typeof __VLS_6) => any;
 }>;
 declare const __VLS_self: import("vue").DefineComponent<DropdownMenuTriggerProps, {
     DropdownMenuTrigger: typeof DropdownMenuTrigger;

@@ -83,13 +83,13 @@ watch(selectedOptions, () => {
           variant="outline"
           role="combobox"
           :aria-expanded="open"
-          class="w-[200px] justify-between overflow-hidden">
+          class="w-full justify-between overflow-hidden">
           {{ humanReadableOptions }}
           <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
         </Button>
       </PopoverTrigger>
 
-      <PopoverContent class="w-[200px] p-0">
+      <PopoverContent class="w-full p-0">
         <Command
           :multiple="multiple"
           v-model="selectedOptions"

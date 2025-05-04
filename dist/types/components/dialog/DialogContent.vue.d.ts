@@ -14,9 +14,9 @@ declare const forwarded: import("vue").ComputedRef<{
     as: import("radix-vue", { with: { "resolution-mode": "import" } }).AsTag | import("vue").Component;
 } & Record<string, any>>;
 declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
-declare var __VLS_19: {};
+declare var __VLS_14: {};
 type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
-    default?: (props: typeof __VLS_19) => any;
+    default?: (props: typeof __VLS_14) => any;
 }>;
 declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
     DialogClose: typeof DialogClose;

@@ -10,14 +10,12 @@ import {
   TextArea,
   Toggle,
 } from '@/components/inputs'
-import { CalendarDate } from '@internationalized/date'
 
 const checkboxValue = ref(true)
 
 const selectValue = ref(null)
 const selectOptions = ref(['Grape', 'Banana', 'Strawberry'])
 
-const comboboxValue = ref('next.js')
 const comboboxOptions = ref([
   { id: 'next.js', name: 'Next.js' },
   { id: 'sveltekit', name: 'SvelteKit' },
@@ -25,11 +23,12 @@ const comboboxOptions = ref([
   { id: 'remix', name: 'Remix' },
   { id: 'astro', name: 'Astro' },
 ])
+const comboboxValue = ref('next.js')
 
 const datePickerValue = ref(null)
 
-watch(datePickerValue, () => {
-  console.log(datePickerValue.value)
+watch(comboboxValue, () => {
+  console.log(comboboxValue.value)
 })
 </script>
 

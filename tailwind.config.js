@@ -3,7 +3,8 @@ import preset from './src/presets/preset'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  presets: [preset],
+    darkMode: ['class'],
+    presets: [preset],
 
   css: {
     postcss: './postcss.config.cjs',

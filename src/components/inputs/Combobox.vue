@@ -1,22 +1,13 @@
 <script setup lang="ts">
-import { computed, ref, watch } from 'vue'
-import { Check, ChevronsUpDown } from 'lucide-vue-next'
+import { ref, watch } from 'vue'
+import { Check, Search, ChevronsUpDown } from 'lucide-vue-next'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/button'
-import { Base } from '@/components/inputs'
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/popover'
-import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from '@/components/command'
+import { Combobox, ComboboxAnchor, ComboboxTrigger, ComboboxEmpty, ComboboxGroup, ComboboxInput, ComboboxItem, ComboboxItemIndicator, ComboboxList } from '@/components/combobox'
 
 const emits = defineEmits(['update:modelValue'])
 
-type ModelValue = Option[] | Option | number | null | string
+type ModelValue = number | string | null
 
 const props = defineProps<{
   modelValue: ModelValue
@@ -26,101 +17,50 @@ const props = defineProps<{
   multiple?: boolean
 }>()
 
-const computedEmpty = computed(() => props.emptyMessage ?? 'Option not found')
-const computedPlaceholder = computed(() => props.placeholder ?? 'Select an option')
+const selected = ref(props.modelValue ?? props.options[0])
 
-const open = ref(false)
-const selectedOptions = ref<ModelValue>(props.modelValue ?? [])
-
-const search = (items: Option[], searchTerm: string) =>
-  items.filter((item) => {
-    return item.name.toLowerCase().includes(searchTerm.toLowerCase())
-  })
-
-const humanReadableOptions = computed(() => {
-  if (Array.isArray(selectedOptions.value)) {
-    if (!selectedOptions.value.length) {
-      return computedPlaceholder.value
-    }
-
-    return selectedOptions.value.map((option) => option.name).join(', ')
-  }
-
-  if (typeof selectedOptions.value === 'object') {
-    return selectedOptions.value.name
-  }
-
-  return props.options.find((item) => item.id === selectedOptions.value)?.name
-})
-
-const isSelected = (option: Option) => {
-  if (Array.isArray(selectedOptions.value)) {
-    return selectedOptions.value.find((cur) => cur.id === option.id)
-  }
-
-  if (typeof selectedOptions.value === 'object') {
-    return selectedOptions.value.id === option.id
-  }
-
-  return selectedOptions.value === option.id
-}
-
-watch(selectedOptions, () => {
-  if (Array.isArray(selectedOptions.value)) {
-    emits('update:modelValue', selectedOptions.value)
-  } else {
-    // @ts-ignore
-    emits('update:modelValue', selectedOptions.value.id)
-  }
+watch(selected, () => {
+  emits('update:modelValue', selected.value)
 })
 </script>
 
 <template>
-  <Base v-bind="$props">
-    <Popover v-model:open="open">
-      <PopoverTrigger as-child>
-        <Button
-          variant="outline"
-          role="combobox"
-          :aria-expanded="open"
-          class="w-full justify-between overflow-hidden">
-          {{ humanReadableOptions }}
-          <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50 dark:text-white" />
+  <Combobox v-model="selected" by="label">
+    <ComboboxAnchor as-child>
+      <ComboboxTrigger as-child>
+        <Button variant="outline" class="justify-between">
+          {{ selected?.name ?? 'Select option' }}
+
+          <ChevronsUpDown class="ml-2 size-4 shrink-0 opacity-50" />
         </Button>
-      </PopoverTrigger>
+      </ComboboxTrigger>
+    </ComboboxAnchor>
 
-      <PopoverContent class="w-full p-0">
-        <Command
-          :multiple="multiple"
-          v-model="selectedOptions"
-          :filter-function="search">
-          <CommandInput
-            class="h-9"
-            :placeholder="computedPlaceholder" />
+    <ComboboxList>
+      <div class="relative w-full max-w-sm items-center">
+        <ComboboxInput class="pl-9 focus-visible:ring-0 border-0 border-b rounded-none h-10" placeholder="Select option..." />
+        <span class="absolute start-0 inset-y-0 flex items-center justify-center px-3">
+          <Search class="size-4 text-muted-foreground" />
+        </span>
+      </div>
 
-          <CommandEmpty>{{ computedEmpty }}</CommandEmpty>
+      <ComboboxEmpty>
+        No option found.
+      </ComboboxEmpty>
 
-          <CommandList>
-            <CommandGroup>
-              <CommandItem
-                v-for="option in options"
-                :key="option.id"
-                :value="option"
-                @select="
-                  () => {
-                    if (!multiple) {
-                      open = false
-                    }
-                  }
-                ">
-                {{ option.name }}
-                <Check
-                  :class="cn('ml-auto size-4', isSelected(option) ? 'opacity-100' : 'opacity-0')" />
-              </CommandItem>
-            </CommandGroup>
-          </CommandList>
-        </Command>
-      </PopoverContent>
-    </Popover>
-  </Base>
+      <ComboboxGroup>
+        <ComboboxItem
+          v-for="option in options"
+          :key="option.id"
+          :value="option"
+        >
+          {{ option.name }}
+
+          <ComboboxItemIndicator>
+            <Check :class="cn('ml-auto size4')" />
+          </ComboboxItemIndicator>
+        </ComboboxItem>
+      </ComboboxGroup>
+    </ComboboxList>
+  </Combobox>
 </template>

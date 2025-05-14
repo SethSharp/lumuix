@@ -29,7 +29,9 @@ const delegatedProps = computed(() => {
       as-child
       variant="outline">
       <slot>
-        <component :is="as" :href="href">
+        <component
+          :is="as"
+          :href="href">
           <ChevronsRight class="size-4" />
         </component>
       </slot>

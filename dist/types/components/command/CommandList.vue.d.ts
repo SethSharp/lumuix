@@ -1,53 +1,12 @@
 import { type HTMLAttributes } from 'vue';
-import { ComboboxContent } from 'radix-vue';
 import type { ComboboxContentProps } from 'radix-vue';
-import { cn } from '@/lib/utils';
 type __VLS_Props = ComboboxContentProps & {
     class?: HTMLAttributes['class'];
 };
-declare const forwarded: import("vue").ComputedRef<{
-    forceMount: boolean;
-    position: "inline" | "popper";
-    bodyLock: boolean;
-    side: import("../../../node_modules/radix-vue/dist/Popper/index.js", { with: { "resolution-mode": "import" } }).Side;
-    sideOffset: number;
-    align: import("../../../node_modules/radix-vue/dist/Popper/index.js", { with: { "resolution-mode": "import" } }).Align;
-    alignOffset: number;
-    avoidCollisions: boolean;
-    collisionBoundary: Element | null | Array<Element | null>;
-    collisionPadding: number | Partial<Record<import("../../../node_modules/radix-vue/dist/Popper/index.js", { with: { "resolution-mode": "import" } }).Side, number>>;
-    arrowPadding: number;
-    sticky: "partial" | "always";
-    hideWhenDetached: boolean;
-    updatePositionStrategy: "optimized" | "always";
-    prioritizePosition: boolean;
-    asChild: boolean;
-    as: import("radix-vue", { with: { "resolution-mode": "import" } }).AsTag | import("vue").Component;
-    disableOutsidePointerEvents: boolean;
-    dismissable: boolean;
-} & Record<string, any>>;
-declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
 declare var __VLS_6: {};
-type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
+type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_6) => any;
-}>;
-declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
-    ComboboxContent: typeof ComboboxContent;
-    cn: typeof cn;
-    forwarded: typeof forwarded;
-}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    escapeKeyDown: (event: KeyboardEvent) => any;
-    pointerDownOutside: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;
-    focusOutside: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
-    interactOutside: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent | import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
-}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
-    onEscapeKeyDown?: (event: KeyboardEvent) => any;
-    onPointerDownOutside?: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;
-    onFocusOutside?: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
-    onInteractOutside?: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent | import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
-}>, {
-    dismissable: boolean;
-}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+};
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     escapeKeyDown: (event: KeyboardEvent) => any;
     pointerDownOutside: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;

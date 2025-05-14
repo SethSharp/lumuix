@@ -1,27 +1,10 @@
-import { Button } from '@/components/button';
-import { TabsRoot, TabBaseContent, TabsList, TabsItem } from '@/components/tabs';
-import { DropdownMenu, DropdownMenuLink, DropdownMenuContent, DropdownMenuTrigger } from '@/components/dropdown-menu';
 type __VLS_Props = {
     tabs: TabOption[];
 };
-declare const currentValue: import("vue").ComputedRef<TabOption>;
-declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
 declare var __VLS_42: {};
-type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
+type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_42) => any;
-}>;
-declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
-    Button: typeof Button;
-    TabsRoot: typeof TabsRoot;
-    TabBaseContent: typeof TabBaseContent;
-    TabsList: typeof TabsList;
-    TabsItem: typeof TabsItem;
-    DropdownMenu: typeof DropdownMenu;
-    DropdownMenuLink: typeof DropdownMenuLink;
-    DropdownMenuContent: typeof DropdownMenuContent;
-    DropdownMenuTrigger: typeof DropdownMenuTrigger;
-    currentValue: typeof currentValue;
-}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+};
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
 export default _default;

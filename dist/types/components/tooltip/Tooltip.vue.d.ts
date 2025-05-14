@@ -1,25 +1,8 @@
-import { TooltipRoot, type TooltipRootProps } from 'radix-vue';
-declare const forwarded: import("vue").ComputedRef<Readonly<import("@vue/shared").LooseRequired<TooltipRootProps>> & {
-    readonly disabled: boolean;
-    readonly open: boolean;
-    readonly defaultOpen: boolean;
-    readonly disableHoverableContent: boolean;
-    readonly disableClosingTrigger: boolean;
-    readonly ignoreNonKeyboardFocus: boolean;
-} & Record<string, any>>;
-declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
+import { type TooltipRootProps } from 'radix-vue';
 declare var __VLS_6: {};
-type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
+type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_6) => any;
-}>;
-declare const __VLS_self: import("vue").DefineComponent<TooltipRootProps, {
-    TooltipRoot: typeof TooltipRoot;
-    forwarded: typeof forwarded;
-}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:open": (value: boolean) => any;
-}, string, import("vue").PublicProps, Readonly<TooltipRootProps> & Readonly<{
-    "onUpdate:open"?: (value: boolean) => any;
-}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+};
 declare const __VLS_component: import("vue").DefineComponent<TooltipRootProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     "update:open": (value: boolean) => any;
 }, string, import("vue").PublicProps, Readonly<TooltipRootProps> & Readonly<{

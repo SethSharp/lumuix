@@ -1,48 +1,14 @@
-import { cn } from '@/lib/utils';
-import { X } from 'lucide-vue-next';
-import { DialogClose, DialogContent, type DialogContentProps, DialogOverlay, DialogPortal } from 'radix-vue';
+import { type DialogContentProps } from 'radix-vue';
 import { type HTMLAttributes } from 'vue';
-import { type SheetVariants, sheetVariants } from '.';
+import { type SheetVariants } from '.';
 interface SheetContentProps extends DialogContentProps {
     class?: HTMLAttributes['class'];
     side?: SheetVariants['side'];
 }
-declare const forwarded: import("vue").ComputedRef<{
-    forceMount: boolean;
-    trapFocus: boolean;
-    disableOutsidePointerEvents: boolean;
-    asChild: boolean;
-    as: import("radix-vue", { with: { "resolution-mode": "import" } }).AsTag | import("vue").Component;
-} & Record<string, any>>;
-declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
 declare var __VLS_14: {};
-type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
+type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_14) => any;
-}>;
-declare const __VLS_self: import("vue").DefineComponent<SheetContentProps, {
-    cn: typeof cn;
-    X: typeof X;
-    DialogClose: typeof DialogClose;
-    DialogContent: typeof DialogContent;
-    DialogOverlay: typeof DialogOverlay;
-    DialogPortal: typeof DialogPortal;
-    sheetVariants: typeof sheetVariants;
-    forwarded: typeof forwarded;
-}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    closeAutoFocus: (event: Event) => any;
-    escapeKeyDown: (event: KeyboardEvent) => any;
-    pointerDownOutside: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;
-    focusOutside: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
-    interactOutside: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent | import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
-    openAutoFocus: (event: Event) => any;
-}, string, import("vue").PublicProps, Readonly<SheetContentProps> & Readonly<{
-    onCloseAutoFocus?: (event: Event) => any;
-    onEscapeKeyDown?: (event: KeyboardEvent) => any;
-    onPointerDownOutside?: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;
-    onFocusOutside?: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
-    onInteractOutside?: (event: import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent | import("../../../node_modules/radix-vue/dist/DismissableLayer/index.js", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
-    onOpenAutoFocus?: (event: Event) => any;
-}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+};
 declare const __VLS_component: import("vue").DefineComponent<SheetContentProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     closeAutoFocus: (event: Event) => any;
     escapeKeyDown: (event: KeyboardEvent) => any;

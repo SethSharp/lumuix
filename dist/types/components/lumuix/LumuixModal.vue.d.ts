@@ -1,4 +1,3 @@
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components/dialog';
 type __VLS_Props = {
     open?: boolean;
     headerData?: {
@@ -7,10 +6,8 @@ type __VLS_Props = {
     };
     size?: string;
 };
-declare const closeModal: () => void;
-declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
 declare var __VLS_10: {}, __VLS_30: {}, __VLS_36: {}, __VLS_38: {}, __VLS_40: {}, __VLS_46: {};
-type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
+type __VLS_Slots = {} & {
     trigger?: (props: typeof __VLS_10) => any;
 } & {
     title?: (props: typeof __VLS_30) => any;
@@ -22,23 +19,7 @@ type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$
     default?: (props: typeof __VLS_40) => any;
 } & {
     footer?: (props: typeof __VLS_46) => any;
-}>;
-declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
-    Dialog: typeof Dialog;
-    DialogContent: typeof DialogContent;
-    DialogDescription: typeof DialogDescription;
-    DialogFooter: typeof DialogFooter;
-    DialogHeader: typeof DialogHeader;
-    DialogTitle: typeof DialogTitle;
-    DialogTrigger: typeof DialogTrigger;
-    closeModal: typeof closeModal;
-}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    close: (...args: any[]) => void;
-}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
-    onClose?: (...args: any[]) => any;
-}>, {
-    size: string;
-}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+};
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     close: (...args: any[]) => void;
 }, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{

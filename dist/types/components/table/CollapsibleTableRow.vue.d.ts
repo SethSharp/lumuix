@@ -1,4 +1,3 @@
-import { TableRow, TableCell, TableRowAction } from '@/components/table/index';
 type Header<Value extends string = string> = {
     value: Value;
     name: string;
@@ -15,9 +14,6 @@ type __VLS_Props = CollapsibleTableRowProps<Header[]> & {
     setOpenTo?: boolean;
     class?: string;
 };
-declare const isOpen: import("vue").Ref<boolean, boolean>;
-declare const toggleOpen: () => void;
-declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
 declare var __VLS_14: `cell_header_${string}`, __VLS_15: {
     item: Row<Header<string>[]>;
     open: boolean;
@@ -30,7 +26,7 @@ declare var __VLS_14: `cell_header_${string}`, __VLS_15: {
     item: Row<Header<string>[]>;
     open: true;
 };
-type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
+type __VLS_Slots = {} & {
     [K in NonNullable<typeof __VLS_14>]?: (props: typeof __VLS_15) => any;
 } & {
     [K in NonNullable<typeof __VLS_32>]?: (props: typeof __VLS_33) => any;
@@ -38,16 +34,7 @@ type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$
     row_actions?: (props: typeof __VLS_21) => any;
 } & {
     sub_row_actions?: (props: typeof __VLS_39) => any;
-}>;
-declare const __VLS_self: import("vue").DefineComponent<__VLS_Props, {
-    TableRow: typeof TableRow;
-    TableCell: typeof TableCell;
-    TableRowAction: typeof TableRowAction;
-    isOpen: typeof isOpen;
-    toggleOpen: typeof toggleOpen;
-}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
-    setOpenTo: boolean;
-}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
+};
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{}>, {
     setOpenTo: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;

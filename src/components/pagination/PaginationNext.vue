@@ -12,7 +12,7 @@ const props = withDefaults(
       class?: HTMLAttributes['class']
     }
   >(),
-  {}
+  {},
 )
 
 const delegatedProps = computed(() => {
@@ -29,7 +29,9 @@ const delegatedProps = computed(() => {
       as-child
       variant="outline">
       <slot>
-        <component :is="as" :href="href">
+        <component
+          :is="as"
+          :href="href">
           <ChevronRight class="size-4" />
         </component>
       </slot>

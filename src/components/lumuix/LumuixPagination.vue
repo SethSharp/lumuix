@@ -67,19 +67,21 @@ const currentActiveIndex = computed(() => props.data.links.findIndex((link) => l
           :href="data.prev_page_url" />
 
         <template v-for="(item, index) in data.links">
-            <Button
-              v-if="(index <= currentActiveIndex+2) && (index >= currentActiveIndex-2)"
-              :key="index"
-              as-child
-              class="size-10 p-0"
-              :variant="item.active ? 'primary' : 'outline'">
-              <component :is="as" :href="item.url">
-                {{ item.label }}
-              </component>
-            </Button>
+          <Button
+            v-if="index <= currentActiveIndex + 2 && index >= currentActiveIndex - 2"
+            :key="index"
+            as-child
+            class="size-10 p-0"
+            :variant="item.active ? 'primary' : 'outline'">
+            <component
+              :is="as"
+              :href="item.url">
+              {{ item.label }}
+            </component>
+          </Button>
         </template>
 
-        <PaginationEllipsis v-if="currentActiveIndex < data.links.length-2" />
+        <PaginationEllipsis v-if="currentActiveIndex < data.links.length - 2" />
 
         <PaginationNext
           v-if="data.next_page_url"

@@ -1,12 +1,8 @@
-import { CalendarGridBody, type CalendarGridBodyProps } from 'radix-vue';
-declare const __VLS_ctx: InstanceType<__VLS_PickNotAny<typeof __VLS_self, new () => {}>>;
+import { type CalendarGridBodyProps } from 'radix-vue';
 declare var __VLS_6: {};
-type __VLS_Slots = __VLS_PrettifyGlobal<__VLS_OmitStringIndex<typeof __VLS_ctx.$slots> & {
+type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_6) => any;
-}>;
-declare const __VLS_self: import("vue").DefineComponent<CalendarGridBodyProps, {
-    CalendarGridBody: typeof CalendarGridBody;
-}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<CalendarGridBodyProps> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
+};
 declare const __VLS_component: import("vue").DefineComponent<CalendarGridBodyProps, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {}, string, import("vue").PublicProps, Readonly<CalendarGridBodyProps> & Readonly<{}>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
 export default _default;

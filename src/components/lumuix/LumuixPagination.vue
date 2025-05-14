@@ -46,7 +46,6 @@ const getTotalNumber = () => {
 }
 
 const currentActiveIndex = computed(() => props.data.links.findIndex((link) => link.active))
-console.log(currentActiveIndex.value)
 </script>
 
 <template>

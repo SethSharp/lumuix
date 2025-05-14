@@ -8,13 +8,11 @@ import { Button } from '@/components/button'
 const props = withDefaults(
   defineProps<
     PaginationLastProps & {
+      href: string
       class?: HTMLAttributes['class']
-      as?: any
     }
   >(),
-  {
-    asChild: true,
-  },
+  {},
 )
 
 const delegatedProps = computed(() => {
@@ -28,10 +26,12 @@ const delegatedProps = computed(() => {
   <PaginationLast v-bind="delegatedProps">
     <Button
       :class="cn('size-10 p-0', props.class)"
-      :as="as"
+      as-child
       variant="outline">
       <slot>
-        <ChevronsRight class="size-4" />
+        <component :is="as" :href="href">
+          <ChevronsRight class="size-4" />
+        </component>
       </slot>
     </Button>
   </PaginationLast>

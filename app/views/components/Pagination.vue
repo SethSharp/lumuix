@@ -22,8 +22,8 @@ import { Button } from '@/components/button'
     <PaginationList
       v-slot="{ items }"
       class="flex items-center gap-1">
-      <PaginationFirst />
-      <PaginationPrev />
+      <PaginationFirst href="#" />
+      <PaginationPrev href="#" />
 
       <template v-for="(item, index) in items">
         <PaginationListItem
@@ -43,8 +43,8 @@ import { Button } from '@/components/button'
           :index="index" />
       </template>
 
-      <PaginationNext />
-      <PaginationLast />
+      <PaginationNext href="#" />
+      <PaginationLast href="#" />
     </PaginationList>
   </Pagination>
 </template>

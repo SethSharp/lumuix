@@ -77,7 +77,7 @@ const tabs = [
 
 const paginatedData = {
   data: [],
-  current_page: 5,
+  current_page: 4,
   first_page_url: '?page=1',
   from: 1,
   last_page: 6,
@@ -99,12 +99,12 @@ const paginatedData = {
       url: '?page=3',
     },
     {
-      active: false,
+      active: true,
       label: '4',
       url: '?page=4',
     },
     {
-      active: true,
+      active: false,
       label: '5',
       url: '?page=5',
     },

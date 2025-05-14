@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue'
 import { Button } from '@/components/button'
 import {
   Pagination,
@@ -43,6 +44,9 @@ const getTotalNumber = () => {
 
   return props.data.current_page * props.data.per_page
 }
+
+const currentActiveIndex = computed(() => props.data.links.findIndex((link) => link.active))
+console.log(currentActiveIndex.value)
 </script>
 
 <template>
@@ -65,7 +69,7 @@ const getTotalNumber = () => {
 
         <template v-for="(item, index) in data.links">
             <Button
-              v-if="index < 5"
+              v-if="(index <= currentActiveIndex+2) && (index >= currentActiveIndex-2)"
               :key="index"
               as-child
               class="size-10 p-0"
@@ -76,7 +80,7 @@ const getTotalNumber = () => {
             </Button>
         </template>
 
-        <PaginationEllipsis v-if="data.links.length > 5" />
+        <PaginationEllipsis v-if="currentActiveIndex < data.links.length-2" />
 
         <PaginationNext
           v-if="data.next_page_url"

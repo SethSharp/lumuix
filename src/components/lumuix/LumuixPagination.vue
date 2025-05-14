@@ -56,27 +56,24 @@ const getTotalNumber = () => {
       <PaginationList class="flex items-center gap-1">
         <PaginationFirst
           :as="as"
-          as-child
           :href="data.first_page_url" />
 
         <PaginationPrev
           v-if="data.prev_page_url"
           :as="as"
-          as-child
           :href="data.prev_page_url" />
 
         <template v-for="(item, index) in data.links">
-          <div
-            v-if="index < 5"
-            :key="index">
             <Button
-              :href="item.url"
-              :as="as"
+              v-if="index < 5"
+              :key="index"
+              as-child
               class="size-10 p-0"
               :variant="item.active ? 'primary' : 'outline'">
-              {{ item.label }}
+              <component :is="as" :href="item.url">
+                {{ item.label }}
+              </component>
             </Button>
-          </div>
         </template>
 
         <PaginationEllipsis v-if="data.links.length > 5" />
@@ -84,12 +81,10 @@ const getTotalNumber = () => {
         <PaginationNext
           v-if="data.next_page_url"
           :as="as"
-          as-child
           :href="data.next_page_url" />
 
         <PaginationLast
           :as="as"
-          as-child
           :href="data.last_page_url" />
       </PaginationList>
     </Pagination>

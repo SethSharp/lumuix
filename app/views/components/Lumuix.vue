@@ -77,10 +77,10 @@ const tabs = [
 
 const paginatedData = {
   data: [],
-  current_page: 2,
+  current_page: 5,
   first_page_url: '?page=1',
   from: 1,
-  last_page: 5,
+  last_page: 6,
   last_page_url: '?page=7',
   links: [
     {
@@ -89,7 +89,7 @@ const paginatedData = {
       url: '?page=1',
     },
     {
-      active: true,
+      active: false,
       label: '2',
       url: '?page=2',
     },
@@ -104,25 +104,25 @@ const paginatedData = {
       url: '?page=4',
     },
     {
-      active: false,
+      active: true,
       label: '5',
       url: '?page=5',
     },
     {
       active: false,
-      label: '5',
+      label: '6',
       url: '?page=6',
     },
     {
       active: false,
-      label: '5',
+      label: '7',
       url: '?page=7',
     },
   ],
-  next_page_url: '?page=3',
+  next_page_url: '?page=6',
   path: '#',
   per_page: 2,
-  prev_page_url: '?page=1',
+  prev_page_url: '?page=5',
   to: 2,
   total: 10,
 }
@@ -187,7 +187,7 @@ const isOpen = ref(false)
         </LumuixTabs>
       </div>
 
-      <div>
+      <div class="mx-4">
         <LumuixPagination
           :as="Link"
           :data="paginatedData" />

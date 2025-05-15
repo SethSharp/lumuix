@@ -40,7 +40,9 @@ defineProps<{
     </Button>
 
     <template #content>
-      <slot />
+      <div class="mt-10">
+        <slot />
+      </div>
     </template>
   </MainLayout>
 </template>

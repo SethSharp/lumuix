@@ -3,6 +3,7 @@ import { codeToHtml } from 'shiki'
 import { onMounted, ref } from 'vue'
 import { Clipboard } from 'lucide-vue-next'
 import { useClipboardItems } from '@vueuse/core'
+import { Eye, Code2 } from 'lucide-vue-next'
 import { Button } from '@/components/button'
 import { TabsContent, TabsList, TabsRoot, TabsTrigger } from '@/components/tabs'
 
@@ -31,15 +32,19 @@ onMounted(async () => {
 <template>
   <TabsRoot default-value="preview">
     <TabsList class="grid w-full grid-cols-2">
-      <TabsTrigger value="preview">
+      <TabsTrigger value="preview" class="flex gap-2">
         Preview
+        <Eye class="size-4 "/>
       </TabsTrigger>
-      <TabsTrigger value="code">
+      <TabsTrigger value="code" class="flex gap-2">
         Code
+        <Code2 class="size-4 "/>
       </TabsTrigger>
     </TabsList>
     <TabsContent value="preview">
-      <slot />
+      <div class="bg-slate-50 dark:bg-slate-900 rounded p-4 h-[500px] items-center flex justify-center overflow-scroll">
+        <slot />
+      </div>
     </TabsContent>
     <TabsContent value="code">
       <div class="relative">
@@ -47,7 +52,7 @@ onMounted(async () => {
           <Clipboard />
         </Button>
 
-        <div v-html="highlightedCode" class="shiki" />
+        <div v-html="highlightedCode" class="shiki max-h-[800px] overflow-scroll" />
       </div>
     </TabsContent>
   </TabsRoot>
@@ -55,7 +60,7 @@ onMounted(async () => {
 
 <style>
 .shiki pre {
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 0.5rem;
   overflow-x: auto;
 }

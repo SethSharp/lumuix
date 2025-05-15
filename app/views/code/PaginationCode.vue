@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { Link } from '@inertiajs/vue3'
 import {
   Pagination,
   PaginationEllipsis,
@@ -22,8 +23,8 @@ import { Button } from '@/components/button'
     <PaginationList
       v-slot="{ items }"
       class="flex items-center gap-1">
-      <PaginationFirst href="#" />
-      <PaginationPrev href="#" />
+      <PaginationFirst href="#" :as="Link" />
+      <PaginationPrev href="#" :as="Link" />
 
       <template v-for="(item, index) in items">
         <PaginationListItem
@@ -43,8 +44,8 @@ import { Button } from '@/components/button'
           :index="index" />
       </template>
 
-      <PaginationNext href="#" />
-      <PaginationLast href="#" />
+      <PaginationNext href="#" :as="Link" />
+      <PaginationLast href="#" :as="Link" />
     </PaginationList>
   </Pagination>
 </template>

@@ -17,7 +17,6 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarFooter,
   SidebarMenuSub,
   SidebarMenuSubItem,
   SidebarTrigger
@@ -30,10 +29,8 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
 </script>
 
 <template>
-  <div class="flex h-screen">
+  <div class=" h-screen mx-auto">
     <SidebarProvider>
-      <SidebarTrigger />
-
       <Sidebar
         v-slot="{ state }"
         side="left"
@@ -88,9 +85,9 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
         </SidebarContent>
       </Sidebar>
 
-      <main class="flex-1 overflow-y-auto bg-background">
+      <main class="flex-1 overflow-y-auto bg-background w-full">
         <header
-          class="flex h-12 w-full shrink-0 items-center gap-2 border-b border-card-border px-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+          class="flex h-12 w-full shrink-0 items-center gap-2 border-b border-card-border px-2 transition-[width,height]  ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div class="flex w-full justify-between">
             <div class="flex items-center gap-2">
               <SidebarTrigger>

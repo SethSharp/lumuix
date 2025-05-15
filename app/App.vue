@@ -5,6 +5,7 @@ import { RouterLink, RouterView } from 'vue-router'
 import { CollapsibleRoot } from 'radix-vue'
 import router from './router'
 import { LumuixModeToggle } from '@/components/lumuix'
+import { Button } from '@/components/button'
 import {
   SidebarProvider,
   Sidebar,
@@ -38,18 +39,13 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
         side="left"
         variant="sidebar">
         <SidebarHeader>
-          <div>
-            <RouterLink to="/">
-              <img
-                v-if="state == 'expanded'"
-                src="/public/images/logo.png"
-                class="w-full"
-                alt="Lumuix Logo" />
-            </RouterLink>
-            <div class="w-full flex justify-end">
-              <SidebarTrigger />
-            </div>
-          </div>
+          <RouterLink to="/">
+            <img
+              v-if="state == 'expanded'"
+              src="/public/images/logo.png"
+              class="w-full"
+              alt="Lumuix Logo" />
+          </RouterLink>
         </SidebarHeader>
         <SidebarContent>
           <SidebarGroup
@@ -90,26 +86,33 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
             </SidebarGroupContent>
           </SidebarGroup>
         </SidebarContent>
-
-        <SidebarFooter class="h-12 text-center">
-          <div class="m-auto flex gap-2 font-bold text-primary">
-            <a
-              href="https://github.com/SethSharp/lumuix"
-              class="my-auto">
-              1.0.0-beta.4.3
-            </a>
-            <LumuixModeToggle />
-          </div>
-        </SidebarFooter>
       </Sidebar>
-    </SidebarProvider>
 
-    <div class="flex w-full flex-col">
       <main class="flex-1 overflow-y-auto bg-background">
+        <header
+          class="flex h-12 w-full shrink-0 items-center gap-2 border-b border-card-border px-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+          <div class="flex w-full justify-between">
+            <div class="flex items-center gap-2">
+              <SidebarTrigger>
+                <Button
+                  data-sidebar="trigger"
+                  variant="ghost"
+                  size="icon"
+                  class="size-7">
+                  <span class="sr-only">Toggle Sidebar</span>
+                </Button>
+              </SidebarTrigger>
+            </div>
+
+            <div class="flex items-center gap-2">
+                <LumuixModeToggle />
+            </div>
+          </div>
+        </header>
         <component :is="$route.meta.layout">
           <RouterView />
         </component>
       </main>
-    </div>
+    </SidebarProvider>
   </div>
 </template>

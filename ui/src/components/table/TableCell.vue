@@ -9,7 +9,7 @@ const props = defineProps<{
 
 <template>
   <td
-    class="p-4 align-middle text-text [&:has([role=checkbox])]:pr-0"
+    class="text-text p-4 align-middle [&:has([role=checkbox])]:pr-0"
     :class="props.class">
     <slot />
   </td>

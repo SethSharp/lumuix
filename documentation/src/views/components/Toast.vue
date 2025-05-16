@@ -13,7 +13,9 @@ const someAction = () => {
 
 <template>
   <MainLayout title="Toaster">
-    <p class="text-text">Allows for easy toast notifications, allowing real time feedback to users.</p>
+    <p class="text-text">
+      Allows for easy toast notifications, allowing real time feedback to users.
+    </p>
 
     <div class="flex w-fit flex-col gap-2">
       <Button

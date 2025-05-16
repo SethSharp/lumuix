@@ -2,7 +2,8 @@
 import { computed, ref } from 'vue'
 import { Link } from '@inertiajs/vue3'
 import { House, Users, Banknote } from 'lucide-vue-next'
-import { Button,
+import {
+  Button,
   LumuixModeToggle,
   LumuixDatatable,
   LumuixModal,
@@ -155,7 +156,12 @@ const isOpen = ref(false)
             the headerData object
           </template>
           <template #content>
-            Reprehenderit irure sunt aute commodo pariatur tempor aute labore consectetur voluptate. Sint dolore minim minim do cupidatat non enim dolore incididunt. Proident nulla occaecat aliquip sint adipisicing enim occaecat deserunt consectetur ex nisi laboris. Nulla nulla nulla do adipisicing sint pariatur do. Id non commodo amet in occaecat anim anim sint excepteur Lorem qui dolor ipsum ipsum. Commodo consequat deserunt ad sunt fugiat ea. Irure nisi amet excepteur non aliqua nulla ut enim consequat commodo incididunt non do.
+            Reprehenderit irure sunt aute commodo pariatur tempor aute labore consectetur voluptate.
+            Sint dolore minim minim do cupidatat non enim dolore incididunt. Proident nulla occaecat
+            aliquip sint adipisicing enim occaecat deserunt consectetur ex nisi laboris. Nulla nulla
+            nulla do adipisicing sint pariatur do. Id non commodo amet in occaecat anim anim sint
+            excepteur Lorem qui dolor ipsum ipsum. Commodo consequat deserunt ad sunt fugiat ea.
+            Irure nisi amet excepteur non aliqua nulla ut enim consequat commodo incididunt non do.
           </template>
           <template #footer>Oh hello, I am down here - the footer...</template>
         </LumuixModal>

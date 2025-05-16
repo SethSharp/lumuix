@@ -1,7 +1,13 @@
 <script setup lang="ts">
 import { MoveRight } from 'lucide-vue-next'
 import MainLayout from './MainLayout.vue'
-import { Button, BreadcrumbItem, BreadcrumbLink, BreadcrumbList, BreadcrumbSeparator } from '@sethsharp/lumuix'
+import {
+  Button,
+  BreadcrumbItem,
+  BreadcrumbLink,
+  BreadcrumbList,
+  BreadcrumbSeparator,
+} from '@sethsharp/lumuix'
 
 defineProps<{
   title: string
@@ -34,7 +40,7 @@ defineProps<{
         target="_blank"
         class="flex gap-2">
         See Shadcn Docs
-        <MoveRight class="size-5 text-muted" />
+        <MoveRight class="text-muted size-5" />
       </a>
     </Button>
 

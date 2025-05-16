@@ -23,8 +23,12 @@ import {
     <PaginationList
       v-slot="{ items }"
       class="flex items-center gap-1">
-      <PaginationFirst href="#" :as="Link" />
-      <PaginationPrev href="#" :as="Link" />
+      <PaginationFirst
+        href="#"
+        :as="Link" />
+      <PaginationPrev
+        href="#"
+        :as="Link" />
 
       <template v-for="(item, index) in items">
         <PaginationListItem
@@ -44,8 +48,12 @@ import {
           :index="index" />
       </template>
 
-      <PaginationNext href="#" :as="Link" />
-      <PaginationLast href="#" :as="Link" />
+      <PaginationNext
+        href="#"
+        :as="Link" />
+      <PaginationLast
+        href="#"
+        :as="Link" />
     </PaginationList>
   </Pagination>
 </template>

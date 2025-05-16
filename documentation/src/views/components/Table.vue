@@ -60,18 +60,16 @@ const invoices = [
     <TableCaption>A list of your recent invoices.</TableCaption>
     <TableHeader>
       <TableRow>
-        <TableHead class="w-[100px]">
-          Invoice
-        </TableHead>
+        <TableHead class="w-[100px]"> Invoice </TableHead>
         <TableHead>Status</TableHead>
         <TableHead>Method</TableHead>
-        <TableHead class="text-right">
-          Amount
-        </TableHead>
+        <TableHead class="text-right"> Amount </TableHead>
       </TableRow>
     </TableHeader>
     <TableBody>
-      <TableRow v-for="invoice in invoices" :key="invoice.invoice">
+      <TableRow
+        v-for="invoice in invoices"
+        :key="invoice.invoice">
         <TableCell class="font-medium">
           {{ invoice.invoice }}
         </TableCell>

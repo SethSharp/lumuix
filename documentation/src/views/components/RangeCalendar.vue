@@ -14,5 +14,7 @@ const value = ref({
 </script>
 
 <template>
-  <RangeCalendar v-model="value" class="rounded-md border w-fit" />
+  <RangeCalendar
+    v-model="value"
+    class="w-fit rounded-md border" />
 </template>

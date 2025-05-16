@@ -18,9 +18,7 @@ import {
   <Breadcrumb>
     <BreadcrumbList>
       <BreadcrumbItem>
-        <BreadcrumbLink href="/">
-          Home
-        </BreadcrumbLink>
+        <BreadcrumbLink href="/"> Home </BreadcrumbLink>
       </BreadcrumbItem>
       <BreadcrumbSeparator />
       <BreadcrumbItem>
@@ -38,9 +36,7 @@ import {
       </BreadcrumbItem>
       <BreadcrumbSeparator />
       <BreadcrumbItem>
-        <BreadcrumbLink href="/docs/components/accordion.html">
-          Components
-        </BreadcrumbLink>
+        <BreadcrumbLink href="/docs/components/accordion.html"> Components </BreadcrumbLink>
       </BreadcrumbItem>
       <BreadcrumbSeparator />
       <BreadcrumbItem>

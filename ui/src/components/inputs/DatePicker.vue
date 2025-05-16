@@ -41,7 +41,7 @@ onMounted(() => {
   if (props.defaultValue) {
     value.value = props.defaultValue
   } else if (value.value === null) {
-    let currentDate = new Date()
+    const currentDate = new Date()
     value.value = new CalendarDate(
       currentDate.getFullYear(),
       currentDate.getMonth() + 1,
@@ -57,7 +57,7 @@ onMounted(() => {
       <PopoverTrigger as-child>
         <Button
           variant="outline"
-          :class="['w-[280px] justify-start text-left font-normal text-text']">
+          :class="['text-text w-[280px] justify-start text-left font-normal']">
           <CalendarIcon class="mr-2 size-4" />
           {{ value ? df.format(value.toDate(getLocalTimeZone())) : placeholder }}
         </Button>

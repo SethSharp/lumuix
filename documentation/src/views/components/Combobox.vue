@@ -33,17 +33,20 @@ const value = ref('')
         variant="outline"
         role="combobox"
         :aria-expanded="open"
-        class="w-[200px] justify-between"
-      >
-        {{ value
-        ? frameworks.find((framework) => framework.value === value)?.label
-        : "Select framework..." }}
+        class="w-[200px] justify-between">
+        {{
+          value
+            ? frameworks.find((framework) => framework.value === value)?.label
+            : 'Select framework...'
+        }}
         <ChevronsUpDown class="ml-2 h-4 w-4 shrink-0 opacity-50" />
       </Button>
     </PopoverTrigger>
     <PopoverContent class="w-[200px] p-0">
       <Command>
-        <CommandInput class="h-9" placeholder="Search framework..." />
+        <CommandInput
+          class="h-9"
+          placeholder="Search framework..." />
         <CommandEmpty>No framework found.</CommandEmpty>
         <CommandList>
           <CommandGroup>
@@ -51,20 +54,18 @@ const value = ref('')
               v-for="framework in frameworks"
               :key="framework.value"
               :value="framework.value"
-              @select="(ev) => {
-                if (typeof ev.detail.value === 'string') {
-                  value = ev.detail.value
+              @select="
+                (ev) => {
+                  if (typeof ev.detail.value === 'string') {
+                    value = ev.detail.value
+                  }
+                  open = false
                 }
-                open = false
-              }"
-            >
+              ">
               {{ framework.label }}
               <Check
                 class="ml-auto size-4"
-                :class="[
-                  value === framework.value ? 'opacity-100' : 'opacity-0',
-                ]"
-              />
+                :class="[value === framework.value ? 'opacity-100' : 'opacity-0']" />
             </CommandItem>
           </CommandGroup>
         </CommandList>

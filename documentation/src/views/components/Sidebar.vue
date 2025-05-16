@@ -8,33 +8,42 @@ import {
   SidebarMenuAction,
   SidebarMenuItem,
   SidebarMenuButton,
-  SidebarGroup, SidebarMenu, SidebarGroupContent, SidebarGroupLabel, DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem } from '@sethsharp/lumuix'
+  SidebarGroup,
+  SidebarMenu,
+  SidebarGroupContent,
+  SidebarGroupLabel,
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from '@sethsharp/lumuix'
 
 const projects = [
   {
     name: 'Lumuix',
-    icon: BlocksIcon
+    icon: BlocksIcon,
   },
   {
     name: 'Portfolio',
-    icon: PersonStanding
+    icon: PersonStanding,
   },
   {
     name: 'Habit Tracker',
-    icon: CheckCircle
-  }
+    icon: CheckCircle,
+  },
 ]
 </script>
 
 <template>
   <SidebarProvider :default-open="false">
     <SidebarTrigger />
-    <Sidebar collapsible="icon" side="right" variant="sidebar">
+    <Sidebar
+      collapsible="icon"
+      side="right"
+      variant="sidebar">
       <SidebarContent>
         <SidebarGroup>
-          <SidebarGroupLabel>
-            Projects
-          </SidebarGroupLabel>
+          <SidebarGroupLabel> Projects </SidebarGroupLabel>
           <SidebarMenu>
             <SidebarGroupContent>
               <SidebarMenuItem v-for="project in projects">
@@ -50,7 +59,9 @@ const projects = [
                       <MoreHorizontal />
                     </SidebarMenuAction>
                   </DropdownMenuTrigger>
-                  <DropdownMenuContent side="left" align="start">
+                  <DropdownMenuContent
+                    side="left"
+                    align="start">
                     <DropdownMenuItem>
                       <span>Edit Project</span>
                     </DropdownMenuItem>

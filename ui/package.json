@@ -12,10 +12,7 @@
   },
   "types": "./dist/types/index.d.ts",
   "scripts": {
-    "build": "run-p format type-check lint",
-    "format": "prettier --write src/ documentation/",
-    "type-check": "vue-tsc --declaration --emitDeclarationOnly --outDir dist/types",
-    "lint": "eslint . --fix"
+    "build": "vue-tsc --declaration --emitDeclarationOnly --outDir dist/types"
   },
   "main": "./dist/ui.umd.cjs",
   "module": "./dist/ui.js",

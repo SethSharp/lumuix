@@ -14,7 +14,7 @@ const mime = 'text/plain'
 const source = ref([
   new ClipboardItem({
     [mime]: new Blob([props.sourceCode], { type: mime }),
-  })
+  }),
 ])
 
 const highlightedCode = ref('')
@@ -23,7 +23,7 @@ const { copy } = useClipboardItems({ source })
 onMounted(async () => {
   highlightedCode.value = await codeToHtml(props.sourceCode, {
     lang: 'vue',
-    theme: 'vitesse-dark'
+    theme: 'vitesse-dark',
   })
 })
 </script>
@@ -31,27 +31,36 @@ onMounted(async () => {
 <template>
   <TabsRoot default-value="preview">
     <TabsList class="grid w-full grid-cols-2">
-      <TabsTrigger value="preview" class="flex gap-2">
+      <TabsTrigger
+        value="preview"
+        class="flex gap-2">
         Preview
-        <Eye class="size-4 "/>
+        <Eye class="size-4" />
       </TabsTrigger>
-      <TabsTrigger value="code" class="flex gap-2">
+      <TabsTrigger
+        value="code"
+        class="flex gap-2">
         Code
-        <Code2 class="size-4 "/>
+        <Code2 class="size-4" />
       </TabsTrigger>
     </TabsList>
     <TabsContent value="preview">
-      <div class="bg-slate-50 dark:bg-slate-900 rounded p-4 h-[500px] items-center flex justify-center overflow-scroll">
+      <div
+        class="flex h-[500px] items-center justify-center overflow-scroll rounded bg-slate-50 p-4 dark:bg-slate-900">
         <slot />
       </div>
     </TabsContent>
     <TabsContent value="code">
       <div class="relative">
-        <Button @click="copy" class="absolute top-2 right-2 text-white">
+        <Button
+          @click="copy"
+          class="absolute right-2 top-2 text-white">
           <Clipboard />
         </Button>
 
-        <div v-html="highlightedCode" class="shiki max-h-[800px] overflow-scroll" />
+        <div
+          v-html="highlightedCode"
+          class="shiki max-h-[800px] overflow-scroll" />
       </div>
     </TabsContent>
   </TabsRoot>

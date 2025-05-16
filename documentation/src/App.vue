@@ -19,7 +19,7 @@ import {
   SidebarMenuItem,
   SidebarMenuSub,
   SidebarMenuSubItem,
-  SidebarTrigger
+  SidebarTrigger,
 } from '@sethsharp/lumuix'
 
 const route = useRoute()
@@ -29,7 +29,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
 </script>
 
 <template>
-  <div class=" h-screen mx-auto">
+  <div class="mx-auto h-screen">
     <SidebarProvider>
       <Sidebar
         v-slot="{ state }"
@@ -85,9 +85,9 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
         </SidebarContent>
       </Sidebar>
 
-      <main class="flex-1 overflow-y-auto bg-background w-full">
+      <main class="bg-background w-full flex-1 overflow-y-auto">
         <header
-          class="flex h-12 w-full shrink-0 items-center gap-2 border-b border-card-border px-2 transition-[width,height]  ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+          class="border-card-border flex h-12 w-full shrink-0 items-center gap-2 border-b px-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div class="flex w-full justify-between">
             <div class="flex items-center gap-2">
               <SidebarTrigger>

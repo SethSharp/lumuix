@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { Label,Input,Button,
+import {
+  Label,
+  Input,
+  Button,
   Dialog,
   DialogContent,
   DialogDescription,

@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { Label,Input, Button,
+import {
+  Label,
+  Input,
+  Button,
   TabsRoot,
   TabsContent,
   TabsList,
@@ -14,14 +17,12 @@ import { Label,Input, Button,
 </script>
 
 <template>
-  <TabsRoot default-value="account" class="w-[400px]">
+  <TabsRoot
+    default-value="account"
+    class="w-[400px]">
     <TabsList class="grid w-full grid-cols-2">
-      <TabsTrigger value="account">
-        Account
-      </TabsTrigger>
-      <TabsTrigger value="password">
-        Password
-      </TabsTrigger>
+      <TabsTrigger value="account"> Account </TabsTrigger>
+      <TabsTrigger value="password"> Password </TabsTrigger>
     </TabsList>
     <TabsContent value="account">
       <Card>
@@ -34,11 +35,15 @@ import { Label,Input, Button,
         <CardContent class="space-y-2">
           <div class="space-y-1">
             <Label for="name">Name</Label>
-            <Input id="name" default-value="Pedro Duarte" />
+            <Input
+              id="name"
+              default-value="Pedro Duarte" />
           </div>
           <div class="space-y-1">
             <Label for="username">Username</Label>
-            <Input id="username" default-value="@peduarte" />
+            <Input
+              id="username"
+              default-value="@peduarte" />
           </div>
         </CardContent>
         <CardFooter>
@@ -58,11 +63,15 @@ import { Label,Input, Button,
           <form>
             <div class="space-y-1">
               <Label for="current">Current password</Label>
-              <Input id="current" type="password" />
+              <Input
+                id="current"
+                type="password" />
             </div>
             <div class="space-y-1">
               <Label for="new">New password</Label>
-              <Input id="new" type="password" />
+              <Input
+                id="new"
+                type="password" />
             </div>
           </form>
         </CardContent>

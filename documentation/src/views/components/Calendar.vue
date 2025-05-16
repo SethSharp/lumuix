@@ -20,5 +20,5 @@ const value = ref(today(getLocalTimeZone())) as Ref<DateValue>
   <Calendar
     v-model="value"
     weekday-format="long"
-    class=" rounded-md border" />
+    class="rounded-md border" />
 </template>

@@ -8,7 +8,6 @@ import {
   LumuixDatatable,
   LumuixModal,
   LumuixTabs,
-  LumuixPagination,
 } from '@sethsharp/lumuix'
 
 const dataTableConfig = computed(() => ({
@@ -74,58 +73,6 @@ const tabs = [
     icon: Banknote,
   },
 ]
-
-const paginatedData = {
-  data: [],
-  current_page: 4,
-  first_page_url: '?page=1',
-  from: 1,
-  last_page: 6,
-  last_page_url: '?page=7',
-  links: [
-    {
-      active: false,
-      label: '1',
-      url: '?page=1',
-    },
-    {
-      active: false,
-      label: '2',
-      url: '?page=2',
-    },
-    {
-      active: false,
-      label: '3',
-      url: '?page=3',
-    },
-    {
-      active: true,
-      label: '4',
-      url: '?page=4',
-    },
-    {
-      active: false,
-      label: '5',
-      url: '?page=5',
-    },
-    {
-      active: false,
-      label: '6',
-      url: '?page=6',
-    },
-    {
-      active: false,
-      label: '7',
-      url: '?page=7',
-    },
-  ],
-  next_page_url: '?page=6',
-  path: '#',
-  per_page: 2,
-  prev_page_url: '?page=5',
-  to: 2,
-  total: 10,
-}
 
 const isOpen = ref(false)
 </script>

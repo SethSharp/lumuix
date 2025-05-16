@@ -12,10 +12,13 @@
   "dependencies": {
     "vue": "^3.5.13",
     "vue-router": "^4.5.0",
+    "radix-vue": "^1.9.1",
+    "lucide-vue-next": "^0.447.0",
     "@sethsharp/lumuix": "file:../ui"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.1",
+    "@inertiajs/vue3": "^1.0.0",
     "@types/node": "^22.14.0",
     "@vitejs/plugin-vue": "^5.2.3",
     "@vue/tsconfig": "^0.7.0",

@@ -1,5 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
-import { preset } from '@sethsharp/lumuix'
+import preset from './src/presets/preset.js'
 
 /** @type {import('tailwindcss').Config} */
 export default {

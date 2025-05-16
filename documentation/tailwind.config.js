@@ -1,10 +1,7 @@
 const defaultTheme = require('tailwindcss/defaultTheme')
-import { preset } from '@sethsharp/lumuix'
 
 /** @type {import('tailwindcss').Config} */
 export default {
-  presets: [preset],
-
   css: {
     postcss: './postcss.config.cjs',
   },

@@ -1,6 +1,6 @@
 {
   "name": "@sethsharp/lumuix",
-  "version": "2.0.0-beta.0.1",
+  "version": "0.0.0",
   "type": "module",
   "files": [
     "ui",
@@ -10,7 +10,6 @@
     "type": "git",
     "url": "https://github.com/SethSharp/lumuix"
   },
-  "types": "./dist/types/index.d.ts",
   "scripts": {
     "format": "run-p prettier lint",
     "prettier": "prettier --write ui/src/components documentation/src",

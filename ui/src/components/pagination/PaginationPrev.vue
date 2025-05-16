@@ -8,7 +8,6 @@ import { Button } from '@/components/button'
 const props = withDefaults(
   defineProps<
     PaginationPrevProps & {
-      href: string
       class?: HTMLAttributes['class']
     }
   >(),
@@ -28,13 +27,7 @@ const delegatedProps = computed(() => {
       :class="cn('size-10 p-0', props.class)"
       as-child
       variant="outline">
-      <slot>
-        <component
-          :is="as"
-          :href="href">
-          <ChevronLeft class="size-4" />
-        </component>
-      </slot>
+      <slot :icon="ChevronLeft" />
     </Button>
   </PaginationPrev>
 </template>

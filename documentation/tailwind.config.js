@@ -1,4 +1,4 @@
-const defaultTheme = require('tailwindcss/defaultTheme')
+import defaultTheme from 'tailwindcss/defaultTheme'
 import { preset } from '@sethsharp/lumuix'
 
 /** @type {import('tailwindcss').Config} */

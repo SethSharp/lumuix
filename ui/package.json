@@ -1,6 +1,6 @@
 {
   "name": "@sethsharp/lumuix",
-  "version": "2.0.0-beta.0.2",
+  "version": "2.0.0-beta.0.3",
   "type": "module",
   "files": [
     "dist",
@@ -25,9 +25,9 @@
       "require": "./dist/lumuix.umd.cjs",
       "types": "./dist/types/index.d.ts"
     },
-    "./presets/slate.css": {
-      "import": "./dist/presets/slate.css",
-      "require": "./dist/presets/slate.css"
+    "./dist/presets/*.css": {
+      "import": "./dist/presets/*.css",
+      "require": "./dist/presets/*.css"
     }
   },
   "peerDependencies": {

@@ -1,4 +1,4 @@
-@import '@sethsharp/lumuix/dist/types/presets/slate.css';
+@import '@sethsharp/lumuix/presets/slate.css';
 
 @tailwind base;
 @tailwind components;

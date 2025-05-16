@@ -11,10 +11,10 @@ export default defineConfig({
       targets: [
         {
           src: 'src/presets/slate.css',
-          dest: 'types/presets',
+          dest: 'presets',
         },
       ],
-    }),
+    })
   ],
   build: {
     lib: {

@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "vue": "^3.5.13",
-    "vue-router": "^4.5.0"
+    "vue-router": "^4.5.0",
+    "@sethsharp/lumuix": "file:../ui"
   },
   "devDependencies": {
     "@tsconfig/node22": "^22.0.1",
@@ -21,6 +22,8 @@
     "jiti": "^2.4.2",
     "npm-run-all2": "^7.0.2",
     "typescript": "~5.8.0",
+    "autoprefixer": "^10.4.20",
+    "tailwindcss": "^3.4.4",
     "vite": "^6.2.4",
     "vite-plugin-vue-devtools": "^7.7.2",
     "shiki": "^3.4.1",

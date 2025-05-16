@@ -9,7 +9,7 @@ export default {
     postcss: './postcss.config.cjs',
   },
 
-  content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './app/**/*.{vue,js,ts,jsx,tsx}'],
+  content: ['./documentation/index.html', './src/**/*.{vue,js,ts,jsx,tsx}', './documentation/**/*.{vue,js,ts,jsx,tsx}'],
 
   safelist: ['max-w-sm', 'max-w-md', 'max-w-lg', 'max-w-xl', 'max-w-2xl'],
 

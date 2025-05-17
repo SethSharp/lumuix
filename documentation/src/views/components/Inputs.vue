@@ -2,7 +2,6 @@
 import { ref, watch } from 'vue'
 import {
   Select,
-  Combobox,
   Checkbox,
   DatePicker,
   ImageUpload,
@@ -15,15 +14,6 @@ const checkboxValue = ref(true)
 
 const selectValue = ref(null)
 const selectOptions = ref(['Grape', 'Banana', 'Strawberry'])
-
-const comboboxValue = ref('next.js')
-const comboboxOptions = ref([
-  { id: 'next.js', name: 'Next.js' },
-  { id: 'sveltekit', name: 'SvelteKit' },
-  { id: 'nuxt', name: 'Nuxt' },
-  { id: 'remix', name: 'Remix' },
-  { id: 'astro', name: 'Astro' },
-])
 
 const datePickerValue = ref(null)
 
@@ -44,14 +34,6 @@ watch(datePickerValue, () => {
         <Checkbox
           v-model="checkboxValue"
           text="This is a checkbox" />
-      </div>
-
-      <div>
-        <Combobox
-          v-model="comboboxValue"
-          label="This is a combobox"
-          description="Accepts options as {id: number|string, value: string}. Model value as: array, null or a number (id)"
-          :options="comboboxOptions" />
       </div>
 
       <div>

@@ -38,6 +38,7 @@
     "@vueuse/core": "^13.2.0",
     "class-variance-authority": "^0.7.0",
     "lucide-vue-next": "^0.447.0",
+    "reka-ui": "^2.2.1",
     "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^10.0.0",

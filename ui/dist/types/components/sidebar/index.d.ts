@@ -31,7 +31,7 @@ export { default as SidebarSeparator } from './SidebarSeparator.vue';
 export { default as SidebarTrigger } from './SidebarTrigger.vue';
 export { useSidebar } from './utils';
 export declare const sidebarMenuButtonVariants: (props?: {
-    variant?: "default" | "outline";
+    variant?: "default" | "outline-solid";
     size?: "default" | "sm" | "lg";
 } & import("class-variance-authority/types").ClassProp) => string;
 export type SidebarMenuButtonVariants = VariantProps<typeof sidebarMenuButtonVariants>;

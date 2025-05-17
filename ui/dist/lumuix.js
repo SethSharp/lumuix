@@ -3667,7 +3667,7 @@ function fl() {
 }
 function gs() {
   const e = document.createElement("span");
-  return e.setAttribute("data-radix-focus-guard", ""), e.tabIndex = 0, e.style.outline = "none", e.style.opacity = "0", e.style.position = "fixed", e.style.pointerEvents = "none", e;
+  return e.setAttribute("data-radix-focus-guard", ""), e.tabIndex = 0, e.style.outline-solid = "none", e.style.opacity = "0", e.style.position = "fixed", e.style.pointerEvents = "none", e;
 }
 function Ha(e) {
   return $(() => {
@@ -6484,7 +6484,7 @@ const [ya, Of] = le("ComboboxRoot"), Af = /* @__PURE__ */ y({
       c.value = G, await se(), G ? (u.value && (Array.isArray(u.value) && o.value ? p.value = (Z = k().find((Ne) => {
         var Ye, bt;
         return ((bt = (Ye = Ne.ref) == null ? void 0 : Ye.dataset) == null ? void 0 : bt.state) === "checked";
-      })) == null ? void 0 : Z.value : p.value = u.value), await se(), (de = h.value) == null || de.focus(), q()) : (w.value = !1, a.resetSearchTermOnBlur && W("blur"));
+      })) == null ? void 0 : Z.value : p.value = u.value), await se(), (de = h.value) == null || de.focus(), q()) : (w.value = !1, a.resetSearchTermOnBlur && W("blur-sm"));
     }
     function m(G) {
       if (Array.isArray(u.value) && o.value) {
@@ -6514,7 +6514,7 @@ const [ya, Of] = le("ComboboxRoot"), Af = /* @__PURE__ */ y({
       return I.value;
     });
     function W(G) {
-      const Z = G === "blur" || G === "select" && a.resetSearchTermOnSelect;
+      const Z = G === "blur-sm" || G === "select" && a.resetSearchTermOnSelect;
       !o.value && u.value && !Array.isArray(u.value) ? a.displayValue ? d.value = a.displayValue(u.value) : typeof u.value != "object" ? d.value = u.value.toString() : Z && (d.value = "") : Z && (d.value = "");
     }
     const N = $(() => M.value.findIndex((G) => Rt(G, p.value))), S = $(() => {
@@ -11538,8 +11538,8 @@ const Ph = /* @__PURE__ */ y({
             mn(R.slice(q + 1)) ? E.preventDefault() : V ? (M = c.value) == null || M.focus() : (W = p.value) == null || W.focus();
           }
         };
-        h.addEventListener("focusin", x), h.addEventListener("focusout", D), h.addEventListener("pointermove", x), h.addEventListener("pointerleave", k), h.addEventListener("keydown", O), window.addEventListener("blur", x), window.addEventListener("focus", C), w(() => {
-          h.removeEventListener("focusin", x), h.removeEventListener("focusout", D), h.removeEventListener("pointermove", x), h.removeEventListener("pointerleave", k), h.removeEventListener("keydown", O), window.removeEventListener("blur", x), window.removeEventListener("focus", C);
+        h.addEventListener("focusin", x), h.addEventListener("focusout", D), h.addEventListener("pointermove", x), h.addEventListener("pointerleave", k), h.addEventListener("keydown", O), window.addEventListener("blur-sm", x), window.addEventListener("focus", C), w(() => {
+          h.removeEventListener("focusin", x), h.removeEventListener("focusout", D), h.removeEventListener("pointermove", x), h.removeEventListener("pointerleave", k), h.removeEventListener("keydown", O), window.removeEventListener("blur-sm", x), window.removeEventListener("focus", C);
         });
       }
     });
@@ -12199,7 +12199,7 @@ const he = (e) => {
   // I could also use lookbehind assertion in `lengthUnitRegex` but that isn't supported widely enough.
   rg.test(e) && !ig.test(e)
 ), Vi = () => !1, bg = (e) => dg.test(e), _g = (e) => ug.test(e), wg = () => {
-  const e = he("colors"), t = he("spacing"), a = he("blur"), n = he("brightness"), o = he("borderColor"), s = he("borderRadius"), r = he("borderSpacing"), i = he("borderWidth"), d = he("contrast"), u = he("grayscale"), c = he("hueRotate"), p = he("invert"), _ = he("gap"), m = he("gradientColorStops"), w = he("gradientColorStopPositions"), h = he("inset"), x = he("margin"), C = he("opacity"), D = he("padding"), k = he("saturate"), O = he("scale"), E = he("sepia"), I = he("skew"), M = he("space"), W = he("translate"), N = () => ["auto", "contain", "none"], S = () => ["auto", "hidden", "clip", "visible", "scroll"], V = () => ["auto", ne, t], R = () => [ne, t], q = () => ["", it, xt], U = () => ["auto", aa, ne], Y = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], ee = () => ["solid", "dashed", "dotted", "double", "none"], ge = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], ye = () => ["start", "end", "center", "between", "around", "evenly", "stretch"], G = () => ["", "0", ne], Z = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], de = () => [aa, ne];
+  const e = he("colors"), t = he("spacing"), a = he("blur-sm"), n = he("brightness"), o = he("borderColor"), s = he("borderRadius"), r = he("borderSpacing"), i = he("borderWidth"), d = he("contrast"), u = he("grayscale"), c = he("hueRotate"), p = he("invert"), _ = he("gap"), m = he("gradientColorStops"), w = he("gradientColorStopPositions"), h = he("inset"), x = he("margin"), C = he("opacity"), D = he("padding"), k = he("saturate"), O = he("scale"), E = he("sepia"), I = he("skew"), M = he("space"), W = he("translate"), N = () => ["auto", "contain", "none"], S = () => ["auto", "hidden", "clip", "visible", "scroll"], V = () => ["auto", ne, t], R = () => [ne, t], q = () => ["", it, xt], U = () => ["auto", aa, ne], Y = () => ["bottom", "center", "left", "left-bottom", "left-top", "right", "right-bottom", "right-top", "top"], ee = () => ["solid", "dashed", "dotted", "double", "none"], ge = () => ["normal", "multiply", "screen", "overlay", "darken", "lighten", "color-dodge", "color-burn", "hard-light", "soft-light", "difference", "exclusion", "hue", "saturation", "color", "luminosity"], ye = () => ["start", "end", "center", "between", "around", "evenly", "stretch"], G = () => ["", "0", ne], Z = () => ["auto", "avoid", "all", "avoid-page", "page", "left", "right", "column"], de = () => [aa, ne];
   return {
     cacheSize: 500,
     separator: ":",
@@ -13636,8 +13636,8 @@ const he = (e) => {
        * Drop Shadow
        * @see https://tailwindcss.com/docs/drop-shadow
        */
-      "drop-shadow": [{
-        "drop-shadow": ["", "none", $t, ne]
+      "drop-shadow-sm": [{
+        "drop-shadow-sm": ["", "none", $t, ne]
       }],
       /**
        * Grayscale
@@ -13686,8 +13686,8 @@ const he = (e) => {
        * Backdrop Blur
        * @see https://tailwindcss.com/docs/backdrop-blur
        */
-      "backdrop-blur": [{
-        "backdrop-blur": [a]
+      "backdrop-blur-sm": [{
+        "backdrop-blur-sm": [a]
       }],
       /**
        * Backdrop Brightness
@@ -13794,7 +13794,7 @@ const he = (e) => {
        * @see https://tailwindcss.com/docs/transition-property
        */
       transition: [{
-        transition: ["none", "all", "", "colors", "opacity", "shadow", "transform", ne]
+        transition: ["none", "all", "", "colors", "opacity", "shadow-sm", "transform", ne]
       }],
       /**
        * Transition Duration
@@ -14618,7 +14618,7 @@ const ks = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, Bs = Lg, $
     ], 2));
   }
 }), Ng = $a(
-  "inline-flex items-center rounded-full border h-fit font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-default",
+  "inline-flex items-center rounded-full border h-fit font-semibold transition-colors focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-default",
   {
     variants: {
       variant: {
@@ -14639,18 +14639,18 @@ const ks = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, Bs = Lg, $
       }
     },
     compoundVariants: [
-      { type: "outline", variant: "primary", class: "border-primary bg-primary/10 text-primary" },
+      { type: "outline-solid", variant: "primary", class: "border-primary bg-primary/10 text-primary" },
       {
-        type: "outline",
+        type: "outline-solid",
         variant: "secondary",
         class: "border-secondary bg-secondary/10 text-secondary"
       },
       {
-        type: "outline",
+        type: "outline-solid",
         variant: "destructive",
         class: "border-destructive bg-destructive/20 text-destructive"
       },
-      { type: "outline", variant: "warning", class: "border-warning bg-warning/20 text-warning" }
+      { type: "outline-solid", variant: "warning", class: "border-warning bg-warning/20 text-warning" }
     ],
     defaultVariants: {
       variant: "primary",
@@ -14805,28 +14805,28 @@ const ks = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, Bs = Lg, $
   variants: {
     size: {
       // requires ! due to parent sizing from the Button
-      default: "!size-4",
-      xs: "!size-3",
-      sm: "!size-3",
-      lg: "!size-4",
-      xl: "!size-5",
-      xxl: "!size-6",
-      icon: "!size-5"
+      default: "size-4!",
+      xs: "size-3!",
+      sm: "size-3!",
+      lg: "size-4!",
+      xl: "size-5!",
+      xxl: "size-6!",
+      icon: "size-5!"
     }
   },
   defaultVariants: {
     size: "default"
   }
 }), Gt = $a(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-hidden focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default: "bg-slate-800 text-slate-50 hover:bg-slate-800/80",
-        primary: "bg-primary text-primary-foreground shadow hover:bg-primary/80",
+        primary: "bg-primary text-primary-foreground shadow-sm hover:bg-primary/80",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/70",
-        outline: "border border-input text-foreground shadow-sm hover:bg-accent hover:text-accent-foreground hover:border-transparent",
-        secondary: "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/50",
+        outline: "border border-input text-foreground shadow-xs hover:bg-accent hover:text-accent-foreground hover:border-transparent",
+        secondary: "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/50",
         ghost: "text-black hover:bg-accent hover:text-accent-foreground dark:text-slate-50",
         link: "text-primary underline-offset-4 hover:underline"
       },
@@ -14854,7 +14854,7 @@ const ks = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, Bs = Lg, $
     const t = e;
     return (a, n) => (v(), L("div", {
       class: K(
-        l(T)("border-card-border bg-card text-card-foreground rounded-lg border shadow-sm", t.class)
+        l(T)("border-card-border bg-card text-card-foreground rounded-lg border shadow-xs", t.class)
       )
     }, [
       b(a.$slots, "default")
@@ -15072,13 +15072,13 @@ const ks = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, Bs = Lg, $
         "h-9 w-9 p-0 font-normal",
         "[&[data-today]:not([data-selected])]:bg-slate-100 [&[data-today]:not([data-selected])]:text-slate-900 dark:[&[data-today]:not([data-selected])]:bg-slate-800 dark:[&[data-today]:not([data-selected])]:text-slate-50",
         // Selected
-        "data-[selected]:bg-slate-900 data-[selected]:text-slate-50 data-[selected]:opacity-100 data-[selected]:hover:bg-slate-900 data-[selected]:hover:text-slate-50 data-[selected]:focus:bg-slate-900 data-[selected]:focus:text-slate-50 dark:data-[selected]:bg-slate-50 dark:data-[selected]:text-slate-900 dark:data-[selected]:hover:bg-slate-50 dark:data-[selected]:hover:text-slate-900 dark:data-[selected]:focus:bg-slate-50 dark:data-[selected]:focus:text-slate-900",
+        "data-selected:bg-slate-900 data-selected:text-slate-50 data-selected:opacity-100 data-selected:hover:bg-slate-900 data-selected:hover:text-slate-50 data-selected:focus:bg-slate-900 data-selected:focus:text-slate-50 dark:data-selected:bg-slate-50 dark:data-selected:text-slate-900 dark:data-selected:hover:bg-slate-50 dark:data-selected:hover:text-slate-900 dark:data-selected:focus:bg-slate-50 dark:data-selected:focus:text-slate-900",
         // Disabled
-        "data-[disabled]:text-slate-500 data-[disabled]:opacity-50 dark:data-[disabled]:text-slate-400",
+        "data-disabled:text-slate-500 data-disabled:opacity-50 dark:data-disabled:text-slate-400",
         // Unavailable
-        "data-[unavailable]:text-slate-50 data-[unavailable]:line-through dark:data-[unavailable]:text-slate-50",
+        "data-unavailable:text-slate-50 data-unavailable:line-through dark:data-unavailable:text-slate-50",
         // Outside months
-        "data-[outside-view]:text-slate-500 data-[outside-view]:opacity-50 dark:data-[outside-view]:text-slate-400 [&[data-outside-view][data-selected]]:bg-slate-100/50 [&[data-outside-view][data-selected]]:text-slate-500 [&[data-outside-view][data-selected]]:opacity-30 dark:[&[data-outside-view][data-selected]]:bg-slate-800/50 dark:[&[data-outside-view][data-selected]]:text-slate-400",
+        "data-outside-view:text-slate-500 data-outside-view:opacity-50 dark:data-outside-view:text-slate-400 [&[data-outside-view][data-selected]]:bg-slate-100/50 [&[data-outside-view][data-selected]]:text-slate-500 [&[data-outside-view][data-selected]]:opacity-30 dark:[&[data-outside-view][data-selected]]:bg-slate-800/50 dark:[&[data-outside-view][data-selected]]:text-slate-400",
         t.class
       )
     }, l(n)), {
@@ -15241,7 +15241,7 @@ const ks = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, Bs = Lg, $
     }), n = re(a);
     return (o, s) => (v(), g(l(ff), P({
       class: l(T)(
-        l(Gt)({ variant: "outline" }),
+        l(Gt)({ variant: "outline-solid" }),
         "size-7 bg-transparent p-0 opacity-50 hover:opacity-100",
         t.class
       )
@@ -15269,7 +15269,7 @@ const ks = (e) => typeof e == "boolean" ? `${e}` : e === 0 ? "0" : e, Bs = Lg, $
     }), n = re(a);
     return (o, s) => (v(), g(l(vf), P({
       class: l(T)(
-        l(Gt)({ variant: "outline" }),
+        l(Gt)({ variant: "outline-solid" }),
         "size-7 bg-transparent p-0 opacity-50 hover:opacity-100",
         t.class
       )
@@ -15782,7 +15782,7 @@ const To = /* @__PURE__ */ y({
     }), n = re(a);
     return (o, s) => (v(), g(l($m), P(l(n), {
       class: l(T)(
-        "border-input bg-background ring-offset-background placeholder:text-muted-foreground focus:ring-ring flex h-10 w-full items-center justify-between rounded-md border px-3 py-2 text-start text-sm transition focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 dark:ring-offset-0 dark:hover:bg-slate-800 dark:focus:ring-slate-800 [&>span]:truncate",
+        "border-input bg-background ring-offset-background placeholder:text-muted-foreground focus:ring-ring flex h-10 w-full items-center justify-between rounded-md border px-3 py-2 text-start text-sm transition focus:outline-hidden focus:ring-2 focus:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 dark:ring-offset-0 dark:hover:bg-slate-800 dark:focus:ring-slate-800 [&>span]:truncate",
         t.class
       )
     }), {
@@ -15844,7 +15844,7 @@ const To = /* @__PURE__ */ y({
               class: K(
                 l(T)(
                   "p-1",
-                  r.position === "popper" && "h-[--radix-select-trigger-height] w-full min-w-[--radix-select-trigger-width]"
+                  r.position === "popper" && "h-(--radix-select-trigger-height) w-full min-w-(--radix-select-trigger-width)"
                 )
               )
             }, {
@@ -15899,7 +15899,7 @@ const To = /* @__PURE__ */ y({
     }), n = re(a);
     return (o, s) => (v(), g(l(Im), P(l(n), {
       class: l(T)(
-        "focus:text-accent-foreground focus:bg-accent relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:text-slate-200 dark:focus:bg-slate-800",
+        "focus:text-accent-foreground focus:bg-accent relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-hidden data-disabled:pointer-events-none data-disabled:opacity-50 dark:text-slate-200 dark:focus:bg-slate-800",
         t.class
       )
     }), {
@@ -16372,7 +16372,7 @@ const To = /* @__PURE__ */ y({
             b(r.$slots, "default"),
             B(l(Ga), {
               onClick: i[0] || (i[0] = (d) => a("close", d)),
-              class: "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-slate-100 data-[state=open]:text-slate-500 dark:ring-offset-slate-950 dark:focus:ring-slate-300 dark:data-[state=open]:bg-slate-800 dark:data-[state=open]:text-slate-400"
+              class: "absolute right-4 top-4 rounded-sm opacity-70 ring-offset-white transition-opacity hover:opacity-100 focus:outline-hidden focus:ring-2 focus:ring-slate-950 focus:ring-offset-2 disabled:pointer-events-none data-[state=open]:bg-slate-100 data-[state=open]:text-slate-500 dark:ring-offset-slate-950 dark:focus:ring-slate-300 dark:data-[state=open]:bg-slate-800 dark:data-[state=open]:text-slate-400"
             }, {
               default: f(() => [
                 B(l(Gn), { class: "size-4 dark:text-slate-300" }),
@@ -16557,7 +16557,7 @@ const To = /* @__PURE__ */ y({
       B(l(Mf), P({ ...l(n), ...o.$attrs }, {
         "auto-focus": "",
         class: l(T)(
-          "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-none placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 dark:placeholder:text-slate-400",
+          "flex h-11 w-full rounded-md bg-transparent py-3 text-sm outline-hidden placeholder:text-slate-500 disabled:cursor-not-allowed disabled:opacity-50 dark:placeholder:text-slate-400",
           t.class
         )
       }), null, 16, ["class"])
@@ -16578,7 +16578,7 @@ const To = /* @__PURE__ */ y({
       const { class: r, ...i } = a;
       return i;
     }), s = ae(o, n);
-    return (r, i) => (v(), g(l(Hf), P(l(s), { class: "relative flex cursor-default select-none rounded-sm px-1.5 py-1.5 text-sm outline-none data-[disabled]:pointer-events-none data-[highlighted]:bg-slate-100 data-[highlighted]:text-slate-900 data-[disabled]:opacity-50 dark:data-[highlighted]:bg-slate-800 dark:data-[highlighted]:text-slate-50" }), {
+    return (r, i) => (v(), g(l(Hf), P(l(s), { class: "relative flex cursor-default select-none rounded-sm px-1.5 py-1.5 text-sm outline-hidden data-disabled:pointer-events-none data-highlighted:bg-slate-100 data-highlighted:text-slate-900 data-disabled:opacity-50 dark:data-highlighted:bg-slate-800 dark:data-highlighted:text-slate-50" }), {
       default: f(() => [
         b(r.$slots, "default")
       ]),
@@ -16693,7 +16693,7 @@ const To = /* @__PURE__ */ y({
     return (a, n) => (v(), L("div", {
       class: K(
         l(T)(
-          "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors hover:bg-slate-200 focus:bg-slate-100 focus:text-slate-900 data-[disabled]:pointer-events-none data-[disabled]:opacity-50 dark:hover:bg-slate-700 dark:focus:bg-slate-800 dark:focus:text-slate-50",
+          "relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-hidden transition-colors hover:bg-slate-200 focus:bg-slate-100 focus:text-slate-900 data-disabled:pointer-events-none data-disabled:opacity-50 dark:hover:bg-slate-700 dark:focus:bg-slate-800 dark:focus:text-slate-50",
           a.inset && "pl-8",
           t.class
         )
@@ -16711,7 +16711,7 @@ const To = /* @__PURE__ */ y({
   },
   setup(e) {
     const a = re(e);
-    return (n, o) => (v(), g(l(kv), P({ class: "outline-none" }, l(a)), {
+    return (n, o) => (v(), g(l(kv), P({ class: "outline-hidden" }, l(a)), {
       default: f(() => [
         b(n.$slots, "default")
       ]),
@@ -16811,7 +16811,7 @@ const To = /* @__PURE__ */ y({
     }), n = re(a);
     return (o, s) => (v(), g(l(di), P(l(n), {
       class: l(T)(
-        "focus:text-accent-foreground focus:bg-accent relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+        "focus:text-accent-foreground focus:bg-accent relative flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-hidden transition-colors data-disabled:pointer-events-none data-disabled:opacity-50",
         o.inset && "pl-8",
         t.class
       )
@@ -16875,7 +16875,7 @@ const To = /* @__PURE__ */ y({
     }), s = ae(o, n);
     return (r, i) => (v(), g(l(Ev), P(l(s), {
       class: l(T)(
-        "focus:text-accent-foreground focus:bg-accent relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+        "focus:text-accent-foreground focus:bg-accent relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-hidden transition-colors data-disabled:pointer-events-none data-disabled:opacity-50",
         a.class
       )
     }), {
@@ -16911,7 +16911,7 @@ const To = /* @__PURE__ */ y({
     }), s = ae(o, n);
     return (r, i) => (v(), g(l(Mv), P(l(s), {
       class: l(T)(
-        "focus:text-accent-foreground focus:bg-accent relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none transition-colors data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+        "focus:text-accent-foreground focus:bg-accent relative flex cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-hidden transition-colors data-disabled:pointer-events-none data-disabled:opacity-50",
         a.class
       )
     }), {
@@ -17012,7 +17012,7 @@ const To = /* @__PURE__ */ y({
     }), n = re(a);
     return (o, s) => (v(), g(l(Vv), P(l(n), {
       class: l(T)(
-        "focus:bg-accent data-[state=open]:bg-accent flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-none",
+        "focus:bg-accent data-[state=open]:bg-accent flex cursor-default select-none items-center rounded-sm px-2 py-1.5 text-sm outline-hidden",
         t.class
       )
     }), {
@@ -17213,7 +17213,7 @@ const ab = /* @__PURE__ */ Qa(Zy, [["render", tb]]), nb = { class: "grid gap-4 m
             id: s.id,
             checked: o.value,
             "onUpdate:checked": r[0] || (r[0] = (i) => o.value = i),
-            class: "focus-visible:ring-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:border-primary dark:ring-offset-primary dark:focus-visible:ring-primary-foreground dark:data-[state=checked]:bg-primary dark:data-[state=checked]:text-primary-foreground peer size-4 shrink-0 rounded-sm border border-slate-600 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+            class: "focus-visible:ring-primary data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground dark:border-primary dark:ring-offset-primary dark:focus-visible:ring-primary-foreground dark:data-[state=checked]:bg-primary dark:data-[state=checked]:text-primary-foreground peer size-4 shrink-0 rounded-sm border border-slate-600 ring-offset-white focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
           }, {
             default: f(() => [
               B(l($f), { class: "flex h-full w-full items-center justify-center text-current" }, {
@@ -17305,7 +17305,7 @@ const ab = /* @__PURE__ */ Qa(Zy, [["render", tb]]), nb = { class: "grid gap-4 m
       default: f(() => [
         B(l(Xv), P({ ...l(s), ...r.$attrs }, {
           class: l(T)(
-            "border-border data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-72 rounded-md border bg-white p-4 text-slate-950 shadow-md outline-none dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50",
+            "border-border data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 z-50 w-72 rounded-md border bg-white p-4 text-slate-950 shadow-md outline-hidden dark:border-slate-800 dark:bg-slate-950 dark:text-slate-50",
             a.class
           )
         }), {
@@ -17345,7 +17345,7 @@ const ab = /* @__PURE__ */ Qa(Zy, [["render", tb]]), nb = { class: "grid gap-4 m
             B(l(od), { "as-child": "" }, {
               default: f(() => [
                 B(l(st), {
-                  variant: "outline",
+                  variant: "outline-solid",
                   role: "combobox",
                   "aria-expanded": r.value,
                   class: "w-full justify-between overflow-hidden"
@@ -17448,7 +17448,7 @@ const ab = /* @__PURE__ */ Qa(Zy, [["render", tb]]), nb = { class: "grid gap-4 m
             B(l(od), { "as-child": "" }, {
               default: f(() => [
                 B(l(st), {
-                  variant: "outline",
+                  variant: "outline-solid",
                   class: K(["text-text w-[280px] justify-start text-left font-normal"])
                 }, {
                   default: f(() => [
@@ -17539,7 +17539,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
             onInput: d
           }, null, 40, vb),
           B(l(st), {
-            variant: "outline",
+            variant: "outline-solid",
             onClick: u
           }, {
             default: f(() => p[0] || (p[0] = [
@@ -17577,7 +17577,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
           placeholder: a.placeholder,
           required: a.required,
           type: a.type,
-          class: K(["flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm text-black ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-normal placeholder:text-slate-500 focus-visible:border-slate-900 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 dark:placeholder:text-slate-600 dark:focus-visible:border-slate-300", {
+          class: K(["flex h-10 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm text-black ring-offset-white file:border-0 file:bg-transparent file:text-sm file:font-normal placeholder:text-slate-500 focus-visible:border-slate-900 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 dark:placeholder:text-slate-600 dark:focus-visible:border-slate-300", {
             "focus-visible:ring-slate-950 dark:focus-visible:ring-slate-400": !a.error,
             "focus-visible:ring-red-600 dark:focus-visible:ring-red-400": a.error
           }])
@@ -17651,7 +17651,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
         ua(ie("textarea", {
           "onUpdate:modelValue": r[0] || (r[0] = (i) => ca(o) ? o.value = i : null),
           placeholder: s.placeholder,
-          class: K(["flex min-h-20 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-normal text-black ring-offset-white placeholder:text-slate-500 focus-visible:border-slate-950 focus-visible:outline-none disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus-visible:border-slate-300", {
+          class: K(["flex min-h-20 w-full rounded-md border border-slate-200 bg-white px-3 py-2 text-sm font-normal text-black ring-offset-white placeholder:text-slate-500 focus-visible:border-slate-950 focus-visible:outline-hidden disabled:cursor-not-allowed disabled:opacity-50 dark:border-slate-800 dark:bg-slate-950 dark:text-slate-200 dark:placeholder:text-slate-500 dark:focus-visible:border-slate-300", {
             "focus-visible:ring-slate-950 dark:focus-visible:ring-slate-400": !s.error,
             "focus-visible:ring-red-600 dark:focus-visible:ring-red-400": s.error
           }])
@@ -17697,7 +17697,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
           "onUpdate:checked": d[0] || (d[0] = (u) => o.value = u)
         }, l(r), {
           class: l(T)(
-            "focus-visible:ring-primary data-[state=checked]:bg-primary data-[state=unchecked]:bg-primary-foreground dark:focus-visible:ring-primary-foreground dark:focus-visible:ring-offset-primary dark:data-[state=checked]:bg-primary dark:data-[state=unchecked]:bg-accent peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50",
+            "focus-visible:ring-primary data-[state=checked]:bg-primary data-[state=unchecked]:bg-primary-foreground dark:focus-visible:ring-primary-foreground dark:focus-visible:ring-offset-primary dark:data-[state=checked]:bg-primary dark:data-[state=unchecked]:bg-accent peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-white disabled:cursor-not-allowed disabled:opacity-50",
             n.class
           )
         }), {
@@ -17766,7 +17766,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
         B(l(st), {
           class: K(l(T)("size-10 p-0", t.class)),
           "as-child": "",
-          variant: "outline"
+          variant: "outline-solid"
         }, {
           default: f(() => [
             b(n.$slots, "default", { icon: l(Sg) })
@@ -17794,7 +17794,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
         B(l(st), {
           class: K(l(T)("size-10 p-0", t.class)),
           "as-child": "",
-          variant: "outline"
+          variant: "outline-solid"
         }, {
           default: f(() => [
             b(n.$slots, "default", { icon: l(Pg) })
@@ -17822,7 +17822,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
         B(l(st), {
           class: K(l(T)("size-10 p-0", t.class)),
           "as-child": "",
-          variant: "outline"
+          variant: "outline-solid"
         }, {
           default: f(() => [
             b(n.$slots, "default", { icon: l(Vl) })
@@ -17850,7 +17850,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
         B(l(st), {
           class: K(l(T)("size-10 p-0", t.class)),
           "as-child": "",
-          variant: "outline"
+          variant: "outline-solid"
         }, {
           default: f(() => [
             b(n.$slots, "default", { icon: l(Bg) })
@@ -18034,7 +18034,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
     return (a, n) => (v(), L("tfoot", {
       class: K(
         l(T)(
-          "border-t bg-slate-100/50 font-medium dark:bg-slate-800/50 [&>tr]:last:border-b-0",
+          "border-t bg-slate-100/50 font-medium dark:bg-slate-800/50 last:[&>tr]:border-b-0",
           t.class
         )
       )
@@ -18292,7 +18292,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
     }), n = re(a);
     return (o, s) => (v(), g(l(wh), P(l(n), {
       class: l(T)(
-        "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-slate-950 data-[state=active]:shadow-sm dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=active]:bg-slate-950 dark:data-[state=active]:text-slate-50",
+        "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-white transition-all focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-white data-[state=active]:text-slate-950 data-[state=active]:shadow-xs dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300 dark:data-[state=active]:bg-slate-950 dark:data-[state=active]:text-slate-50",
         t.class
       )
     }), {
@@ -18317,7 +18317,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
         class: K([
           a.tab.active ? "text-primary bg-white hover:bg-opacity-80 dark:bg-slate-950" : "hover:bg-white dark:hover:bg-slate-900",
           l(T)(
-            "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium ring-offset-white transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
+            "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md px-3 py-2 text-sm font-medium ring-offset-white transition-all focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
             t.class
           )
         ])
@@ -18377,7 +18377,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
     });
     return (n, o) => (v(), g(l(_h), P({
       class: l(T)(
-        "ring-offset-whit mt-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:text-slate-400 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
+        "ring-offset-whit mt-2 focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:text-slate-400 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
         t.class
       )
     }, a.value), {
@@ -18387,7 +18387,7 @@ const pb = { class: "flex items-center space-x-2" }, fb = ["src"], vb = ["accept
       _: 3
     }, 16, ["class"]));
   }
-}), Eb = {}, Ob = { class: "text-text mt-2 ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300" };
+}), Eb = {}, Ob = { class: "text-text mt-2 ring-offset-white focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300" };
 function Ab(e, t) {
   return v(), L("div", Ob, [
     b(e.$slots, "default")
@@ -18604,18 +18604,18 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
     return (o, s) => (v(), g(l(vm), P({
       class: l(T)(
         l(Gt)({ variant: "ghost" }),
-        "h-9 w-9 p-0 font-normal data-[selected]:opacity-100",
+        "h-9 w-9 p-0 font-normal data-selected:opacity-100",
         "[&[data-today]:not([data-selected])]:bg-slate-100 [&[data-today]:not([data-selected])]:text-slate-900 dark:[&[data-today]:not([data-selected])]:bg-slate-800 dark:[&[data-today]:not([data-selected])]:text-slate-50",
         // Selection Start
-        "data-[selection-start]:bg-slate-900 data-[selection-start]:text-slate-50 data-[selection-start]:hover:bg-slate-900 data-[selection-start]:hover:text-slate-50 data-[selection-start]:focus:bg-slate-900 data-[selection-start]:focus:text-slate-50 dark:data-[selection-start]:bg-slate-50 dark:data-[selection-start]:text-slate-900 dark:data-[selection-start]:hover:bg-slate-50 dark:data-[selection-start]:hover:text-slate-900 dark:data-[selection-start]:focus:bg-slate-50 dark:data-[selection-start]:focus:text-slate-900",
+        "data-selection-start:bg-slate-900 data-selection-start:text-slate-50 data-selection-start:hover:bg-slate-900 data-selection-start:hover:text-slate-50 data-selection-start:focus:bg-slate-900 data-selection-start:focus:text-slate-50 dark:data-selection-start:bg-slate-50 dark:data-selection-start:text-slate-900 dark:data-selection-start:hover:bg-slate-50 dark:data-selection-start:hover:text-slate-900 dark:data-selection-start:focus:bg-slate-50 dark:data-selection-start:focus:text-slate-900",
         // Selection End
-        "data-[selection-end]:bg-slate-900 data-[selection-end]:text-slate-50 data-[selection-end]:hover:bg-slate-900 data-[selection-end]:hover:text-slate-50 data-[selection-end]:focus:bg-slate-900 data-[selection-end]:focus:text-slate-50 dark:data-[selection-end]:bg-slate-50 dark:data-[selection-end]:text-slate-900 dark:data-[selection-end]:hover:bg-slate-50 dark:data-[selection-end]:hover:text-slate-900 dark:data-[selection-end]:focus:bg-slate-50 dark:data-[selection-end]:focus:text-slate-900",
+        "data-selection-end:bg-slate-900 data-selection-end:text-slate-50 data-selection-end:hover:bg-slate-900 data-selection-end:hover:text-slate-50 data-selection-end:focus:bg-slate-900 data-selection-end:focus:text-slate-50 dark:data-selection-end:bg-slate-50 dark:data-selection-end:text-slate-900 dark:data-selection-end:hover:bg-slate-50 dark:data-selection-end:hover:text-slate-900 dark:data-selection-end:focus:bg-slate-50 dark:data-selection-end:focus:text-slate-900",
         // Outside months
-        "data-[outside-view]:text-slate-500 data-[outside-view]:opacity-50 dark:data-[outside-view]:text-slate-400 [&[data-outside-view][data-selected]]:bg-slate-100/50 [&[data-outside-view][data-selected]]:text-slate-500 [&[data-outside-view][data-selected]]:opacity-30 dark:[&[data-outside-view][data-selected]]:bg-slate-800/50 dark:[&[data-outside-view][data-selected]]:text-slate-400",
+        "data-outside-view:text-slate-500 data-outside-view:opacity-50 dark:data-outside-view:text-slate-400 [&[data-outside-view][data-selected]]:bg-slate-100/50 [&[data-outside-view][data-selected]]:text-slate-500 [&[data-outside-view][data-selected]]:opacity-30 dark:[&[data-outside-view][data-selected]]:bg-slate-800/50 dark:[&[data-outside-view][data-selected]]:text-slate-400",
         // Disabled
-        "data-[disabled]:text-slate-500 data-[disabled]:opacity-50 dark:data-[disabled]:text-slate-400",
+        "data-disabled:text-slate-500 data-disabled:opacity-50 dark:data-disabled:text-slate-400",
         // Unavailable
-        "data-[unavailable]:text-slate-50 data-[unavailable]:line-through dark:data-[unavailable]:text-slate-50",
+        "data-unavailable:text-slate-50 data-unavailable:line-through dark:data-unavailable:text-slate-50",
         t.class
       )
     }, l(n)), {
@@ -18778,7 +18778,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
     }), n = re(a);
     return (o, s) => (v(), g(l(dm), P({
       class: l(T)(
-        l(Gt)({ variant: "outline" }),
+        l(Gt)({ variant: "outline-solid" }),
         "size-7 bg-transparent p-0 opacity-50 hover:opacity-100",
         t.class
       )
@@ -18807,7 +18807,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
     }), n = re(a);
     return (o, s) => (v(), g(l(um), P({
       class: l(T)(
-        l(Gt)({ variant: "outline" }),
+        l(Gt)({ variant: "outline-solid" }),
         "size-7 bg-transparent p-0 opacity-50 hover:opacity-100",
         t.class
       )
@@ -18848,7 +18848,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
           class: K(
             l(T)(
               "bg-background text-muted-foreground absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 items-center justify-center text-xs",
-              t.orientation === "vertical" ? "w-[1px] px-1 py-2" : "h-[1px] px-2 py-1"
+              t.orientation === "vertical" ? "w-px px-1 py-2" : "h-px px-2 py-1"
             )
           )
         }, Q(t.label), 3)) : oe("", !0)
@@ -18914,7 +18914,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
         }, { ...l(s), ...r.$attrs }), {
           default: f(() => [
             b(r.$slots, "default"),
-            B(l(Ga), { class: "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none" }, {
+            B(l(Ga), { class: "ring-offset-background focus:ring-ring data-[state=open]:bg-secondary absolute right-4 top-4 rounded-sm opacity-70 transition-opacity hover:opacity-100 focus:outline-hidden focus:ring-2 focus:ring-offset-2 disabled:pointer-events-none" }, {
               default: f(() => [
                 B(l(Gn), { class: "text-muted-foreground h-4 w-4" })
               ]),
@@ -19027,7 +19027,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
   }
 ), Yb = "sidebar:state", Jb = 60 * 60 * 24 * 7, Qb = "16rem", Xb = "18rem", Zb = "3rem", e0 = "b", [qn, t0] = le("Sidebar"), a0 = { class: "flex h-full w-full flex-col" }, n0 = ["data-state", "data-collapsible", "data-variant", "data-side"], o0 = {
   "data-sidebar": "sidebar",
-  class: "group-data-[variant=floating]:border-sidebar-border bg-sidebar text-sidebar-foreground flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow"
+  class: "group-data-[variant=floating]:border-sidebar-border bg-sidebar text-sidebar-foreground flex h-full w-full flex-col group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow-sm"
 }, q_ = /* @__PURE__ */ y({
   inheritAttrs: !1,
   __name: "Sidebar",
@@ -19041,7 +19041,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
     const t = e, { isMobile: a, state: n, openMobile: o, setOpenMobile: s } = qn();
     return (r, i) => r.collapsible === "none" ? (v(), L("div", P({
       key: 0,
-      class: l(T)("bg-sidebar text-sidebar-foreground flex h-full w-[--sidebar-width] flex-col", t.class)
+      class: l(T)("bg-sidebar text-sidebar-foreground flex h-full w-(--sidebar-width) flex-col", t.class)
     }, r.$attrs), [
       b(r.$slots, "default")
     ], 16)) : l(a) ? (v(), g(l(jb), P({
@@ -19053,7 +19053,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
           "data-sidebar": "sidebar",
           "data-mobile": "true",
           side: r.side,
-          class: "bg-sidebar text-sidebar-foreground w-[--sidebar-width] p-0 [&>button]:hidden",
+          class: "bg-sidebar text-sidebar-foreground w-(--sidebar-width) p-0 [&>button]:hidden",
           style: Ot({
             "--sidebar-width": l(Xb)
           })
@@ -19078,19 +19078,19 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
       ie("div", {
         class: K(
           l(T)(
-            "relative h-svh w-[--sidebar-width] bg-transparent transition-[width] duration-200 ease-linear",
+            "relative h-svh w-(--sidebar-width) bg-transparent transition-[width] duration-200 ease-linear",
             "group-data-[collapsible=offcanvas]:w-0",
             "group-data-[side=right]:rotate-180",
-            r.variant === "floating" || r.variant === "inset" ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]" : "group-data-[collapsible=icon]:w-[--sidebar-width-icon]"
+            r.variant === "floating" || r.variant === "inset" ? "group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4)))]" : "group-data-[collapsible=icon]:w-(--sidebar-width-icon)"
           )
         )
       }, null, 2),
       ie("div", P({
         class: l(T)(
-          "fixed inset-y-0 z-10 hidden h-svh w-[--sidebar-width] transition-[left,right,width] duration-200 ease-linear md:flex",
+          "fixed inset-y-0 z-10 hidden h-svh w-(--sidebar-width) transition-[left,right,width] duration-200 ease-linear md:flex",
           r.side === "left" ? "left-0 group-data-[collapsible=offcanvas]:left-[calc(var(--sidebar-width)*-1)]" : "right-0 group-data-[collapsible=offcanvas]:right-[calc(var(--sidebar-width)*-1)]",
           // Adjust the padding for floating and inset variants.
-          r.variant === "floating" || r.variant === "inset" ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4)_+2px)]" : "group-data-[collapsible=icon]:w-[--sidebar-width-icon] group-data-[side=left]:border-r group-data-[side=right]:border-l",
+          r.variant === "floating" || r.variant === "inset" ? "p-2 group-data-[collapsible=icon]:w-[calc(var(--sidebar-width-icon)+(--spacing(4))+2px)]" : "group-data-[collapsible=icon]:w-(--sidebar-width-icon) group-data-[side=left]:border-r group-data-[side=right]:border-l",
           t.class
         )
       }, r.$attrs), [
@@ -19162,9 +19162,9 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
       "as-child": a.asChild,
       class: K(
         l(T)(
-          "ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sidebar-foreground absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 outline-none transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+          "ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground text-sidebar-foreground absolute right-3 top-3.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 outline-hidden transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
           // Increases the hit area of the button on mobile.
-          "after:absolute after:-inset-2 after:md:hidden",
+          "after:absolute after:-inset-2 md:after:hidden",
           "group-data-[collapsible=icon]:hidden",
           t.class
         )
@@ -19205,7 +19205,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
       "as-child": a.asChild,
       class: K(
         l(T)(
-          "ring-sidebar-ring text-sidebar-foreground/70 flex h-8 shrink-0 items-center rounded-md px-2 text-xs font-medium outline-none transition-[margin,opa] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+          "ring-sidebar-ring text-sidebar-foreground/70 flex h-8 shrink-0 items-center rounded-md px-2 text-xs font-medium outline-hidden transition-[margin,opa] duration-200 ease-linear focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
           "group-data-[collapsible=icon]:-mt-8 group-data-[collapsible=icon]:opacity-0",
           t.class
         )
@@ -19264,7 +19264,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
       class: K(
         l(T)(
           "bg-background relative flex min-h-svh flex-1 flex-col",
-          "peer-data-[variant=inset]:min-h-[calc(100svh-theme(spacing.4))] md:peer-data-[variant=inset]:m-2 md:peer-data-[state=collapsed]:peer-data-[variant=inset]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow",
+          "peer-data-[variant=inset]:min-h-[calc(100svh-(--spacing(4)))] md:peer-data-[variant=inset]:m-2 md:peer-data-[variant=inset]:peer-data-[state=collapsed]:ml-2 md:peer-data-[variant=inset]:ml-0 md:peer-data-[variant=inset]:rounded-xl md:peer-data-[variant=inset]:shadow-sm",
           t.class
         )
       )
@@ -19300,9 +19300,9 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
       "data-sidebar": "menu-action",
       class: K(
         l(T)(
-          "ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer-hover/menu-button:text-sidebar-accent-foreground text-sidebar-foreground absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 outline-none transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
+          "ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground peer-hover/menu-button:text-sidebar-accent-foreground text-sidebar-foreground absolute right-1 top-1.5 flex aspect-square w-5 items-center justify-center rounded-md p-0 outline-hidden transition-transform focus-visible:ring-2 [&>svg]:size-4 [&>svg]:shrink-0",
           // Increases the hit area of the button on mobile.
-          "after:absolute after:-inset-2 after:md:hidden",
+          "after:absolute after:-inset-2 md:after:hidden",
           "peer-data-[size=sm]/menu-button:top-1",
           "peer-data-[size=default]/menu-button:top-1.5",
           "peer-data-[size=lg]/menu-button:top-2.5",
@@ -19562,7 +19562,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
         "data-sidebar": "menu-skeleton-icon"
       })) : oe("", !0),
       B(Ms, {
-        class: "h-4 max-w-[--skeleton-width] flex-1",
+        class: "h-4 max-w-(--skeleton-width) flex-1",
         "data-sidebar": "menu-skeleton-text",
         style: Ot({ "--skeleton-width": a.value })
       }, null, 8, ["style"])
@@ -19607,7 +19607,7 @@ const Mb = /* @__PURE__ */ Qa(Eb, [["render", Ab]]), N_ = /* @__PURE__ */ y({
       "data-active": a.isActive,
       class: K(
         l(T)(
-          "ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground active:bg-sidebar-accent active:text-sidebar-accent-foreground [&>svg]:text-sidebar-accent-foreground text-sidebar-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 outline-none focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+          "ring-sidebar-ring hover:bg-sidebar-accent hover:text-sidebar-accent-foreground active:bg-sidebar-accent active:text-sidebar-accent-foreground [&>svg]:text-sidebar-accent-foreground text-sidebar-foreground flex h-7 min-w-0 -translate-x-px items-center gap-2 overflow-hidden rounded-md px-2 outline-hidden focus-visible:ring-2 disabled:pointer-events-none disabled:opacity-50 aria-disabled:pointer-events-none aria-disabled:opacity-50 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
           "data-[active=true]:bg-sidebar-accent data-[active=true]:text-sidebar-accent-foreground",
           a.size === "sm" && "text-xs",
           a.size === "md" && "text-sm",
@@ -19695,7 +19695,7 @@ const fw = /* @__PURE__ */ Qa(i0, [["render", d0]]), vw = /* @__PURE__ */ y({
       class: K(
         l(T)(
           "hover:after:bg-sidebar-border absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex",
-          "[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize",
+          "in-data-[side=left]:cursor-w-resize in-data-[side=right]:cursor-e-resize",
           "[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize",
           "group-data-[collapsible=offcanvas]:hover:bg-sidebar group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full",
           "[[data-side=left][data-collapsible=offcanvas]_&]:-right-2",
@@ -19749,7 +19749,7 @@ const fw = /* @__PURE__ */ Qa(i0, [["render", d0]]), vw = /* @__PURE__ */ y({
     }, 8, ["class", "onClick"]));
   }
 }), u0 = $a(
-  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-none ring-sidebar-ring transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-[[data-sidebar=menu-action]]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:!size-8 group-data-[collapsible=icon]:!p-2 [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
+  "peer/menu-button flex w-full items-center gap-2 overflow-hidden rounded-md p-2 text-left text-sm outline-hidden ring-sidebar-ring transition-[width,height,padding] hover:bg-sidebar-accent hover:text-sidebar-accent-foreground focus-visible:ring-2 active:bg-sidebar-accent active:text-sidebar-accent-foreground disabled:pointer-events-none disabled:opacity-50 group-has-data-[sidebar=menu-action]/menu-item:pr-8 aria-disabled:pointer-events-none aria-disabled:opacity-50 data-[active=true]:bg-sidebar-accent data-[active=true]:font-medium data-[active=true]:text-sidebar-accent-foreground data-[state=open]:hover:bg-sidebar-accent data-[state=open]:hover:text-sidebar-accent-foreground group-data-[collapsible=icon]:size-8! group-data-[collapsible=icon]:p-2! [&>span:last-child]:truncate [&>svg]:size-4 [&>svg]:shrink-0",
   {
     variants: {
       variant: {
@@ -19759,7 +19759,7 @@ const fw = /* @__PURE__ */ Qa(i0, [["render", d0]]), vw = /* @__PURE__ */ y({
       size: {
         default: "h-8 text-sm",
         sm: "h-7 text-xs",
-        lg: "h-12 text-sm group-data-[collapsible=icon]:!p-0"
+        lg: "h-12 text-sm group-data-[collapsible=icon]:p-0!"
       }
     },
     defaultVariants: {
@@ -19806,7 +19806,7 @@ const fw = /* @__PURE__ */ Qa(i0, [["render", d0]]), vw = /* @__PURE__ */ y({
         }),
         (v(!0), L(X, null, fe(r.modelValue, (d, u) => (v(), g(l(ih), {
           key: u,
-          class: "border-primary bg-primary ring-offset-background focus-visible:ring-ring block size-5 rounded-full border-2 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
+          class: "border-primary bg-primary ring-offset-background focus-visible:ring-ring block size-5 rounded-full border-2 transition-colors focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50"
         }))), 128))
       ]),
       _: 1
@@ -19984,7 +19984,7 @@ const h0 = { class: "flex gap-3" }, g0 = { class: "grid gap-1" }, bw = /* @__PUR
     });
     return (n, o) => (v(), g(l(Ih), P(a.value, {
       class: l(T)(
-        "fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
+        "fixed top-0 z-100 flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]",
         t.class
       )
     }), null, 16, ["class"]));
@@ -20032,7 +20032,7 @@ const h0 = { class: "flex gap-3" }, g0 = { class: "grid gap-1" }, bw = /* @__PUR
     });
     return (n, o) => (v(), g(l(Si), P(a.value, {
       class: l(T)(
-        "text-foreground/50 hover:text-foreground absolute right-2 top-2 rounded-md p-1 opacity-0 transition-opacity focus:opacity-100 focus:outline-none focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 group-[.destructive]:hover:text-red-50 group-[.destructive]:focus:ring-red-400 group-[.destructive]:focus:ring-offset-red-600",
+        "text-foreground/50 hover:text-foreground absolute right-2 top-2 rounded-md p-1 opacity-0 transition-opacity focus:opacity-100 focus:outline-hidden focus:ring-2 group-hover:opacity-100 group-[.destructive]:text-red-300 hover:group-[.destructive]:text-red-50 focus:group-[.destructive]:ring-red-400 focus:group-[.destructive]:ring-offset-red-600",
         t.class
       )
     }), {
@@ -20102,7 +20102,7 @@ const h0 = { class: "flex gap-3" }, g0 = { class: "grid gap-1" }, bw = /* @__PUR
     }, 16));
   }
 }), $0 = $a(
-  "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border border-border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-[--radix-toast-swipe-end-x] data-[swipe=move]:translate-x-[--radix-toast-swipe-move-x] data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full data-[state=open]:sm:slide-in-from-bottom-full",
+  "group pointer-events-auto relative flex w-full items-center justify-between space-x-4 overflow-hidden rounded-md border border-border p-6 pr-8 shadow-lg transition-all data-[swipe=cancel]:translate-x-0 data-[swipe=end]:translate-x-(--radix-toast-swipe-end-x) data-[swipe=move]:translate-x-(--radix-toast-swipe-move-x) data-[swipe=move]:transition-none data-[state=open]:animate-in data-[state=closed]:animate-out data-[swipe=end]:animate-out data-[state=closed]:fade-out-80 data-[state=closed]:slide-out-to-right-full data-[state=open]:slide-in-from-top-full sm:data-[state=open]:slide-in-from-bottom-full",
   {
     variants: {
       variant: {

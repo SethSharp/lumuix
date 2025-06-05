@@ -1,6 +1,6 @@
 {
   "name": "@sethsharp/lumuix",
-  "version": "2.0.0-beta.0.3",
+  "version": "2.0.0-beta.0.4",
   "type": "module",
   "files": [
     "dist",
@@ -41,7 +41,7 @@
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.447.0",
     "reka-ui": "^2.2.1",
-    "tailwind-merge": "^2.6.0",
+    "tailwind-merge": "^2.5.2",
     "tailwindcss-animate": "^1.0.7",
     "uuid": "^10.0.0",
     "vue-component-type-helpers": "^2.0.29"

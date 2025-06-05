@@ -10,6 +10,7 @@
     "build-only": "vite build"
   },
   "dependencies": {
+    "@vueuse/core": "^13.2.0",
     "@sethsharp/lumuix": "file:../ui",
     "lucide-vue-next": "^0.447.0",
     "radix-vue": "^1.9.1",

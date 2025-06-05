@@ -2,7 +2,7 @@
 import { codeToHtml } from 'shiki'
 import { onMounted, ref } from 'vue'
 import { Clipboard } from 'lucide-vue-next'
-import { useClipboardItems } from '@vueuse/core'
+import { useClipboard } from '@vueuse/core'
 import { Eye, Code2 } from 'lucide-vue-next'
 import { Button, TabsContent, TabsList, TabsRoot, TabsTrigger } from '@sethsharp/lumuix'
 
@@ -10,15 +10,17 @@ const props = defineProps<{
   sourceCode: string
 }>()
 
-const mime = 'text/plain'
-const source = ref([
-  new ClipboardItem({
-    [mime]: new Blob([props.sourceCode], { type: mime }),
-  }),
-])
-
+const recentlyCopied = ref(false)
+const { copy } = useClipboard()
 const highlightedCode = ref('')
-const { copy } = useClipboardItems({ source })
+
+const copyCode = () => {
+  recentlyCopied.value = true
+  setTimeout(() => {
+    recentlyCopied.value = false
+  }, 2000)
+  copy(props.sourceCode)
+}
 
 onMounted(async () => {
   highlightedCode.value = await codeToHtml(props.sourceCode, {
@@ -53,9 +55,12 @@ onMounted(async () => {
     <TabsContent value="code">
       <div class="relative">
         <Button
-          @click="copy"
+          @click="copyCode"
           class="absolute right-2 top-2 text-white">
           <Clipboard />
+          <template v-if="recentlyCopied">
+            Copied!
+          </template>
         </Button>
 
         <div

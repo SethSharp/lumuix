@@ -1,56 +1,141 @@
+@import 'tailwindcss';
+
+@plugin 'tailwindcss-animate';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-background: var(--background);
+  --color-heading: var(--heading);
+  --color-text: var(--text);
+  --color-sub-text: var(--sub-text);
+  --color-foreground: var(--foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-warning: var(--warning);
+  --color-warning-foreground: var(--warning-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-accordion-text: var(--accordion-text);
+  --color-accordion-border: var(--accordion-border);
+
+  --color-skeleton: var(--skeleton);
+
+  --color-card: var(--card);
+  --color-card-border: var(--card-border);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  @keyframes accordion-down {
+    from { height: 0 }
+    to { height: var(--radix-accordion-content-height) }
+  }
+
+  @keyframes accordion-up {
+    from { height: var(--radix-accordion-content-height) }
+    to { height: 0 }
+  }
+
+  --animation-accordion-down: accordion-down 0.2s ease-out;
+  --animation-accordion-up: accordion-up 0.2s ease-out;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+
 :root {
-  --background: 0 0% 100%;
-  --foreground: 222.2 47.4% 11.2%;
+  --background: hsl(0 0% 100%);
+  --foreground: hsl(222.2 47.4% 11.2%);
 
-  --heading: 229 84% 5%; /* slate-950 */
-  --text: 229 84% 5%; /* slate-950 */
-  --sub-text: 222 47% 11%; /* slate-950 */
+  --heading: hsl(229 84% 5%);
+  --text: hsl(229 84% 5%);
+  --sub-text: hsl(222 47% 11%);
 
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
+  --muted: hsl(210 40% 96.1%);
+  --muted-foreground: hsl(215.4 16.3% 46.9%);
 
-  --accordion-text: 229 84% 5%; /* slate-950 */
-  --accordion-border: 215 20% 65%; /* slate-500 */
+  --accordion-text: hsl(229 84% 5%);
+  --accordion-border: hsl(215 20% 65%);
 
-  --card: 0 0% 100%;
-  --card-border: 215 20% 65%; /* slate-400 */
-  --card-foreground: 229 84% 5%; /* slate-950 */
+  --card: hsl(0 0% 100%);
+  --card-border: hsl(215 20% 65%);
+  --card-foreground: hsl(229 84% 5%);
 
-  --skeleton: 214 32% 91%; /* slate-200 */
+  --skeleton: hsl(214 32% 91%);
 
-  --popover: 0 0% 100%;
-  --popover-foreground: 222.2 47.4% 11.2%;
+  --popover: hsl(0 0% 100%);
+  --popover-foreground: hsl(222.2 47.4% 11.2%);
 
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
+  --border: hsl(214.3 31.8% 91.4%);
+  --input: hsl(214.3 31.8% 91.4%);
 
-  --primary: 173 80% 40%;
-  --primary-foreground: 210 40% 98%;
+  --primary: hsl(173 80% 40%);
+  --primary-foreground: hsl(210 40% 98%);
 
-  --warning: 45 93% 47%; /* yellow-500 */
-  --warning-foreground: 55 92% 95%; /* yellow-50 */
+  --warning: hsl(45 93% 47%);
+  --warning-foreground: hsl(55 92% 95%);
 
-  --secondary: 217 33% 17%; /* slate-800 */
-  --secondary-foreground: 210 40% 98%; /* slate-50 */
+  --secondary: hsl(217 33% 17%);
+  --secondary-foreground: hsl(210 40% 98%);
 
-  --accent: 210 40% 96.1%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: hsl(210 40% 96.1%);
+  --accent-foreground: hsl(222.2 47.4% 11.2%);
 
-  --destructive: 0 100% 50%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive: hsl(0 100% 50%);
+  --destructive-foreground: hsl(210 40% 98%);
 
-  --ring: 215 20.2% 65.1%;
-
+  --ring: hsl(215 20.2% 65.1%);
   --radius: 0.5rem;
 
-  --sidebar: 0 0% 100%; /* white */
-  --sidebar-foreground: 240 5.3% 26.1%;
-  --sidebar-primary: 240 5.9% 10%;
-  --sidebar-primary-foreground: 0 0% 98%;
-  --sidebar-accent: 240 4.8% 95.9%;
-  --sidebar-accent-foreground: 240 5.9% 10%;
-  --sidebar-border: 220 13% 91%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --sidebar: hsl(0 0% 100%);
+  --sidebar-foreground: hsl(240 5.3% 26.1%);
+  --sidebar-primary: hsl(240 5.9% 10%);
+  --sidebar-primary-foreground: hsl(0 0% 98%);
+  --sidebar-accent: hsl(240 4.8% 95.9%);
+  --sidebar-accent-foreground: hsl(240 5.9% 10%);
+  --sidebar-border: hsl(220 13% 91%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
 
   --vis-tooltip-background-color: none !important;
   --vis-tooltip-border-color: none !important;
@@ -59,62 +144,71 @@
   --vis-tooltip-backdrop-filter: none !important;
   --vis-tooltip-padding: none !important;
 
-  --vis-primary-color: 173 80% 40%;
-  --vis-secondary-color: 210 40% 96.1%;
-  --vis-text-color: 215.4 16.3% 46.9%;
+  --vis-primary-color: hsl(173 80% 40%);
+  --vis-secondary-color: hsl(210 40% 96.1%);
+  --vis-text-color: hsl(215.4 16.3% 46.9%);
 }
 
 .dark {
-  --sidebar: 240 5.9% 10%;
-  --sidebar-foreground: 240 4.8% 95.9%;
-  --sidebar-primary: 224.3 76.3% 48%;
-  --sidebar-primary-foreground: 0 0% 100%;
-  --sidebar-accent: 240 3.7% 15.9%;
-  --sidebar-accent-foreground: 240 4.8% 95.9%;
-  --sidebar-border: 240 3.7% 15.9%;
-  --sidebar-ring: 217.2 91.2% 59.8%;
+  --sidebar: hsl(240 5.9% 10%);
+  --sidebar-foreground: hsl(240 4.8% 95.9%);
+  --sidebar-primary: hsl(224.3 76.3% 48%);
+  --sidebar-primary-foreground: hsl(0 0% 100%);
+  --sidebar-accent: hsl(240 3.7% 15.9%);
+  --sidebar-accent-foreground: hsl(240 4.8% 95.9%);
+  --sidebar-border: hsl(240 3.7% 15.9%);
+  --sidebar-ring: hsl(217.2 91.2% 59.8%);
 
-  --background: 229 84% 5%; /* slate-950 */
-  --foreground: 214 32% 91%;
+  --background: hsl(229 84% 5%);
+  --foreground: hsl(214 32% 91%);
 
-  --primary: 175 77% 26%; /* teal-700 */
-  --primary-foreground: 210 40% 98%; /* slate-50 */
+  --primary: hsl(175 77% 26%);
+  --primary-foreground: hsl(210 40% 98%);
 
-  --warning: 35 92% 33%; /* yellow-700 */
-  --warning-foreground: 55 92% 95%; /* yellow-50 */
+  --warning: hsl(35 92% 33%);
+  --warning-foreground: hsl(55 92% 95%);
 
-  --secondary: 215 19% 35%; /* slate-800 */
-  --secondary-foreground: 210 40% 98%; /* slate-50 */
+  --secondary: hsl(215 19% 35%);
+  --secondary-foreground: hsl(210 40% 98%);
 
-  --accent: 215 25% 27%; /* slate-800 */
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --accent: hsl(215 25% 27%);
+  --accent-foreground: hsl(222.2 47.4% 11.2%);
 
-  --destructive: 0 74% 42%; /* red-700 */
-  --destructive-foreground: 210 40% 98%; /* slate-50 */
+  --destructive: hsl(0 74% 42%);
+  --destructive-foreground: hsl(210 40% 98%);
 
-  --heading: 210 40% 96%; /* slate-200 */
-  --text: 213 27% 84%; /* slate-300 */
-  --sub-text: 215 16% 47%; /* slate-500 */
+  --heading: hsl(210 40% 96%);
+  --text: hsl(213 27% 84%);
+  --sub-text: hsl(215 16% 47%);
 
-  --muted: 215 20% 65%; /* slate-400 */
-  --muted-foreground: 215 19% 35%; /* slate-600 */
+  --muted: hsl(215 20% 65%);
+  --muted-foreground: hsl(215 19% 35%);
 
-  --accordion-text: 213 27% 84%; /* slate-300 */
-  --accordion-border: 215 16% 47%; /* slate-500 */
+  --accordion-text: hsl(213 27% 84%);
+  --accordion-border: hsl(215 16% 47%);
 
-  --card: 229 84% 5%; /* slate-950 */
-  --card-border: 215 16% 47%; /* slate-500 */
-  --card-foreground: 214 32% 91%; /* slate-200 */
+  --card: hsl(229 84% 5%);
+  --card-border: hsl(215 16% 47%);
+  --card-foreground: hsl(214 32% 91%);
 
-  --popover: 229 84% 5%; /* slate-950 */
-  --popover-foreground: 214 32% 91%; /* slate-200 */
+  --popover: hsl(229 84% 5%);
+  --popover-foreground: hsl(214 32% 91%);
 
-  --skeleton: 215 25% 27%; /* slate-800 */
+  --skeleton: hsl(215 25% 27%);
 
-  --border: 215 20% 65%; /* slate-400 */
-  --input: 215 19% 35%; /* slate-600 */
+  --border: hsl(215 20% 65%);
+  --input: hsl(215 19% 35%);
 
-  --vis-primary-color: 175 77% 26%; /* teal-700 */
-  --vis-secondary-color: 215 20% 65%; /* slate-400 */
-  --vis-text-color: 215 19% 35%; /* slate-600 */
+  --vis-primary-color: hsl(175 77% 26%);
+  --vis-secondary-color: hsl(215 20% 65%);
+  --vis-text-color: hsl(215 19% 35%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
 }

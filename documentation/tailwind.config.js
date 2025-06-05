@@ -1,9 +1,6 @@
 import defaultTheme from 'tailwindcss/defaultTheme'
-import preset from './src/presets/preset.js'
 
-/** @type {import('tailwindcss').Config} */
 export default {
-  presets: [preset],
   css: {
     postcss: './postcss.config.cjs',
   },

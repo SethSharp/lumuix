@@ -1,5 +1,3 @@
-import defaultTheme from 'tailwindcss/defaultTheme'
-
 export default {
   css: {
     postcss: './postcss.config.cjs',
@@ -16,7 +14,6 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Rubik', ...defaultTheme.fontFamily.sans],
       },
     },
   },

@@ -1,5 +1,3 @@
-import preset from '@/presets/preset'
-
 export * from '@/components/accordion'
 export * from '@/components/badge'
 export * from '@/components/breadcrumb'
@@ -26,5 +24,3 @@ export * from '@/components/table'
 export * from '@/components/tabs'
 export * from '@/components/toast'
 export * from '@/components/tooltip'
-
-export { preset }

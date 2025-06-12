@@ -24,18 +24,18 @@ export const badgeVariants = cva(
       },
     },
     compoundVariants: [
-      { type: 'outline-solid', variant: 'primary', class: 'border-primary bg-primary/10 text-primary' },
+      { type: 'outline', variant: 'primary', class: 'border-primary bg-primary/10 text-primary' },
       {
-        type: 'outline-solid',
+        type: 'outline',
         variant: 'secondary',
         class: 'border-secondary bg-secondary/10 text-secondary',
       },
       {
-        type: 'outline-solid',
+        type: 'outline',
         variant: 'destructive',
         class: 'border-destructive bg-destructive/20 text-destructive',
       },
-      { type: 'outline-solid', variant: 'warning', class: 'border-warning bg-warning/20 text-warning' },
+      { type: 'outline', variant: 'warning', class: 'border-warning bg-warning/20 text-warning' },
     ],
     defaultVariants: {
       variant: 'primary',

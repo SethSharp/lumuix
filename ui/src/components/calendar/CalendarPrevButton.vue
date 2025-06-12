@@ -19,7 +19,7 @@ const forwardedProps = useForwardProps(delegatedProps)
   <CalendarPrev
     :class="
       cn(
-        buttonVariants({ variant: 'outline-solid' }),
+        buttonVariants({ variant: 'outline' }),
         'size-7 bg-transparent p-0 opacity-50 hover:opacity-100',
         props.class,
       )

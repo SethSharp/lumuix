@@ -25,10 +25,7 @@ export default defineConfig({
       fileName: 'lumuix',
     },
     rollupOptions: {
-      external: [
-        'vue',
-        'tailwindcss',
-      ],
+      external: ['vue'],
     },
     emptyOutDir: false,
   },

@@ -2,12 +2,12 @@
 import { MoveRight } from 'lucide-vue-next'
 import MainLayout from './MainLayout.vue'
 import {
-  Button,
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
   BreadcrumbSeparator,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/breadcrumb'
+import { Button } from '@sethsharp/lumuix/button'
 
 defineProps<{
   title: string

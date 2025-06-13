@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Skeleton } from '@sethsharp/lumuix'
+import { Skeleton } from '@sethsharp/lumuix/skeleton'
 </script>
 
 <template>

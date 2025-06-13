@@ -2,7 +2,7 @@
 import { type Ref, ref } from 'vue'
 import type { DateRange } from 'radix-vue'
 import { getLocalTimeZone, today } from '@internationalized/date'
-import { RangeCalendar } from '@sethsharp/lumuix'
+import { RangeCalendar } from '@sethsharp/lumuix/range-calendar'
 
 const start = today(getLocalTimeZone())
 const end = start.add({ days: 7 })

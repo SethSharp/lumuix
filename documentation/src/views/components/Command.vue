@@ -9,7 +9,7 @@ import {
   CommandList,
   CommandSeparator,
   CommandShortcut,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/command'
 </script>
 
 <template>

@@ -4,9 +4,9 @@ import { useRoute } from 'vue-router'
 import { RouterLink, RouterView } from 'vue-router'
 import { CollapsibleRoot } from 'radix-vue'
 import router from './router'
+import { Button } from '@sethsharp/lumuix/button'
+import { LumuixModeToggle } from '@sethsharp/lumuix/lumuix'
 import {
-  LumuixModeToggle,
-  Button,
   SidebarProvider,
   Sidebar,
   SidebarContent,
@@ -20,7 +20,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubItem,
   SidebarTrigger,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/sidebar'
 
 const route = useRoute()
 const currentRoute = computed(() => route.path)

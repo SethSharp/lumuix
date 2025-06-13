@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
+import { Button } from '@sethsharp/lumuix/button'
 import {
-  Button,
   Pagination,
   PaginationEllipsis,
   PaginationFirst,
@@ -10,7 +10,7 @@ import {
   PaginationNext,
   PaginationPrev,
   PaginationDetails,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/pagination'
 import { Link } from '@inertiajs/vue3'
 
 const paginatedData = {

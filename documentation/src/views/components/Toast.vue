@@ -2,7 +2,8 @@
 import { h } from 'vue'
 import { CircleCheckIcon, XCircle } from 'lucide-vue-next'
 import MainLayout from '../../layouts/MainLayout.vue'
-import { Toaster, useToast, ToastAction, Button } from '@sethsharp/lumuix'
+import { Button } from '@sethsharp/lumuix/button'
+import { Toaster, useToast, ToastAction } from '@sethsharp/lumuix/toast'
 
 const { toast } = useToast()
 

@@ -12,11 +12,13 @@ import {
   SidebarMenu,
   SidebarGroupContent,
   SidebarGroupLabel,
+} from '@sethsharp/lumuix/sidebar'
+import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/dropdown-menu'
 
 const projects = [
   {

@@ -3,7 +3,7 @@ import { codeToHtml } from 'shiki'
 import { onMounted, ref } from 'vue'
 import { useClipboard } from '@vueuse/core'
 import { Clipboard } from 'lucide-vue-next'
-import { Button } from '@sethsharp/lumuix'
+import { Button } from '@sethsharp/lumuix/button'
 
 const props = withDefaults(
   defineProps<{

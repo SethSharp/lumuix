@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Badge } from '@sethsharp/lumuix'
+import { Badge } from '@sethsharp/lumuix/badge'
 
 const variants = ['primary', 'secondary', 'destructive', 'warning'] as const
 const sizes = ['xs', 'sm', 'md', 'lg'] as const

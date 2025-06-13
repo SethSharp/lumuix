@@ -3,7 +3,6 @@ import MainLayout from '../layouts/MainLayout.vue'
 import ComponentLayout from '../layouts/ComponentLayout.vue'
 import {
   Installation,
-  Styles,
   Home,
   NotFound,
   Accordion,
@@ -50,14 +49,6 @@ const routes = [
         path: '/getting-started/installation',
         name: 'Installation',
         component: Installation,
-        meta: {
-          layout: MainLayout,
-        },
-      },
-      {
-        path: '/getting-started/configure-styles',
-        name: 'Configure Styles',
-        component: Styles,
         meta: {
           layout: MainLayout,
         },

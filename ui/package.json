@@ -25,9 +25,8 @@
       "require": "./dist/lumuix.umd.cjs",
       "types": "./dist/types/index.d.ts"
     },
-    "./dist/presets/*.css": {
-      "import": "./dist/presets/*.css",
-      "require": "./dist/presets/*.css"
+    "./presets/slate.css": {
+      "import": "./dist/presets/slate.css"
     }
   },
   "peerDependencies": {

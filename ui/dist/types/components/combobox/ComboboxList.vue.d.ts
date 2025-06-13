@@ -9,30 +9,14 @@ type __VLS_Slots = {} & {
 };
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     escapeKeyDown: (event: KeyboardEvent) => any;
-    pointerDownOutside: (event: CustomEvent<{
-        originalEvent: PointerEvent;
-    }>) => any;
-    focusOutside: (event: CustomEvent<{
-        originalEvent: FocusEvent;
-    }>) => any;
-    interactOutside: (event: CustomEvent<{
-        originalEvent: PointerEvent;
-    }> | CustomEvent<{
-        originalEvent: FocusEvent;
-    }>) => any;
+    pointerDownOutside: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;
+    focusOutside: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
+    interactOutside: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent | import("reka-ui", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
 }, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
     onEscapeKeyDown?: (event: KeyboardEvent) => any;
-    onPointerDownOutside?: (event: CustomEvent<{
-        originalEvent: PointerEvent;
-    }>) => any;
-    onFocusOutside?: (event: CustomEvent<{
-        originalEvent: FocusEvent;
-    }>) => any;
-    onInteractOutside?: (event: CustomEvent<{
-        originalEvent: PointerEvent;
-    }> | CustomEvent<{
-        originalEvent: FocusEvent;
-    }>) => any;
+    onPointerDownOutside?: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;
+    onFocusOutside?: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
+    onInteractOutside?: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent | import("reka-ui", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
 }>, {
     position: "inline" | "popper";
     sideOffset: number;

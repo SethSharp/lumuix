@@ -1,6 +1,6 @@
 {
   "name": "@sethsharp/lumuix",
-  "version": "3.0.0-beta.0.2",
+  "version": "3.0.0-beta.0.2.1",
   "type": "module",
   "files": [
     "dist",
@@ -25,10 +25,7 @@
       "require": "./dist/lumuix.umd.cjs",
       "types": "./dist/types/index.d.ts"
     },
-    "./dist/presets/*.css": {
-      "import": "./dist/presets/*.css",
-      "require": "./dist/presets/*.css"
-    }
+    "./dist/presets/slate.css": "./dist/presets/slate.css"
   },
   "peerDependencies": {
     "radix-vue": "^1.9.1",

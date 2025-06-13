@@ -2,6 +2,6 @@
 
 @import 'tw-animate-css';
 
-@import '@sethsharp/lumuix/presets/slate.css';
+@import '@sethsharp/lumuix/dist/presets/slate.css';
 
 @config "../../tailwind.config.js";

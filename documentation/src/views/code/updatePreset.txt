@@ -1,0 +1,4 @@
+:root {
+    --primary: hsl(142 76% 36%);
+    --primary-foreground: hsl(138 76% 97%);
+}

@@ -2,6 +2,7 @@
 import Code from '@/components/Code.vue'
 import cssCode from '../code/cssConfig.txt?raw'
 import sourceCode from '../code/tailwindConfig.txt?raw'
+import updatePreset from '../code/updatePreset.txt?raw'
 </script>
 
 <template>
@@ -23,6 +24,12 @@ import sourceCode from '../code/tailwindConfig.txt?raw'
     </p>
 
     <Code lang="css" :source-code="cssCode" />
+
+    <p>
+      If needed, you can overwrite variables in <code> slate.css </code> like so, ensuring to use <code>hsl</code>:
+    </p>
+
+    <Code lang="css" :source-code="updatePreset" />
 
     <p>
       You must also define a <code>tailwind.config.ts</code> file to ensure Tailwind scans your own files

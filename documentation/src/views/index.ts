@@ -1,5 +1,4 @@
 export { default as Installation } from './getting-started/Installation.vue'
-export { default as Styles } from './getting-started/Styles.vue'
 export { default as Home } from './Home.vue'
 export { default as NotFound } from './NotFound.vue'
 export { default as Accordion } from './components/Accordion.vue'

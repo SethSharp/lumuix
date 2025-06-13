@@ -37,7 +37,7 @@ const someAction = () => {
             title: 'Action time!',
             icon: CircleCheckIcon,
             description: 'You have clicked a button, now dismiss it ->',
-            iconClasses: '!size-6',
+            iconClasses: 'size-6!',
             variant: 'destructive',
             action: h(
               ToastAction,

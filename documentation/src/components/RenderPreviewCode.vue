@@ -1,33 +1,18 @@
 <script setup lang="ts">
-import { codeToHtml } from 'shiki'
-import { onMounted, ref } from 'vue'
-import { Clipboard } from 'lucide-vue-next'
-import { useClipboard } from '@vueuse/core'
 import { Eye, Code2 } from 'lucide-vue-next'
-import { Button, TabsContent, TabsList, TabsRoot, TabsTrigger } from '@sethsharp/lumuix'
+import { TabsContent, TabsList, TabsRoot, TabsTrigger } from '@sethsharp/lumuix'
+import Code from '@/components/Code.vue'
 
-const props = defineProps<{
-  sourceCode: string
-}>()
-
-const recentlyCopied = ref(false)
-const { copy } = useClipboard()
-const highlightedCode = ref('')
-
-const copyCode = () => {
-  recentlyCopied.value = true
-  setTimeout(() => {
-    recentlyCopied.value = false
-  }, 2000)
-  copy(props.sourceCode)
-}
-
-onMounted(async () => {
-  highlightedCode.value = await codeToHtml(props.sourceCode, {
+const props = withDefaults(
+  defineProps<{
+    sourceCode: string
+    lang: string
+    theme: string
+  }>(), {
     lang: 'vue',
-    theme: 'vitesse-dark',
-  })
-})
+    theme: 'vitesse-dark'
+  }
+)
 </script>
 
 <template>
@@ -53,28 +38,7 @@ onMounted(async () => {
       </div>
     </TabsContent>
     <TabsContent value="code">
-      <div class="relative">
-        <Button
-          @click="copyCode"
-          class="absolute right-2 top-2 text-white">
-          <Clipboard />
-          <template v-if="recentlyCopied">
-            Copied!
-          </template>
-        </Button>
-
-        <div
-          v-html="highlightedCode"
-          class="shiki max-h-[800px] overflow-scroll" />
-      </div>
+      <Code :lang :theme :source-code />
     </TabsContent>
   </TabsRoot>
 </template>
-
-<style>
-.shiki pre {
-  padding: 2rem;
-  border-radius: 0.5rem;
-  overflow-x: auto;
-}
-</style>

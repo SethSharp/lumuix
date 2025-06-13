@@ -87,7 +87,7 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
 
       <main class="bg-background w-full flex-1 overflow-y-auto">
         <header
-          class="border-card-border flex h-12 w-full shrink-0 items-center gap-2 border-b px-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
+          class="border-card-border flex h-12 w-full shrink-0 items-center gap-2 border-b px-2 transition-[width,height] ease-linear group-has-data-[collapsible=icon]/sidebar-wrapper:h-12">
           <div class="flex w-full justify-between">
             <div class="flex items-center gap-2">
               <SidebarTrigger>

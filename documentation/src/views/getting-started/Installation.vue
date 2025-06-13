@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import Code from '@/components/Code.vue'
+import cssCode from '../code/cssConfig.txt?raw'
 import sourceCode from '../code/tailwindConfig.txt?raw'
 </script>
 
@@ -21,7 +22,7 @@ import sourceCode from '../code/tailwindConfig.txt?raw'
       To apply the preset, import it in your main CSS file:
     </p>
 
-    <Code lang="css" source-code="@import '@sethsharp/lumuix/presets/slate.css'" />
+    <Code lang="css" :source-code="cssCode" />
 
     <p>
       You must also define a <code>tailwind.config.ts</code> file to ensure Tailwind scans your own files

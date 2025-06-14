@@ -1,4 +1,5 @@
 export * from '@/components/accordion';
+export * from '@/components/alert';
 export * from '@/components/badge';
 export * from '@/components/breadcrumb';
 export * from '@/components/button';

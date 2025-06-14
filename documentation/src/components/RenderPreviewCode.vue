@@ -3,11 +3,11 @@ import { Eye, Code2 } from 'lucide-vue-next'
 import { TabsContent, TabsList, TabsRoot, TabsTrigger } from '@sethsharp/lumuix'
 import Code from '@/components/Code.vue'
 
-const props = withDefaults(
+withDefaults(
   defineProps<{
     sourceCode: string
-    lang: string
-    theme: string
+    lang?: string
+    theme?: string
   }>(), {
     lang: 'vue',
     theme: 'vitesse-dark'

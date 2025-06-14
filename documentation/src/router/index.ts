@@ -6,6 +6,7 @@ import {
   Home,
   NotFound,
   Accordion,
+  Alert,
   Breadcrumbs,
   Button,
   Calendar,
@@ -62,6 +63,15 @@ const routes = [
         path: '/components/accordion',
         name: 'Accordion',
         component: Accordion,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/alert',
+        name: 'Alert',
+        component: Alert,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

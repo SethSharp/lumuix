@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { Label } from '@sethsharp/lumuix/form'
+import { Input } from '@sethsharp/lumuix/inputs'
+import { Button } from '@sethsharp/lumuix/button'
 import {
-  Label,
-  Input,
-  Button,
   Dialog,
   DialogContent,
   DialogDescription,
@@ -10,7 +10,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/dialog'
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@sethsharp/lumuix'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@sethsharp/lumuix/accordion'
 </script>
 
 <template>

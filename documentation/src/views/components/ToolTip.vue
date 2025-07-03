@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { Button, Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@sethsharp/lumuix'
+import { Button } from '@sethsharp/lumuix/button'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@sethsharp/lumuix/tooltip'
 </script>
 
 <template>

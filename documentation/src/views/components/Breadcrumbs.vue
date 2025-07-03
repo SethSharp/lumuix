@@ -7,11 +7,13 @@ import {
   BreadcrumbList,
   BreadcrumbPage,
   BreadcrumbSeparator,
+} from '@sethsharp/lumuix/breadcrumb'
+import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/dropdown-menu'
 </script>
 
 <template>

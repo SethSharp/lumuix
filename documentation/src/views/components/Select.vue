@@ -7,7 +7,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/select'
 </script>
 
 <template>

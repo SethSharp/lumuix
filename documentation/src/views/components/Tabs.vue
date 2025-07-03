@@ -1,19 +1,21 @@
 <script setup lang="ts">
 import {
-  Label,
-  Input,
-  Button,
   TabsRoot,
   TabsContent,
   TabsList,
   TabsTrigger,
+} from '@sethsharp/lumuix/tabs'
+import { Label } from '@sethsharp/lumuix/form'
+import { Input } from '@sethsharp/lumuix/inputs'
+import { Button } from '@sethsharp/lumuix/button'
+import {
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/card'
 </script>
 
 <template>

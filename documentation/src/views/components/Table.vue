@@ -7,7 +7,7 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/table'
 
 const invoices = [
   {

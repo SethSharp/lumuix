@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { Eye, Code2 } from 'lucide-vue-next'
-import { TabsContent, TabsList, TabsRoot, TabsTrigger } from '@sethsharp/lumuix'
+import { TabsContent, TabsList, TabsRoot, TabsTrigger } from '@sethsharp/lumuix/tabs'
 import Code from '@/components/Code.vue'
 
 withDefaults(

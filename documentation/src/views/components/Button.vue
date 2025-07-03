@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Button } from '@sethsharp/lumuix'
+import { Button } from '@sethsharp/lumuix/button'
 </script>
 
 <template>

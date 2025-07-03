@@ -2,30 +2,149 @@
   "name": "@sethsharp/lumuix",
   "version": "3.0.0-beta.0.3",
   "type": "module",
-  "files": [
-    "dist",
-    "src"
-  ],
+  "files": ["dist/*"],
   "repository": {
     "type": "git",
     "url": "https://github.com/SethSharp/lumuix"
   },
-  "types": "./dist/types/index.d.ts",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "clean": "rimraf dist",
-    "build:types": "vue-tsc --declaration --emitDeclarationOnly --outDir dist/types",
+    "build:types": "vue-tsc --declaration --emitDeclarationOnly --declarationDir dist/types",
     "build:vite": "vite build",
     "build": "npm-run-all clean build:types build:vite"
   },
-  "main": "./dist/ui.umd.cjs",
-  "module": "./dist/ui.js",
   "exports": {
-    ".": {
-      "import": "./dist/lumuix.js",
-      "require": "./dist/lumuix.umd.cjs",
-      "types": "./dist/types/index.d.ts"
+    "./accordion": {
+      "import": "./dist/accordion.js",
+      "require": "./dist/accordion.cjs",
+      "types": "./src/components/accordion/index.ts"
     },
-    "./dist/presets/slate.css": "./dist/presets/slate.css"
+    "./badge": {
+      "import": "./dist/badge.js",
+      "require": "./dist/badge.cjs",
+      "types": "./src/components/badge/index.ts"
+    },
+    "./breadcrumb": {
+      "import": "./dist/breadcrumb.js",
+      "require": "./dist/breadcrumb.cjs",
+      "types": "./src/components/breadcrumb/index.ts"
+    },
+    "./button": {
+      "import": "./dist/button.js",
+      "require": "./dist/button.cjs",
+      "types": "./src/components/button/index.ts"
+    },
+    "./calendar": {
+      "import": "./dist/calendar.js",
+      "require": "./dist/calendar.cjs",
+      "types": "./src/components/calendar/index.ts"
+    },
+    "./card": {
+      "import": "./dist/card.js",
+      "require": "./dist/card.cjs",
+      "types": "./src/components/card/index.ts"
+    },
+    "./combobox": {
+      "import": "./dist/combobox.js",
+      "require": "./dist/combobox.cjs",
+      "types": "./src/components/combobox/index.ts"
+    },
+    "./command": {
+      "import": "./dist/command.js",
+      "require": "./dist/command.cjs",
+      "types": "./src/components/command/index.ts"
+    },
+    "./dialog": {
+      "import": "./dist/dialog.js",
+      "require": "./dist/dialog.cjs",
+      "types": "./src/components/dialog/index.ts"
+    },
+    "./dropdown-menu": {
+      "import": "./dist/dropdown-menu.js",
+      "require": "./dist/dropdown-menu.cjs",
+      "types": "./src/components/dropdown-menu/index.ts"
+    },
+    "./form": {
+      "import": "./dist/form.js",
+      "require": "./dist/form.cjs",
+      "types": "./src/components/form/index.ts"
+    },
+    "./inputs": {
+      "import": "./dist/inputs.js",
+      "require": "./dist/inputs.cjs",
+      "types": "./src/components/inputs/index.ts"
+    },
+    "./lumuix": {
+      "import": "./dist/lumuix.js",
+      "require": "./dist/lumuix.cjs",
+      "types": "./src/components/lumuix/index.ts"
+    },
+    "./pagination": {
+      "import": "./dist/pagination.js",
+      "require": "./dist/pagination.cjs",
+      "types": "./src/components/pagination/index.ts"
+    },
+    "./popover": {
+      "import": "./dist/popover.js",
+      "require": "./dist/popover.cjs",
+      "types": "./src/components/popover/index.ts"
+    },
+    "./range-calendar": {
+      "import": "./dist/range-calendar.js",
+      "require": "./dist/range-calendar.cjs",
+      "types": "./src/components/range-calendar/index.ts"
+    },
+    "./select": {
+      "import": "./dist/select.js",
+      "require": "./dist/select.cjs",
+      "types": "./src/components/select/index.ts"
+    },
+    "./separator": {
+      "import": "./dist/separator.js",
+      "require": "./dist/separator.cjs",
+      "types": "./src/components/separator/index.ts"
+    },
+    "./sheet": {
+      "import": "./dist/sheet.js",
+      "require": "./dist/sheet.cjs",
+      "types": "./src/components/sheet/index.ts"
+    },
+    "./sidebar": {
+      "import": "./dist/sidebar.js",
+      "require": "./dist/sidebar.cjs",
+      "types": "./src/components/sidebar/index.ts"
+    },
+    "./skeleton": {
+      "import": "./dist/skeleton.js",
+      "require": "./dist/skeleton.cjs",
+      "types": "./src/components/skeleton/index.ts"
+    },
+    "./slider": {
+      "import": "./dist/slider.js",
+      "require": "./dist/slider.cjs",
+      "types": "./src/components/slider/index.ts"
+    },
+    "./table": {
+      "import": "./dist/table.js",
+      "require": "./dist/table.cjs",
+      "types": "./src/components/table/index.ts"
+    },
+    "./tabs": {
+      "import": "./dist/tabs.js",
+      "require": "./dist/tabs.cjs",
+      "types": "./src/components/tabs/index.ts"
+    },
+    "./toast": {
+      "import": "./dist/toast.js",
+      "require": "./dist/toast.cjs",
+      "types": "./src/components/toast/index.ts"
+    },
+    "./tooltip": {
+      "import": "./dist/tooltip.js",
+      "require": "./dist/tooltip.cjs",
+      "types": "./src/components/tooltip/index.ts"
+    }
   },
   "peerDependencies": {
     "radix-vue": "^1.9.1",

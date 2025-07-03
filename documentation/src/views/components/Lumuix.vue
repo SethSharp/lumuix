@@ -2,13 +2,13 @@
 import { computed, ref } from 'vue'
 import { Link } from '@inertiajs/vue3'
 import { House, Users, Banknote } from 'lucide-vue-next'
+import { Button } from '@sethsharp/lumuix/button'
 import {
-  Button,
   LumuixModeToggle,
   LumuixDatatable,
   LumuixModal,
   LumuixTabs,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/lumuix'
 
 const dataTableConfig = computed(() => ({
   headers: [

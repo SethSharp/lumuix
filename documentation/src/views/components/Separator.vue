@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Separator } from '@sethsharp/lumuix'
+import { Separator } from '@sethsharp/lumuix/separator'
 </script>
 
 <template>

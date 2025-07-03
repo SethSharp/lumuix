@@ -15,9 +15,8 @@ import {
   UserPlus,
   Users,
 } from 'lucide-vue-next'
-
+import { Button } from '@sethsharp/lumuix/button'
 import {
-  Button,
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
@@ -30,7 +29,7 @@ import {
   DropdownMenuSubContent,
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/dropdown-menu'
 </script>
 
 <template>

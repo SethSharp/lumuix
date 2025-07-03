@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { Check, Search } from 'lucide-vue-next'
-import { Combobox, ComboboxAnchor, ComboboxEmpty, ComboboxGroup, ComboboxInput, ComboboxItem, ComboboxItemIndicator, ComboboxList } from '@sethsharp/lumuix'
 import { ref, watch } from 'vue'
+import { Check, Search } from 'lucide-vue-next'
+import { Combobox, ComboboxAnchor, ComboboxEmpty, ComboboxGroup, ComboboxInput, ComboboxItem, ComboboxItemIndicator, ComboboxList } from '@sethsharp/lumuix/combobox'
 
 const frameworks = [
   { value: 'next.js', label: 'Next.js' },

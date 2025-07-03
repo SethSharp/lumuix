@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import { Popover, PopoverContent, PopoverTrigger, Button, Input, Label } from '@sethsharp/lumuix'
+import { Label } from '@sethsharp/lumuix/form'
+import { Input } from '@sethsharp/lumuix/inputs'
+import { Button } from '@sethsharp/lumuix/button'
+import { Popover, PopoverContent, PopoverTrigger } from '@sethsharp/lumuix/popover'
 </script>
 
 <template>

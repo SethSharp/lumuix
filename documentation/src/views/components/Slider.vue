@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Slider } from '@sethsharp/lumuix'
+import { Slider } from '@sethsharp/lumuix/slider'
 
 const modelValue = ref([50])
 </script>

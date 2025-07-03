@@ -1,8 +1,8 @@
 <script setup lang="ts">
+import { Label} from '@sethsharp/lumuix/form'
+import { Input } from '@sethsharp/lumuix/inputs'
+import { Button } from '@sethsharp/lumuix/button'
 import {
-  Button,
-  Input,
-  Label,
   Sheet,
   SheetClose,
   SheetContent,
@@ -11,7 +11,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/sheet'
 </script>
 
 <template>

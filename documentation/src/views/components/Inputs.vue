@@ -8,7 +8,7 @@ import {
   Input,
   TextArea,
   Toggle,
-} from '@sethsharp/lumuix'
+} from '@sethsharp/lumuix/inputs'
 
 const checkboxValue = ref(true)
 

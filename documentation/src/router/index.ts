@@ -32,6 +32,7 @@ import {
   ToolTip,
   Badge,
   Lumuix,
+  NavigationMenu
 } from '../views'
 
 const routes = [
@@ -199,6 +200,15 @@ const routes = [
         path: '/components/lumuix',
         name: 'Lumuix',
         component: Lumuix,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: false,
+        },
+      },
+      {
+        path: '/components/navigation-menu',
+        name: 'Navigation Menu',
+        component: NavigationMenu,
         meta: {
           layout: ComponentLayout,
           shadcn: false,

@@ -7,6 +7,7 @@ import {
   NotFound,
   Accordion,
   Alert,
+  Avatar,
   Breadcrumbs,
   Button,
   Calendar,
@@ -72,6 +73,15 @@ const routes = [
         path: '/components/alert',
         name: 'Alert',
         component: Alert,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: true,
+        },
+      },
+      {
+        path: '/components/avatar',
+        name: 'Avatar',
+        component: Avatar,
         meta: {
           layout: ComponentLayout,
           shadcn: true,

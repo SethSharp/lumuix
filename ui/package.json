@@ -34,11 +34,11 @@
   "dependencies": {
     "@tailwindcss/vite": "^4.1.7",
     "@tanstack/vue-table": "^8.21.3",
-    "@vueuse/core": "^13.2.0",
+    "@vueuse/core": "^13.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-vue-next": "^0.447.0",
-    "reka-ui": "^2.2.1",
+    "reka-ui": "^2.3.2",
     "tailwind-merge": "^2.5.2",
     "tailwindcss": "^4.1.7",
     "tw-animate-css": "^1.3.4",

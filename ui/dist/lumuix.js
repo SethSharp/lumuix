@@ -18278,7 +18278,7 @@ const gx = /* @__PURE__ */ b({
     ], 2));
   }
 }), T_ = jt(
-  "inline-flex items-center rounded-full border h-fit font-semibold transition-colors focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-default",
+  "inline-flex items-center rounded-full h-fit font-semibold transition-colors focus:outline-hidden focus:ring-2 focus:ring-ring focus:ring-offset-2 cursor-default",
   {
     variants: {
       variant: {
@@ -18288,7 +18288,7 @@ const gx = /* @__PURE__ */ b({
         warning: "bg-warning text-warning-foreground"
       },
       type: {
-        outline: "",
+        outline: "border",
         fill: "border-transparent"
       },
       size: {

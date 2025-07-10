@@ -33,7 +33,7 @@ withDefaults(
     </TabsList>
     <TabsContent value="preview">
       <div
-        class="flex h-[500px] items-center justify-center overflow-scroll rounded bg-slate-50 p-4 dark:bg-slate-900">
+        class="flex justify-center rounded bg-background p-4 border border-card-border">
         <slot />
       </div>
     </TabsContent>

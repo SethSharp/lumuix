@@ -6,7 +6,7 @@ import RenderPreviewCode from '../../components/RenderPreviewCode.vue'
 
 <template>
   <div>
-    <div>
+    <div class="text-text">
       <p>
         This is a custom set of reusable components built from
         <a href="https://unovis.dev/" class="text-primary underline font-medium">

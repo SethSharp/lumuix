@@ -68,7 +68,7 @@ const routes = [
         component: Accordion,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -77,7 +77,7 @@ const routes = [
         component: Alert,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -86,7 +86,7 @@ const routes = [
         component: Avatar,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -95,7 +95,7 @@ const routes = [
         component: Badge,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -104,7 +104,7 @@ const routes = [
         component: Breadcrumbs,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -113,7 +113,7 @@ const routes = [
         component: Button,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -122,7 +122,7 @@ const routes = [
         component: Calendar,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -131,7 +131,7 @@ const routes = [
         component: Card,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -140,7 +140,11 @@ const routes = [
         component: Chart,
         meta: {
           layout: ComponentLayout,
-          shadcn: false,
+          contributor: 'lumuix',
+          label: 'Lumuix Component',
+          alpha: true,
+          alertMessage: true,
+          alertMessageContent: 'Alpha release of Chart, the API can change anytime outside of major version updates.'
         },
       },
       {
@@ -149,7 +153,7 @@ const routes = [
         component: Combobox,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -158,7 +162,7 @@ const routes = [
         component: Command,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -167,7 +171,7 @@ const routes = [
         component: Dialog,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -176,7 +180,7 @@ const routes = [
         component: DropdownMenu,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -185,7 +189,8 @@ const routes = [
         component: Inputs,
         meta: {
           layout: ComponentLayout,
-          shadcn: false,
+          contributor: 'lumuix',
+          label: 'Collection of Shadcn Components'
         },
       },
       {
@@ -194,7 +199,7 @@ const routes = [
         component: Pagination,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -203,7 +208,7 @@ const routes = [
         component: Popover,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -212,7 +217,10 @@ const routes = [
         component: Lumuix,
         meta: {
           layout: ComponentLayout,
-          shadcn: false,
+          contributor: 'lumuix',
+          label: 'Pre-built components',
+          alertMessage: true,
+          alertMessageContent: 'These components are deprecated and may be removed in non-major versions'
         },
       },
       {
@@ -221,7 +229,7 @@ const routes = [
         component: NavigationMenu,
         meta: {
           layout: ComponentLayout,
-          shadcn: false,
+          contributor: 'shadcn',
         },
       },
       {
@@ -230,7 +238,7 @@ const routes = [
         component: RangeCalendar,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -239,7 +247,7 @@ const routes = [
         component: Select,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -248,7 +256,7 @@ const routes = [
         component: Sheet,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -257,7 +265,7 @@ const routes = [
         component: Separator,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -266,7 +274,7 @@ const routes = [
         component: Sidebar,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -275,7 +283,7 @@ const routes = [
         component: Skeleton,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -284,7 +292,7 @@ const routes = [
         component: Slider,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -293,7 +301,7 @@ const routes = [
         component: Table,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -302,7 +310,7 @@ const routes = [
         component: Tabs,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -311,7 +319,7 @@ const routes = [
         component: Toast,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
       {
@@ -320,7 +328,7 @@ const routes = [
         component: ToolTip,
         meta: {
           layout: ComponentLayout,
-          shadcn: true,
+          contributor: 'shadcn',
         },
       },
     ],
@@ -332,7 +340,7 @@ const routes = [
     isExternal: true,
     meta: {
       layout: ComponentLayout,
-      shadcn: false,
+      contributor: false,
     },
   },
 ]

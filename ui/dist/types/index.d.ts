@@ -12,6 +12,7 @@ export * from '@/components/dialog';
 export * from '@/components/dropdown-menu';
 export * from '@/components/form';
 export * from '@/components/inputs';
+export * from '@/components/chart';
 export * from '@/components/pagination';
 export * from '@/components/popover';
 export * from '@/components/lumuix';

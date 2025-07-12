@@ -12,6 +12,7 @@ import {
   Button,
   Calendar,
   Card,
+  Chart,
   Combobox,
   Command,
   Dialog,
@@ -131,6 +132,15 @@ const routes = [
         meta: {
           layout: ComponentLayout,
           shadcn: true,
+        },
+      },
+      {
+        path: '/components/chart',
+        name: 'Chart',
+        component: Chart,
+        meta: {
+          layout: ComponentLayout,
+          shadcn: false,
         },
       },
       {

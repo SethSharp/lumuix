@@ -1,11 +1,13 @@
 <script setup lang="ts">
 import ChartCode from '../code/ChartCode.vue'
+import CustomChartCode from '../code/CustomChartCode.vue'
 import sourceCode from '../code/ChartCode.vue?raw'
+import customCode from '../code/CustomChartCode.vue?raw'
 import RenderPreviewCode from '../../components/RenderPreviewCode.vue'
 </script>
 
 <template>
-  <div>
+  <div class="space-y-4">
     <div class="text-text">
       <p>
         This is a custom set of reusable components built from
@@ -16,24 +18,71 @@ import RenderPreviewCode from '../../components/RenderPreviewCode.vue'
         unovis in its raw state, passing props and component structure.
       </p>
 
-      <h3>Points</h3>
+      <p>
+        Original Documentation
+        <a href="https://unovis.dev/contributing/intro" class="text-primary underline font-medium">
+          here
+        </a>
+        .
+      </p>
+    </div>
+
+    <div class="text-text space-y-2">
+      <h2 class="text-xl text-heading">
+        Custom Chart
+      </h2>
+
+      <p>
+        Currently we support a all-in-one chart called LineChart. Unlike other aspects of the library,
+        this is a pre-built component to show how you can use the libraries components - but also offers a easy chart
+        to integrate.
+      </p>
+
       <ul class="list-disc list-inside">
         <li>
-          All charts must be wrapped in `ChartProvider`
+          Chart Provider
         </li>
         <li>
-          Expansion of support is planned, but feel free to make those contributions yourself
-        </li>
-        <li>
-          Checkout the documentation
-          <a href="https://unovis.dev/contributing/intro" class="text-primary underline font-medium">
-            here
-          </a>
+          XAxis / YAxis
         </li>
       </ul>
+
+      <p>
+        The below example shows off how this can be achieved. Mentioning again this is a alpha build. The API
+        is due to change to make this process a lot easier (composables etc).
+      </p>
+
+      <RenderPreviewCode :source-code="sourceCode">
+        <ChartCode />
+      </RenderPreviewCode>
     </div>
-    <RenderPreviewCode :source-code="sourceCode">
-      <ChartCode />
+
+    <div class="text-text space-y-2">
+      <h2 class="text-xl text-heading">
+        Custom Chart
+      </h2>
+
+      <p>
+        You can build out your custom charts using exported components
+      </p>
+
+      <ul class="list-disc list-inside">
+        <li>
+          Chart Provider
+        </li>
+        <li>
+          XAxis / YAxis
+        </li>
+      </ul>
+
+      <p>
+        The below example shows off how this can be achieved. Mentioning again this is a alpha build. The API
+        is due to change to make this process a lot easier (composables etc).
+      </p>
+    </div>
+
+    <RenderPreviewCode :source-code="customCode">
+      <CustomChartCode />
     </RenderPreviewCode>
   </div>
 </template>

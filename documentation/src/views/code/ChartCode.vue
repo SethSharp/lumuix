@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { LineChart } from '@sethsharp/lumuix'
 
-const sampleData = [
+const data = [
   { x: 1, a: 1, b: 2, c: 20 },
   { x: 5, a: 10, b: 15, c:18 },
   { x: 10, a: 40, b: 30, c: 30 },
@@ -30,5 +30,10 @@ const items = [
 </script>
 
 <template>
-  <LineChart :data="sampleData" index="x" :categories="['a', 'b', 'c']" :colours :items />
+  <LineChart
+    :data
+    index="x"
+    :categories="['a', 'b', 'c']"
+    :colours
+    :items />
 </template>

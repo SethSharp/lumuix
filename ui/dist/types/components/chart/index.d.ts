@@ -13,3 +13,5 @@ export { default as XAxis } from './XAxis.vue';
 export { default as YAxis } from './YAxis.vue';
 export { default as ChartProvider } from './ChartProvider.vue';
 export { default as Line } from './Line.vue';
+export { default as LineChart } from './LineChart.vue';
+export { default as Legend } from './Legend.vue';

@@ -140,9 +140,6 @@
 
   --skeleton: hsl(214 32% 91%);
 
-  --popover: hsl(0 0% 100%);
-  --popover-foreground: hsl(222.2 47.4% 11.2%);
-
   --vis-tooltip-background-color: none !important;
   --vis-tooltip-border-color: none !important;
   --vis-tooltip-text-color: none !important;

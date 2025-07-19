@@ -38,7 +38,7 @@ const dashAccessor = (d: GenericDataRecord[], i: number) =>
       :y="yAccessors"
       :color="colorAccessor"
       :lineDashArray="dashAccessor"
-      :curveType="curveType ?? CurveType.MonotoneX"
+      :curveType="curveType ?? CurveType.Basis"
       :lineWidth="lineWidth ?? 2"
       :fallbackValue="fallbackValue"
       :interpolateMissingData="interpolateMissingData"

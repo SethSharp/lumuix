@@ -20,6 +20,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubItem,
   SidebarTrigger,
+  Badge,
 } from '@sethsharp/lumuix'
 
 const route = useRoute()
@@ -73,6 +74,9 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
                             :to="route.path"
                             class="text-text">
                             {{ route.name }}
+                            <Badge v-if="route.meta.alpha" variant="destructive" type="outline" size="xs">
+                              Alpha
+                            </Badge>
                           </RouterLink>
                         </SidebarMenuButton>
                       </SidebarMenuSubItem>

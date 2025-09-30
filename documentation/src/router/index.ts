@@ -16,6 +16,7 @@ import {
   Combobox,
   Command,
   Dialog,
+  Draggable,
   DropdownMenu,
   Inputs,
   Pagination,
@@ -172,6 +173,16 @@ const routes = [
         meta: {
           layout: ComponentLayout,
           contributor: 'shadcn',
+        },
+      },
+      {
+        path: '/components/draggable',
+        name: 'Draggable',
+        component: Draggable,
+        meta: {
+          layout: ComponentLayout,
+          contributor: 'lumuix',
+          alpha: true
         },
       },
       {

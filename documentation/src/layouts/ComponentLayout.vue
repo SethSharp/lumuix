@@ -48,7 +48,7 @@ defineProps<{
     </Button>
     <div v-else-if="$route.meta.contributor === 'lumuix'">
       <Badge size="sm" type="outline">
-        {{ $route.meta.label }}
+        {{ $route.meta.label ?? 'Lumuix Component' }}
       </Badge>
     </div>
 

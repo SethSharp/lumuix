@@ -182,8 +182,7 @@ const routes = [
         meta: {
           layout: ComponentLayout,
           contributor: 'lumuix',
-          alpha: true,
-          label: 'New Draggable component - enjoy'
+          alpha: true
         },
       },
       {

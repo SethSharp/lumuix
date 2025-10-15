@@ -1,14 +1,12 @@
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { v4 as uuidv4 } from 'uuid'
-import { Base } from '@/components/inputs'
+import { provide, ref } from 'vue'
+import { Label } from '@/components/form'
 import { Button } from '@/components/button'
 
 const props = withDefaults(
   defineProps<{
-    modelValue?: any
-    currentImage?: string
     defaultImage?: string
+    label?: string
     accept?: string
   }>(),
   {
@@ -16,49 +14,44 @@ const props = withDefaults(
   },
 )
 
-const emits = defineEmits(['update:modelValue'])
+const fileInput = ref<HTMLInputElement | null>(null)
+const imageUrl = ref<string | null>(props.defaultImage ?? null)
 
-const uniqueId = 'file-upload-' + uuidv4()
-const newImage = computed(() => (inputVal.value ? URL.createObjectURL(inputVal.value) : null))
-const curImg = props.currentImage ? props.currentImage : props.defaultImage
+const onFileChange = (e: Event) => {
+  const target = e.target as HTMLInputElement
+  const file = target.files?.[0]
 
-const inputVal = computed({
-  get: () => props.modelValue,
-  set: (value) => emits('update:modelValue', value),
-})
+  if (!file) return
 
-const handleFileChange = (event: any) => {
-  inputVal.value = event.target.files[0]
+  imageUrl.value = URL.createObjectURL(file)
+
+  console.log(file)
+  model.value = file
 }
 
-const fileUpload = () => document.getElementById(uniqueId).click()
+const triggerFilePicker = () => {
+  fileInput.value?.click()
+}
+
+const model = defineModel()
+
+provide('container', 'md')
 </script>
 
 <template>
-  <Base v-bind="$props">
-    <div class="flex items-center space-x-2">
+  <div class="space-y-2">
+    <Label>{{ label }}</Label>
+
+    <div class="flex items-center gap-2">
       <slot
         name="image"
-        :newImage="newImage"
-        :curImage="curImg">
-        <img
-          :src="newImage ?? curImg"
-          alt="Image cannot be shown right now"
-          class="size-24 rounded-full dark:bg-slate-900" />
+        :curImage="imageUrl">
+        <img v-if="imageUrl" :src="imageUrl" alt="Uploaded preview" class="size-32 rounded shadow" />
       </slot>
 
-      <input
-        :id="uniqueId"
-        :accept="accept"
-        hidden
-        type="file"
-        @input="handleFileChange" />
+      <Button @click.prevent="triggerFilePicker" variant="outline">Upload</Button>
 
-      <Button
-        variant="outline"
-        @click="fileUpload">
-        Upload
-      </Button>
+      <input ref="fileInput" type="file" :accept @change="onFileChange" class="hidden" />
     </div>
-  </Base>
+  </div>
 </template>

@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { computed, type HTMLAttributes, watch } from 'vue'
-import { SwitchRoot, type SwitchRootProps, SwitchThumb, useForwardPropsEmits } from 'radix-vue'
+import { type HTMLAttributes, watch } from 'vue'
+import { SwitchRoot, type SwitchRootProps, SwitchThumb } from 'radix-vue'
 import { cn } from '@/lib/utils'
 import { Base } from '@/components/inputs'
 
@@ -12,26 +12,17 @@ const props = defineProps<
   }
 >()
 
-const toggle = defineModel()
+const toggle = defineModel<boolean | undefined>()
 
 watch(toggle, () => {
   emits('update:modelValue', toggle.value)
 })
-
-const delegatedProps = computed(() => {
-  const { class: _, ...delegated } = props
-
-  return delegated
-})
-
-const forwarded = useForwardPropsEmits(delegatedProps, emits)
 </script>
 
 <template>
   <Base v-bind="$props">
     <SwitchRoot
       v-model:checked="toggle"
-      v-bind="forwarded"
       v-slot="{ checked }"
       :class="
         cn(

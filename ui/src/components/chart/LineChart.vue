@@ -32,7 +32,7 @@ const lines = props.categories.map((key, i) => ({
         :lines="lines"
         :lineWidth="3"
         interpolateMissingData
-        :fallbackValue="null"
+        :fallbackValue="undefined"
       />
     </ChartProvider>
 

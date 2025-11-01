@@ -6,4 +6,4 @@ export { default as NavigationMenuLink } from './NavigationMenuLink.vue';
 export { default as NavigationMenuList } from './NavigationMenuList.vue';
 export { default as NavigationMenuTrigger } from './NavigationMenuTrigger.vue';
 export { default as NavigationMenuViewport } from './NavigationMenuViewport.vue';
-export declare const navigationMenuTriggerStyle: (props?: import("class-variance-authority/types").ClassProp) => string;
+export declare const navigationMenuTriggerStyle: (props?: import("class-variance-authority/dist/types.js").ClassProp) => string;

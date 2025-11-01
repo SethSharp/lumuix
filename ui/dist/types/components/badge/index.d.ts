@@ -4,5 +4,5 @@ export declare const badgeVariants: (props?: {
     variant?: "destructive" | "warning" | "primary" | "secondary";
     type?: "fill" | "outline";
     size?: "xs" | "sm" | "md" | "lg";
-} & import("class-variance-authority/types").ClassProp) => string;
+} & import("class-variance-authority/dist/types.js").ClassProp) => string;
 export type BadgeVariants = VariantProps<typeof badgeVariants>;

@@ -5,7 +5,7 @@ type __VLS_Props = SwitchRootProps & {
     class?: HTMLAttributes['class'];
 };
 type __VLS_PublicProps = __VLS_Props & {
-    modelValue?: any;
+    modelValue?: boolean | undefined;
 };
 declare var __VLS_14: {}, __VLS_16: {};
 type __VLS_Slots = {} & {

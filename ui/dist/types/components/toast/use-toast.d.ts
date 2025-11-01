@@ -41,7 +41,7 @@ declare function useToast(): {
             template?: string | object;
             render?: Function;
             components?: Record<string, Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>>;
-            directives?: Record<string, import("vue").Directive<any, any, string, string>>;
+            directives?: Record<string, import("vue").Directive<any, any, string, any>>;
             inheritAttrs?: boolean;
             emits?: any;
             slots?: {};
@@ -162,7 +162,7 @@ declare function useToast(): {
             template?: string | object;
             render?: Function;
             components?: Record<string, Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>>;
-            directives?: Record<string, import("vue").Directive<any, any, string, string>>;
+            directives?: Record<string, import("vue").Directive<any, any, string, any>>;
             inheritAttrs?: boolean;
             emits?: any;
             slots?: {};
@@ -283,7 +283,7 @@ declare function useToast(): {
             template?: string | object;
             render?: Function;
             components?: Record<string, Component<any, any, any, import("vue").ComputedOptions, import("vue").MethodOptions, {}, any>>;
-            directives?: Record<string, import("vue").Directive<any, any, string, string>>;
+            directives?: Record<string, import("vue").Directive<any, any, string, any>>;
             inheritAttrs?: boolean;
             emits?: any;
             slots?: {};

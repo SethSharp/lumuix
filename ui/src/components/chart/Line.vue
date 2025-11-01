@@ -25,11 +25,9 @@ const defaultColors = ['#007aff', '#ff9500', '#34c759', '#ff3b30', '#af52de']
 
 const yAccessors = props.lines.map(line => line.y)
 
-// @ts-expect-error
 const colorAccessor = (d: GenericDataRecord[], i: number) =>
   props.lines[i]?.color ?? defaultColors[i % defaultColors.length]
 
-// @ts-expect-error
 const dashAccessor = (d: GenericDataRecord[], i: number) =>
   props.lines[i]?.dashArray ?? undefined
 </script>

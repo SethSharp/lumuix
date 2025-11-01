@@ -8,9 +8,9 @@ type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_6) => any;
 };
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    select: (event: import("../../../node_modules/radix-vue/dist/Combobox/ComboboxItem.js", { with: { "resolution-mode": "import" } }).SelectEvent<import("../../../node_modules/radix-vue/dist/Combobox/ComboboxRoot.js", { with: { "resolution-mode": "import" } }).AcceptableValue>) => any;
+    select: (event: import("radix-vue/dist/Combobox/ComboboxItem").SelectEvent<import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue>) => any;
 }, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
-    onSelect?: (event: import("../../../node_modules/radix-vue/dist/Combobox/ComboboxItem.js", { with: { "resolution-mode": "import" } }).SelectEvent<import("../../../node_modules/radix-vue/dist/Combobox/ComboboxRoot.js", { with: { "resolution-mode": "import" } }).AcceptableValue>) => any;
+    onSelect?: (event: import("radix-vue/dist/Combobox/ComboboxItem").SelectEvent<import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue>) => any;
 }>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, false, {}, any>;
 declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
 export default _default;

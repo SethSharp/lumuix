@@ -8,19 +8,19 @@ declare const __VLS_component: import("vue").DefineComponent<ToastProps, {}, {},
     "update:open": (value: boolean) => any;
     escapeKeyDown: (event: KeyboardEvent) => any;
     resume: () => any;
-    swipeStart: (event: import("../../../node_modules/radix-vue/dist/Toast/utils.js", { with: { "resolution-mode": "import" } }).SwipeEvent) => any;
-    swipeMove: (event: import("../../../node_modules/radix-vue/dist/Toast/utils.js", { with: { "resolution-mode": "import" } }).SwipeEvent) => any;
-    swipeCancel: (event: import("../../../node_modules/radix-vue/dist/Toast/utils.js", { with: { "resolution-mode": "import" } }).SwipeEvent) => any;
-    swipeEnd: (event: import("../../../node_modules/radix-vue/dist/Toast/utils.js", { with: { "resolution-mode": "import" } }).SwipeEvent) => any;
+    swipeStart: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
+    swipeMove: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
+    swipeCancel: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
+    swipeEnd: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
 }, string, import("vue").PublicProps, Readonly<ToastProps> & Readonly<{
     onPause?: () => any;
     "onUpdate:open"?: (value: boolean) => any;
     onEscapeKeyDown?: (event: KeyboardEvent) => any;
     onResume?: () => any;
-    onSwipeStart?: (event: import("../../../node_modules/radix-vue/dist/Toast/utils.js", { with: { "resolution-mode": "import" } }).SwipeEvent) => any;
-    onSwipeMove?: (event: import("../../../node_modules/radix-vue/dist/Toast/utils.js", { with: { "resolution-mode": "import" } }).SwipeEvent) => any;
-    onSwipeCancel?: (event: import("../../../node_modules/radix-vue/dist/Toast/utils.js", { with: { "resolution-mode": "import" } }).SwipeEvent) => any;
-    onSwipeEnd?: (event: import("../../../node_modules/radix-vue/dist/Toast/utils.js", { with: { "resolution-mode": "import" } }).SwipeEvent) => any;
+    onSwipeStart?: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
+    onSwipeMove?: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
+    onSwipeCancel?: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
+    onSwipeEnd?: (event: import("radix-vue/dist/Toast/utils").SwipeEvent) => any;
 }>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;
 declare const _default: __VLS_WithSlots<typeof __VLS_component, __VLS_Slots>;
 export default _default;

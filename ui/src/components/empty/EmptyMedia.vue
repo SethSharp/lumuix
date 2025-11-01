@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import type { HTMLAttributes } from "vue"
-import type { EmptyMediaVariants } from "./index.js"
-import { cn } from "@/lib/utils.js"
+import { cn } from "@/lib/utils"
 import { emptyMediaVariants } from "./index.js"
+import type { EmptyMediaVariants } from "./index.js"
 
 const props = defineProps<{
   class?: HTMLAttributes["class"]

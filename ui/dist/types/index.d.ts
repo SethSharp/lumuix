@@ -12,6 +12,7 @@ export * from '@/components/command';
 export * from '@/components/dialog';
 export * from '@/components/draggable';
 export * from '@/components/dropdown-menu';
+export * from '@/components/empty';
 export * from '@/components/form';
 export * from '@/components/inputs';
 export * from '@/components/chart';

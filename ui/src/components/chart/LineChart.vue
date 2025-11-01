@@ -16,7 +16,7 @@ const x = (d: (typeof props.data)[number]) => d[props.index]
 
 const lines = props.categories.map((key, i) => ({
   y: (d: Record<string, any>) => d[key],
-  color: props.colours[i],
+  color: props.colours[key],
   // todo: how can we dynamically apply other props to pass per line?
 }))
 </script>

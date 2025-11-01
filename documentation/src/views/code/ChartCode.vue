@@ -7,24 +7,24 @@ const data = [
   { x: 10, a: 40, b: 30, c: 30 },
 ]
 
-const colours = [
-  '#ff0000',
-  '#00ff00',
-  '#0032ff',
-]
+const colours = {
+  a: '#ff0000',
+  b: '#00ff00',
+  c: '#0032ff',
+}
 
 const items = [
   {
+    key: 'a',
     name: 'A',
-    color: colours[0]
   },
   {
+    key: 'b',
     name: 'B',
-    color: colours[1]
   },
   {
-    name: 'B',
-    color: colours[2]
+    key: 'c',
+    name: 'C',
   }
 ]
 </script>

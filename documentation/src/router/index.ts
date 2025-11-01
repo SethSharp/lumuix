@@ -18,6 +18,7 @@ import {
   Dialog,
   Draggable,
   DropdownMenu,
+  Empty,
   Inputs,
   Pagination,
   Popover,
@@ -189,6 +190,15 @@ const routes = [
         path: '/components/dropdown-menu',
         name: 'Dropdown Menu',
         component: DropdownMenu,
+        meta: {
+          layout: ComponentLayout,
+          contributor: 'shadcn',
+        },
+      },
+      {
+        path: '/components/empty',
+        name: 'Empty',
+        component: Empty,
         meta: {
           layout: ComponentLayout,
           contributor: 'shadcn',

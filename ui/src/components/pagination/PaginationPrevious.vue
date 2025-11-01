@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import type { PaginationNextProps } from "reka-ui"
+import type { PaginationPrevProps } from "reka-ui"
 import type { HTMLAttributes } from "vue"
 import type { ButtonVariants } from '@/components/button'
 import { reactiveOmit } from "@vueuse/core"
-import { ChevronRightIcon } from "lucide-vue-next"
-import { PaginationNext, useForwardProps } from "reka-ui"
+import { ChevronLeftIcon } from "lucide-vue-next"
+import { PaginationPrev, useForwardProps } from "reka-ui"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from '@/components/button'
 
-const props = withDefaults(defineProps<PaginationNextProps & {
+const props = withDefaults(defineProps<PaginationPrevProps & {
   size?: ButtonVariants["size"]
   class?: HTMLAttributes["class"]
 }>(), {
@@ -20,14 +20,14 @@ const forwarded = useForwardProps(delegatedProps)
 </script>
 
 <template>
-  <PaginationNext
-    data-slot="pagination-next"
+  <PaginationPrev
+    data-slot="pagination-previous"
     :class="cn(buttonVariants({ variant: 'ghost', size }), 'gap-1 px-2.5 sm:pr-2.5', props.class)"
     v-bind="forwarded"
   >
     <slot>
-      <span class="hidden sm:block">Next</span>
-      <ChevronRightIcon />
+      <ChevronLeftIcon />
+      <span class="hidden sm:block">Previous</span>
     </slot>
-  </PaginationNext>
+  </PaginationPrev>
 </template>

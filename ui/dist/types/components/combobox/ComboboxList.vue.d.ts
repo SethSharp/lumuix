@@ -9,14 +9,14 @@ type __VLS_Slots = {} & {
 };
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
     escapeKeyDown: (event: KeyboardEvent) => any;
-    pointerDownOutside: (event: import("reka-ui").PointerDownOutsideEvent) => any;
-    focusOutside: (event: import("reka-ui").FocusOutsideEvent) => any;
-    interactOutside: (event: import("reka-ui").PointerDownOutsideEvent | import("reka-ui").FocusOutsideEvent) => any;
+    pointerDownOutside: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;
+    focusOutside: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
+    interactOutside: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent | import("reka-ui", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
 }, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
     onEscapeKeyDown?: (event: KeyboardEvent) => any;
-    onPointerDownOutside?: (event: import("reka-ui").PointerDownOutsideEvent) => any;
-    onFocusOutside?: (event: import("reka-ui").FocusOutsideEvent) => any;
-    onInteractOutside?: (event: import("reka-ui").PointerDownOutsideEvent | import("reka-ui").FocusOutsideEvent) => any;
+    onPointerDownOutside?: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent) => any;
+    onFocusOutside?: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
+    onInteractOutside?: (event: import("reka-ui", { with: { "resolution-mode": "import" } }).PointerDownOutsideEvent | import("reka-ui", { with: { "resolution-mode": "import" } }).FocusOutsideEvent) => any;
 }>, {
     position: "inline" | "popper";
     sideOffset: number;

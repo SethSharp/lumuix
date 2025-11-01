@@ -2,9 +2,9 @@ import { type VariantProps } from 'class-variance-authority';
 export { default as Button } from './Button.vue';
 export declare const spinnerSize: (props?: {
     size?: "default" | "xs" | "sm" | "lg" | "xl" | "xxl" | "icon";
-} & import("class-variance-authority/dist/types.js").ClassProp) => string;
+} & import("class-variance-authority/types").ClassProp) => string;
 export declare const buttonVariants: (props?: {
     variant?: "default" | "link" | "destructive" | "primary" | "secondary" | "outline" | "ghost";
     size?: "default" | "xs" | "sm" | "lg" | "xl" | "xxl" | "icon";
-} & import("class-variance-authority/dist/types.js").ClassProp) => string;
+} & import("class-variance-authority/types").ClassProp) => string;
 export type ButtonVariants = VariantProps<typeof buttonVariants>;

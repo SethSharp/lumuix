@@ -8,15 +8,15 @@ type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_6) => any;
 };
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (value: import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue) => any;
+    "update:modelValue": (value: import("../../../node_modules/radix-vue/dist/Combobox/ComboboxRoot.js", { with: { "resolution-mode": "import" } }).AcceptableValue) => any;
     "update:open": (value: boolean) => any;
     "update:searchTerm": (value: string) => any;
-    "update:selectedValue": (value: import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue) => any;
+    "update:selectedValue": (value: import("../../../node_modules/radix-vue/dist/Combobox/ComboboxRoot.js", { with: { "resolution-mode": "import" } }).AcceptableValue) => any;
 }, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
-    "onUpdate:modelValue"?: (value: import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue) => any;
+    "onUpdate:modelValue"?: (value: import("../../../node_modules/radix-vue/dist/Combobox/ComboboxRoot.js", { with: { "resolution-mode": "import" } }).AcceptableValue) => any;
     "onUpdate:open"?: (value: boolean) => any;
     "onUpdate:searchTerm"?: (value: string) => any;
-    "onUpdate:selectedValue"?: (value: import("radix-vue/dist/Combobox/ComboboxRoot").AcceptableValue) => any;
+    "onUpdate:selectedValue"?: (value: import("../../../node_modules/radix-vue/dist/Combobox/ComboboxRoot.js", { with: { "resolution-mode": "import" } }).AcceptableValue) => any;
 }>, {
     open: boolean;
 }, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;

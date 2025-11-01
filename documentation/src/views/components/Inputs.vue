@@ -12,7 +12,7 @@ import {
 const checkboxValue = ref(true)
 
 const selectValue = ref(null)
-const selectOptions = ref(['Grape', 'Banana', 'Strawberry']))
+const selectOptions = ref(['Grape', 'Banana', 'Strawberry'])
 </script>
 
 <template>

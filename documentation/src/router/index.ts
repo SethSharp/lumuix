@@ -10,7 +10,6 @@ import {
   Avatar,
   Breadcrumbs,
   Button,
-  Calendar,
   Card,
   Chart,
   Combobox,
@@ -22,7 +21,6 @@ import {
   Inputs,
   Pagination,
   Popover,
-  RangeCalendar,
   Select,
   Separator,
   Sheet,
@@ -113,15 +111,6 @@ const routes = [
         path: '/components/button',
         name: 'Button',
         component: Button,
-        meta: {
-          layout: ComponentLayout,
-          contributor: 'shadcn',
-        },
-      },
-      {
-        path: '/components/calendar',
-        name: 'Calendar',
-        component: Calendar,
         meta: {
           layout: ComponentLayout,
           contributor: 'shadcn',
@@ -248,15 +237,6 @@ const routes = [
         path: '/components/navigation-menu',
         name: 'Navigation Menu',
         component: NavigationMenu,
-        meta: {
-          layout: ComponentLayout,
-          contributor: 'shadcn',
-        },
-      },
-      {
-        path: '/components/range-calendar',
-        name: 'Range Calendar',
-        component: RangeCalendar,
         meta: {
           layout: ComponentLayout,
           contributor: 'shadcn',

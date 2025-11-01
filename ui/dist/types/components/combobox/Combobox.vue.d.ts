@@ -5,17 +5,17 @@ type __VLS_Slots = {} & {
     default?: (props: typeof __VLS_6) => any;
 };
 declare const __VLS_component: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {
-    "update:modelValue": (value: import("reka-ui", { with: { "resolution-mode": "import" } }).AcceptableValue) => any;
+    "update:modelValue": (value: import("reka-ui").AcceptableValue) => any;
     highlight: (payload: {
         ref: HTMLElement;
-        value: import("reka-ui", { with: { "resolution-mode": "import" } }).AcceptableValue;
+        value: import("reka-ui").AcceptableValue;
     }) => any;
     "update:open": (value: boolean) => any;
 }, string, import("vue").PublicProps, Readonly<__VLS_Props> & Readonly<{
-    "onUpdate:modelValue"?: (value: import("reka-ui", { with: { "resolution-mode": "import" } }).AcceptableValue) => any;
+    "onUpdate:modelValue"?: (value: import("reka-ui").AcceptableValue) => any;
     onHighlight?: (payload: {
         ref: HTMLElement;
-        value: import("reka-ui", { with: { "resolution-mode": "import" } }).AcceptableValue;
+        value: import("reka-ui").AcceptableValue;
     }) => any;
     "onUpdate:open"?: (value: boolean) => any;
 }>, {}, {}, {}, {}, string, import("vue").ComponentProvideOptions, true, {}, any>;

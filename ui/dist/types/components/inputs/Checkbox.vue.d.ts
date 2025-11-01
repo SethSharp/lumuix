@@ -1,6 +1,6 @@
 import { type CheckboxRootProps } from 'radix-vue';
 type __VLS_Props = CheckboxRootProps & {
-    modelValue: boolean | null;
+    modelValue: boolean | 'indeterminate' | undefined;
     text?: string;
 };
 declare const _default: import("vue").DefineComponent<__VLS_Props, {}, {}, {}, {}, import("vue").ComponentOptionsMixin, import("vue").ComponentOptionsMixin, {

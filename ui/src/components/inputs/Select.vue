@@ -24,8 +24,8 @@ const props = withDefaults(
 
 const computedPlaceholder = computed(() => props.placeholder ?? 'Select an option...')
 
-const selectedOption = ref(
-  props.modelValue ? props.options.find((option) => option === props.modelValue) : null,
+const selectedOption = ref<string | undefined>(
+  props.modelValue ? props.options.find((option) => option === props.modelValue) : undefined,
 )
 
 watch(selectedOption, () => {
@@ -43,7 +43,8 @@ watch(selectedOption, () => {
       </SelectTrigger>
       <SelectContent>
         <SelectItem
-          v-for="option in options"
+          v-for="(option, idx) in options"
+          :key="idx"
           :value="option">
           {{ option }}
         </SelectItem>

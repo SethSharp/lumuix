@@ -9,12 +9,12 @@ const emits = defineEmits(['update:modelValue'])
 
 const props = defineProps<
   CheckboxRootProps & {
-    modelValue: boolean | null
+    modelValue: boolean | 'indeterminate' | undefined
     text?: string
   }
 >()
 
-const checked = ref(props.modelValue)
+const checked = ref<boolean | 'indeterminate' | undefined>(props.modelValue)
 
 watch(checked, (newChecked) => {
   emits('update:modelValue', newChecked)

@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 import {
   Select,
   Checkbox,
-  DatePicker,
   ImageUpload,
   Input,
   TextArea,
@@ -13,13 +12,7 @@ import {
 const checkboxValue = ref(true)
 
 const selectValue = ref(null)
-const selectOptions = ref(['Grape', 'Banana', 'Strawberry'])
-
-const datePickerValue = ref(null)
-
-watch(datePickerValue, () => {
-  console.log(datePickerValue.value)
-})
+const selectOptions = ref(['Grape', 'Banana', 'Strawberry']))
 </script>
 
 <template>
@@ -34,13 +27,6 @@ watch(datePickerValue, () => {
         <Checkbox
           v-model="checkboxValue"
           text="This is a checkbox" />
-      </div>
-
-      <div>
-        <DatePicker
-          v-model="datePickerValue"
-          label="Date picker"
-          description="Select a date for this example page" />
       </div>
 
       <div>

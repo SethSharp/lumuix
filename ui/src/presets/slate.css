@@ -99,7 +99,7 @@
     --background: hsl(223.8136 -172.5242% 100.0000%);
     --foreground: hsl(223.8136 0.0000% 3.9388%);
 
-    --card: hsl(223.8136 -172.5242% 100.0000%);
+    --card: hsl(0, 0%, 97%);
     --card-border: hsl(215 20% 65%);
     --card-foreground: hsl(223.8136 0.0000% 3.9388%);
 
@@ -186,7 +186,7 @@
     --foreground: hsl(223.8136 0.0004% 98.0256%);
 
     --card: hsl(223.8136 0.0000% 9.0527%);
-    --card-border: hsl(215 16% 47%);
+    --card-border: hsl(0, 0%, 31%);
     --card-foreground: hsl(223.8136 0.0004% 98.0256%);
 
     --popover: hsl(0, 0%, 9%);

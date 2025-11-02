@@ -32,7 +32,6 @@ defineProps<{
     </template>
     <Button
       v-if="$route.meta.contributor === 'shadcn'"
-      variant="default"
       as-child>
       <a
         :href="
@@ -43,7 +42,7 @@ defineProps<{
         target="_blank"
         class="flex gap-2">
         See Shadcn Docs
-        <MoveRight class="text-muted size-5" />
+        <MoveRight class="text-muted-foreground size-5" />
       </a>
     </Button>
     <div v-else-if="$route.meta.contributor === 'lumuix'">

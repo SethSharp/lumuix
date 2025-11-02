@@ -25,7 +25,7 @@ import {
     </EmptyHeader>
     <EmptyContent>
       <div class="flex gap-2">
-        <Button>Create Project</Button>
+        <Button variant="primary">Create Project</Button>
         <Button variant="outline">
           Import Project
         </Button>

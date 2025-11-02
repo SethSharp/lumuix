@@ -127,9 +127,9 @@
     --accordion-text: hsl(0, 0%, 17%);
     --accordion-border: hsl(0, 0%, 24%);
 
-    --border: hsl(223.8136 0.0001% 89.8161%);
-    --input: hsl(223.8136 0.0001% 89.8161%);
-    --ring: hsl(223.8136 0.0000% 63.0163%);
+    --border: hsl(223.8136 0.0000% 63.0163%);
+    --input: hsl(0, 0%, 11%);
+    --ring: hsl(0, 0%, 24%);
 
     --skeleton: hsl(214 32% 91%);
 
@@ -210,9 +210,9 @@
     --destructive: hsl(358, 100%, 42%);
     --destructive-foreground: hsl(223.8136 0.0004% 98.0256%);
 
-    --border: hsl(223.8136 0.0000% 15.5096%);
-    --input: hsl(223.8136 0.0000% 20.3885%);
-    --ring: hsl(223.8136 0.0000% 45.1519%);
+    --border: hsl(0, 0%, 21%);
+    --input: hsl(0, 0%, 89%);
+    --ring: hsl(0, 0%, 55%);
 
     --sidebar: hsl(223.8136 0.0000% 9.0527%);
     --sidebar-foreground: hsl(223.8136 0.0004% 98.0256%);

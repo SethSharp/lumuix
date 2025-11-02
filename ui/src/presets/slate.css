@@ -92,9 +92,9 @@
 }
 
 :root {
-    --heading: hsl(229 84% 5%);
-    --text: hsl(229 84% 5%);
-    --sub-text: hsl(222 47% 11%);
+    --heading: hsl(0, 0%, 0%);
+    --text: hsl(0, 0%, 10%);
+    --sub-text: hsl(0, 0%, 27%);
 
     --background: hsl(223.8136 -172.5242% 100.0000%);
     --foreground: hsl(223.8136 0.0000% 3.9388%);
@@ -113,7 +113,7 @@
     --warning-foreground: hsl(55 92% 95%);
 
     --secondary: hsl(0 0% 92.1%);
-    -secondary-foreground: hsl(223.8136 0.0000% 9.0527%);
+    --secondary-foreground: hsl(223.8136 0.0000% 9.0527%);
 
     --muted: hsl(223.8136 0.0002% 96.0587%);
     --muted-foreground: hsl(223.8136 0.0000% 45.1519%);
@@ -121,11 +121,11 @@
     --accent: hsl(223.8136 0.0002% 96.0587%);
     --accent-foreground: hsl(223.8136 0.0000% 9.0527%);
 
-    --destructive: hsl(351.7303 123.6748% 40.5257%);
+    --destructive: hsl(352, 97%, 41%);
     --destructive-foreground: hsl(223.8136 -172.5242% 100.0000%);
 
-    --accordion-text: hsl(229 84% 5%);
-    --accordion-border: hsl(215 20% 65%);
+    --accordion-text: hsl(0, 0%, 17%);
+    --accordion-border: hsl(0, 0%, 24%);
 
     --border: hsl(223.8136 0.0001% 89.8161%);
     --input: hsl(223.8136 0.0001% 89.8161%);
@@ -178,9 +178,9 @@
 }
 
 .dark {
-    --heading: hsl(210 40% 96%);
-    --text: hsl(213 27% 84%);
-    --sub-text: hsl(215 16% 47%);
+    --heading: hsl(0, 0%, 100%);
+    --text: hsl(0, 0%, 70%);
+    --sub-text: hsl(0, 0%, 25%);
 
     --background: hsl(223.8136 0.0000% 3.9388%);
     --foreground: hsl(223.8136 0.0004% 98.0256%);
@@ -207,7 +207,7 @@
     --accent: hsl(223.8136 0.0000% 25.0471%);
     --accent-foreground: hsl(223.8136 0.0004% 98.0256%);
 
-    --destructive: hsl(358.7594 101.8439% 69.8357%);
+    --destructive: hsl(358, 100%, 42%);
     --destructive-foreground: hsl(223.8136 0.0004% 98.0256%);
 
     --border: hsl(223.8136 0.0000% 15.5096%);

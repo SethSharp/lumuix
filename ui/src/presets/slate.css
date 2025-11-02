@@ -189,8 +189,8 @@
     --card-border: hsl(215 16% 47%);
     --card-foreground: hsl(223.8136 0.0004% 98.0256%);
 
-    --popover: hsl(223.8136 0.0000% 14.9382%);
-    --popover-foreground: hsl(223.8136 0.0004% 98.0256%);
+    --popover: hsl(0, 0%, 9%);
+    --popover-foreground: hsl(0, 0%, 82%);
 
     --primary: hsl(175 77% 26%);
     --primary-foreground: hsl(210 40% 98%);
@@ -246,7 +246,7 @@
     --accordion-text: hsl(213 27% 84%);
     --accordion-border: hsl(215 16% 47%);
 
-    --skeleton: hsl(215 25% 27%);
+    --skeleton: hsl(0, 1%, 24%);
 
     --vis-primary-color: hsl(175 77% 26%);
     --vis-secondary-color: hsl(215 20% 65%);

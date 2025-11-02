@@ -35,6 +35,7 @@
     --color-skeleton: var(--skeleton);
 
     --color-card: var(--card);
+    --color-card-border: var(--card-border);
     --color-card-foreground: var(--card-foreground);
 
     --color-border: var(--border);

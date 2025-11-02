@@ -7,6 +7,7 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
+  SelectSeparator
 } from '@sethsharp/lumuix'
 </script>
 
@@ -16,14 +17,24 @@ import {
       <SelectValue />
     </SelectTrigger>
     <SelectContent>
-      <SelectItem :value="null"> Select a fruit </SelectItem>
+      <SelectItem :value="null"> Select a Item </SelectItem>
+
+      <SelectSeparator />
+
       <SelectGroup>
         <SelectLabel>Fruits</SelectLabel>
         <SelectItem value="apple"> Apple </SelectItem>
         <SelectItem value="banana"> Banana </SelectItem>
         <SelectItem value="blueberry"> Blueberry </SelectItem>
-        <SelectItem value="grapes"> Grapes </SelectItem>
-        <SelectItem value="pineapple"> Pineapple </SelectItem>
+      </SelectGroup>
+
+      <SelectSeparator />
+
+      <SelectGroup>
+        <SelectLabel>Vegetables</SelectLabel>
+        <SelectItem value="pumpkin"> Pumpkin </SelectItem>
+        <SelectItem value="potato"> Potato </SelectItem>
+        <SelectItem value="carrot"> Carrot </SelectItem>
       </SelectGroup>
     </SelectContent>
   </SelectRoot>

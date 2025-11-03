@@ -17589,7 +17589,7 @@ const Gk = /* @__PURE__ */ _({
   for (const [a, o] of t)
     n[a] = o;
   return n;
-}, rS = {}, iS = { class: "text-sm text-muted" };
+}, rS = {}, iS = { class: "text-sm text-sub-text" };
 function sS(e, t) {
   return g(), V("div", iS, [
     w(e.$slots, "default")
@@ -17953,7 +17953,7 @@ const gS = /* @__PURE__ */ zo(hS, [["render", mS]]), yS = { class: "grid gap-4 m
       default: y(() => [
         P(l(f0), O({ ...l(r), ...i.$attrs }, {
           class: l(F)(
-            "bg-popover text-popover-foreground border border-card data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-96 min-w-32 overflow-hidden rounded-md shadow-md",
+            "bg-muted text-muted-foreground border border-border data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2 relative z-50 max-h-96 min-w-32 overflow-hidden rounded-md shadow-md",
             e.position === "popper" && "data-[side=bottom]:translate-y-1 data-[side=left]:-translate-x-1 data-[side=right]:translate-x-1 data-[side=top]:-translate-y-1",
             n.class
           )
@@ -18019,7 +18019,7 @@ const gS = /* @__PURE__ */ zo(hS, [["render", mS]]), yS = { class: "grid gap-4 m
     }), a = Le(n);
     return (o, r) => (g(), k(l(v0), O(l(a), {
       class: l(F)(
-        "text-text border border-transparent hover:border-border focus:text-accent-foreground focus:bg-accent relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-hidden data-disabled:pointer-events-none data-disabled:opacity-50 dark:focus:bg-muted-foreground hover:bg-muted",
+        "text-text border border-transparent hover:border-border focus:text-accent-foreground focus:bg-accent relative flex w-full cursor-default select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-hidden data-disabled:pointer-events-none data-disabled:opacity-50 dark:focus:bg-muted-foreground hover:bg-muted/10",
         t.class
       )
     }), {

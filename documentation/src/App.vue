@@ -77,6 +77,9 @@ const routes = router.getRoutes().filter((route) => route.children.length > 0)
                             <Badge v-if="route.meta.alpha" variant="destructive" type="outline" size="xs">
                               Alpha
                             </Badge>
+                            <Badge v-if="route.meta.new" type="outline" size="xs">
+                              New
+                            </Badge>
                           </RouterLink>
                         </SidebarMenuButton>
                       </SidebarMenuSubItem>

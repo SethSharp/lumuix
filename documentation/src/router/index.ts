@@ -19,6 +19,7 @@ import {
   DropdownMenu,
   Empty,
   Inputs,
+  Kpi,
   Pagination,
   Popover,
   Select,
@@ -201,6 +202,16 @@ const routes = [
           layout: ComponentLayout,
           contributor: 'lumuix',
           label: 'Collection of Shadcn Components'
+        },
+      },
+      {
+        path: '/components/kpi',
+        name: 'Kpi',
+        component: Kpi,
+        meta: {
+          layout: ComponentLayout,
+          contributor: 'lumuix',
+          new: true,
         },
       },
       {

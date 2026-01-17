@@ -5,6 +5,9 @@ import RenderPreviewCode from '../../components/RenderPreviewCode.vue'
 </script>
 
 <template>
+  <div>
+    The latest shadcn pagination api accepts multiple parameters to easily any set of paginated data.
+  </div>
   <RenderPreviewCode :source-code="sourceCode">
     <PaginationCode />
   </RenderPreviewCode>
